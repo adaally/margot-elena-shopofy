@@ -1,0 +1,30 @@
+.modal__inner .page-content.page-content--product .product-block {
+    margin: 0;
+}
+
+.modal.modal--square.modal--quick-shop .product-block.cstm.revies--pro{
+    display: none;
+}
+.modal.modal--square.modal--quick-shop .product-single__title {
+   
+    margin-bottom: 0px;
+}
+.modal.modal--square.modal--quick-shop  div#category {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.modal.modal--square.modal--quick-shop  .product-block.product-block--sales-point ul.sales-points {
+    margin: 0;
+    margin-bottom: 2px;
+}
+.modal.modal--square.modal--quick-shop .product-block.product-block--sales-point+.product-block:not(.product-block--sales-point) {
+    margin-top: 20px;
+}
+.btn-alt {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    border-color: #000;
+    color: #000;
+}

@@ -1,0 +1,26 @@
+<script defer>
+  function swymCallbackFn(swat){
+    // your API calls go here
+    document.addEventListener("collection:reloaded", function(){
+      swat.initializeActionButtons("body");
+    })
+  }
+  if(!window.SwymCallbacks){
+    window.SwymCallbacks = [];
+  }
+  window.SwymCallbacks.push(swymCallbackFn);
+
+</script>
+
+<style>
+  button.swym-button.swym-add-to-wishlist-view-product.swym-iconbtnlink.swym-heart.swym-loaded {
+    z-index: 2;
+    position: absolute;
+    left: 3%;
+    top: 2%;
+    font-size: 15px;
+    border-radius: 50%;
+    background: white;
+    padding: 8px;
+}
+</style>
