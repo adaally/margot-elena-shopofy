@@ -10,7 +10,7 @@
 
   {%- for filter_value in filter.active_values -%}
   <li class="tag tag--remove">
-    <a aria-label="Remove {{ filter_value.label | escape }}" class="btn btn--small" href="{{ filter_value.url_to_remove }}">
+    <a role="button" aria-label="Remove {{ filter_value.label | escape }}" class="btn btn--small" href="{{ filter_value.url_to_remove }}">
       {{ filter_value.label | escape }}
     </a>
     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><title>icon-X</title><path d="m19 17.61 27.12 27.13m0-27.12L19 44.74"/></svg>
@@ -56,7 +56,7 @@
                 endif
               -%}
 
-              <ul class="no-bullets tag-list">
+              <ul aria-label="{{ filter.label | escape }}" class="no-bullets tag-list">
               {%- assign tag_count = filter.values.size -%}
               {%- for filter_value in filter.values -%}
                 {%- liquid
