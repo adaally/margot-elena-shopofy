@@ -69,18 +69,15 @@
               -%}
 
                 <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
-                    <input id="{{ product.id }}"
-                            type="checkbox"
-                            class="tag__input"
-                            name="{{ filter_value.param_name }}"
-                            value="{{ filter_value.value }}"
-                            {% if filter_value.active %}checked{% endif %}>
-                    <label class="tag__checkbox-wrapper text-label" for="{{ product.id }}">
-
+                    <label class="tag__checkbox-wrapper text-label">
+                      <input type="checkbox"
+                             class="tag__input"
+                             name="{{ filter_value.param_name }}"
+                             value="{{ filter_value.value }}"
+                             {% if filter_value.active %}checked{% endif %}>
                       {%- if is_color -%}
                       <span
                           class="color-swatch color-swatch--filter color-swatch--{{ filter_value.label | handle }}"
-                          title="{{ filter_value.label }}"
                           style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
                       >
                           {{ filter_value.label }}
