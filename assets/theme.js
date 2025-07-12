@@ -8343,4 +8343,55 @@ theme.recentlyViewed = {
     });
   }
 
+const openButton = document.querySelector('#search--button'); // replace with your actual button
+const searchForm = document.querySelector('predictive-search form');
+const closeButton = searchForm.querySelector('.btn--close-search');
+
+let focusableElements = [];
+let firstEl, lastEl;
+
+function trapFocus(container) {
+  focusableElements = container.querySelectorAll(
+    'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+  );
+  firstEl = focusableElements[0];
+  lastEl = focusableElements[focusableElements.length - 1];
+
+  container.addEventListener('keydown', handleTrap);
+}
+
+function handleTrap(e) {
+  if (e.key === 'Tab') {
+    if (e.shiftKey) {
+      // Shift + Tab
+      if (document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      }
+    } else {
+      // Tab
+      if (document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    }
+  }
+}
+
+function openSearch() {
+  searchForm.classList.add('is-active');
+  trapFocus(searchForm);
+  firstEl.focus();
+}
+
+function closeSearch() {
+  searchForm.classList.remove('is-active');
+  searchForm.removeEventListener('keydown', handleTrap);
+  openButton.focus(); // Return focus to opener
+}
+
+// Open/Close bindings
+openButton.addEventListener('click', openSearch);
+closeButton.addEventListener('click', closeSearch);
+
 })();
