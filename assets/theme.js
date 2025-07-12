@@ -8315,18 +8315,17 @@ theme.recentlyViewed = {
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
 
-  function closeDropdownWithScape() {
-    document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
-      console.log("aqui")
-      detailsEl.addEventListener('keydown', function (e) {
-        if (e.code === 'Escape') {
-          if (detailsEl.open) {
-            e.preventDefault();
-            detailsEl.removeAttribute('open');
-            detailsEl.setAttribute('aria-expanded','false');
+  function closeDropdownWithEscape() {
+    document.addEventListener('keydown', function (e) {
+      if (e.code === 'Escape' || e.key === 'Escape') {
+        document.querySelectorAll('details.site-nav__details[open]').forEach(detailsEl => {
+          detailsEl.removeAttribute('open');
+          const summary = detailsEl.querySelector('summary');
+          if (summary) {
+            summary.setAttribute('aria-expanded', 'false');
           }
-        }
-      });
+        });
+      }
     });
   }
 
