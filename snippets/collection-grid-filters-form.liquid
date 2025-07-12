@@ -19,12 +19,12 @@
 {%- endfor -%}
 </ul>
 
-<form class="filter-form">
+<form class="filter-form" role="list" aria-label="Filter categories">
 {%- for filter in filters -%}
   {%- capture filter_id -%}filter-{{ filter.label | handleize }}{%- endcapture -%}
   {%- assign filter_index = forloop.index -%}
 
-  <div class="collection-sidebar__group--{{ filter_index }}">
+  <div class="collection-sidebar__group--{{ filter_index }}" role="listitem">
     <div class="collection-sidebar__group">
       <button
           type="button"
