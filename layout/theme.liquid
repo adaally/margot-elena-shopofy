@@ -365,6 +365,22 @@ for (var i = 0; i < atcButtons.length; i++) {
 
 
 <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/d3bgs2lII4noj0dHz0EcyecV5uC2sPl5K5yRukGR" async></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  console.log("entro")
+  document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
+    console.log("entro1")
+    detailsEl.addEventListener('keydown', function (e) {
+      if (e.code === 'Space' || e.key === ' ') {
+        if (detailsEl.open) {
+          e.preventDefault(); // Prevent the page from scrolling
+          detailsEl.removeAttribute('open');
+        }
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
 
