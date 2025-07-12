@@ -8312,6 +8312,7 @@ theme.recentlyViewed = {
       theme.customerTemplates();
     }
     closeDropdownWithEscape();
+    toggleDropdown();
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
 
@@ -8323,6 +8324,22 @@ theme.recentlyViewed = {
           detailsEl.setAttribute('aria-expanded', 'false');
         });
       }
+    });
+  }
+
+    function toggleDropdown() {
+    document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
+      document.addEventListener('keydown', function (e) {
+        if (e.code === 'Enter' || e.key === 'Enter') {
+          if(detailsEl.open) {
+            detailsEl.removeAttribute('open');
+            detailsEl.setAttribute('aria-expanded', 'false');
+          } else {
+            detailsEl.setAttribute('open','');
+            detailsEl.setAttribute('aria-expanded', 'true');
+          }
+        }
+      });
     });
   }
 
