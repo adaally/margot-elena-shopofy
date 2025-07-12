@@ -8414,10 +8414,10 @@ theme.recentlyViewed = {
   closeButton.addEventListener('click', closeSearch);
 
   if(inputSearchMain) {
-    inputSearchMain.addEventListener('input', () => trapFocus(container));
+    inputSearchMain.addEventListener('input', openSearchMain);
     
     // Close button disables trap
-    closeButtonMain.addEventListener('click', () => releaseFocus(container));
+    closeButtonMain.addEventListener('click', closeSearchMain);
   }
 
 
