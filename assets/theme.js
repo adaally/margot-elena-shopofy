@@ -8313,6 +8313,7 @@ theme.recentlyViewed = {
     }
     closeDropdownWithEscape();
     toggleDropdown();
+    addAriaHiddenToBrAndHr();
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
 
@@ -8343,7 +8344,8 @@ theme.recentlyViewed = {
     });
   }
 
-const openButton = document.querySelector('#search--button'); // replace with your actual button
+  //Focus trap search
+const openButton = document.querySelector('#search--button');
 const searchForm = document.querySelector('predictive-search form');
 const closeButton = searchForm.querySelector('.btn--close-search');
 
@@ -8363,13 +8365,11 @@ function trapFocus(container) {
 function handleTrap(e) {
   if (e.key === 'Tab') {
     if (e.shiftKey) {
-      // Shift + Tab
       if (document.activeElement === firstEl) {
         e.preventDefault();
         lastEl.focus();
       }
     } else {
-      // Tab
       if (document.activeElement === lastEl) {
         e.preventDefault();
         firstEl.focus();
@@ -8387,11 +8387,20 @@ function openSearch() {
 function closeSearch() {
   searchForm.classList.remove('is-active');
   searchForm.removeEventListener('keydown', handleTrap);
-  openButton.focus(); // Return focus to opener
+  openButton.focus();
 }
 
 // Open/Close bindings
 openButton.addEventListener('click', openSearch);
 closeButton.addEventListener('click', closeSearch);
 
+  function addAriaHiddenToBrAndHr() {
+    document.querySelectorAll('br').forEach(el => {
+      el.setAttribute('aria-hidden', 'true');
+    });
+    
+    document.querySelectorAll('hr').forEach(el => {
+      el.setAttribute('aria-hidden', 'true');
+    });
+  }
 })();
