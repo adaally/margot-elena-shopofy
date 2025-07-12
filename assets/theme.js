@@ -4490,6 +4490,20 @@ theme.recentlyViewed = {
   
       menuDetailsHandler();
       searchDrawer();
+      preventSummaryDataLink();
+    }
+
+    function preventSummaryDataLink() {
+      document.querySelectorAll('summary[data-link]').forEach(summary => {
+        summary.addEventListener('click', function (e) {
+          const url = this.dataset.link;
+          if (url && url !== '' && url !== '#' && url !== 'undefined') {
+            window.location.href = url;
+          } else {
+            e.preventDefault();
+          }
+        });
+      });
     }
   
     function menuDetailsHandler() {
