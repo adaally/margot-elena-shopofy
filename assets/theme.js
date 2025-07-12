@@ -8351,7 +8351,7 @@ theme.recentlyViewed = {
   
   const inputSearchMain = document.querySelector('#main--search predictive-search input');
   const searchFormMain = document.querySelector('#main--search predictive-search form');
-  const closeButtonMain = searchForm.querySelector('#main--search .btn--close-search');
+  const closeButtonMain = searchFormMain.querySelector('.btn--close-search');
   
   let focusableElements = [];
   let firstEl, lastEl;
