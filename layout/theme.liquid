@@ -368,12 +368,13 @@ for (var i = 0; i < atcButtons.length; i++) {
   <script>
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('summary[data-link]').forEach(summary => {
+      console.log("xd")
       summary.addEventListener('click', function (e) {
+        
         const url = this.dataset.link;
         if (url && url !== '' && url !== '#' && url !== 'undefined') {
           window.location.href = url;
         } else {
-          window.location.href = window.location.href.slice(0, -1);
           e.preventDefault();
         }
       });
