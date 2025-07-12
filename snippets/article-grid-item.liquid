@@ -3,15 +3,15 @@
   {%- assign fixed_aspect_ratio = true -%}
 {% endunless %}
 
-<div class="grid__item {{ grid_item_width }}" data-aos="row-of-{{ per_row }}">
+<div role="listitem" class="grid__item {{ grid_item_width }}" data-aos="row-of-{{ per_row }}">
   <div class="grid">
     <div class="grid__item small--one-third">
       {%- if article.image -%}
         <a href="{{ article.url }}" class="article__grid-image" aria-label="{{ article.title | escape }}">
           {%- if fixed_aspect_ratio -%}
-            <div class="image-wrap">
-              <div
-                class="grid__image-ratio grid__image-ratio--{{ image_size }}">
+            <div class="image-wrap" aria-hidden="true">
+              <div 
+                class="grid__image-ratio grid__image-ratio--{{ image_size }}" aria-hidden="true">
                 {%- render 'image-element',
                   img: article.image,
                   sizes: '33vw',
