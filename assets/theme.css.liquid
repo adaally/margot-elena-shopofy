@@ -8703,7 +8703,6 @@ input[type=image]{
 }
 
 .hero__text-shadow{
-  background-color: rgb(256, 256, 256);
   display:inline-block;
   position:relative;
 }
@@ -9767,7 +9766,7 @@ html[dir=rtl] .grid-product__content{
   cursor:pointer;
   font-size:calc(var(--typeBaseSize)*0.85);
   left:10px;
-  opacity:0;
+  display: none;
   overflow:hidden;
   padding:8px 5px;
   position:absolute;
@@ -9784,7 +9783,7 @@ html[dir=rtl] .grid-product__content{
 }
 
 .grid-product__content:hover .quick-product__btn{
-    opacity:1;
+    display: block;
     transform:translateY(0);
     transition:opacity 0.25s ease,transform 0.25s ease-out;
 }
