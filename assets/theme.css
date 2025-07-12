@@ -8469,6 +8469,7 @@ input[type=image]{
 
 .slideshow-wrapper{
   position:relative;
+  display: flex;
 }
 
 .slideshow__pause:focus{
@@ -10833,6 +10834,10 @@ html[dir=rtl] .background-media-text__text{
 .announcement-bar a:active,.announcement-bar a:hover,.announcement-bar a:visited:active,.announcement-bar a:visited:hover{
       color:var(--colorAnnouncementText);
     }
+
+.announcement-slider {
+    width: 100%;
+}
 
 .announcement-slider__slide{
   overflow:hidden;
