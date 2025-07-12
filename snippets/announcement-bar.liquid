@@ -10,7 +10,7 @@
 {% if show_announcement %}
   <div class="announcement-bar">
     <div class="page-width">
-      <div class="slideshow-wrapper d-flex">
+      <div class="slideshow-wrapper" style="display: flex;">
         <button type="button" class="slideshow__pause" data-id="{{ section.id }}" aria-live="polite">
           <span class="slideshow__pause-stop">
             <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-pause" viewBox="0 0 10 13"><path d="M0 0h3v13H0zm7 0h3v13H7z" fill-rule="evenodd"/></svg>
@@ -24,7 +24,7 @@
 
         <div
           id="AnnouncementSlider"
-          class="announcement-slider w-100"
+          class="announcement-slider" style="width: 100%;"
           data-compact="{{ section.settings.announcement_compact }}"
           data-block-count="{{ announcement_block_count }}">
           {%- assign slide_index = 0 -%}
