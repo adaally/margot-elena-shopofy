@@ -23,7 +23,7 @@
   endif
 -%}
 
-<div class="grid__item {{ gridView }}" {{ block.shopify_attributes }}>
+<div role="listitem" class="grid__item {{ gridView }}" {{ block.shopify_attributes }}>
   <a href="{{ collection.url }}" class="collection-item collection-item--{{ settings.collection_grid_style }}" data-aos="row-of-{{ per_row }}">
 
     {%- if collection == blank or collection_image == blank -%}
