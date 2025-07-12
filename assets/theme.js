@@ -8311,7 +8311,7 @@ theme.recentlyViewed = {
     if (theme.settings.isCustomerTemplate) {
       theme.customerTemplates();
     }
-    closeDropdownWithScape();
+    closeDropdownWithEscape();
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
 
@@ -8320,10 +8320,7 @@ theme.recentlyViewed = {
       if (e.code === 'Escape' || e.key === 'Escape') {
         document.querySelectorAll('details.site-nav__details[open]').forEach(detailsEl => {
           detailsEl.removeAttribute('open');
-          const summary = detailsEl.querySelector('summary');
-          if (summary) {
-            summary.setAttribute('aria-expanded', 'false');
-          }
+          detailsEl.setAttribute('aria-expanded', 'false');
         });
       }
     });
