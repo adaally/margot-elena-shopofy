@@ -48,7 +48,7 @@ Snippet Arguments
       </button>
     </div>
 
-    <div class="collection-filter__item collection-filter__item--count small--hide">
+    <div aria-live="polite" class="collection-filter__item collection-filter__item--count small--hide">
       {%- if enable_collection_count -%}
         {{ count_label | t: count: count }}
       {%- endif -%}
