@@ -2450,7 +2450,6 @@ theme.recentlyViewed = {
   
     Modal.prototype.init = function() {
       document.querySelectorAll(this.config.open).forEach(btn => {
-        btn.setAttribute('aria-expanded', 'false');
         btn.addEventListener('click', this.open.bind(this));
       });
   
@@ -2485,7 +2484,7 @@ theme.recentlyViewed = {
       if (evt && evt.stopPropagation) {
         evt.stopPropagation();
         // save the source of the click, we'll focus to this on close
-        this.activeSource = evt.currentTarget.setAttribute('aria-expanded', 'true');
+        this.activeSource = undefined;
       }
   
       if (this.modalIsOpen && !externalCall) {
