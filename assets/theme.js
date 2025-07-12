@@ -8404,11 +8404,6 @@ theme.recentlyViewed = {
     firstEl.focus();
   }
   
-  function closeSearchMain() {
-    searchFormMain.removeEventListener('keydown', handleTrap);
-    openButton.focus();
-  }
-  
   // Open/Close bindings
   openButton.addEventListener('click', openSearch);
   closeButton.addEventListener('click', closeSearch);
