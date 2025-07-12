@@ -18,7 +18,7 @@
       </h1>
 
       {%- if section.settings.blog_show_tag_filter and blog.tags.size > 0 -%}
-        <select id="BlogTagFilter">
+        <select aria-label="Blog Filter" id="BlogTagFilter">
           <option value="/blogs/{{ blog.handle }}">All</option>
           {%- for tag in blog.all_tags -%}
             {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
@@ -28,7 +28,7 @@
       {%- endif -%}
     </header>
 
-    <div class="grid grid--uniform">
+    <div aria-label="blog" role="list" class="grid grid--uniform">
       {%- for article in blog.articles -%}
         {%- render 'article-grid-item', article: article, grid_item_width: 'medium-up--one-third', per_row: '3', image_size: section.settings.blog_image_size -%}
       {%- endfor -%}
