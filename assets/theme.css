@@ -84,6 +84,15 @@
   --color-body:#ffffff;
   --color-bg:#ffffff;
 }
+
+.w-100 {
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
 .custom-content .yotpo.yotpo-lightbox-wrapper .yotpo-display-wrapper {
   width: 100% !important;
 }
@@ -8469,7 +8478,6 @@ input[type=image]{
 
 .slideshow-wrapper{
   position:relative;
-  display: flex;
 }
 
 .slideshow__pause:focus{
