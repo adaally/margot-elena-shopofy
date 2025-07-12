@@ -367,14 +367,13 @@ for (var i = 0; i < atcButtons.length; i++) {
 <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/d3bgs2lII4noj0dHz0EcyecV5uC2sPl5K5yRukGR" async></script>
   <script>
   document.addEventListener('DOMContentLoaded', function () {
-    console.log("prueba")
     document.querySelectorAll('summary[data-link]').forEach(summary => {
-      console.log("aqui")
       summary.addEventListener('click', function (e) {
         const url = this.dataset.link;
         if (url && url !== '' && url !== '#' && url !== 'undefined') {
           window.location.href = url;
         } else {
+          window.location.href = window.location.href.slice(0, -1);
           e.preventDefault();
         }
       });
