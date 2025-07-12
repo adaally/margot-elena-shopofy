@@ -5,7 +5,7 @@
     }
   {%- endstyle -%}
   <div class="footer__logo">
-    <a href="{{ routes.root_url }}">
+    <a href="{{ routes.root_url }}" aria-label="Margot elena">
       {%- assign width = block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio | times: 2 -%}
       {%- assign height = block.settings.desktop_logo_height -%}
       {%- capture sizes -%}{{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}px{%- endcapture -%}
