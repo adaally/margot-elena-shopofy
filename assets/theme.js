@@ -8317,7 +8317,6 @@ theme.recentlyViewed = {
 
   function closeDropdownWithScape() {
     document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
-      console.log("aqui")
       detailsEl.addEventListener('keydown', function (e) {
         if (e.code === 'Escape') {
           if (detailsEl.open) {
