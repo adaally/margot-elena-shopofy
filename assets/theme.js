@@ -8311,8 +8311,23 @@ theme.recentlyViewed = {
     if (theme.settings.isCustomerTemplate) {
       theme.customerTemplates();
     }
-
+    closeDropdownWithScape();
     document.dispatchEvent(new CustomEvent('page:loaded'));
   });
+
+  function closeDropdownWithScape() {
+    document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
+      console.log("aqui")
+      detailsEl.addEventListener('keydown', function (e) {
+        if (e.code === 'Escape') {
+          if (detailsEl.open) {
+            e.preventDefault();
+            detailsEl.removeAttribute('open');
+            detailsEl.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+    });
+  }
 
 })();
