@@ -368,8 +368,8 @@ for (var i = 0; i < atcButtons.length; i++) {
   <script>
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
-    detailsEl.addEventListener('keydown', function (e) {
       console.log("aqui")
+    detailsEl.addEventListener('keydown', function (e) {
       if (e.code === 'ESCAPE') {
         if (detailsEl.open) {
           e.preventDefault();
