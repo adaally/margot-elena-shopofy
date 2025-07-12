@@ -8412,7 +8412,7 @@ theme.recentlyViewed = {
   // Open/Close bindings
   openButton.addEventListener('click', openSearch);
   closeButton.addEventListener('click', closeSearch);
-
+  console.log("trap")
   if(inputSearchMain) {
     inputSearchMain.addEventListener('input', openSearchMain);
     
