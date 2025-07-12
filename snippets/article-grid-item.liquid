@@ -10,8 +10,8 @@
         <a href="{{ article.url }}" class="article__grid-image" aria-label="{{ article.title | escape }}">
           {%- if fixed_aspect_ratio -%}
             <div class="image-wrap">
-              <div
-                class="grid__image-ratio grid__image-ratio--{{ image_size }}">
+              <div 
+                class="grid__image-ratio grid__image-ratio--{{ image_size }}" aria-hidden="true">
                 {%- render 'image-element',
                   img: article.image,
                   sizes: '33vw',
