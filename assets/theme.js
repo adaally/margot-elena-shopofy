@@ -8400,7 +8400,7 @@ theme.recentlyViewed = {
   }
 
   function openSearchMain() {
-    trapFocus(inputSearchMain);
+    trapFocus(searchFormMain);
     firstEl.focus();
   }
   
@@ -8418,11 +8418,6 @@ theme.recentlyViewed = {
     
     // Close button disables trap
     closeButtonMain.addEventListener('click', closeSearchMain);
-  }
-
-
-  function focusTrapMainSearch() {
-    const input = document.querySelector('#main--search predictive-search input');
   }
 
   function addAriaHiddenToBrAndHr() {
