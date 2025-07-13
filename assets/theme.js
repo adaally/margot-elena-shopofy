@@ -8313,6 +8313,7 @@ theme.recentlyViewed = {
     closeDropdownWithEscape();
     toggleDropdown();
     addAriaHiddenToBrAndHr();
+    addListSemanticsToProductInfo();
     document.dispatchEvent(new CustomEvent('page:loaded'));
 
         const observer = new MutationObserver(() => {
@@ -8342,6 +8343,35 @@ theme.recentlyViewed = {
   });
     observer.observe(document.body, { childList: true, subtree: true });
   })
+
+  function addListSemanticsToProductInfo() {
+    console.log("productInfo")
+      const blocks = document.querySelectorAll('.product-block.product-block--sales-point');
+  if (!blocks.length) return;
+
+  // Collect all .icon-and-text elements
+  const iconSpans = document.querySelectorAll('.icon-and-text');
+  if (!iconSpans.length) return;
+
+  // Create the unified container
+  const container = document.createElement('div');
+  container.className = 'all-sales-points';
+
+  // Wrap each icon-and-text span in a sales-point div and add to container
+  iconSpans.forEach(span => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'sales-point';
+    wrapper.appendChild(span); // move original span
+    container.appendChild(wrapper);
+  });
+
+  // Insert the container before the first .product-block--sales-point
+  const firstBlock = blocks[0];
+  firstBlock.parentNode.insertBefore(container, firstBlock);
+
+  // Remove all .product-block--sales-point blocks
+  blocks.forEach(block => block.remove());
+  }
 
   function closeDropdownWithEscape() {
     document.addEventListener('keydown', function (e) {
