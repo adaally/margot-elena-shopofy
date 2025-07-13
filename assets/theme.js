@@ -8318,7 +8318,11 @@ theme.recentlyViewed = {
         const observer = new MutationObserver(() => {
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
-      console.log("herexd")
+      const yoptoModalList = document.querySelector(".y-slider-container");
+
+          if(yoptoModalList) {
+            yoptoModalList.setAttribute("aria-hidden","true");
+          }
       if (galleryButtons.length && usernameNodes.length && galleryButtons.length === usernameNodes.length) {
         const nameCounts = {};
 
