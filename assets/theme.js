@@ -8316,6 +8316,9 @@ theme.recentlyViewed = {
     addListSemanticsToProductInfo();
     addAriaLabelToYoptoImages();
     document.dispatchEvent(new CustomEvent('page:loaded'));
+
+    const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
+    yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages)
   })
 
   function addAriaLabelToYoptoImages() {
