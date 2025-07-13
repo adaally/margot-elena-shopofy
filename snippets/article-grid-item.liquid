@@ -5,10 +5,9 @@
 
 <div role="listitem" class="grid__item {{ grid_item_width }}" data-aos="row-of-{{ per_row }}">
   <div class="grid">
-    <a href="{{ article.url }}">
-      <div class="grid__item small--one-third">
+    <div class="grid__item small--one-third">
       {%- if article.image -%}
-        <div tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" class="article__grid-image">
+        <a tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" href="{{ article.url }}" class="article__grid-image">
           {%- if fixed_aspect_ratio -%}
             <div class="image-wrap">
               <div 
@@ -29,7 +28,7 @@
               -%}
             </div>
           {%- endif -%}
-        </div>
+        </a>
       {%- else -%}
         <div class="article__grid-image">
           {%- if fixed_aspect_ratio -%}
@@ -63,7 +62,7 @@
           </div>
         {%- endif -%}
 
-        <span class="article__title">{{ article.title }}</span>
+        <a href="{{ article.url }}" class="article__title">{{ article.title }}</a>
 
         {%- if section.settings.blog_show_author -%}
           <div class="article__author">by {{ article.author }}</div>
@@ -80,6 +79,5 @@
         {%- endif -%}
       </div>
     </div>
-    </a>
   </div>
 </div>
