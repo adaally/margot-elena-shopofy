@@ -8336,6 +8336,8 @@ theme.recentlyViewed = {
         observer.disconnect();
       }
   });
+    observer.observe(document.body, { childList: true, subtree: true });
+  })
 
   function closeDropdownWithEscape() {
     document.addEventListener('keydown', function (e) {
