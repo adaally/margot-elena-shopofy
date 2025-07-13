@@ -8377,6 +8377,8 @@ theme.recentlyViewed = {
   const listWrapper = document.createElement('div');
   listWrapper.setAttribute('role', 'list');
   listWrapper.className = 'product-tab-list';
+  const firstTab = tabBlocks[0];
+  firstTab.parentNode.insertBefore(listWrapper, firstTab);
 firstTab.parentNode.insertBefore(listWrapper, firstTab);
   // Move all .product-block--tab elements into the wrapper
   tabBlocks.forEach(tab => {
@@ -8385,8 +8387,6 @@ firstTab.parentNode.insertBefore(listWrapper, firstTab);
   });
 
   // Insert the wrapper before the first .product-block--tab
-  const firstTab = tabBlocks[0];
-  firstTab.parentNode.insertBefore(listWrapper, firstTab);
   }
 
   function closeDropdownWithEscape() {
