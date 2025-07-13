@@ -8370,7 +8370,7 @@ theme.recentlyViewed = {
     blocks.forEach(block => block.remove());
 
     // product info TABs
-    const tabBlocks = document.querySelectorAll('.product-block--tab');
+    const tabBlocks = document.querySelectorAll('.product-block.product-block--tab');
     if (!tabBlocks.length) return;
   
     // Create wrapper
