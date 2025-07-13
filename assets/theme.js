@@ -8324,9 +8324,10 @@ theme.recentlyViewed = {
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
       const yoptoModalList = document.querySelector(".y-slider-container");
 
-          if(yoptoModalList) {
+      if(yoptoModalList) {
             yoptoModalList.setAttribute("aria-hidden","true");
-          }
+      }
+          
       if (galleryButtons.length && usernameNodes.length && galleryButtons.length === usernameNodes.length) {
         const nameCounts = {};
 
