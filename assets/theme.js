@@ -8387,7 +8387,7 @@ const tabBlocks = document.querySelectorAll('.product-block--tab');
   });
 
   // Insert the wrapper before where the first .product-block--tab was
-  parent.insertBefore(listWrapper, firstTab);
+  firstTab.insertBefore(listWrapper, firstTab);
 
   // Remove the now-empty first tab placeholder
   firstTab.remove();
