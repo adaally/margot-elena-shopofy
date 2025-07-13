@@ -8367,6 +8367,7 @@ theme.recentlyViewed = {
     const container = document.createElement('div');
     container.className = 'all-sales-points';
     container.setAttribute("role", "list");
+    container.setAttribute("aria-label", "Customer benefits");
     container.style.marginBottom = "15px";
   
     iconSpans.forEach(span => {
