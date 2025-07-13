@@ -8316,14 +8316,15 @@ theme.recentlyViewed = {
     addListSemanticsToProductInfo();
     addAriaLabelToYoptoImages();
     document.dispatchEvent(new CustomEvent('page:loaded'));
-
+    setTimeout(() => {
+      listenToButtonMoreYoptoImages();
+    }, 4000);
 
   })
 
-  function listenToButtonMore() {
-        const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
-    console.log(yoptoButtonMore)
-    yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages)
+  function listenToButtonMoreYoptoImages() {
+      const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
+      yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages);
   }
 
   function addAriaLabelToYoptoImages() {
@@ -8349,7 +8350,6 @@ theme.recentlyViewed = {
           galleryButtons[i].setAttribute('aria-label', label);
         });
 
-    listenToButtonMore();
         // Once done, disconnect the observer
         observer.disconnect();
       }
