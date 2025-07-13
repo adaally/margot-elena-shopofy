@@ -8368,6 +8368,25 @@ theme.recentlyViewed = {
     firstBlock.parentNode.insertBefore(container, firstBlock);
   
     blocks.forEach(block => block.remove());
+
+    // product info TABs
+    const tabBlocks = document.querySelectorAll('.product-block--tab');
+    if (!tabBlocks.length) return;
+  
+    // Create wrapper
+    const listWrapper = document.createElement('div');
+    listWrapper.setAttribute('role', 'list');
+    listWrapper.className = 'product-tab-list';
+  
+    // Move all .product-block--tab elements into the wrapper
+    tabBlocks.forEach(tab => {
+      tab.setAttribute('role', 'listitem');
+      listWrapper.appendChild(tab);
+    });
+  
+    // Insert the wrapper before the first .product-block--tab
+    const firstTab = tabBlocks[0];
+    firstTab.parentNode.insertBefore(listWrapper, firstTab);
   }
 
   function closeDropdownWithEscape() {
