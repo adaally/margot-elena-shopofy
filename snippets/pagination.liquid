@@ -1,4 +1,4 @@
-<div class="pagination">
+<div class="pagination" aria-label="pagination" role="navigation">
   {% if paginate.previous %}
     <span class="prev">
       <a href="{{ paginate.previous.url | replace: 'view=ajax', '' }}{{ hash }}" title="{{ 'general.pagination.previous' | t }}">
