@@ -1,6 +1,7 @@
 <script defer>
   function swymCallbackFn(swat){
     function swymAttachEvents(){
+      console.log("AQUIQ")
       swat.initializeActionButtons("body");
     }
     document.addEventListener('quickview:loaded', function(e) {
@@ -12,6 +13,7 @@
     });
     document.addEventListener('variant:change', function(event) {
       var variant_id = event.detail.variant.id;
+      console.log("AQUIQ")
       var btn =  document.querySelector("#swym-quick-view");
       if(btn){
         btn.setAttribute("data-variant-id", variant_id);
