@@ -924,6 +924,10 @@ tool-tip[data-tool-tip-open=true] .tool-tip__inner{
   margin-right:-30px;
 }
 
+.rebuy-money.compare-at, .rebuy-widget .rebuy-money.compare-at {
+    color: #766F6F !important;
+}
+
 @media only screen and (max-width:768px){
 
 .text-with-icons__blocks{
