@@ -8322,6 +8322,7 @@ theme.recentlyViewed = {
   })
 
   function addAriaLabelToYoptoImages() {
+    console.log("hereagain")
       const observer = new MutationObserver(() => {
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
