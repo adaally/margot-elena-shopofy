@@ -8315,15 +8315,19 @@ theme.recentlyViewed = {
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
     addAriaLabelToYoptoImages();
+    listenToButtonMore();
     document.dispatchEvent(new CustomEvent('page:loaded'));
 
-    const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
-    console.log(yoptoButtonMore)
-    yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages)
+
   })
 
+  function listenToButtonMore() {
+        const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
+    console.log(yoptoButtonMore)
+    yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages)
+  }
+
   function addAriaLabelToYoptoImages() {
-    console.log("hereagain")
       const observer = new MutationObserver(() => {
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
