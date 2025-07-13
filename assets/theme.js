@@ -8318,6 +8318,7 @@ theme.recentlyViewed = {
     document.dispatchEvent(new CustomEvent('page:loaded'));
 
     const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
+    console.log(yoptoButtonMore)
     yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages)
   })
 
