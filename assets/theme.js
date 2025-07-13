@@ -8375,22 +8375,22 @@ theme.recentlyViewed = {
 
     // product info TABs
     const tabBlocks = document.querySelectorAll('.product-block--tab');
-  if (!tabBlocks.length) return;
-
-  // Create wrapper
-  const listWrapper = document.createElement('div');
-  listWrapper.setAttribute('role', 'list');
-  listWrapper.className = 'product-tab-list';
-  const firstTab = tabBlocks[0];
-  firstTab.parentNode.insertBefore(listWrapper, firstTab);
-firstTab.parentNode.insertBefore(listWrapper, firstTab);
-  // Move all .product-block--tab elements into the wrapper
-  tabBlocks.forEach(tab => {
-    tab.setAttribute('role', 'listitem');
-    listWrapper.appendChild(tab);
-  });
-
-  // Insert the wrapper before the first .product-block--tab
+    if (!tabBlocks.length) return;
+  
+    // Create wrapper
+    const listWrapper = document.createElement('div');
+    listWrapper.setAttribute('role', 'list');
+    listWrapper.className = 'product-tab-list';
+    
+      const firstTab = tabBlocks[0];
+    firstTab.parentNode.insertBefore(listWrapper, firstTab);
+    firstTab.parentNode.insertBefore(listWrapper, firstTab);
+    
+      // Move all .product-block--tab elements into the wrapper
+    tabBlocks.forEach(tab => {
+      tab.setAttribute('role', 'listitem');
+      listWrapper.appendChild(tab);
+    });
   }
 
   function closeDropdownWithEscape() {
