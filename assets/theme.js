@@ -8373,28 +8373,17 @@ theme.recentlyViewed = {
   const tabBlocks = document.querySelectorAll('.product-block--tab');
   if (!tabBlocks.length) return;
 
-  // Create wrapper div with role="list"
   const listWrapper = document.createElement('div');
   listWrapper.className = 'product-tab-list';
   listWrapper.setAttribute('role', 'list');
 
   tabBlocks.forEach(tab => {
-    // Set role on each tab and move into wrapper
     tab.setAttribute('role', 'listitem');
-    listWrapper.appendChild(tab);
+    listWrapper.appendChild(tab); // this moves the tab out of its old position
   });
 
-  // Replace the first tab block with the wrapper
   const firstTab = tabBlocks[0];
   firstTab.replaceWith(listWrapper);
-
-  // Remove the rest (they're already moved into the wrapper)
-  for (let i = 1; i < tabBlocks.length; i++) {
-    const tab = tabBlocks[i];
-    if (tab.parentNode) {
-      tab.remove();
-    }
-  }
   }
 
   function closeDropdownWithEscape() {
