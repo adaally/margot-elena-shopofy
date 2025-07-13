@@ -8314,9 +8314,12 @@ theme.recentlyViewed = {
     toggleDropdown();
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
+    addAriaLabelToYoptoImages();
     document.dispatchEvent(new CustomEvent('page:loaded'));
+  })
 
-        const observer = new MutationObserver(() => {
+  function addAriaLabelToYoptoImages() {
+      const observer = new MutationObserver(() => {
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
       const yoptoModalList = document.querySelector(".y-slider-container");
@@ -8342,7 +8345,7 @@ theme.recentlyViewed = {
       }
   });
     observer.observe(document.body, { childList: true, subtree: true });
-  })
+  }
 
   function addListSemanticsToProductInfo() {
     const blocks = document.querySelectorAll('.product-block.product-block--sales-point');
