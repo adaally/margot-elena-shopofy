@@ -8314,6 +8314,27 @@ theme.recentlyViewed = {
     toggleDropdown();
     addAriaHiddenToBrAndHr();
     document.dispatchEvent(new CustomEvent('page:loaded'));
+
+        const observer = new MutationObserver(() => {
+      const galleryButtons = document.querySelectorAll('.yotpo-gallery-207 div[role="button"].y-image-wrapper');
+      const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
+
+      if (galleryButtons.length && usernameNodes.length && galleryButtons.length === usernameNodes.length) {
+        const nameCounts = {};
+
+        usernameNodes.forEach((node, i) => {
+          const name = node.textContent.trim();
+
+          // Initialize or increment count
+          nameCounts[name] = (nameCounts[name] || 0) + 1;
+
+          const label = `${name} ${nameCounts[name]}`;
+          galleryButtons[i].setAttribute('aria-label', label);
+        });
+
+        // Once done, disconnect the observer
+        observer.disconnect();
+      }
   });
 
   function closeDropdownWithEscape() {
