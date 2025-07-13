@@ -8370,20 +8370,27 @@ theme.recentlyViewed = {
     blocks.forEach(block => block.remove());
 
     // product info TABs
-  const tabBlocks = document.querySelectorAll('.product-block--tab');
+const tabBlocks = document.querySelectorAll('.product-block--tab');
   if (!tabBlocks.length) return;
 
   const listWrapper = document.createElement('div');
   listWrapper.className = 'product-tab-list';
   listWrapper.setAttribute('role', 'list');
 
+  // Save reference to insert position (before first tab)
+  const firstTab = tabBlocks[0];
+  const parent = firstTab.parentNode;
+
   tabBlocks.forEach(tab => {
     tab.setAttribute('role', 'listitem');
-    listWrapper.appendChild(tab); // this moves the tab out of its old position
+    listWrapper.appendChild(tab); // move each tab into the wrapper
   });
 
-  const firstTab = tabBlocks[0];
-  firstTab.replaceWith(listWrapper);
+  // Insert the wrapper before where the first .product-block--tab was
+  parent.insertBefore(listWrapper, firstTab);
+
+  // Remove the now-empty first tab placeholder
+  firstTab.remove();
   }
 
   function closeDropdownWithEscape() {
