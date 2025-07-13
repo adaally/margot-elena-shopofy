@@ -8386,7 +8386,7 @@ theme.recentlyViewed = {
   
     // Insert the wrapper before the first .product-block--tab
     const firstTab = tabBlocks[0];
-    firstTab.parentNode.insertBefore(listWrapper, firstTab);
+    //firstTab.parentNode.insertBefore(listWrapper, firstTab);
   }
 
   function closeDropdownWithEscape() {
