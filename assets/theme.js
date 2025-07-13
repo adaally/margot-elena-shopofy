@@ -8345,7 +8345,6 @@ theme.recentlyViewed = {
   })
 
   function addListSemanticsToProductInfo() {
-    console.log("productInfo")
       const blocks = document.querySelectorAll('.product-block.product-block--sales-point');
   if (!blocks.length) return;
 
@@ -8356,10 +8355,12 @@ theme.recentlyViewed = {
   // Create the unified container
   const container = document.createElement('div');
   container.className = 'all-sales-points';
+    container.setAttribute("role", "list");
 
   // Wrap each icon-and-text span in a sales-point div and add to container
   iconSpans.forEach(span => {
     const wrapper = document.createElement('div');
+    wrapper.setAttribute("role", "listitem");
     wrapper.className = 'sales-point';
     wrapper.appendChild(span); // move original span
     container.appendChild(wrapper);
