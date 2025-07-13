@@ -8315,7 +8315,6 @@ theme.recentlyViewed = {
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
     addAriaLabelToYoptoImages();
-    listenToButtonMore();
     document.dispatchEvent(new CustomEvent('page:loaded'));
 
 
@@ -8350,6 +8349,7 @@ theme.recentlyViewed = {
           galleryButtons[i].setAttribute('aria-label', label);
         });
 
+    listenToButtonMore();
         // Once done, disconnect the observer
         observer.disconnect();
       }
