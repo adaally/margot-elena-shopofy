@@ -8316,9 +8316,9 @@ theme.recentlyViewed = {
     document.dispatchEvent(new CustomEvent('page:loaded'));
 
         const observer = new MutationObserver(() => {
-      const galleryButtons = document.querySelectorAll('.yotpo-gallery-207 div[role="button"].y-image-wrapper');
+      const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
-
+      console.log("herexd")
       if (galleryButtons.length && usernameNodes.length && galleryButtons.length === usernameNodes.length) {
         const nameCounts = {};
 
