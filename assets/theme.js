@@ -8390,6 +8390,7 @@ theme.recentlyViewed = {
     // Create wrapper
     const listWrapper = document.createElement('div');
     listWrapper.setAttribute('role', 'list');
+    listWrapper.setAttribute('aria-label', 'Product Information');
     listWrapper.className = 'product-tab-list';
     
       const firstTab = tabBlocks[0];
