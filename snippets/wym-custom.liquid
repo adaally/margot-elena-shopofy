@@ -5,6 +5,9 @@
     }
     document.addEventListener('quickview:loaded', function(e) {
       console.log("Quickview Loaded!",e.detail.productId);
+      var btn =  document.querySelector("#swym-quick-view");
+      btn.setAttribute('tab-index', '-1');
+      btn.setAttribute('aria-hidden', 'true');
       swymAttachEvents();
     });
     document.addEventListener('variant:change', function(event) {
