@@ -8341,6 +8341,7 @@ theme.recentlyViewed = {
 
       if(descriptionsModals) {
         descriptionsModals.forEach(item => item.style.maxHeight = "none");
+        console.log(descriptionsModals)
       }
 
       const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
