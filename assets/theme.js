@@ -8323,7 +8323,7 @@ theme.recentlyViewed = {
   })
 
   function listenToButtonMoreYoptoImages() {
-      const yoptoButtonMore = document.querySelector(".yotpo-icon-button-text");
+      const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
       yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages);
   }
 
@@ -8334,9 +8334,7 @@ theme.recentlyViewed = {
       const yoptoModalList = document.querySelector(".y-slider-container");
 
       const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
-
-      setTimeout(() => {
-        if(headerIcons) {
+      if(headerIcons) {
           headerIcons.forEach((item) => {
             item.setAttribute("aria-hidden", "true");
           });
@@ -8346,8 +8344,6 @@ theme.recentlyViewed = {
           item.setAttribute("role", "heading");
           item.setAttribute("aria-leve", "1");
         });
-      },300) 
-
 
       if(yoptoModalList) {
             yoptoModalList.setAttribute("aria-hidden","true");
