@@ -8341,6 +8341,11 @@ theme.recentlyViewed = {
         });
       }
 
+      usernameNodes.forEach(item => {
+        item.setAttribute("role", "heading");
+        item.setAttribute("aria-leve", "1");
+      })
+
       if(yoptoModalList) {
             yoptoModalList.setAttribute("aria-hidden","true");
       }
