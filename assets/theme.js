@@ -8334,17 +8334,20 @@ theme.recentlyViewed = {
       const yoptoModalList = document.querySelector(".y-slider-container");
 
       const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
-      
-      if(headerIcons) {
-        headerIcons.forEach((item) => {
-          item.setAttribute("aria-hidden", "true");
-        });
+
+      setTimeout(() => {
+        if(headerIcons) {
+          headerIcons.forEach((item) => {
+            item.setAttribute("aria-hidden", "true");
+          });
       }
 
-      usernameNodes.forEach(item => {
-        item.setAttribute("role", "heading");
-        item.setAttribute("aria-leve", "1");
-      })
+        usernameNodes.forEach(item => {
+          item.setAttribute("role", "heading");
+          item.setAttribute("aria-leve", "1");
+        });
+      },300) 
+
 
       if(yoptoModalList) {
             yoptoModalList.setAttribute("aria-hidden","true");
