@@ -8333,6 +8333,14 @@ theme.recentlyViewed = {
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
       const yoptoModalList = document.querySelector(".y-slider-container");
 
+      const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
+      console.log(headerIcons)
+      if(headerIcons) {
+        headerIcons.forEach((item) => {
+          item.setAttribute("aria-hidden", "true");
+        });
+      }
+
       if(yoptoModalList) {
             yoptoModalList.setAttribute("aria-hidden","true");
       }
