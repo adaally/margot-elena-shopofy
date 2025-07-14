@@ -8338,7 +8338,6 @@ theme.recentlyViewed = {
       if(headerIcons) {
         headerIcons.forEach((item) => {
           item.setAttribute("aria-hidden", "true");
-          console.log(item)
         });
       }
 
