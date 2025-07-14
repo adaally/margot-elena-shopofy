@@ -8339,7 +8339,7 @@ theme.recentlyViewed = {
       const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container sr-only");
 
       if(srOnlyList) {
-        srOnlyList.setAttribute("aria-hidden", "true");
+        srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
       }
 
       if(emptyDivModal) {
