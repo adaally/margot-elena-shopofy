@@ -8334,10 +8334,11 @@ theme.recentlyViewed = {
       const yoptoModalList = document.querySelector(".y-slider-container");
 
       const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
-      console.log(headerIcons)
+      
       if(headerIcons) {
         headerIcons.forEach((item) => {
           item.setAttribute("aria-hidden", "true");
+          console.log(item)
         });
       }
 
