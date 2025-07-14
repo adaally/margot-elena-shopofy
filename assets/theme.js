@@ -8335,6 +8335,17 @@ theme.recentlyViewed = {
       const toggleTextContainers = document.querySelectorAll(".toggle-text");
       const descriptionsModals = document.querySelectorAll(".yopto-main");
 
+      const emptyDivModal = document.querySelector(".yotpo-modal-mask.yotpo-active-display");
+      const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container sr-only");
+
+      if(srOnlyList) {
+        srOnlyList.setAttribute("aria-hidden", "true");
+      }
+
+      if(emptyDivModal) {
+        emptyDivModal.setAttribute("aria-hidden", "true");
+      }
+
       if(toggleTextContainers) {
         toggleTextContainers.forEach(item => {
           item.style.display = "none";
