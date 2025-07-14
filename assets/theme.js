@@ -8333,7 +8333,7 @@ theme.recentlyViewed = {
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
       const yoptoModalList = document.querySelector(".y-slider-container");
       const toggleTextContainers = document.querySelectorAll(".toggle-text");
-      const descriptionsModals = document.querySelectorAll(".yotpo-lightbox.yotpo-lightbox-new.yotpo .yotpo-modal.yotpo-modal-active .yotpo-lightbox-container .yotpo-instagram .yopto-main.yotpo-regular-box");
+      const descriptionsModals = document.querySelectorAll(".yopto-main");
 
       if(toggleTextContainers) {
         toggleTextContainers.forEach(item => item.style.display = "none");
