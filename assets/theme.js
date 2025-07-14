@@ -8336,7 +8336,10 @@ theme.recentlyViewed = {
       const descriptionsModals = document.querySelectorAll(".yopto-main");
 
       if(toggleTextContainers) {
-        toggleTextContainers.forEach(item => item.style.display = "none");
+        toggleTextContainers.forEach(item => {
+          item.style.display = "none";
+          item.setAttribute("tabindex", "-1");
+        });
       }
 
       if(descriptionsModals) {
