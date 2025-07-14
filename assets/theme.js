@@ -8333,14 +8333,14 @@ theme.recentlyViewed = {
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
       const yoptoModalList = document.querySelector(".y-slider-container");
       const toggleTextContainers = document.querySelectorAll(".toggle-text");
-      const descriptionsModals = document.querySelectorAll(".yopto-main.yotpo-regular-box.yotpo-loc");
+      const descriptionsModals = document.querySelectorAll(".yopto-main");
 
       if(toggleTextContainers) {
         toggleTextContainers.forEach(item => item.style.display = "none");
       }
 
       if(descriptionsModals) {
-        descriptionsModals.forEach(item => item.style.maxHeight = "none !important");
+        descriptionsModals.forEach(item => item.style.maxHeight = "none");
       }
 
       const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
