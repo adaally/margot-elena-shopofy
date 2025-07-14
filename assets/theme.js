@@ -8335,8 +8335,8 @@ theme.recentlyViewed = {
       const toggleTextContainers = document.querySelectorAll(".toggle-text");
       const descriptionsModals = document.querySelectorAll(".yopto-main");
 
-      const emptyDivModal = document.querySelector(".yotpo-modal-mask.yotpo-active-display");
-      const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container sr-only");
+      const emptyDivModal = document.querySelector(".yotpo-modal-mask");
+      const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container .sr-only");
 
       if(srOnlyList) {
         srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
