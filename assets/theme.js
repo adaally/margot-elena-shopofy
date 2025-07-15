@@ -8315,6 +8315,7 @@ theme.recentlyViewed = {
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
     addAriaLabelToYoptoImages();
+    changeReviewTitleTag();
     document.dispatchEvent(new CustomEvent('page:loaded'));
     setTimeout(() => {
       listenToButtonMoreYoptoImages();
@@ -8396,6 +8397,7 @@ theme.recentlyViewed = {
   function changeReviewTitleTag() {
     const titleContainer = document.querySelector(".yotpo-head");
     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
+    console.log(reviewTitle)
     if(reviewTitle) {
       const h2 = document.createHtml("h2");
       h2.textContent = reviewTitle.innerText;
