@@ -8393,6 +8393,17 @@ theme.recentlyViewed = {
     observer.observe(document.body, { childList: true, subtree: true });
   }
 
+  function changeReviewTitleTag() {
+    const titleContainer = document.querySelector(".yotpo-head");
+    const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
+    if(reviewTitle) {
+      const h2 = document.createHtml("h2");
+      h2.textContent = reviewTitle.innerText;
+      titleContainer.innerHTML = '';
+      titleContainer.appendChild(h2);
+    }
+  }
+
   function addListSemanticsToProductInfo() {
     const blocks = document.querySelectorAll('.product-block.product-block--sales-point');
     if (!blocks.length) return;
