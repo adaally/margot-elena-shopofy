@@ -8315,7 +8315,6 @@ theme.recentlyViewed = {
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
     addAriaLabelToYoptoImages();
-    changeReviewTitleTag();
     document.dispatchEvent(new CustomEvent('page:loaded'));
     setTimeout(() => {
       listenToButtonMoreYoptoImages();
@@ -8395,18 +8394,17 @@ theme.recentlyViewed = {
   }
 
   function runWhenYotpoIsReady(callback) {
-  const checkYotpo = setInterval(() => {
-    if (window.yotpo && typeof yotpo.initialized === 'boolean') {
-      clearInterval(checkYotpo);
-      callback();
-    }
-  }, 100);
-}
+    const checkYotpo = setInterval(() => {
+      if (window.yotpo && typeof yotpo.initialized === 'boolean') {
+        clearInterval(checkYotpo);
+        callback();
+      }
+    }, 100);
+  }
 
-runWhenYotpoIsReady(() => {
-  console.log('Yotpo is ready!');
-  // Call your method here
-});
+  runWhenYotpoIsReady(() => {
+    changeReviewTitleTag();
+  });
 
   function changeReviewTitleTag() {
     const titleContainer = document.querySelector(".yotpo-head");
