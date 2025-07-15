@@ -8394,6 +8394,20 @@ theme.recentlyViewed = {
     observer.observe(document.body, { childList: true, subtree: true });
   }
 
+  function runWhenYotpoIsReady(callback) {
+  const checkYotpo = setInterval(() => {
+    if (window.yotpo && typeof yotpo.initialized === 'boolean') {
+      clearInterval(checkYotpo);
+      callback();
+    }
+  }, 100);
+}
+
+runWhenYotpoIsReady(() => {
+  console.log('Yotpo is ready!');
+  // Call your method here
+});
+
   function changeReviewTitleTag() {
     const titleContainer = document.querySelector(".yotpo-head");
     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
