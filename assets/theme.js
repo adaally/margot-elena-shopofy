@@ -8498,7 +8498,7 @@ theme.recentlyViewed = {
     const reviewTitle = document.querySelector(".yotpo-head");
     if(reviewTitle) {
       const newTitle = document.createElement("h2");
-      newTitle.text = reviewTitle.innerText;
+      newTitle.textContent = reviewTitle.innerText;
       reviewTitle.classList.forEach(cls => newTitle.classList.add(cls));
       reviewTitle.parentNode.insertBefore(newTitle, reviewTitle);
       reviewTitle.remove();
