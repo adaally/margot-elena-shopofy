@@ -8421,6 +8421,7 @@ theme.recentlyViewed = {
   }
 
   function addListSemanticsToProductInfo() {
+        console.log("llamado");
     const blocks = document.querySelectorAll('.product-block.product-block--sales-point');
     if (!blocks.length) return;
   
@@ -8466,6 +8467,17 @@ theme.recentlyViewed = {
       listWrapper.appendChild(tab);
     });
   }
+
+  function listenToAllQuickviewBtns() {
+    const buttons = document.querySelectorAll();
+    buttons.forEach(item => {
+      item.addEventListener('click', () => {
+        addListSemanticsToProductInfo();
+      });
+    });
+  }
+
+  listenToAllQuickviewBtns();
 
   function closeDropdownWithEscape() {
     document.addEventListener('keydown', function (e) {
