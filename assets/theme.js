@@ -8476,7 +8476,7 @@ theme.recentlyViewed = {
     buttons.forEach(item => {
       item.addEventListener('click', () => {
         setTimeout(() => {
-          addListSemanticsToProductInfo();
+          addListSemanticsToProductInfo(true);
         },2000);
       });
     });
