@@ -8495,15 +8495,17 @@ theme.recentlyViewed = {
   }
 
   function changePtoH2ToReviews() {
+    setTimeout(() => {
     const reviewTitle = document.querySelector(".yotpo-head");
-    if(reviewTitle) {
-      console.log("herexd");
-      const newTitle = document.createElement("h2");
-      newTitle.textContent = reviewTitle.innerText;
-      reviewTitle.classList.forEach(cls => newTitle.classList.add(cls));
-      reviewTitle.parentNode.insertBefore(newTitle, reviewTitle);
-      reviewTitle.remove();
-    }
+      if(reviewTitle) {
+        console.log("herexd");
+        const newTitle = document.createElement("h2");
+        newTitle.textContent = reviewTitle.innerText;
+        reviewTitle.classList.forEach(cls => newTitle.classList.add(cls));
+        reviewTitle.parentNode.insertBefore(newTitle, reviewTitle);
+        reviewTitle.remove();
+      }
+    }, 3000);
   }
 
   changePtoH2ToReviews();
