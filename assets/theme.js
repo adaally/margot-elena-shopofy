@@ -8492,6 +8492,19 @@ theme.recentlyViewed = {
     });
   }
 
+  function changePtoH2ToReviews() {
+    const reviewTitle = document.querySelector(".yotpo-head");
+    if(reviewTitle) {
+      const newTitle = document.createElement("h2");
+      newTitle.text = reviewTitle.innerText;
+      reviewTitle.classList.forEach(cls => newTitle.classList.add(cls));
+      reviewTitle.parentNode.insertBefore(newTitle, reviewTitle);
+      reviewTitle.remove();
+    }
+  }
+
+  changePtoH2ToReviews();
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
