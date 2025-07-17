@@ -8469,7 +8469,7 @@ theme.recentlyViewed = {
   }
 
   function listenToAllQuickviewBtns() {
-    const buttons = document.querySelectorAll("quick-product__btn");
+    const buttons = document.querySelectorAll(".quick-product__btn");
     buttons.forEach(item => {
       item.addEventListener('click', () => {
         addListSemanticsToProductInfo();
