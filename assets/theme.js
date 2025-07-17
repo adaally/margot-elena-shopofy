@@ -8421,6 +8421,7 @@ theme.recentlyViewed = {
   }
 
   function addListSemanticsToProductInfo(modalContainer) {
+    //TODO: need to fix it's repeating!
     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
     const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
     if (!blocks.length) return;
