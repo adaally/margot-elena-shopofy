@@ -8324,7 +8324,9 @@ theme.recentlyViewed = {
 
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
-      yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages);
+      if(yoptoButtonMore) {
+        yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages);
+      }
   }
 
   function addAriaLabelToYoptoImages() {
