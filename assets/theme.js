@@ -8472,7 +8472,9 @@ theme.recentlyViewed = {
     const buttons = document.querySelectorAll(".quick-product__btn");
     buttons.forEach(item => {
       item.addEventListener('click', () => {
-        addListSemanticsToProductInfo();
+        setTimeout(() => {
+          addListSemanticsToProductInfo();
+        },2000);
       });
     });
   }
