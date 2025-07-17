@@ -8420,9 +8420,12 @@ theme.recentlyViewed = {
     }
   }
 
-  function addListSemanticsToProductInfo() {
-        console.log("llamado");
-    const blocks = document.querySelectorAll('.product-block.product-block--sales-point');
+  function addListSemanticsToProductInfo(modalContainer) {
+    let class = '.product-block.product-block--sales-point'
+    if(modalContainer) {
+      class = '.modal--is-active ' + class;
+    }
+    const blocks = document.querySelectorAll(class);
     if (!blocks.length) return;
   
     const iconSpans = document.querySelectorAll('.icon-and-text');
