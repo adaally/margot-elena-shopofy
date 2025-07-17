@@ -8421,11 +8421,11 @@ theme.recentlyViewed = {
   }
 
   function addListSemanticsToProductInfo(modalContainer) {
-    let class = '.product-block.product-block--sales-point'
+    let classList = '.product-block.product-block--sales-point'
     if(modalContainer) {
-      class = '.modal--is-active ' + class;
+      classList = '.modal--is-active ' + classList;
     }
-    const blocks = document.querySelectorAll(class);
+    const blocks = document.querySelectorAll(classList);
     if (!blocks.length) return;
   
     const iconSpans = document.querySelectorAll('.icon-and-text');
