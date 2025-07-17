@@ -8421,14 +8421,11 @@ theme.recentlyViewed = {
   }
 
   function addListSemanticsToProductInfo(modalContainer) {
-    let classList = '.product-block.product-block--sales-point'
-    if(modalContainer) {
-      classList = '.modal--is-active ' + classList;
-    }
-    const blocks = document.querySelectorAll(classList);
+    let modalClassActive = modalContainer ? '.modal--is-active ' : '';
+    const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
     if (!blocks.length) return;
   
-    const iconSpans = document.querySelectorAll('.icon-and-text');
+    const iconSpans = document.querySelectorAll(modalClassActive+'.icon-and-text');
     if (!iconSpans.length) return;
   
     const container = document.createElement('div');
@@ -8451,7 +8448,7 @@ theme.recentlyViewed = {
     blocks.forEach(block => block.remove());
 
     // product info TABs
-    const tabBlocks = document.querySelectorAll('.product-block--tab');
+    const tabBlocks = document.querySelectorAll(modalClassActive+'.product-block--tab');
     if (!tabBlocks.length) return;
   
     // Create wrapper
