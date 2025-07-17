@@ -8496,18 +8496,19 @@ theme.recentlyViewed = {
 
   function changePtoH2ToReviews() {
     setTimeout(() => {
-    const reviewTitle = document.querySelector(".yotpo-head");
-      if(reviewTitle) {
+      const reviewTitleContainer = document.querySelector(".yotpo-head");
+      if(reviewTitleContainer) {
         const newTitle = document.createElement("h2");
-        newTitle.textContent = reviewTitle.innerText;
-        reviewTitle.classList.forEach(cls => newTitle.classList.add(cls));
-        reviewTitle.parentNode.insertBefore(newTitle, reviewTitle);
-        reviewTitle.remove();
+        const oldTitle = reviewTitleContainer.querySelector(".yotpo-headline");
+        newTitle.textContent = oldTitle.innerText;
+        oldTitle.classList.forEach(cls => newTitle.classList.add(cls));
+        reviewTitleContainer.innerText = '';
+        reviewTitleContainer.appendChild(newTitle);
       }
     }, 3000);
   }
 
-  //changePtoH2ToReviews();
+  changePtoH2ToReviews();
 
   //Focus trap search
   const openButton = document.querySelector('#search--button');
