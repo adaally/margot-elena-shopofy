@@ -8498,7 +8498,6 @@ theme.recentlyViewed = {
     setTimeout(() => {
     const reviewTitle = document.querySelector(".yotpo-head");
       if(reviewTitle) {
-        console.log("herexd");
         const newTitle = document.createElement("h2");
         newTitle.textContent = reviewTitle.innerText;
         reviewTitle.classList.forEach(cls => newTitle.classList.add(cls));
@@ -8508,7 +8507,7 @@ theme.recentlyViewed = {
     }, 3000);
   }
 
-  changePtoH2ToReviews();
+  //changePtoH2ToReviews();
 
   //Focus trap search
   const openButton = document.querySelector('#search--button');
