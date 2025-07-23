@@ -15,6 +15,7 @@
     <input aria-hidden="true" tabindex="-1" type="hidden" name="contact[tags]" value="prospect,newsletter">
     <input aria-hidden="true" tabindex="-1" type="hidden" name="contact[context]" value="{{ snippet_context }}">
     <div class="input-group newsletter__input-group">
+      <label for="Email-{{ section_id }}" class="visually-hidden">Email</label>
       <input type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{ 'general.newsletter_form.newsletter_email' | t }}*" name="contact[email]" id="Email-{{ section_id }}" class="input-group-field newsletter__input" autocorrect="off" autocapitalize="off" required>
       <div class="input-group-btn">
         <button type="submit" id="newsletter-form-submit-{{ section_id }}" class="btn" name="commit">
