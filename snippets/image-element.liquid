@@ -142,7 +142,7 @@
        height="{{ img_height }}"
        class="{{ classes }}"
        loading="{{ loading }}"
-       {% if alt != blank %}alt="{{ alt }}"{% endif %}
+       {% if alt != '' %}alt="{{ alt }}"{% endif %}
        {% if img_widths != blank %}srcset="{{ img_widths }}"{% endif %}
        {% if data-name and data-value %}data-{{ data-name }}="{{ data-value }}"{% endif %}
        sizes="{{ sizes }}"
