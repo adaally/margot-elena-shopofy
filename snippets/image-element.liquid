@@ -104,7 +104,7 @@
     {% if img_width == blank %}
       {% assign img_width = widths | split: ',' | last %}
     {% endif %}
-    <img {% if alt != empty %}alt="{{ alt }}"{% endif %} aria-hidden="true" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
+    <img aria-hidden="true" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
       | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" role="{{ role }}" sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}" widths="{{ widths }}">
   {% else %}
     {% if img_width == blank %}
