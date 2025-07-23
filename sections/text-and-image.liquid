@@ -54,7 +54,7 @@
                     sizeVariable: sizeVariable,
                     fallback: fallback,
                     classes: 'feature-row__image',
-                    alt: ,
+                    alt: section.settings.image_alt | escape
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
@@ -78,8 +78,7 @@
                     widths: '180, 360, 540, 750, 900, 1080',
                     sizeVariable: sizeVariable,
                     fallback: fallback,
-                    classes: 'feature-row__image',
-                    alt: section.settings.image_alt | escape
+                    classes: 'feature-row__image'
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
