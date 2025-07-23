@@ -53,8 +53,7 @@
                     loading: loading,
                     sizeVariable: sizeVariable,
                     fallback: fallback,
-                    classes: 'feature-row__image',
-                    alt: section.settings.image_alt | escape
+                    classes: 'feature-row__image'
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
@@ -78,8 +77,7 @@
                     widths: '180, 360, 540, 750, 900, 1080',
                     sizeVariable: sizeVariable,
                     fallback: fallback,
-                    classes: 'feature-row__image',
-                    alt: section.settings.image2_alt | escape
+                    classes: 'feature-row__image'
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
@@ -148,11 +146,6 @@
       "label": "t:sections.text-and-image.settings.image.label"
     },
     {
-      "type": "text",
-      "id": "image_alt",
-      "label": "Alt"
-    },
-    {
       "type": "select",
       "id": "image_mask",
       "label": "t:common.image_mask.label",
@@ -216,11 +209,6 @@
       "type": "image_picker",
       "id": "image2",
       "label": "t:sections.text-and-image.settings.image2.label"
-    },
-    {
-      "type": "text",
-      "id": "image2_alt",
-      "label": "Alt",
     },
     {
       "type": "select",
