@@ -203,6 +203,7 @@
       "disabled": true,
       "settings": {
         "image": "shopify://shop_images/MD_Gift_Box_50_50_2870707a-e081-4bc8-a954-885d864e6f56.jpg",
+        "image_alt": "",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
@@ -494,6 +495,7 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/MothersDayRefresh_OFT5050.jpg",
+        "image_alt": "Mother's day refresh",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
@@ -516,6 +518,7 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/MothersDayRefresh_PerfectScent5050.jpg",
+        "image_alt": "",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
