@@ -203,7 +203,6 @@
       "disabled": true,
       "settings": {
         "image": "shopify://shop_images/MD_Gift_Box_50_50_2870707a-e081-4bc8-a954-885d864e6f56.jpg",
-        "image_alt": "",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
@@ -495,7 +494,6 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/MothersDayRefresh_OFT5050.jpg",
-        "image_alt": "Mother's day refresh",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
@@ -518,7 +516,6 @@
       "type": "text-and-image",
       "settings": {
         "image": "shopify://shop_images/MothersDayRefresh_PerfectScent5050.jpg",
-        "image_alt": "Mothers Day Refresh Perfect Scent",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
@@ -684,6 +681,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/ME_Press_Byrdie.jpg",
+            "image_alt": "Byrdie logo",
             "link": "https://margotelena.com/pages/press-page"
           }
         },
@@ -691,6 +689,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/ME_Press_Comso.jpg",
+            "image_alt": "Cosmopolitan logo",
             "link": "https://margotelena.com/pages/press-page"
           }
         },
@@ -698,6 +697,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/ME_Press_Popsugar.jpg",
+            "image_alt": "Popsugar logo",
             "link": "https://margotelena.com/pages/press-page"
           }
         },
@@ -705,6 +705,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/ME_Press_Oprah_Daily.jpg",
+            "image_alt": "Opal daily",
             "link": "https://margotelena.com/pages/press-page"
           }
         },
@@ -713,6 +714,7 @@
           "disabled": true,
           "settings": {
             "image": "shopify://shop_images/ME_Press_MS_Living.jpg",
+            "image_alt": "",
             "link": ""
           }
         }
