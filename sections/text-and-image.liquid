@@ -54,6 +54,7 @@
                     sizeVariable: sizeVariable,
                     fallback: fallback,
                     classes: 'feature-row__image',
+                    alt: block.settings.logo.alt | default: shop.name,
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
@@ -144,6 +145,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.text-and-image.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "t:sections.text-and-image.settings.image_alt.label"
     },
     {
       "type": "select",
