@@ -54,7 +54,7 @@
                     sizeVariable: sizeVariable,
                     fallback: fallback,
                     classes: 'feature-row__image',
-                    alt: block.settings.logo.alt | default: shop.name,
+                    alt: ,
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
@@ -79,6 +79,7 @@
                     sizeVariable: sizeVariable,
                     fallback: fallback,
                     classes: 'feature-row__image',
+                    alt: section.settings.image_alt | escape
                   -%}
                 </div>
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}</a>{%- endif -%}
