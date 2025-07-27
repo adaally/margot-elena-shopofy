@@ -8388,7 +8388,7 @@ theme.recentlyViewed = {
 
               
           
-            const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
+            const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
             console.log(rebuyMoney)
             if(rebuyMoney) {
               const details = rebuyMoney.querySelectorAll("span");
