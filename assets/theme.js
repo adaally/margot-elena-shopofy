@@ -8354,9 +8354,10 @@ theme.recentlyViewed = {
             const href = innerLink?.getAttribute('href');
 
             const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
-            console.log(rebuyMoney)
+            
             if(rebuyMoney) {
               const details = rebuyMoney.querySelectorAll("span");
+              console.log(details)
               if(details[1]) {
                 details[1].setAttribute("tabindex", "-1");
               }
