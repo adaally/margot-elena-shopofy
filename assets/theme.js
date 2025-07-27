@@ -8349,38 +8349,39 @@ theme.recentlyViewed = {
           containerProductList.setAttribute("aria-label", superTitle ? superTitle.innerText : '');
 
           containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
-            // Get the product link from one of the existing <a> tags
+            // 1. Find the first existing link to extract the href
             const firstLink = block.querySelector('a');
             const href = firstLink?.getAttribute('href');
           
-            if (!href) return; // Skip if no link
+            if (!href) return; // Skip if no href
           
-            // Replace all <a> inside with <span>, keeping their content
+            // 2. Replace all <a> inside with <span>
             block.querySelectorAll('a').forEach(a => {
               const span = document.createElement('span');
           
-              // Copy all children (text, images, etc.)
+              // Move all children into the span
               while (a.firstChild) {
                 span.appendChild(a.firstChild);
               }
           
-              // Copy classes (optional)
+              // Copy classes and attributes (optional)
               span.className = a.className;
           
-              // Replace <a> with <span>
-              a.parentNode.replaceChild(span, a);
+              a.replaceWith(span);
             });
           
-            // Wrap the entire block in an <a>
-            const wrapperLink = document.createElement('a');
-            wrapperLink.href = href;
-            // wrapperLink.classList.add('rebuy-product-link-wrapper');
+            // 3. Wrap the entire inner content of .rebuy-product-block in a single <a>
+            const linkWrapper = document.createElement('a');
+            linkWrapper.href = href;
+            linkWrapper.classList.add('rebuy-product-link-wrapper'); // Optional for styling
           
-            // Clone the block and insert it inside the <a>
-            wrapperLink.appendChild(block.cloneNode(true));
+            // Move all children from block to the linkWrapper
+            while (block.firstChild) {
+              linkWrapper.appendChild(block.firstChild);
+            }
           
-            // Replace original block with the wrapped version
-            block.parentNode.replaceChild(wrapperLink, block);
+            // Append the new <a> as the only child of the block
+            block.appendChild(linkWrapper);
           });
         }
         
