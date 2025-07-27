@@ -8349,39 +8349,43 @@ theme.recentlyViewed = {
           containerProductList.setAttribute("aria-label", superTitle ? superTitle.innerText : '');
 
           containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
-            // 1. Find the first existing link to extract the href
-            const firstLink = block.querySelector('a');
-            const href = firstLink?.getAttribute('href');
+            // Get first <a> inside to extract the product link
+            const innerLink = block.querySelector('a');
+            const href = innerLink?.getAttribute('href');
           
-            if (!href) return; // Skip if no href
+            if (!href) return; // Skip if no valid href
           
-            // 2. Replace all <a> inside with <span>
+            // Replace all inner <a> with <span> to avoid nesting
             block.querySelectorAll('a').forEach(a => {
               const span = document.createElement('span');
+              span.className = a.className;
           
-              // Move all children into the span
               while (a.firstChild) {
                 span.appendChild(a.firstChild);
               }
           
-              // Copy classes and attributes (optional)
-              span.className = a.className;
-          
               a.replaceWith(span);
             });
           
-            // 3. Wrap the entire inner content of .rebuy-product-block in a single <a>
-            const linkWrapper = document.createElement('a');
-            linkWrapper.href = href;
-            linkWrapper.classList.add('rebuy-product-link-wrapper'); // Optional for styling
+            // Create new <a> element to replace the div
+            const aWrapper = document.createElement('a');
+            aWrapper.href = href;
           
-            // Move all children from block to the linkWrapper
+            // Copy all attributes and classes from original div to <a>
+            for (const attr of block.attributes) {
+              if (attr.name !== 'class' && attr.name !== 'href') {
+                aWrapper.setAttribute(attr.name, attr.value);
+              }
+            }
+            aWrapper.className = block.className;
+          
+            // Move all children from div into the new <a>
             while (block.firstChild) {
-              linkWrapper.appendChild(block.firstChild);
+              aWrapper.appendChild(block.firstChild);
             }
           
-            // Append the new <a> as the only child of the block
-            block.appendChild(linkWrapper);
+            // Replace the div with the new <a>
+            block.replaceWith(aWrapper);
           });
         }
         
