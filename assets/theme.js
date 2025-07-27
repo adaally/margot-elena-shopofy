@@ -8336,19 +8336,28 @@ theme.recentlyViewed = {
 
   setTimeout(() => {
     changeAddToWishlist();
+    listenToAddWishBtnsAriaPressed();
   }, 4000);
 
-  document.addEventListener('click', function (e) {
-  const button = e.target.closest('[data-frcp-in-wishlist]');
-  if (!button) return;
+  function listenToAddWishBtnsAriaPressed() {
+    document.querySelectorAll('[data-frcp-in-wishlist]').forEach(button => {
+      const inWishlist = button.getAttribute('data-frcp-in-wishlist') === 'true';
+      button.setAttribute('aria-pressed', inWishlist.toString());
+    });
 
-  const currentValue = button.getAttribute('data-frcp-in-wishlist') === 'true';
-  const newValue = !currentValue;
+    document.addEventListener('click', function (e) {
+        const button = e.target.closest('[data-frcp-in-wishlist]');
+        if (!button) return;
+      
+        const currentValue = button.getAttribute('data-frcp-in-wishlist') === 'true';
+        const newValue = !currentValue;
+      
+        // Update aria-pressed
+        button.setAttribute('aria-pressed', newValue.toString());
+    });
+  }
 
 
-  // Update aria-pressed
-  button.setAttribute('aria-pressed', newValue.toString());
-});
 
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
