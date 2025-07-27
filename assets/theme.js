@@ -8355,40 +8355,40 @@ theme.recentlyViewed = {
           
             if (href){
               // Replace all inner <a> with <span> to avoid nesting
-            block.querySelectorAll('a').forEach(a => {
-              const span = document.createElement('span');
-              span.className = a.className;
-          
-              while (a.firstChild) {
-                span.appendChild(a.firstChild);
+              block.querySelectorAll('a').forEach(a => {
+                const span = document.createElement('span');
+                span.className = a.className;
+            
+                while (a.firstChild) {
+                  span.appendChild(a.firstChild);
+                }
+            
+                a.replaceWith(span);
+              });
+            
+              // Create new <a> element to replace the div
+              const aWrapper = document.createElement('a');
+              aWrapper.href = href;
+            
+              // Copy all attributes and classes from original div to <a>
+              for (const attr of block.attributes) {
+                if (attr.name !== 'class' && attr.name !== 'href') {
+                  aWrapper.setAttribute(attr.name, attr.value);
+                }
               }
-          
-              a.replaceWith(span);
-            });
-          
-            // Create new <a> element to replace the div
-            const aWrapper = document.createElement('a');
-            aWrapper.href = href;
-          
-            // Copy all attributes and classes from original div to <a>
-            for (const attr of block.attributes) {
-              if (attr.name !== 'class' && attr.name !== 'href') {
-                aWrapper.setAttribute(attr.name, attr.value);
+              aWrapper.className = block.className;
+            
+              // Move all children from div into the new <a>
+              while (block.firstChild) {
+                aWrapper.appendChild(block.firstChild);
               }
-            }
-            aWrapper.className = block.className;
-          
-            // Move all children from div into the new <a>
-            while (block.firstChild) {
-              aWrapper.appendChild(block.firstChild);
-            }
-          
-            // Replace the div with the new <a>
-            block.replaceWith(aWrapper);
+            
+              // Replace the div with the new <a>
+              block.replaceWith(aWrapper);
             }
           
             const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
-            
+            console.log(rebuyMoney)
             if(rebuyMoney) {
               const details = rebuyMoney.querySelectorAll("span");
               details.forEach(detail => {
