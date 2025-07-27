@@ -8330,7 +8330,9 @@ theme.recentlyViewed = {
     });
   }
 
-  changeAddToWishlist();
+  setTimeout(() => {
+    changeAddToWishlist();
+  }, 2000);
 
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
