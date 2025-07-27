@@ -8473,11 +8473,20 @@ theme.recentlyViewed = {
     const buttons = document.querySelectorAll(".quick-product__btn");
     buttons.forEach(item => {
       item.addEventListener('click', () => {
+        addRoleModalDialogToQuickview();
         setTimeout(() => {
           addListSemanticsToProductInfo(true);
         },2000);
       });
     });
+  }
+  
+  function addRoleModalDialogToQuickview() {
+    const dialogContainer = document.querySelector(".modal");
+    console.log(dialogContainer)
+    if(dialogContainer) {
+      dialogContainer.setAttribute("role", "modaldialog");
+    }
   }
 
   listenToAllQuickviewBtns();
