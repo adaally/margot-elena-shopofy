@@ -8324,13 +8324,11 @@ theme.recentlyViewed = {
 
   function changeAddToWishlist() {
     const items = document.querySelectorAll(".grid-product__content");
-    console.log(items)
     items.forEach(item => {
       const title = item.querySelector(".grid-product__title");
       const wishBtn = item.querySelector(".frcp-wishlist-btn");
-      console.log(wishBtn)
-      if(title) {
-        wishBtn.setAttribute("aria-label", "Add" + title.innerText + " to wishlist");
+      if(title && wishBtn) {
+        wishBtn.setAttribute("aria-label", "Add " + title.innerText + " to wishlist");
       }
     });
   }
