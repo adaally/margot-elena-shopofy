@@ -8322,6 +8322,16 @@ theme.recentlyViewed = {
 
   })
 
+  function changeAddToWishlist() {
+    const items = document.querySelector(".frcp-wishlist-btn.frcp-wishlist-grid-btn");
+    console.log(items)
+    items.forEach(item => {
+      item.setAttribute("tabindex", "0");
+    });
+  }
+
+  changeAddToWishlist();
+
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
       if(yoptoButtonMore) {
