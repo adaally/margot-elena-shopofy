@@ -8328,9 +8328,8 @@ theme.recentlyViewed = {
     items.forEach(item => {
       const title = item.querySelector(".grid-product__title");
       const wishBtn = item.querySelector(".frcp-wishlist-btn");
+      console.log(wishBtn)
       if(title) {
-        title.innerText
-
         wishBtn.setAttribute("aria-label", "Add" + title.innerText + " to wishlist");
       }
     });
