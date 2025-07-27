@@ -8486,6 +8486,7 @@ theme.recentlyViewed = {
     console.log(dialogContainer)
     if(dialogContainer) {
       dialogContainer.setAttribute("role", "modaldialog");
+      console.log(dialogContainer)
     }
   }
 
