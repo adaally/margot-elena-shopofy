@@ -8338,6 +8338,7 @@ theme.recentlyViewed = {
           // Copy inner content
           h2.innerHTML = superTitle.innerHTML;
           h2.classList.add("h3");
+          h2.style.marginBottom='0';
         
           // Replace in DOM
           superTitle.parentNode.replaceChild(h2, superTitle);
