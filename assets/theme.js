@@ -8323,7 +8323,7 @@ theme.recentlyViewed = {
   })
 
   function changeAddToWishlist() {
-    const items = document.querySelector(".frcp-wishlist-btn.frcp-wishlist-grid-btn");
+    const items = document.querySelectorAll(".frcp-wishlist-btn.frcp-wishlist-grid-btn");
     console.log(items)
     items.forEach(item => {
       item.setAttribute("tabindex", "0");
