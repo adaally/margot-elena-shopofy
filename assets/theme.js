@@ -8457,8 +8457,14 @@ theme.recentlyViewed = {
     }
   }
 
+  function removeAriaHiddenFromBuyConsentModalQuickView() {
+    const item = document.querySelector("#shopify-buyer-consent-modal");
+    if(item) {
+      item.removeAttribute("aria-hidden");
+    }
+  }
+
   function addListSemanticsToProductInfo(modalContainer) {
-    //TODO: need to fix it's repeating!
     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
     const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
     if (!blocks.length) return;
@@ -8515,6 +8521,7 @@ theme.recentlyViewed = {
         },100);
         setTimeout(() => {
           addListSemanticsToProductInfo(true);
+          removeAriaHiddenFromBuyConsentModalQuickView();
         },2000);
       });
     });
