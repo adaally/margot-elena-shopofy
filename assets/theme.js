@@ -8331,7 +8331,7 @@ theme.recentlyViewed = {
   }
 
   setTimeout(() => {
-    changeAddToWishlist();
+    // changeAddToWishlist();
   }, 2000);
 
   function listenToButtonMoreYoptoImages() {
