@@ -8482,7 +8482,7 @@ theme.recentlyViewed = {
   }
   
   function addRoleModalDialogToQuickview() {
-    const dialogContainer = document.querySelector(".modal");
+    const dialogContainer = document.querySelector(".modal.modal--is-active");
     console.log(dialogContainer)
     if(dialogContainer) {
       dialogContainer.setAttribute("role", "modaldialog");
