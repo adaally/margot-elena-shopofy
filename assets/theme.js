@@ -8386,16 +8386,13 @@ theme.recentlyViewed = {
               // Replace the div with the new <a>
               block.replaceWith(aWrapper);
 
-              
-          
-            const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
-            console.log(rebuyMoney)
-            if(rebuyMoney) {
-              const details = rebuyMoney.querySelectorAll("span");
-              details.forEach(detail => {
-                detail.removeAttribute("tabindex");
-              });
-            }
+              const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
+              if(rebuyMoney) {
+                const details = rebuyMoney.querySelectorAll("span");
+                details.forEach(detail => {
+                  detail.removeAttribute("tabindex");
+                });
+              }
             }
           });
         }
