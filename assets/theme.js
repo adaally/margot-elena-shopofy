@@ -8353,17 +8353,6 @@ theme.recentlyViewed = {
             const innerLink = block.querySelector('a');
             const href = innerLink?.getAttribute('href');
           
-            const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
-            console.log(rebuyMoney)
-            if(rebuyMoney) {
-              const details = rebuyMoney.querySelectorAll("span");
-              details.forEach(detail => {
-                detail.removeAttribute("tabindex");
-                detail.setAttribute("tabindex", "-1");
-                console.log(detail)
-              });
-            }
-          
             if (href){
               // Replace all inner <a> with <span> to avoid nesting
               block.querySelectorAll('a').forEach(a => {
@@ -8396,6 +8385,19 @@ theme.recentlyViewed = {
             
               // Replace the div with the new <a>
               block.replaceWith(aWrapper);
+
+              
+          
+            const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
+            console.log(rebuyMoney)
+            if(rebuyMoney) {
+              const details = rebuyMoney.querySelectorAll("span");
+              details.forEach(detail => {
+                detail.removeAttribute("tabindex");
+                detail.setAttribute("tabindex", "-1");
+                console.log(detail)
+              });
+            }
             }
           });
         }
