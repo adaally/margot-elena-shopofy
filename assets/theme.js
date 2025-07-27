@@ -8343,6 +8343,12 @@ theme.recentlyViewed = {
           // Replace in DOM
           superTitle.parentNode.replaceChild(h2, superTitle);
         }
+
+        const containerProductList = item.querySelector('.rebuy-product-grid');
+        if(containerProductList) {
+          containerProductList.setAttribute("aria-label", superTitle ? superTitle.innerText : '');
+        }
+        
         clearInterval(checkIfRendered);
       }
     }, 100);
