@@ -8322,7 +8322,7 @@ theme.recentlyViewed = {
 
   })
 
-  function changeH3toH2InRebuyProductsBestSellers() {
+  function changeH3toH2InRebuyProductsBestSellersWhenReady() {
     const checkIfRendered = setInterval(() => {
       const item = document.querySelector('.rebuy-widget.widget-type-product');
       if (item) {
@@ -8345,6 +8345,8 @@ theme.recentlyViewed = {
       }
     }, 100);
   }
+
+  changeH3toH2InRebuyProductsBestSellersWhenReady():
 
   function changeAddToWishlist() {
     const items = document.querySelectorAll(".grid-product__content");
