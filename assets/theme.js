@@ -8357,10 +8357,9 @@ theme.recentlyViewed = {
             
             if(rebuyMoney) {
               const details = rebuyMoney.querySelectorAll("span");
-              console.log(details)
-              if(details[1]) {
-                details[1].setAttribute("tabindex", "-1");
-              }
+              details.forEach(detail => {
+                detail.setAttribute("tabindex", "-1");
+              });
             }
           
             if (!href) return; // Skip if no valid href
