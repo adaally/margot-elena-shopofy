@@ -8323,7 +8323,7 @@ theme.recentlyViewed = {
   })
 
   function changeAddToWishlist() {
-    const items = document.querySelectorAll(".grid__item-image-wrapper");
+    const items = document.querySelectorAll(".grid-product__content");
     console.log(items)
     items.forEach(item => {
       const title = item.querySelector(".grid-product__title");
