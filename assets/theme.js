@@ -8385,6 +8385,7 @@ theme.recentlyViewed = {
             
               // Replace the div with the new <a>
               block.replaceWith(aWrapper);
+              aWrapper.removeAttribute("aria-label");
 
               const image = aWrapper.querySelector(".rebuy-product-image img");
               if(image) {
