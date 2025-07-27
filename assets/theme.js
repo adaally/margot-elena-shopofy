@@ -8347,6 +8347,41 @@ theme.recentlyViewed = {
         const containerProductList = item.querySelector('.rebuy-product-grid');
         if(containerProductList) {
           containerProductList.setAttribute("aria-label", superTitle ? superTitle.innerText : '');
+
+          containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
+            // Get the product link from one of the existing <a> tags
+            const firstLink = block.querySelector('a');
+            const href = firstLink?.getAttribute('href');
+          
+            if (!href) return; // Skip if no link
+          
+            // Replace all <a> inside with <span>, keeping their content
+            block.querySelectorAll('a').forEach(a => {
+              const span = document.createElement('span');
+          
+              // Copy all children (text, images, etc.)
+              while (a.firstChild) {
+                span.appendChild(a.firstChild);
+              }
+          
+              // Copy classes (optional)
+              span.className = a.className;
+          
+              // Replace <a> with <span>
+              a.parentNode.replaceChild(span, a);
+            });
+          
+            // Wrap the entire block in an <a>
+            const wrapperLink = document.createElement('a');
+            wrapperLink.href = href;
+            // wrapperLink.classList.add('rebuy-product-link-wrapper');
+          
+            // Clone the block and insert it inside the <a>
+            wrapperLink.appendChild(block.cloneNode(true));
+          
+            // Replace original block with the wrapped version
+            block.parentNode.replaceChild(wrapperLink, block);
+          });
         }
         
         clearInterval(checkIfRendered);
