@@ -8386,6 +8386,11 @@ theme.recentlyViewed = {
               // Replace the div with the new <a>
               block.replaceWith(aWrapper);
 
+              const image = aWrapper.querySelector(".rebuy-product-image img");
+              if(image) {
+                image.setAttribute("aria-hidden", "true");
+              }
+
               const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
               if(rebuyMoney) {
                 const details = rebuyMoney.querySelectorAll("span");
