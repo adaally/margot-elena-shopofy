@@ -8323,15 +8323,21 @@ theme.recentlyViewed = {
   })
 
   function changeAddToWishlist() {
-    const items = document.querySelectorAll(".frcp-wishlist-btn.frcp-wishlist-grid-btn");
+    const items = document.querySelectorAll(".grid__item-image-wrapper");
     console.log(items)
     items.forEach(item => {
-      item.setAttribute("tabindex", "0");
+      const title = item.querySelector(".grid-product__title");
+      const wishBtn = item.querySelector(".frcp-wishlist-btn");
+      if(title) {
+        title.innerText
+
+        wishBtn.setAttribute("aria-label", "Add" + title.innerText + " to wishlist");
+      }
     });
   }
 
   setTimeout(() => {
-    // changeAddToWishlist();
+    changeAddToWishlist();
   }, 2000);
 
   function listenToButtonMoreYoptoImages() {
