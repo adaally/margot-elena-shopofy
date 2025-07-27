@@ -8353,7 +8353,7 @@ theme.recentlyViewed = {
             const innerLink = block.querySelector('a');
             const href = innerLink?.getAttribute('href');
 
-            const item = block.querySelector(".rebuy-product-price");
+            const item = block.querySelector(".rebuy-product-price .rebuy-money");
             if(item) {
               const details = item.querSelectorAll("span");
               if(details[1]) {
