@@ -8359,6 +8359,7 @@ theme.recentlyViewed = {
               const details = rebuyMoney.querySelectorAll("span");
               details.forEach(detail => {
                 detail.setAttribute("tabindex", "-1");
+                console.log(detail)
               });
             }
           
