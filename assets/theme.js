@@ -8338,7 +8338,7 @@ theme.recentlyViewed = {
 
   setTimeout(() => {
     changeAddToWishlist();
-  }, 2000);
+  }, 4000);
 
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
