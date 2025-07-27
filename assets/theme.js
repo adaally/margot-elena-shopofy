@@ -8346,7 +8346,7 @@ theme.recentlyViewed = {
     }, 100);
   }
 
-  changeH3toH2InRebuyProductsBestSellersWhenReady():
+  changeH3toH2InRebuyProductsBestSellersWhenReady();
 
   function changeAddToWishlist() {
     const items = document.querySelectorAll(".grid-product__content");
