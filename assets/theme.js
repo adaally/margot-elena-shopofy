@@ -8352,6 +8352,14 @@ theme.recentlyViewed = {
             // Get first <a> inside to extract the product link
             const innerLink = block.querySelector('a');
             const href = innerLink?.getAttribute('href');
+
+            const item = block.querySelector(".rebuy-product-price");
+            if(item) {
+              const details = item.querSelectorAll("span");
+              if(details[1]) {
+                details[1].setAttribute("tabindex", "-1");
+              }
+            }
           
             if (!href) return; // Skip if no valid href
           
