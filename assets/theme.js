@@ -8352,21 +8352,9 @@ theme.recentlyViewed = {
             // Get first <a> inside to extract the product link
             const innerLink = block.querySelector('a');
             const href = innerLink?.getAttribute('href');
-
-            const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
-            
-            if(rebuyMoney) {
-              const details = rebuyMoney.querySelectorAll("span");
-              details.forEach(detail => {
-                detail.removeAttribute("tabindex");
-                detail.setAttribute("tabindex", "-1");
-                console.log(detail)
-              });
-            }
           
-            if (!href) return; // Skip if no valid href
-          
-            // Replace all inner <a> with <span> to avoid nesting
+            if (href){
+              // Replace all inner <a> with <span> to avoid nesting
             block.querySelectorAll('a').forEach(a => {
               const span = document.createElement('span');
               span.className = a.className;
@@ -8397,6 +8385,18 @@ theme.recentlyViewed = {
           
             // Replace the div with the new <a>
             block.replaceWith(aWrapper);
+            }
+          
+            const rebuyMoney = block.querySelector(".rebuy-product-price .rebuy-money");
+            
+            if(rebuyMoney) {
+              const details = rebuyMoney.querySelectorAll("span");
+              details.forEach(detail => {
+                detail.removeAttribute("tabindex");
+                detail.setAttribute("tabindex", "-1");
+                console.log(detail)
+              });
+            }
           });
         }
         
