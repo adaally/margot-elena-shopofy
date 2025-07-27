@@ -8322,6 +8322,30 @@ theme.recentlyViewed = {
 
   })
 
+  function changeH3toH2InRebuyProductsBestSellers() {
+    const checkIfRendered = setInterval(() => {
+      const item = document.querySelector('.rebuy-widget.widget-type-product');
+      if (item) {
+        const superTitle = item.querySelector(".super-title");
+        if(superTitle) {
+          const h2 = document.createElement('h2');
+
+          // Copy all attributes
+          for (const attr of superTitle.attributes) {
+            h2.setAttribute(attr.name, attr.value);
+          }
+        
+          // Copy inner content
+          h2.innerHTML = superTitle.innerHTML;
+        
+          // Replace in DOM
+          superTitle.parentNode.replaceChild(h2, superTitle);
+        }
+        clearInterval(checkIfRendered);
+      }
+    }, 100);
+  }
+
   function changeAddToWishlist() {
     const items = document.querySelectorAll(".grid-product__content");
     items.forEach(item => {
