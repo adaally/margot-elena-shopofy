@@ -8331,11 +8331,24 @@ theme.recentlyViewed = {
         wishBtn.setAttribute("aria-label", "Add " + title.innerText + " to wishlist");
       }
     });
+    
   }
 
   setTimeout(() => {
     changeAddToWishlist();
   }, 4000);
+
+  document.addEventListener('click', function (e) {
+  const button = e.target.closest('[data-frcp-in-wishlist]');
+  if (!button) return;
+
+  const currentValue = button.getAttribute('data-frcp-in-wishlist') === 'true';
+  const newValue = !currentValue;
+
+
+  // Update aria-pressed
+  button.setAttribute('aria-pressed', newValue.toString());
+});
 
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
