@@ -8386,6 +8386,14 @@ theme.recentlyViewed = {
               // Replace the div with the new <a>
               block.replaceWith(aWrapper);
               aWrapper.removeAttribute("aria-label");
+              
+              const btnToCart = aWrapper.querySelector(".rebuy-button");
+
+              if(btnToCart) {
+                btnToCart.addEventListener("click", function(event) {
+                  event.preventDefault();
+                });
+              }
 
               const image = aWrapper.querySelector(".rebuy-product-image img");
               if(image) {
