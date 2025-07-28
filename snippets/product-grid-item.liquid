@@ -47,7 +47,6 @@ Arguments
 -%}
 
 <div role="listitem" class="grid__item grid-product {{ gridView }} {% if quick_shop_enable %} grid-product__has-quick-shop{% endif %}" data-aos="row-of-{{ per_row }}" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}">
-  <a href="{{ product.url | within: collection }}">
   <div class="grid-product__content">
     {%- if has_custom_label -%}
       <div class="grid-product__tag grid-product__tag--custom">
@@ -190,7 +189,7 @@ Arguments
         {%- endif -%}
       </div>
 
-      <span class="grid-product__link">
+      <a href="{{ product.url | within: collection }}" class="grid-product__link">
         <div class="grid-product__meta">
           <div class="grid-product__title grid-product__title--{{ settings.type_product_style }}">{{ product.title }}</div>
           
@@ -363,7 +362,7 @@ display: inline-block;
             <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
           {%- endif -%}
         </div>
-      </span>
+      </a>
     </div>
   </div>
   {%- if settings.enable_swatches and type == blank -%}
@@ -431,8 +430,6 @@ display: inline-block;
   {%- if quick_shop_enable and type == blank -%}
     {%- render 'quick-shop-modal', product: product -%}
   {%- endif -%}
-  
-    </a>
 </div>
 
 <style>
