@@ -366,7 +366,6 @@ display: inline-block;
       </span>
     </div>
   </div>
-    </a>
   {%- if settings.enable_swatches and type == blank -%}
     {%- liquid
       assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
@@ -432,6 +431,8 @@ display: inline-block;
   {%- if quick_shop_enable and type == blank -%}
     {%- render 'quick-shop-modal', product: product -%}
   {%- endif -%}
+  
+    </a>
 </div>
 
 <style>
