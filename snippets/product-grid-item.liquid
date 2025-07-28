@@ -80,9 +80,9 @@ Arguments
 
       assign preview_image = product.featured_media.preview_image
     -%}
-
+<a href="{{ product.url | within: collection }}" tabindex="0">
     <div class="grid__item-image-wrapper">
-     <a href="{{ product.url | within: collection }}" tabindex="0">
+     
              <div class="grid-product__image-mask">
         {%- if fixed_aspect_ratio -%}
           <div
@@ -188,7 +188,6 @@ Arguments
           </button>
         {%- endif -%}
       </div>
-     </a>
 
 
       <span class="grid-product__link">
@@ -366,7 +365,10 @@ display: inline-block;
         </div>
       </span>
     </div>
+  
+     </a>
   </div>
+  
   {%- if settings.enable_swatches and type == blank -%}
     {%- liquid
       assign swatch_trigger = 'products.general.color_swatch_trigger' | t | downcase
