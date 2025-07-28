@@ -82,8 +82,8 @@ Arguments
     -%}
 
     <div class="grid__item-image-wrapper">
-     
-      <div class="grid-product__image-mask">
+     <a href="{{ product.url | within: collection }}" tabindex="0">
+             <div class="grid-product__image-mask">
         {%- if fixed_aspect_ratio -%}
           <div
             class="grid__image-ratio grid__image-ratio--{% if image_style == 'circle' %}square{% else %}{{ settings.product_grid_image_size }}{% endif %}">
@@ -188,8 +188,10 @@ Arguments
           </button>
         {%- endif -%}
       </div>
+     </a>
 
-      <a href="{{ product.url | within: collection }}" tabindex="0" class="grid-product__link">
+
+      <span class="grid-product__link">
         <div class="grid-product__meta">
           <div class="grid-product__title grid-product__title--{{ settings.type_product_style }}">{{ product.title }}</div>
           
@@ -362,7 +364,7 @@ display: inline-block;
             <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
           {%- endif -%}
         </div>
-      </a>
+      </span>
     </div>
   </div>
   {%- if settings.enable_swatches and type == blank -%}
