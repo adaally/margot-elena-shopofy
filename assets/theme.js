@@ -8688,7 +8688,7 @@ theme.recentlyViewed = {
 
   runWhenYotpoIsReady(() => {
     changeReviewTitleTag();
-    removeTitleFromUsernamesReviews();
+    
   });
 
   function changeReviewTitleTag() {
@@ -8700,10 +8700,12 @@ theme.recentlyViewed = {
       titleContainer.innerHTML = '';
       titleContainer.appendChild(h2);
     }
+    removeTitleFromUsernamesReviews();
   }
 
   function removeTitleFromUsernamesReviews() {
     const usernames = document.querySelectorAll(".yotpo-main-reviews-widget .yotpo-reviewer-name");
+    console.log(usernames)
     usernames.forEach(item => {
       item.removeAttribute("title");
     })
