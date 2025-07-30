@@ -8521,9 +8521,9 @@ theme.recentlyViewed = {
             
               // Copy all attributes and classes from original div to <a>
               for (const attr of block.attributes) {
-                if (attr.name !== 'class' && attr.name !== 'href') {
-                  aWrapper.setAttribute(attr.name, attr.value);
-                }
+                // if (attr.name !== 'class' && attr.name !== 'href' && attr.name !== 'role') {
+                //   aWrapper.setAttribute(attr.name, attr.value);
+                // }
               }
               div.className = block.className;
             
@@ -8536,6 +8536,7 @@ theme.recentlyViewed = {
               block.replaceWith(div);
               aWrapper.removeAttribute("aria-label");
               div.appendChild(aWrapper);
+              div.setAttribute("role", "listitem");
               
               const btnToCart = aWrapper.querySelector(".rebuy-button");
 
