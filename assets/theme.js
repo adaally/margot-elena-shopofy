@@ -8467,7 +8467,7 @@ theme.recentlyViewed = {
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
     const checkIfRendered = setInterval(() => {
       console.log("betseller")
-      const item = document.querySelector('.rebuy-widget.widget-type-product');
+      const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
       if (item) {
         console.log(item)
         const superTitle = item.querySelector(".super-title");
