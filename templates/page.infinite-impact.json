@@ -1,1 +1,233 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"image","settings":{"top_subheading":"","title":"Infinite Impact","title_size":61,"subheading":"","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-center","image":"shopify://shop_images/Infinite_Impact_04.jpg","image_mobile":"shopify://shop_images/Infinite_Impact_04_Mobile.jpg","parallax_direction":"top","overlay_opacity":0}}},"block_order":["slideshow-0"],"settings":{"section_height":"natural","mobile_height":"auto","parallax":false,"style":"bars","autoplay":true,"autoplay_speed":7,"lazyload_images":true}},"rich-text":{"type":"rich-text","disabled":true,"blocks":{"heading":{"type":"heading","settings":{"title":"Rich text"}},"text":{"type":"text","settings":{"enlarge_text":true,"text":"<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"}}},"block_order":["heading","text"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"81d031f3-81c0-466f-a10e-c58b7341bd2a":{"type":"text-and-image","settings":{"image":"shopify://shop_images/Impuse_-_Mobile_Top_Hero_Copy_3_eec0f553-88c0-43a2-b86e-b788828935f2.jpg","image_mask":"none","image2_mask":"none","subtitle":"","title":"Women Inspiring Women","text":"<p>In all we do, it’s our desire to help women live more boldly and beautifully. So we’re excited to partner with Dress for Success by donating a portion of the proceeds from Infinite She to help them support women in the community who are daring to pursue their best life.</p>","button_label":"Learn More","button_link":"https://dressforsuccess.org/","button_style":"primary","align_text":"left","image_width":"50","layout":"right","divider":false,"top_padding":true,"bottom_padding":true,"lazyload_images":true}},"fafe999a-7bcc-450c-af49-04439f3cca10":{"type":"text-and-image","settings":{"image":"shopify://shop_images/Margot_Elena_Copy_3.jpg","image_mask":"none","image2_mask":"none","subtitle":"","title":"Infinite Connections","text":"<p>Featuring best-selling products like perfume, hand cream, bubble bath, candles, shea butter soap, bath salt soaks, shower gel, hand sanitizer, body lotion, cosmetics, and everything from greeting cards to gift sets – there’s something for everyone (whether you gift others or yourself!). We even curate a special subscription box to help you explore everything we have to offer and discover a favorite!</p><p>Creating products and brand worlds to capture the imagination and provide artful experiences, Margot Elena continues to charm customers and press alike with beautiful, well-thought-out treasures to fall in love with.</p>","button_label":"Learn More","button_link":"https://dressforsuccess.org/","button_style":"primary","align_text":"left","image_width":"50","layout":"left","divider":false,"top_padding":true,"bottom_padding":true,"lazyload_images":true}},"6ba09ada-9b16-4867-a8fb-6b696fef5eb4":{"type":"slideshow","disabled":true,"blocks":{"template--15819824627867__6ba09ada-9b16-4867-a8fb-6b696fef5eb4-1679511975d4bdb808-0":{"type":"image","settings":{"top_subheading":"","title":"Endless\npossibilities.","title_size":65,"subheading":"A BEAUTIFUL PARTNERSHIP IN THE MAKING. OUR PRESIDENT MEETS WITH THE DENVER DIRECTOR OF DRESS FOR SUCCESS.","link":"","link_text":"","link_2":"","link_text_2":"","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-left","image":"shopify://shop_images/Artboard_Copy_13_81c11038-32d4-4dc9-958f-13f228f42646.jpg","parallax_direction":"top","overlay_opacity":0}}},"block_order":["template--15819824627867__6ba09ada-9b16-4867-a8fb-6b696fef5eb4-1679511975d4bdb808-0"],"settings":{"section_height":"natural","mobile_height":"auto","parallax":false,"style":"bars","autoplay":true,"autoplay_speed":5,"lazyload_images":true}},"35b393e7-5a2c-4934-b84a-98d8409f488e":{"type":"text-with-icons","disabled":true,"blocks":{"template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-0":{"type":"text_block","settings":{"icon":"charity","title":"Example title","text":"<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"}},"template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-1":{"type":"text_block","settings":{"icon":"ribbon","title":"Example title","text":"<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"}},"template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-2":{"type":"text_block","settings":{"icon":"recycle","title":"Example title","text":"<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"}}},"block_order":["template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-0","template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-1","template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-2"],"settings":{"title":"","align_text":"center","desktop_columns_per_row":3,"icon_color":"#e68491","button_label":"","button_link":"","divider":false}},"featured-collection":{"type":"featured-collection","settings":{"title":"Best Sellers","home_featured_products":"mecc-best-sellers","per_row":4,"rows":1,"mobile_scrollable":false,"view_all":false,"divider":false}}},"order":["main","slideshow","rich-text","81d031f3-81c0-466f-a10e-c58b7341bd2a","fafe999a-7bcc-450c-af49-04439f3cca10","6ba09ada-9b16-4867-a8fb-6b696fef5eb4","35b393e7-5a2c-4934-b84a-98d8409f488e","featured-collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Infinite Impact",
+            "title_size": 61,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify://shop_images/Infinite_Impact_04.jpg",
+            "image_mobile": "shopify://shop_images/Infinite_Impact_04_Mobile.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "81d031f3-81c0-466f-a10e-c58b7341bd2a": {
+      "type": "text-and-image",
+      "custom_css": [
+        ".appear-delay-2 a {outline-offset: 4px; }"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Impuse_-_Mobile_Top_Hero_Copy_3_eec0f553-88c0-43a2-b86e-b788828935f2.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "custom_id": "default-id",
+        "subtitle": "",
+        "title": "Women Inspiring Women",
+        "text": "<p>In all we do, it’s our desire to help women live more boldly and beautifully. So we’re excited to partner with Dress for Success by donating a portion of the proceeds from Infinite She to help them support women in the community who are daring to pursue their best life.</p>",
+        "button_label": "Learn More",
+        "button_link": "https://dressforsuccess.org/",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "fafe999a-7bcc-450c-af49-04439f3cca10": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Margot_Elena_Copy_3.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "custom_id": "default-id",
+        "subtitle": "",
+        "title": "Infinite Connections",
+        "text": "<p>Featuring best-selling products like perfume, hand cream, bubble bath, candles, shea butter soap, bath salt soaks, shower gel, hand sanitizer, body lotion, cosmetics, and everything from greeting cards to gift sets – there’s something for everyone (whether you gift others or yourself!). We even curate a special subscription box to help you explore everything we have to offer and discover a favorite!</p><p>Creating products and brand worlds to capture the imagination and provide artful experiences, Margot Elena continues to charm customers and press alike with beautiful, well-thought-out treasures to fall in love with.</p>",
+        "button_label": "Learn More",
+        "button_link": "https://dressforsuccess.org/",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "6ba09ada-9b16-4867-a8fb-6b696fef5eb4": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15819824627867__6ba09ada-9b16-4867-a8fb-6b696fef5eb4-1679511975d4bdb808-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Endless\npossibilities.",
+            "title_size": 65,
+            "subheading": "A BEAUTIFUL PARTNERSHIP IN THE MAKING. OUR PRESIDENT MEETS WITH THE DENVER DIRECTOR OF DRESS FOR SUCCESS.",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Artboard_Copy_13_81c11038-32d4-4dc9-958f-13f228f42646.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--15819824627867__6ba09ada-9b16-4867-a8fb-6b696fef5eb4-1679511975d4bdb808-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "35b393e7-5a2c-4934-b84a-98d8409f488e": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "charity",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "ribbon",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "recycle",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-0",
+        "template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-1",
+        "template--15818762420379__35b393e7-5a2c-4934-b84a-98d8409f488e-1679340462037d764f-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#e68491",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "home_featured_products": "mecc-best-sellers",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow",
+    "rich-text",
+    "81d031f3-81c0-466f-a10e-c58b7341bd2a",
+    "fafe999a-7bcc-450c-af49-04439f3cca10",
+    "6ba09ada-9b16-4867-a8fb-6b696fef5eb4",
+    "35b393e7-5a2c-4934-b84a-98d8409f488e",
+    "featured-collection"
+  ]
+}
