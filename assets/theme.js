@@ -8518,13 +8518,6 @@ theme.recentlyViewed = {
               const div = document.createElement('div');
               const aWrapper = document.createElement('a');
               aWrapper.href = href;
-            
-              // Copy all attributes and classes from original div to <a>
-              for (const attr of block.attributes) {
-                // if (attr.name !== 'class' && attr.name !== 'href' && attr.name !== 'role') {
-                //   aWrapper.setAttribute(attr.name, attr.value);
-                // }
-              }
               div.className = block.className;
             
               // Move all children from div into the new <a>
