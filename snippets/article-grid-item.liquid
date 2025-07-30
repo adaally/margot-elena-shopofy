@@ -68,10 +68,21 @@
 {%- if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 -%}
   <div class="article__date">
     {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
-      {%- for tag in article.tags -%}
-         {% if tag contains "_" %}{%- assign tag_starts_with = tag | slice: 0 -%}{% if tag_starts_with == "_" %}{% if tag_count %}{%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}{% endif %}{% continue %}{% endif %}{% endif %}
-           <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
-             {%- endfor -%}
+{%- for tag in article.tags -%}
+  {% assign tag_trimmed = tag | strip %}
+  {% if tag_trimmed != "" %}
+    {% if tag contains "_" %}
+      {% assign tag_starts_with = tag | slice: 0 %}
+      {% if tag_starts_with == "_" %}
+        {% if tag_count %}
+          {% assign tag_count = tag_count | minus: 1 | at_least: 0 %}
+        {% endif %}
+        {% continue %}
+      {% endif %}
+    {% endif %}
+    <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+  {% endif %}
+{%- endfor -%}
           {%- endif -%}
           {%- if section.settings.blog_show_comments and article.comments_count > 0 -%}
              <a href="{{ article.url }}#comments">
