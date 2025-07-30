@@ -8363,6 +8363,7 @@ theme.recentlyViewed = {
             registerBtn.addEventListener('click', () => {
               releaseFocus();
               const releaseFocusRegister = trapFocusWishList(modalContainer);
+              console.log("entered");
             });
           }
         },300);
@@ -8386,7 +8387,7 @@ theme.recentlyViewed = {
       'select:not([disabled])',
       '[tabindex]:not([tabindex="-1"])'
     ];
-  
+    console.log(focusableSelectors);
     const focusableElements = container.querySelectorAll(focusableSelectors.join(','));
     const firstEl = focusableElements[0];
     const lastEl = focusableElements[focusableElements.length - 1];
