@@ -8682,21 +8682,18 @@ theme.recentlyViewed = {
           });
 
           const submitBtn = modal.querySelector(".yotpo-new-review-submit");
-          console.log(submitBtn, 'btnexist')
           if(submitBtn) {
-            console.log("btnexist")
             submitBtn.addEventListener('click', () => {
               setTimeout(() => {
                 const formCompletedContainer = modal.querySelector('.yotpo-form-complete');
                 if(formCompletedContainer) {
-                  console.log("formCompletedContainer")
                   formCompletedContainer.setAttribute("role", "alert");
                 }
-              }, 500);
+              }, 300);
             });
           }
         }
-      }, 500);
+      }, 300);
     }
   });
 
