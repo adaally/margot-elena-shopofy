@@ -8700,7 +8700,9 @@ theme.recentlyViewed = {
       titleContainer.innerHTML = '';
       titleContainer.appendChild(h2);
     }
-    removeTitleFromUsernamesReviews();
+    setTimeout(() => {
+      removeTitleFromUsernamesReviews();
+    },300);
   }
 
   function removeTitleFromUsernamesReviews() {
