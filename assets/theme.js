@@ -8358,7 +8358,12 @@ theme.recentlyViewed = {
             registerBtn.setAttribute("tabindex", "0");
 
             const releaseFocus = trapFocusWishList(modalContainer);
-            
+
+            closeBtn.addEventListener('click', () => releaseFocus());
+            registerBtn.addEventListener('click', () => {
+              releaseFocus();
+              const releaseFocusRegister = trapFocusWishList(modalContainer);
+            });
           }
         },300);
         
@@ -8382,11 +8387,7 @@ theme.recentlyViewed = {
       '[tabindex]:not([tabindex="-1"])'
     ];
   
-    const focusableElements = Array.from(container.querySelectorAll(focusableSelectors.join(',')))
-      .filter(el => el.offsetParent !== null); // removes hidden elements
-  
-    if (focusableElements.length === 0) return;
-  
+    const focusableElements = container.querySelectorAll(focusableSelectors.join(','));
     const firstEl = focusableElements[0];
     const lastEl = focusableElements[focusableElements.length - 1];
   
@@ -8410,11 +8411,13 @@ theme.recentlyViewed = {
   
     container.addEventListener('keydown', handleKeyDown);
   
-    // Optionally focus first element
-    firstEl.focus();
+    // Optional: focus the first element when trap starts
+    firstEl?.focus();
   
-    // Return cleanup function
-    return () => container.removeEventListener('keydown', handleKeyDown);
+    // Return a cleanup function
+    return () => {
+      container.removeEventListener('keydown', handleKeyDown);
+    };
   }
 
   listenToAddToWishlistBtn();
