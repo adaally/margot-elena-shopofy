@@ -8324,7 +8324,7 @@ theme.recentlyViewed = {
 
   function listenToAddToWishlistBtn() {
     const interval = setInterval(() => {
-      const btn = document.querySelector(".frcp-wishlist-btn");
+      const btn = document.querySelector(".frcp-wishlist-wrapper .frcp-wishlist-btn");
   
       if (!btn) {
         return;
