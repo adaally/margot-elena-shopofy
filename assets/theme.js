@@ -8515,6 +8515,7 @@ theme.recentlyViewed = {
               });
             
               // Create new <a> element to replace the div
+              const div = document.createElement('div');
               const aWrapper = document.createElement('a');
               aWrapper.href = href;
             
@@ -8524,7 +8525,7 @@ theme.recentlyViewed = {
                   aWrapper.setAttribute(attr.name, attr.value);
                 }
               }
-              aWrapper.className = block.className;
+              div.className = block.className;
             
               // Move all children from div into the new <a>
               while (block.firstChild) {
@@ -8532,8 +8533,9 @@ theme.recentlyViewed = {
               }
             
               // Replace the div with the new <a>
-              block.replaceWith(aWrapper);
+              block.replaceWith(div);
               aWrapper.removeAttribute("aria-label");
+              div.appendChild(aWrapper);
               
               const btnToCart = aWrapper.querySelector(".rebuy-button");
 
@@ -8555,12 +8557,6 @@ theme.recentlyViewed = {
                   detail.removeAttribute("tabindex");
                 });
               }
-
-              // const ratingValue = aWrapper.querySelector(".rebuy-star-rating-value")
-              // if(ratingValue) {
-              //   console.log(ratingValue)
-              //   ratingValue.fontSize = '11px';
-              // }
             }
           });
         }
