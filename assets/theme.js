@@ -8363,6 +8363,7 @@ theme.recentlyViewed = {
             registerBtn.addEventListener('click', () => {
               releaseFocus();
               const loginBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
+              console.log(loginBtn)
               loginBtn.setAttribute("tabindex", "0");
               const releaseFocusRegister = trapFocusWishlist(modalContainer);
             });
@@ -8393,7 +8394,7 @@ theme.recentlyViewed = {
       .filter(el => el.offsetParent !== null); // removes hidden elements
   
     if (focusableElements.length === 0) return;
-  
+    console.log(focusableElements)
     const firstEl = focusableElements[0];
     const lastEl = focusableElements[focusableElements.length - 1];
   
