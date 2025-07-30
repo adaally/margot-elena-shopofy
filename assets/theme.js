@@ -8365,6 +8365,11 @@ theme.recentlyViewed = {
               loginBtn[1].setAttribute("tabindex", "0");
               releaseFocus();
               const releaseFocusRegister = trapFocusWishlist(modalContainer);
+
+              loginBtn[1].addEventListener('click', () => {
+                releaseFocusRegister();
+                trapFocusWishlist(modalContainer);
+              });
             });
           }
         },300);
