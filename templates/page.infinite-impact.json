@@ -81,9 +81,7 @@
     },
     "81d031f3-81c0-466f-a10e-c58b7341bd2a": {
       "type": "text-and-image",
-      "custom_css": [
-        ".appear-delay-2 a {outline-offset: 4px; }"
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Impuse_-_Mobile_Top_Hero_Copy_3_eec0f553-88c0-43a2-b86e-b788828935f2.jpg",
         "image_mask": "none",
