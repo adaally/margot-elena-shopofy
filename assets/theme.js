@@ -8610,6 +8610,7 @@ theme.recentlyViewed = {
   function addAriaLabelToYoptoImages() {
       const observer = new MutationObserver(() => {
       const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper imgs");  
+      console.log(imgs)
       imgs.forEach(item => item.setAttribute("alt",""))
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
