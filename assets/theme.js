@@ -8322,71 +8322,91 @@ theme.recentlyViewed = {
 
   })
 
-  function listenToAddToWishlistBtn() {
-    const interval = setInterval(() => {
-      const btn = document.querySelector(".frcp-wishlist-btn");
-      
-      if(!btn) {
-        console.log(btn, 'whishlist btn not ready');
-        return;
-      }
-      
-      console.log(btn, 'whishlist btn');
-      clearInterval(interval);
-      clearTimeout(timeout);
+function listenToAddToWishlistBtn() {
+  const interval = setInterval(() => {
+    const btn = document.querySelector(".frcp-wishlist-btn");
 
-      btn.addEventListener('click', () => {
-        setTimeout(() => {
-          const modalContainer = document.querySelector(".frcp-login.frcp-popup");
-          if(modalContainer) {
-            console.log(modalContainer)
-            modalContainer.setAttribute("role", "alertdialog");
+    if (!btn) {
+      console.log(btn, 'wishlist btn not ready');
+      return;
+    }
 
-            //change title to h1
-            const title = modalContainer.querySelector(".frcp-popup__title");
-            const newTitle = document.createElement("h1");
-            newTitle.className = title.className;
-            newTitle.innerHTML = title.innerHTML;
-            newTitle.style.marginBottom = '0';
-            newTitle.style.textTransform = 'none';
-            title.parentNode.replaceChild(newTitle, title);
+    console.log(btn, 'wishlist btn');
+    clearInterval(interval);
+    clearTimeout(timeout);
 
-            const closeBtn = modalContainer.querySelector(".frcp-popup__close");
-            closeBtn.setAttribute("tabindex", "0");
-            closeBtn.setAttribute("role", "button");
-            closeBtn.setAttribute("aria-label", "Close");
+    btn.addEventListener('click', () => {
+      setTimeout(() => {
+        const modalContainer = document.querySelector(".frcp-login.frcp-popup");
+        if (modalContainer) {
+          const openerBtn = btn; // 👈 Save the opener to restore focus later
 
-            const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
-            registerBtn.setAttribute("tabindex", "0");
-            registerBtn.setAttribute("role", "button");
+          modalContainer.setAttribute("role", "alertdialog");
 
-            const releaseFocus = trapFocusWishlist(modalContainer);
+          // Replace title with h1
+          const title = modalContainer.querySelector(".frcp-popup__title");
+          const newTitle = document.createElement("h1");
+          newTitle.className = title.className;
+          newTitle.innerHTML = title.innerHTML;
+          newTitle.style.marginBottom = '0';
+          newTitle.style.textTransform = 'none';
+          title.parentNode.replaceChild(newTitle, title);
 
-            closeBtn.addEventListener('click', () => releaseFocus());
-            registerBtn.addEventListener('click', () => {
-              const loginBtn = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
-              loginBtn[1].setAttribute("tabindex", "0");
-              loginBtn[1].setAttribute("role", "button");
+          // Setup accessibility roles
+          const closeBtn = modalContainer.querySelector(".frcp-popup__close");
+          closeBtn.setAttribute("tabindex", "0");
+          closeBtn.setAttribute("role", "button");
+          closeBtn.setAttribute("aria-label", "Close");
+
+          const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
+          registerBtn.setAttribute("tabindex", "0");
+          registerBtn.setAttribute("role", "button");
+
+          // Trap focus
+          let releaseFocus = trapFocusWishlist(modalContainer);
+
+          // Close on close button
+          closeBtn.addEventListener('click', () => {
+            releaseFocus();
+            openerBtn.focus(); // 👈 Return focus
+            document.removeEventListener('keydown', escListener);
+          });
+
+          // ESC key support
+          function escListener(e) {
+            if (e.key === 'Escape') {
               releaseFocus();
-              const releaseFocusRegister = trapFocusWishlist(modalContainer);
-
-              loginBtn[1].addEventListener('click', () => {
-                releaseFocusRegister();
-                trapFocusWishlist(modalContainer);
-              });
-            });
+              openerBtn.focus(); // 👈 Return focus
+              modalContainer.style.display = 'none'; // optional
+              document.removeEventListener('keydown', escListener);
+            }
           }
-        },300);
-        
-      });
-      
-    }, 300);
-    
-    const timeout = setTimeout(() => {
-      clearInterval(interval);
-      console.log('Stopped checking for payment buttons (timeout)');
-    }, 5000); // 5 seconds
-  }
+          document.addEventListener('keydown', escListener);
+
+          // Switch to register form
+          registerBtn.addEventListener('click', () => {
+            const loginBtns = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
+            loginBtns[1].setAttribute("tabindex", "0");
+            loginBtns[1].setAttribute("role", "button");
+
+            releaseFocus();
+            releaseFocus = trapFocusWishlist(modalContainer); // 👈 re-trap for register
+
+            loginBtns[1].addEventListener('click', () => {
+              releaseFocus();
+              trapFocusWishlist(modalContainer);
+            });
+          });
+        }
+      }, 300);
+    });
+  }, 300);
+
+  const timeout = setTimeout(() => {
+    clearInterval(interval);
+    console.log('Stopped checking for wishlist button (timeout)');
+  }, 5000);
+}
 
   function trapFocusWishlist(container) {
     const focusableSelectors = [
