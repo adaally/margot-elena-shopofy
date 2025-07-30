@@ -8346,7 +8346,7 @@ theme.recentlyViewed = {
             const title = modalContainer.querySelector(".frcp-popup__title");
             const newTitle = document.createElement("h1");
             newTitle.className = title.className;
-            newTitle.innerHtml = title.innerHtml;
+            newTitle.innerHTML = title.innerHTML;
             newTitle.style.marginBottom = '0';
             newTitle.style.textTransform = 'none';
             title.parentNode.replaceChild(newTitle, title);
@@ -8354,7 +8354,7 @@ theme.recentlyViewed = {
             const closeBtn = modalContainer.querySelector(".frcp-popup__close");
             closeBtn.setAttribute("tabindex", "0");
 
-            const registerBtn = modalContainer.querySelecotr(".frcp-form__switch .frcp-popup__btn");
+            const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
             registerBtn.setAttribute("tabindex", "0");
             
           }
