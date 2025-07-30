@@ -8322,6 +8322,13 @@ theme.recentlyViewed = {
 
   })
 
+  function listenToAddToWishlistBtn() {
+    const btn = document.querySelector(".frcp-wishlist-btn");
+    console.log(btn, 'whishlist btn')
+  }
+
+  listenToAddToWishlistBtn();
+
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
     const checkIfRendered = setInterval(() => {
       const item = document.querySelector('.rebuy-widget.widget-type-product');
