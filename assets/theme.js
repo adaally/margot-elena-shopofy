@@ -8661,6 +8661,14 @@ theme.recentlyViewed = {
     });
   }
 
+  const tags = document.querySelectorAll(".grid__item__container.grid__item .tag-item");
+  tags.forEach(item => {
+    if(item.innerText.trim() === '') {
+      console.log(item.innerText)
+      item.remove();
+    }
+  }) 
+
   document.addEventListener('click', function (e) {
     if (e.target.matches('#yotpo-main-widget-btn')) {
       // Delay to wait for modal render
