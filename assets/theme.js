@@ -8353,6 +8353,8 @@ theme.recentlyViewed = {
 
             const closeBtn = modalContainer.querySelector(".frcp-popup__close");
             closeBtn.setAttribute("tabindex", "0");
+            closeBtn.setAttribute("role", "button");
+            closeBtn.setAttribute("aria-label", "Close");
 
             const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
             registerBtn.setAttribute("tabindex", "0");
