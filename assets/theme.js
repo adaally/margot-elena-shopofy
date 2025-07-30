@@ -8661,15 +8661,17 @@ theme.recentlyViewed = {
     });
   }
 
-  const tags = document.querySelectorAll(".grid__item__container.grid__item .article__date a");
-  tags.forEach(item => {
-    console.log(item.innerText.trim() == '')
-    if(item.innerText.trim() === '') {
-      console.log(item.innerText)
-      item.remove();
-    }
-  }) 
+  function removeEmptyLinkFromBlogTags() {
+    const tags = document.querySelectorAll(".grid__item__container.grid__item .article__date a");
+    tags.forEach(item => {
+      if(item.innerText.trim() === '') {
+        item.remove();
+      }
+    });
+  }
 
+  removeEmptyLinkFromBlogTags();
+  
   document.addEventListener('click', function (e) {
     if (e.target.matches('#yotpo-main-widget-btn')) {
       // Delay to wait for modal render
