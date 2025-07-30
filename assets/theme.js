@@ -8358,6 +8358,7 @@ theme.recentlyViewed = {
 
             const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
             registerBtn.setAttribute("tabindex", "0");
+            registerBtn.setAttribute("role", "button");
 
             const releaseFocus = trapFocusWishlist(modalContainer);
 
@@ -8365,6 +8366,7 @@ theme.recentlyViewed = {
             registerBtn.addEventListener('click', () => {
               const loginBtn = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
               loginBtn[1].setAttribute("tabindex", "0");
+              loginBtn[1].setAttribute("role", "button");
               releaseFocus();
               const releaseFocusRegister = trapFocusWishlist(modalContainer);
 
