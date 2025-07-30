@@ -8336,8 +8336,11 @@ theme.recentlyViewed = {
       clearTimeout(timeout);
 
       btn.addEventListener('click', () => {
-        const modalContainer = document.querySelector(".frcp-login.frcp-popup");
-        console.log(modalContainer);
+        setTimeout(() => {
+          const modalContainer = document.querySelector(".frcp-login.frcp-popup");
+          console.log(modalContainer)
+        },300);
+        
       });
       
     }, 300);
