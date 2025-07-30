@@ -8572,6 +8572,7 @@ theme.recentlyViewed = {
       const wishBtn = item.querySelector(".frcp-wishlist-btn");
       if(title && wishBtn) {
         wishBtn.setAttribute("aria-label", "Add " + title.innerText + " to wishlist");
+        wishBtn.removeAttribute("title");
       }
     });
     
