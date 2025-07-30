@@ -8348,7 +8348,7 @@ theme.recentlyViewed = {
             newTitle.className = title.className;
             newTitle.innerHtml = title.innerHtml;
             newTitle.style.marginBottom = '0';
-            newTitle.style.text-transform = 'none';
+            newTitle.style.textTransform = 'none';
             title.parentNode.replaceChild(newTitle, title);
 
             const closeBtn = modalContainer.querySelector(".frcp-popup__close");
