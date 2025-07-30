@@ -8356,6 +8356,8 @@ theme.recentlyViewed = {
 
             const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
             registerBtn.setAttribute("tabindex", "0");
+
+            const releaseFocus = trapFocus(modalContainer);
             
           }
         },300);
@@ -8368,6 +8370,49 @@ theme.recentlyViewed = {
       clearInterval(interval);
       console.log('Stopped checking for payment buttons (timeout)');
     }, 5000); // 5 seconds
+  }
+
+  function trapFocus(container) {
+    const focusableSelectors = [
+      'a[href]',
+      'button:not([disabled])',
+      'textarea:not([disabled])',
+      'input:not([disabled]):not([type="hidden"])',
+      'select:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])'
+    ];
+  
+    const focusableElements = container.querySelectorAll(focusableSelectors.join(','));
+    const firstEl = focusableElements[0];
+    const lastEl = focusableElements[focusableElements.length - 1];
+  
+    function handleKeyDown(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          // Shift + Tab
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          // Tab
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
+      }
+    }
+  
+    container.addEventListener('keydown', handleKeyDown);
+  
+    // Optional: focus the first element when trap starts
+    firstEl?.focus();
+  
+    // Return a cleanup function
+    return () => {
+      container.removeEventListener('keydown', handleKeyDown);
+    };
   }
 
   listenToAddToWishlistBtn();
