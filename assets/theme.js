@@ -8328,6 +8328,7 @@ theme.recentlyViewed = {
       
       if(!btn) {
         console.log(btn, 'whishlist btn not ready');
+        return;
       }
       
       console.log(btn, 'whishlist btn');
