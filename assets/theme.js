@@ -8682,6 +8682,7 @@ theme.recentlyViewed = {
           });
 
           const submitBtn = modal.querySelector("btn.yotpo-new-review-submit");
+          console.log(submitBtn)
           if(submitBtn) {
             console.log("btnexist")
             submitBtn.addEventListener('click', () => {
@@ -8691,11 +8692,11 @@ theme.recentlyViewed = {
                   console.log("formCompletedContainer")
                   formCompletedContainer.setAttribute("role", "alert");
                 }
-              }, 100);
+              }, 500);
             });
           }
         }
-      }, 300);
+      }, 500);
     }
   });
 
