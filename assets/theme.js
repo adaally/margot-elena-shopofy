@@ -8661,6 +8661,19 @@ theme.recentlyViewed = {
     });
   }
 
+  document.addEventListener('click', function (e) {
+    if (e.target.matches('#yotpo-main-widget-btn')) {
+      // Delay to wait for modal render
+      setTimeout(() => {
+        const modal = document.querySelector('#yotpo-modal');
+        if (modal) {
+          // Do your stuff here
+          console.log('Yotpo modal opened!');
+        }
+      }, 1000);
+    }
+  });
+
   function changePtoH2ToReviews() {
     setTimeout(() => {
       const reviewTitleContainer = document.querySelector(".yotpo-head");
