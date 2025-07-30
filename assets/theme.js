@@ -8622,7 +8622,12 @@ theme.recentlyViewed = {
     });
   }
 
+  function addAriaLabelToImpactPage(){
+    const items = document.querySelector('.feature-row .appear-delay-2 a');
+    items.forEach(item => item.setAttribute("Learn more about Dress for Success"));
+  }
 
+  addAriaLabelToImpactPage();
 
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
