@@ -8334,6 +8334,12 @@ theme.recentlyViewed = {
       console.log(btn, 'whishlist btn');
       clearInterval(interval);
       clearTimeout(timeout);
+
+      btn.addEventListener('click', () => {
+        const modalContainer = document.querySelector(".frcp-login.frcp-popup");
+        console.log(modalContainer);
+      });
+      
     }, 300);
     
     const timeout = setTimeout(() => {
