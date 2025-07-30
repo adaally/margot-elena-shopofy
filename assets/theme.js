@@ -8329,6 +8329,11 @@ theme.recentlyViewed = {
       if (!btn) {
         return;
       }
+
+      btn.removeAttribute("title");
+
+      const productLogoTitle = document.querySelector(".product-single__vendor a");
+      productLogoTitle.removeAttribute("title");
   
       clearInterval(interval);
       clearTimeout(timeout);
@@ -8683,6 +8688,7 @@ theme.recentlyViewed = {
 
   runWhenYotpoIsReady(() => {
     changeReviewTitleTag();
+    removeTitleFromUsernamesReviews();
   });
 
   function changeReviewTitleTag() {
@@ -8694,6 +8700,13 @@ theme.recentlyViewed = {
       titleContainer.innerHTML = '';
       titleContainer.appendChild(h2);
     }
+  }
+
+  function removeTitleFromUsernamesReviews() {
+    const usernames = document.querySelector(".yotpo-main-reviews-widget .yotpo-reviewer-name");
+    usernames.forEach(item => {
+      item.removeAttribute("title");
+    })
   }
 
   function removeAriaHiddenFromBuyConsentModalQuickView() {
