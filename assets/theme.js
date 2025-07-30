@@ -8626,7 +8626,22 @@ theme.recentlyViewed = {
     const items = document.querySelectorAll('.feature-row .appear-delay-2 a');
     items.forEach(item => item.setAttribute("aria-label","Learn more about Dress for Success"));
     const imgLinks = document.querySelectorAll('.feature-row .feature-row__first-image a');
-    console.log(imgLinks);
+    
+    imgLinks.forEach(a => {
+      const div = document.createElement('div');
+    
+    
+      // Copy styles or other attributes if needed
+      // div.setAttribute('style', a.getAttribute('style') || '');
+    
+      // Move all children from <a> to <div>
+      while (a.firstChild) {
+        div.appendChild(a.firstChild);
+      }
+    
+      // Replace <a> with the new <div>
+      a.parentNode.replaceChild(div, a);
+    });
   }
 
   addAriaLabelToImpactPage();
