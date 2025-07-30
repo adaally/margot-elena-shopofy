@@ -8667,8 +8667,13 @@ theme.recentlyViewed = {
       setTimeout(() => {
         const modal = document.querySelector('#yotpo-modal');
         if (modal) {
-          // Do your stuff here
-          console.log('Yotpo modal opened!');
+          const header = modal.querySelector("h2.yotpo-modal-header");
+          if(header) {
+            const newHeader = document.createElement("h1");
+            newHeader.className = header.className;
+            newHeader.innerHTML = header.innerHTML;
+            header.parentNode.replaceChild(newHeader, header);
+          }
         }
       }, 1000);
     }
