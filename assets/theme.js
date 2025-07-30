@@ -8609,7 +8609,7 @@ theme.recentlyViewed = {
 
   function addAriaLabelToYoptoImages() {
       const observer = new MutationObserver(() => {
-      const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper imgs");  
+      const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
       console.log(imgs)
       imgs.forEach(item => item.setAttribute("alt",""))
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
@@ -8692,7 +8692,6 @@ theme.recentlyViewed = {
   function changeReviewTitleTag() {
     const titleContainer = document.querySelector(".yotpo-head");
     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
-    console.log(reviewTitle)
     if(reviewTitle) {
       const h2 = document.createElement("h2");
       h2.textContent = reviewTitle.innerText;
