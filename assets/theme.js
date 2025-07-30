@@ -8570,6 +8570,7 @@ theme.recentlyViewed = {
       const item = document.querySelector(".rte.cc-careers-script-container");
 
       if(item) {
+        console.log(item, 'container')
         clearInterval(interval);
         clearTimeout(timeout);
         const dropDown = item.querySelector(".cc-filter-dropdown");
