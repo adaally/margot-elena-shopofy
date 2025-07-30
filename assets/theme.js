@@ -8565,6 +8565,30 @@ theme.recentlyViewed = {
 
   changeH3toH2InRebuyProductsBestSellersWhenReady();
 
+  function fixAccessibilityCareers() {
+    const interval = setInterval(() => {
+      const item = document.querySelector(".rte.cc-careers-script-container");
+
+      if(item) {
+        clearInterval(interval);
+        clearTimeout(timeout);
+        const dropDown = item.querySelector(".cc-filter-dropdown");
+        console.log(dropDown, 'dropdwn')
+        if(dropDown) {
+          dropDown.setAttribute("role", "combobox");
+          dropDown.removeAttribute("aria-hidden");
+        }
+      }
+    }, 300);
+
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+      console.log("Stopped checking (timeout)");
+    }, 5000);
+  }
+
+    fixAccessibilityCareers();
+
   function changeAddToWishlist() {
     const items = document.querySelectorAll(".grid-product__content");
     items.forEach(item => {
