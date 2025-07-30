@@ -8680,8 +8680,18 @@ theme.recentlyViewed = {
             item.removeAttribute("tabindex");
             item.removeAttribute("aria-label");
           });
+
+          const submitBtn = modal.querySelector("btn.yotpo-new-review-submit");
+          if(submitBtn) {
+            submitBtn.addEventListener('click', () => {
+              const formCompletedContainer = modal.querySelector('.yotpo-form-complete');
+              if(formCompletedContainer) {
+                formCompletedContainer.setAttribute("alert");
+              }
+            });
+          }
         }
-      }, 1000);
+      }, 300);
     }
   });
 
