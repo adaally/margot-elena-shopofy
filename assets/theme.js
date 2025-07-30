@@ -8387,8 +8387,9 @@ theme.recentlyViewed = {
       'select:not([disabled])',
       '[tabindex]:not([tabindex="-1"])'
     ];
-    console.log(focusableSelectors);
+    
     const focusableElements = container.querySelectorAll(focusableSelectors.join(','));
+    console.log(focusableElements);
     const firstEl = focusableElements[0];
     const lastEl = focusableElements[focusableElements.length - 1];
   
