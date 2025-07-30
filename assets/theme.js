@@ -8704,6 +8704,7 @@ theme.recentlyViewed = {
       const h2 = document.createElement("h2");
       h2.textContent = reviewTitle.innerText;
       titleContainer.innerHTML = '';
+      h2.className = reviewTitle.className;
       titleContainer.appendChild(h2);
     }
     setTimeout(() => {
