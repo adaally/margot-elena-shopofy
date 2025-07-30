@@ -8694,7 +8694,7 @@ theme.recentlyViewed = {
     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
     console.log(reviewTitle)
     if(reviewTitle) {
-      const h2 = document.createHtml("h2");
+      const h2 = document.createElement("h2");
       h2.textContent = reviewTitle.innerText;
       titleContainer.innerHTML = '';
       titleContainer.appendChild(h2);
