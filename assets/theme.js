@@ -8702,7 +8702,7 @@ theme.recentlyViewed = {
     }
     setTimeout(() => {
       removeTitleFromUsernamesReviews();
-    },300);
+    },1000);
   }
 
   function removeTitleFromUsernamesReviews() {
