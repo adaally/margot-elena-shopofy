@@ -8338,7 +8338,25 @@ theme.recentlyViewed = {
       btn.addEventListener('click', () => {
         setTimeout(() => {
           const modalContainer = document.querySelector(".frcp-login.frcp-popup");
-          console.log(modalContainer)
+          if(modalContainer) {
+            modalContainer.setAttribute("role", "alertdialog");
+
+            //change title to h1
+            const title = modalContainer.querySelector(".frcp-popup__title");
+            const newTitle = document.createElement("h1");
+            newTitle.className = title.className;
+            newTitle.innerHtml = title.innerHtml;
+            newTitle.style.marginBottom = '0';
+            newTitle.style.text-transform = 'none';
+            title.parentNode.replaceChild(newTitle, title);
+
+            const closeBtn = modalContainer.querySelector(".frcp-popup__close");
+            closeBtn.setAttribute("tabindex", "0");
+
+            const registerBtn = modalContainer.querySelecotr(".frcp-form__switch .frcp-popup__btn");
+            registerBtn.setAttribute("tabindex", "0");
+            
+          }
         },300);
         
       });
