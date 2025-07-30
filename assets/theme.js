@@ -8323,8 +8323,18 @@ theme.recentlyViewed = {
   })
 
   function listenToAddToWishlistBtn() {
-    const btn = document.querySelector(".frcp-wishlist-btn");
-    console.log(btn, 'whishlist btn')
+    const interval = setInterval(() => {
+      const btn = document.querySelector(".frcp-wishlist-btn");
+      
+      if(!btn) {
+        console.log(btn, 'whishlist btn not ready');
+      }
+      
+      console.log(btn, 'whishlist btn');
+      clearInterval(interval);
+    }, 300);
+    
+    
   }
 
   listenToAddToWishlistBtn();
