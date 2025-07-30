@@ -8624,7 +8624,7 @@ theme.recentlyViewed = {
 
   function addAriaLabelToImpactPage(){
     const items = document.querySelectorAll('.feature-row .appear-delay-2 a');
-    items.forEach(item => item.setAttribute("Learn more about Dress for Success"));
+    items.forEach(item => item.setAttribute("aria-label","Learn more about Dress for Success"));
   }
 
   addAriaLabelToImpactPage();
