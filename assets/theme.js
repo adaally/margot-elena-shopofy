@@ -8573,12 +8573,14 @@ theme.recentlyViewed = {
         console.log(item, 'container')
         clearInterval(interval);
         clearTimeout(timeout);
-        const dropDown = item.querySelector(".cc-filter-dropdown");
-        console.log(dropDown, 'dropdwn')
-        if(dropDown) {
-          dropDown.setAttribute("role", "combobox");
-          dropDown.removeAttribute("aria-hidden");
-        }
+        setTimeout(() => {
+          const dropDown = item.querySelector("div.cc-filter-dropdown");
+          console.log(dropDown, 'dropdwn')
+          if(dropDown) {
+            dropDown.setAttribute("role", "combobox");
+            dropDown.removeAttribute("aria-hidden");
+          }
+        },500);
       }
     }, 300);
 
