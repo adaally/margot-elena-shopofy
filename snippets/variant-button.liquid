@@ -14,8 +14,8 @@
   endif
 -%}
 
-<div class="variant-wrapper js" data-type="button">
-  <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+<fieldset class="variant-wrapper js" data-type="button">
+  <legend class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
     for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
     {%- if connect_to_sizechart and is_size -%}
@@ -40,7 +40,7 @@
         </span>
       </span>
     {%- endif -%}
-  </label>
+  </legend>
   {%- assign option_index = forloop.index -%}
   <fieldset class="variant-input-wrap"
     name="{{ option.name }}"
@@ -91,4 +91,4 @@
       </div>
     {%- endfor -%}
   </fieldset>
-</div>
+</fieldset>
