@@ -70,19 +70,15 @@
     {%- if section.settings.blog_show_tags and article.tags.size > 0 -%}
 {%- for tag in article.tags -%}
   {% assign tag_trimmed = tag | strip %}
-
   {% assign first_char = tag_trimmed | slice: 0 %}
 
-  {%- if tag_trimmed == "" -%}
-    {%- continue -%}
-  {%- endif -%}
+  {% if tag_trimmed == "" %}
+    {% continue %}
+  {% endif %}
 
-  {%- if tag_trimmed contains "_" and first_char == "_" -%}
-    {%- if tag_count -%}
-      {%- assign tag_count = tag_count | minus: 1 | at_least: 0 -%}
-    {%- endif -%}
-    {%- continue -%}
-  {%- endif -%}
+  {% if first_char == "_" %}
+    {% continue %}
+  {% endif %}
 
   <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
 {%- endfor -%}
@@ -100,3 +96,6 @@
   </a>
   
 </div>
+<script>
+  console.log("Tags:", {{ article.tags | json }});
+</script>
