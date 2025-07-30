@@ -8661,7 +8661,7 @@ theme.recentlyViewed = {
     });
   }
 
-  const tags = document.querySelectorAll(".grid__item__container.grid__item .tag-item");
+  const tags = document.querySelectorAll(".grid__item__container.grid__item .article__date a");
   tags.forEach(item => {
     console.log(item.innerText.trim() == '')
     if(item.innerText.trim() === '') {
