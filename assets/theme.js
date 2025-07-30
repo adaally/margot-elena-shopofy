@@ -8573,8 +8573,8 @@ theme.recentlyViewed = {
         console.log(item, 'container')
         clearInterval(interval);
         clearTimeout(timeout);
-        item.setAttribute("role", "combobox");
-        item.removeAttribute("aria-hidden");
+        // item.setAttribute("role", "combobox");
+        // item.removeAttribute("aria-hidden");
       }
     }, 300);
 
