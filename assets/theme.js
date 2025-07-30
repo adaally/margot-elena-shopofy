@@ -8555,11 +8555,11 @@ theme.recentlyViewed = {
                 });
               }
 
-              const ratingValue = aWrapper.querySelector(".rebuy-star-rating-value")
-              if(ratingValue) {
-                console.log(ratingValue)
-                ratingValue.fontSize = '11px';
-              }
+              // const ratingValue = aWrapper.querySelector(".rebuy-star-rating-value")
+              // if(ratingValue) {
+              //   console.log(ratingValue)
+              //   ratingValue.fontSize = '11px';
+              // }
             }
           });
         }
