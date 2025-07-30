@@ -8469,9 +8469,11 @@ theme.recentlyViewed = {
       console.log("betseller")
       const item = document.querySelector('.rebuy-widget.widget-type-product');
       if (item) {
+        console.log(item)
         const superTitle = item.querySelector(".super-title");
         if(superTitle) {
           const h2 = document.createElement('h2');
+          console.log(superTitle)
 
           // Copy all attributes
           for (const attr of superTitle.attributes) {
