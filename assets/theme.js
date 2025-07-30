@@ -8567,20 +8567,14 @@ theme.recentlyViewed = {
 
   function fixAccessibilityCareers() {
     const interval = setInterval(() => {
-      const item = document.querySelector(".rte.cc-careers-script-container");
+      const item = document.querySelector(".rte.cc-careers-script-container div.cc-filter-dropdown");
 
       if(item) {
         console.log(item, 'container')
         clearInterval(interval);
         clearTimeout(timeout);
-        setTimeout(() => {
-          const dropDown = item.querySelector("div.cc-filter-dropdown");
-          console.log(dropDown, 'dropdwn')
-          if(dropDown) {
-            dropDown.setAttribute("role", "combobox");
-            dropDown.removeAttribute("aria-hidden");
-          }
-        },500);
+        item.setAttribute("role", "combobox");
+        item.removeAttribute("aria-hidden");
       }
     }, 300);
 
