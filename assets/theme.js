@@ -8663,7 +8663,7 @@ theme.recentlyViewed = {
 
   const tags = document.querySelectorAll(".grid__item__container.grid__item .tag-item");
   tags.forEach(item => {
-    console.log(item.innerText)
+    console.log(item.innerText.trim() == '')
     if(item.innerText.trim() === '') {
       console.log(item.innerText)
       item.remove();
