@@ -89,7 +89,8 @@
 <script>
   const tags = document.querySelector("article__date .tag-item");
   tags.forEach(item => {
-    if(item.innerText === '') {
+    if(item.innerText.trim() === '') {
+      console.log(item.innerText)
       item.remove();
     }
   }) 
