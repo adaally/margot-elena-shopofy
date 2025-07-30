@@ -8357,7 +8357,7 @@ theme.recentlyViewed = {
             const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
             registerBtn.setAttribute("tabindex", "0");
 
-            const releaseFocus = trapFocus(modalContainer);
+            const releaseFocus = trapFocusWishList(modalContainer);
             
           }
         },300);
@@ -8372,7 +8372,7 @@ theme.recentlyViewed = {
     }, 5000); // 5 seconds
   }
 
-  function trapFocus(container) {
+  function trapFocusWishList(container) {
     const focusableSelectors = [
       'a[href]',
       'button:not([disabled])',
