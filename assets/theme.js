@@ -8338,10 +8338,17 @@ theme.recentlyViewed = {
           const modalContainer = document.querySelector(".frcp-login.frcp-popup");
           if (modalContainer) {
             const labels = modalContainer.querySelectorAll('label');
-            labels.forEach(item => item.style.color = '#000');
+            labels.forEach(item => {
+              item.style.color = '#000';
+              item.textContent += ' *';
+            });
             const inputs = modalContainer.querySelectorAll('input');
             inputs.forEach(item => item.style.borderColor = '#000');
-
+            const actionsBtns = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
+            actionsBtns.forEach(item => {
+              item.style.color = '#000';
+              item.style.borderColor = '#000'
+            });
 
             
             const openerBtn = btn; // 👈 Save the opener to restore focus later
