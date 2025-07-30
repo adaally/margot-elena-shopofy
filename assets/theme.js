@@ -8675,7 +8675,7 @@ theme.recentlyViewed = {
             header.parentNode.replaceChild(newHeader, header);
           }
 
-          const stars = modal.querySelectorAll(".yotpo-star-rating-icon");
+          const stars = modal.querySelectorAll("svg.yotpo-star-rating-icon");
           stars.forEach(item => {
             item.removeAttribute("tabindex");
             item.removeAttribute("aria-label");
