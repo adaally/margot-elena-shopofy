@@ -8333,9 +8333,13 @@ theme.recentlyViewed = {
       
       console.log(btn, 'whishlist btn');
       clearInterval(interval);
+      clearTimeout(timeout);
     }, 300);
     
-    
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+      console.log('Stopped checking for payment buttons (timeout)');
+    }, 5000); // 5 seconds
   }
 
   listenToAddToWishlistBtn();
