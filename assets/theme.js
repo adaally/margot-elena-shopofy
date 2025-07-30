@@ -8674,6 +8674,12 @@ theme.recentlyViewed = {
             newHeader.innerHTML = header.innerHTML;
             header.parentNode.replaceChild(newHeader, header);
           }
+
+          const stars = modal.querySelectorAll(".yotpo-star-rating-icon");
+          stars.forEach(item => {
+            item.removeAttribute("tabindex");
+            item.removeAttribute("aria-label");
+          });
         }
       }, 1000);
     }
