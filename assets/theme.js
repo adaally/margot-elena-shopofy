@@ -8681,8 +8681,8 @@ theme.recentlyViewed = {
             item.removeAttribute("aria-label");
           });
 
-          const submitBtn = modal.querySelector("btn.yotpo-new-review-submit");
-          console.log(submitBtn)
+          const submitBtn = modal.querySelector(".yotpo-new-review-submit");
+          console.log(submitBtn, 'btnexist')
           if(submitBtn) {
             console.log("btnexist")
             submitBtn.addEventListener('click', () => {
