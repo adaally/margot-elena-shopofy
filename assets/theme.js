@@ -8494,6 +8494,7 @@ theme.recentlyViewed = {
         const containerProductList = item.querySelector('.rebuy-product-grid');
         if(containerProductList) {
           containerProductList.setAttribute("aria-label", superTitle ? superTitle.innerText : '');
+          containerProductList.removeAttribute("tabindex");
 
           containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
             // Get first <a> inside to extract the product link
