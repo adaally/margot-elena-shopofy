@@ -8357,12 +8357,12 @@ theme.recentlyViewed = {
             const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
             registerBtn.setAttribute("tabindex", "0");
 
-            const releaseFocus = trapFocusWishList(modalContainer);
+            const releaseFocus = trapFocusWishlist(modalContainer);
 
             closeBtn.addEventListener('click', () => releaseFocus());
             registerBtn.addEventListener('click', () => {
               releaseFocus();
-              const releaseFocusRegister = trapFocusWishList(modalContainer);
+              const releaseFocusRegister = trapFocusWishlist(modalContainer);
               console.log("entered");
             });
           }
