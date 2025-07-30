@@ -8703,7 +8703,7 @@ theme.recentlyViewed = {
   }
 
   function removeTitleFromUsernamesReviews() {
-    const usernames = document.querySelector(".yotpo-main-reviews-widget .yotpo-reviewer-name");
+    const usernames = document.querySelectorAll(".yotpo-main-reviews-widget .yotpo-reviewer-name");
     usernames.forEach(item => {
       item.removeAttribute("title");
     })
