@@ -8555,7 +8555,7 @@ theme.recentlyViewed = {
                 });
               }
 
-              const ratingValue = aWrapper.querSelector(".rebuy-star-rating-value")
+              const ratingValue = aWrapper.querySelector(".rebuy-star-rating-value")
               if(ratingValue) {
                 console.log(ratingValue)
                 ratingValue.fontSize = '11px';
