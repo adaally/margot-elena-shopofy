@@ -8382,7 +8382,11 @@ theme.recentlyViewed = {
       '[tabindex]:not([tabindex="-1"])'
     ];
   
-    const focusableElements = container.querySelectorAll(focusableSelectors.join(','));
+    const focusableElements = Array.from(container.querySelectorAll(focusableSelectors.join(',')))
+      .filter(el => el.offsetParent !== null); // removes hidden elements
+  
+    if (focusableElements.length === 0) return;
+  
     const firstEl = focusableElements[0];
     const lastEl = focusableElements[focusableElements.length - 1];
   
@@ -8406,13 +8410,11 @@ theme.recentlyViewed = {
   
     container.addEventListener('keydown', handleKeyDown);
   
-    // Optional: focus the first element when trap starts
-    firstEl?.focus();
+    // Optionally focus first element
+    firstEl.focus();
   
-    // Return a cleanup function
-    return () => {
-      container.removeEventListener('keydown', handleKeyDown);
-    };
+    // Return cleanup function
+    return () => container.removeEventListener('keydown', handleKeyDown);
   }
 
   listenToAddToWishlistBtn();
