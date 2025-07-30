@@ -8466,14 +8466,11 @@ theme.recentlyViewed = {
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
     const checkIfRendered = setInterval(() => {
-      console.log("betseller")
       const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
       if (item) {
-        console.log(item)
         const superTitle = item.querySelector(".super-title");
         if(superTitle) {
           const h2 = document.createElement('h2');
-          console.log(superTitle)
 
           // Copy all attributes
           for (const attr of superTitle.attributes) {
@@ -8610,7 +8607,6 @@ theme.recentlyViewed = {
   function addAriaLabelToYoptoImages() {
       const observer = new MutationObserver(() => {
       const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
-      console.log(imgs)
       imgs.forEach(item => item.setAttribute("alt",""))
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
@@ -8772,10 +8768,8 @@ theme.recentlyViewed = {
   
   function addRoleModalDialogToQuickview() {
     const dialogContainer = document.querySelector(".modal.modal--is-active");
-    console.log(dialogContainer)
     if(dialogContainer) {
       dialogContainer.setAttribute("role", "modaldialog");
-      console.log(dialogContainer)
     }
   }
 
