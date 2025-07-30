@@ -8378,7 +8378,7 @@ theme.recentlyViewed = {
     }, 5000); // 5 seconds
   }
 
-  function trapFocus(container) {
+  function trapFocusWishlist(container) {
     const focusableSelectors = [
       'a[href]',
       'button:not([disabled])',
