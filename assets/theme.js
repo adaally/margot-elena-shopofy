@@ -8339,6 +8339,7 @@ theme.recentlyViewed = {
         setTimeout(() => {
           const modalContainer = document.querySelector(".frcp-login.frcp-popup");
           if(modalContainer) {
+            console.log(modalContainer)
             modalContainer.setAttribute("role", "alertdialog");
 
             //change title to h1
