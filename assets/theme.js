@@ -8340,7 +8340,7 @@ theme.recentlyViewed = {
             const labels = modalContainer.querySelectorAll('label');
             labels.forEach(item => {
               item.style.color = '#000';
-              item.textContent += ' *';
+              item.textContent += '*';
             });
             const inputs = modalContainer.querySelectorAll('input');
             inputs.forEach(item => item.style.borderColor = '#000');
