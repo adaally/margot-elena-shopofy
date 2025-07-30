@@ -8337,6 +8337,13 @@ theme.recentlyViewed = {
         setTimeout(() => {
           const modalContainer = document.querySelector(".frcp-login.frcp-popup");
           if (modalContainer) {
+            const labels = modalContainer.querySelectorAll('label');
+            labels.forEach(item => item.style.color = '#000');
+            const inputs = modalContainer.querySelectorAll('input');
+            inputs.forEach(item => item.style.borderColor = '#000');
+
+
+            
             const openerBtn = btn; // 👈 Save the opener to restore focus later
   
             modalContainer.setAttribute("role", "alertdialog");
