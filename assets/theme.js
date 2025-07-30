@@ -8539,6 +8539,9 @@ theme.recentlyViewed = {
                 });
               }
 
+              const actionsContainer = div.querySelector(".rebuy-product-actions");
+              aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
+
               const image = aWrapper.querySelector(".rebuy-product-image img");
               if(image) {
                 image.setAttribute("aria-hidden", "true");
