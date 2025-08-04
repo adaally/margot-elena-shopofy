@@ -43,8 +43,8 @@
   {%- endif -%}
 
   <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
-  <label for="id" class="visually-hidden">Select a price</label>
-  <select name="id" data-product-select class="product-single__variants no-js" data-productid="{{product.id}}">
+  <label for="select-price" class="visually-hidden">Select a price</label>
+  <select name="id" id="select-price" data-product-select class="product-single__variants no-js" data-productid="{{product.id}}">
     {%- for variant in product.variants -%}
       {%- if variant.available -%}
         <option {% if variant == product.selected_or_first_available_variant %}
