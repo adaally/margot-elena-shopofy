@@ -8470,9 +8470,12 @@ theme.recentlyViewed = {
   listenToAddToWishlistBtn();
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
+    //const timeout = () =>
+
     const checkIfRendered = setInterval(() => {
-      const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
-      if (item) {
+      const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
+      if(items.length === 0) return;
+      items.forEach(item => {
         const superTitle = item.querySelector(".super-title");
         const primaryTitle = item.querySelector(".primary-title");
         let newListText = '';
@@ -8577,8 +8580,9 @@ theme.recentlyViewed = {
           });
         }
         
+      });
+
         clearInterval(checkIfRendered);
-      }
     }, 100);
   }
 
