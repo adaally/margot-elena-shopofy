@@ -8470,14 +8470,16 @@ theme.recentlyViewed = {
   listenToAddToWishlistBtn();
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
-    //const timeout = () =>
+    const timeout = setTimeout(() => {
+
+    }, 6000);
     const processed = new Set();
     const expectedCount = 2;
 
     const checkIfRendered = setInterval(() => {
       const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
-      items.forEach(item => {
+      items.forEach((item, index) => {
         if (!processed.has(item)) {
           processed.add(item);
           // ✅ Run your method here
@@ -8523,10 +8525,11 @@ theme.recentlyViewed = {
         if(containerProductList) {
           containerProductList.setAttribute("aria-label", newListText);
           containerProductList.removeAttribute("tabindex");
-
+          const isFourColumns = containerProductList.classList.contains('large-columns-4');
           containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
             // Get first <a> inside to extract the product link
             const innerLink = block.querySelector('a');
+            
             const href = innerLink?.getAttribute('href');
           
             if (href){
@@ -8544,6 +8547,7 @@ theme.recentlyViewed = {
             
               // Create new <a> element to replace the div
               const div = document.createElement('div');
+              div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
               const aWrapper = document.createElement('a');
               aWrapper.href = href;
               div.className = block.className;
