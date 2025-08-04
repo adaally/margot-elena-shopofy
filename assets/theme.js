@@ -8477,7 +8477,6 @@ theme.recentlyViewed = {
   const startTime = Date.now();
 
   const checkIfRendered = setInterval(() => {
-    console.log("here")
     const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
     if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
@@ -8490,7 +8489,6 @@ theme.recentlyViewed = {
       if (processed.has(item)) return;
 
       processed.add(item);
-      console.log('Processing:', item);
 
       const superTitle = item.querySelector(".super-title");
       const primaryTitle = item.querySelector(".primary-title");
@@ -8563,7 +8561,7 @@ theme.recentlyViewed = {
       clearInterval(checkIfRendered);
       console.log('✅ All expected items processed.');
     }
-  }, 100);
+  }, 200);
 }
 
   changeH3toH2InRebuyProductsBestSellersWhenReady();
