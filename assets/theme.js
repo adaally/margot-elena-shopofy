@@ -8547,11 +8547,11 @@ theme.recentlyViewed = {
             
               // Create new <a> element to replace the div
               const div = document.createElement('div');
-              div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
               const aWrapper = document.createElement('a');
               aWrapper.href = href;
               div.className = block.className;
             
+              div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
               // Move all children from div into the new <a>
               while (block.firstChild) {
                 aWrapper.appendChild(block.firstChild);
