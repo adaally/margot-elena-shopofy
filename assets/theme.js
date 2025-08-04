@@ -8472,11 +8472,12 @@ theme.recentlyViewed = {
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
     const timeout = setTimeout(() => {
 
-    }, 6000);
+    }, 10000);
     const processed = new Set();
     const expectedCount = 2;
 
     const checkIfRendered = setInterval(() => {
+      console.log("jere")
       const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
       items.forEach((item, index) => {
