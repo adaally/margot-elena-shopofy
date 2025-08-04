@@ -245,6 +245,20 @@
   }
 }
 
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+}
+
+.grid-row > a {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hero__text-wrap .hero__top-subtitle, .hero__text-wrap h1.hero__title, .hero__text-wrap .hero__subtitle {
     background: rgba(0,0,0,0.01);
     border-radius: 50%
