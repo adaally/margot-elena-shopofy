@@ -8470,135 +8470,100 @@ theme.recentlyViewed = {
   listenToAddToWishlistBtn();
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
-    const timeout = setTimeout(() => {
+  const processed = new Set();
+  const expectedCount = 2;
+  const maxWaitTime = 10000; // 10 seconds
 
-    }, 10000);
-    const processed = new Set();
-    const expectedCount = 2;
+  const startTime = Date.now();
 
-    const checkIfRendered = setInterval(() => {
-      console.log("jere")
-      const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
+  const checkIfRendered = setInterval(() => {
+    const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
-      items.forEach((item, index) => {
-        if (!processed.has(item)) {
-          processed.add(item);
-          // ✅ Run your method here
-          console.log('Processing:', item);
-          const superTitle = item.querySelector(".super-title");
-        const primaryTitle = item.querySelector(".primary-title");
-        let newListText = '';
-        if(superTitle) {
-          const h2 = document.createElement('h2');
+    if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
+      clearInterval(checkIfRendered);
+      console.log('No items found within time limit — stopping.');
+      return;
+    }
 
-          // Copy all attributes
-          for (const attr of superTitle.attributes) {
-            h2.setAttribute(attr.name, attr.value);
-          }
-        
-          // Copy inner content
-          h2.innerHTML = superTitle.innerHTML;
-          h2.classList.add("h3");
-          h2.style.marginBottom='0';
-        
-          // Replace in DOM
-          superTitle.parentNode.replaceChild(h2, superTitle);
-          newListText = superTitle.innerText;
-        } else if(primaryTitle) {
-          const h2 = document.createElement('h2');
+    items.forEach(item => {
+      if (processed.has(item)) return;
 
-          // Copy all attributes
-          for (const attr of primaryTitle.attributes) {
-            h2.setAttribute(attr.name, attr.value);
-          }
-        
-          // Copy inner content
-          h2.innerHTML = primaryTitle.innerHTML;
-          h2.classList.add("h3");
-          h2.style.marginBottom='0';
-        
-          // Replace in DOM
-          primaryTitle.parentNode.replaceChild(h2, primaryTitle);
-          newListText = primaryTitle.innerText;
-        }
+      processed.add(item);
+      console.log('Processing:', item);
 
-        const containerProductList = item.querySelector('.rebuy-product-grid');
-        if(containerProductList) {
-          containerProductList.setAttribute("aria-label", newListText);
-          containerProductList.removeAttribute("tabindex");
-          const isFourColumns = containerProductList.classList.contains('large-columns-4');
-          containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
-            // Get first <a> inside to extract the product link
-            const innerLink = block.querySelector('a');
-            
-            const href = innerLink?.getAttribute('href');
-          
-            if (href){
-              // Replace all inner <a> with <span> to avoid nesting
-              block.querySelectorAll('a').forEach(a => {
-                const span = document.createElement('span');
-                span.className = a.className;
-            
-                while (a.firstChild) {
-                  span.appendChild(a.firstChild);
-                }
-            
-                a.replaceWith(span);
-              });
-            
-              // Create new <a> element to replace the div
-              const div = document.createElement('div');
-              const aWrapper = document.createElement('a');
-              aWrapper.href = href;
-              div.className = block.className;
-            
-              div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
-              // Move all children from div into the new <a>
-              while (block.firstChild) {
-                aWrapper.appendChild(block.firstChild);
-              }
-            
-              // Replace the div with the new <a>
-              block.replaceWith(div);
-              aWrapper.removeAttribute("aria-label");
-              div.appendChild(aWrapper);
-              div.setAttribute("role", "listitem");
-              
-              const btnToCart = aWrapper.querySelector(".rebuy-button");
+      const superTitle = item.querySelector(".super-title");
+      const primaryTitle = item.querySelector(".primary-title");
+      let newListText = '';
 
-              if(btnToCart) {
-                btnToCart.addEventListener("click", function(event) {
-                  event.preventDefault();
-                });
-              }
-
-              const actionsContainer = div.querySelector(".rebuy-product-actions");
-              aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
-
-              const image = aWrapper.querySelector(".rebuy-product-image img");
-              if(image) {
-                image.setAttribute("aria-hidden", "true");
-              }
-
-              const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
-              if(rebuyMoney) {
-                const details = rebuyMoney.querySelectorAll("span");
-                details.forEach(detail => {
-                  detail.removeAttribute("tabindex");
-                });
-              }
-            }
-          });
-        }
-        }
-      });
-
-      if (processed.size >= expectedCount) {
-        clearInterval(checkIfRendered);
-        console.log('All expected items processed');
+      const sourceTitle = superTitle || primaryTitle;
+      if (sourceTitle) {
+        const h2 = document.createElement('h2');
+        [...sourceTitle.attributes].forEach(attr => h2.setAttribute(attr.name, attr.value));
+        h2.innerHTML = sourceTitle.innerHTML;
+        h2.classList.add("h3");
+        h2.style.marginBottom = '0';
+        sourceTitle.parentNode.replaceChild(h2, sourceTitle);
+        newListText = sourceTitle.innerText;
       }
-    }, 100);
-  }
+
+      const containerProductList = item.querySelector('.rebuy-product-grid');
+      if (containerProductList) {
+        containerProductList.setAttribute("aria-label", newListText);
+        containerProductList.removeAttribute("tabindex");
+
+        const isFourColumns = containerProductList.classList.contains('large-columns-4');
+        containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
+          const innerLink = block.querySelector('a');
+          const href = innerLink?.getAttribute('href');
+
+          if (href) {
+            block.querySelectorAll('a').forEach(a => {
+              const span = document.createElement('span');
+              span.className = a.className;
+              while (a.firstChild) span.appendChild(a.firstChild);
+              a.replaceWith(span);
+            });
+
+            const div = document.createElement('div');
+            const aWrapper = document.createElement('a');
+            aWrapper.href = href;
+            div.className = block.className;
+            div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
+
+            while (block.firstChild) aWrapper.appendChild(block.firstChild);
+            block.replaceWith(div);
+            div.appendChild(aWrapper);
+            div.setAttribute("role", "listitem");
+            aWrapper.removeAttribute("aria-label");
+
+            const btnToCart = aWrapper.querySelector(".rebuy-button");
+            if (btnToCart) {
+              btnToCart.addEventListener("click", e => e.preventDefault());
+            }
+
+            const actionsContainer = div.querySelector(".rebuy-product-actions");
+            if (actionsContainer) aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
+
+            const image = aWrapper.querySelector(".rebuy-product-image img");
+            if (image) image.setAttribute("aria-hidden", "true");
+
+            const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
+            if (rebuyMoney) {
+              rebuyMoney.querySelectorAll("span").forEach(detail => {
+                detail.removeAttribute("tabindex");
+              });
+            }
+          }
+        });
+      }
+    });
+
+    if (processed.size >= expectedCount) {
+      clearInterval(checkIfRendered);
+      console.log('✅ All expected items processed.');
+    }
+  }, 100);
+}
 
   changeH3toH2InRebuyProductsBestSellersWhenReady();
 
