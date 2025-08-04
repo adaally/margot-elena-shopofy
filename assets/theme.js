@@ -8471,13 +8471,18 @@ theme.recentlyViewed = {
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
     //const timeout = () =>
+    const processed = new Set();
+    const expectedCount = 2;
 
     const checkIfRendered = setInterval(() => {
       const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
-      console.log(items)
-      if(items.length === 0) return;
+
       items.forEach(item => {
-        const superTitle = item.querySelector(".super-title");
+        if (!processed.has(item)) {
+          processed.add(item);
+          // ✅ Run your method here
+          console.log('Processing:', item);
+          const superTitle = item.querySelector(".super-title");
         const primaryTitle = item.querySelector(".primary-title");
         let newListText = '';
         if(superTitle) {
@@ -8580,10 +8585,13 @@ theme.recentlyViewed = {
             }
           });
         }
-        
+        }
       });
 
+      if (processed.size >= expectedCount) {
         clearInterval(checkIfRendered);
+        console.log('All expected items processed');
+      }
     }, 100);
   }
 
