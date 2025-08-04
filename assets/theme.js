@@ -8512,7 +8512,7 @@ theme.recentlyViewed = {
 
         const containerProductList = item.querySelector('.rebuy-product-grid');
         if(containerProductList) {
-          containerProductList.setAttribute("aria-label", superTitle ? superTitle.innerText : '');
+          containerProductList.setAttribute("aria-label", newListText);
           containerProductList.removeAttribute("tabindex");
 
           containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
