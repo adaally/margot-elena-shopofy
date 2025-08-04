@@ -8474,6 +8474,7 @@ theme.recentlyViewed = {
 
     const checkIfRendered = setInterval(() => {
       const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
+      console.log(items)
       if(items.length === 0) return;
       items.forEach(item => {
         const superTitle = item.querySelector(".super-title");
