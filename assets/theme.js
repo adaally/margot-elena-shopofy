@@ -8595,7 +8595,7 @@ theme.recentlyViewed = {
     }, 100);
   }
 
-  //changeH3toH2InRebuyProductsBestSellersWhenReady();
+  //CHECK ANDER  changeH3toH2InRebuyProductsBestSellersWhenReady();
 
   function fixAccessibilityCareers() {
     const interval = setInterval(() => {
