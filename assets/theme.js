@@ -8475,7 +8475,7 @@ theme.recentlyViewed = {
       if (item) {
         const superTitle = item.querySelector(".super-title");
         const primaryTitle = item.querySelector(".primary-title");
-        const newListText = '';
+        let newListText = '';
         if(superTitle) {
           const h2 = document.createElement('h2');
 
@@ -8582,7 +8582,7 @@ theme.recentlyViewed = {
     }, 100);
   }
 
-  //changeH3toH2InRebuyProductsBestSellersWhenReady();
+  changeH3toH2InRebuyProductsBestSellersWhenReady();
 
   function fixAccessibilityCareers() {
     const interval = setInterval(() => {
