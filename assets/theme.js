@@ -8477,6 +8477,7 @@ theme.recentlyViewed = {
   const startTime = Date.now();
 
   const checkIfRendered = setInterval(() => {
+    console.log("here")
     const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
     if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
