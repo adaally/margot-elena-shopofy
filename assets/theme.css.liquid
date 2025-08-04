@@ -255,6 +255,17 @@
   align-items: center;
 }
 
+@media (max-width: 480px) {
+  .grid-row {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-row .rebuy-product-actions {
+    width: 100%;
+  }
+}
+
 .flex-column {
   display: flex;
   justify-content: space-between !important;
