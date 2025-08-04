@@ -8474,6 +8474,8 @@ theme.recentlyViewed = {
       const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
       if (item) {
         const superTitle = item.querySelector(".super-title");
+        const primaryTitle = item.querySelector(".primary-title");
+        const newListText = '';
         if(superTitle) {
           const h2 = document.createElement('h2');
 
@@ -8489,6 +8491,23 @@ theme.recentlyViewed = {
         
           // Replace in DOM
           superTitle.parentNode.replaceChild(h2, superTitle);
+          newListText = superTitle.innerText;
+        } else if(primaryTitle) {
+          const h2 = document.createElement('h2');
+
+          // Copy all attributes
+          for (const attr of primaryTitle.attributes) {
+            h2.setAttribute(attr.name, attr.value);
+          }
+        
+          // Copy inner content
+          h2.innerHTML = primaryTitle.innerHTML;
+          h2.classList.add("h3");
+          h2.style.marginBottom='0';
+        
+          // Replace in DOM
+          primaryTitle.parentNode.replaceChild(h2, primaryTitle);
+          newListText = primaryTitle.innerText;
         }
 
         const containerProductList = item.querySelector('.rebuy-product-grid');
