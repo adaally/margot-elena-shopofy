@@ -8421,6 +8421,7 @@ theme.recentlyViewed = {
   
     const timeout = setTimeout(() => {
       clearInterval(interval);
+      console.log("wishlistbtn stop")
     }, 5000);
   }
 
