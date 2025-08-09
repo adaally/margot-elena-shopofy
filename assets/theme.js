@@ -1946,7 +1946,7 @@ theme.recentlyViewed = {
       el.querySelectorAll(selectors.trigger).forEach(trigger => {
         var state = trigger.classList.contains(classes.open);
         trigger.setAttribute('aria-expanded', state);
-  
+        trigger.removeAttribute("title");
         trigger.off('click' + namespace);
         trigger.on('click' + namespace, toggle);
       });
