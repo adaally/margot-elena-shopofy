@@ -508,7 +508,7 @@
           "type": "question",
           "settings": {
             "title": "How can I update the shipping address for my subscription box?",
-            "text": "<p>Please visit <a href=\"https://margotelena.com/pages/subscription-box-address-changes\" title=\"Subscription Box Address Change Instructions\">Subscription Box Address Change Instructions</a></p>"
+            "text": "<p>Please visit <a href=\"https://margotelena.com/pages/subscription-box-address-changes\">Subscription Box Address Change Instructions</a></p>"
           }
         },
         "e880c498-6a2d-4ec1-84eb-f0c87fdfcef1": {
