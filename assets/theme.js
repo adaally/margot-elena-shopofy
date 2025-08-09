@@ -8651,7 +8651,7 @@ theme.recentlyViewed = {
   function addFieldSetToRechangeSubscriptionOnProduct() {
     const timeout = setTimeout(() => {
       clearInterval(interval);
-    },6000);
+    },10000);
 
     const interval = setInterval(() => {
       const rcTemplate = document.querySelector(".rc-template");
@@ -8659,6 +8659,7 @@ theme.recentlyViewed = {
         const container = rcTemplate.querySelector(".rc-template__legacy-radio");
         const fieldSetContainer = document.createElement("fieldset");
         const legend = document.createElement("legend");
+        legend.classList.add("visually-hidden");
         legend.innerText = 'Product purchasing options';
         fieldSetContainer.appendChild(legend);
         fieldSetContainer.className = container.className;
