@@ -8791,7 +8791,7 @@ theme.recentlyViewed = {
 
   runWhenYotpoIsReady(() => {
     changeReviewTitleTag();
-    
+    console.log("YOPTO FOUND")
   });
 
   function changeReviewTitleTag() {
