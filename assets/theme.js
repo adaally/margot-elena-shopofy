@@ -8806,12 +8806,11 @@ theme.recentlyViewed = {
     }
     setTimeout(() => {
       removeTitleFromUsernamesReviews();
-    },2000);
+    },3000);
   }
 
   function removeTitleFromUsernamesReviews() {
     const usernames = document.querySelectorAll(".yotpo-reviewer-name");
-    console.log(usernames, 'users')
     usernames.forEach(item => {
       item.removeAttribute("title");
     });
