@@ -8659,6 +8659,8 @@ theme.recentlyViewed = {
         const container = rcTemplate.querySelector(".rc-template__legacy-radio");
         const fieldSetContainer = document.createElement("fieldset");
         const legend = document.createElement("legend");
+        legend.innerText = 'Product purchasing options';
+        fieldSetContainer.appendChild(legend);
         fieldSetContainer.className = container.className;
         [...container.attributes].forEach(attr => {
           fieldSetContainer.setAttribute(attr.name, attr.value);
