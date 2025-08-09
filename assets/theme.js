@@ -8672,7 +8672,7 @@ theme.recentlyViewed = {
         if(sortLabel) {
           const newElement = document.createElement("div");
           newElement.className = sortLabel.className;
-          newElement.innerHtml = sortLabel.innerHTML;
+          newElement.innerHTML = sortLabel.innerHTML;
           sortLabel.replaceWith(newElement);
         }
 
