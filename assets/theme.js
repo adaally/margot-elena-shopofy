@@ -8651,7 +8651,6 @@ theme.recentlyViewed = {
   function addLabelTextToYoptoSearch() {
     const timeout = setTimeout(() => {
       clearInterval(interval);
-      console.log("finished-yopto")
     },6000);
 
     const interval = setInterval(() => {
@@ -8669,7 +8668,6 @@ theme.recentlyViewed = {
 
         clearInterval(interval);
         clearTimeout(timeout);
-        console.log("found yopTO");
       }
     });
   }
