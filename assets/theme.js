@@ -8314,7 +8314,7 @@ theme.recentlyViewed = {
     toggleDropdown();
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
-    addAriaLabelToYoptoImages();
+    addAccessibilityToYopto();
     document.dispatchEvent(new CustomEvent('page:loaded'));
     setTimeout(() => {
       listenToButtonMoreYoptoImages();
@@ -8644,11 +8644,11 @@ theme.recentlyViewed = {
   function listenToButtonMoreYoptoImages() {
       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
       if(yoptoButtonMore) {
-        yoptoButtonMore.addEventListener('click', addAriaLabelToYoptoImages);
+        yoptoButtonMore.addEventListener('click', addAccessibilityToYopto);
       }
   }
 
-  function addAriaLabelToYoptoImages() {
+  function addAccessibilityToYopto() {
       const observer = new MutationObserver(() => {
       const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
       imgs.forEach(item => item.setAttribute("alt",""))
@@ -8658,8 +8658,13 @@ theme.recentlyViewed = {
       const toggleTextContainers = document.querySelectorAll(".toggle-text");
       const descriptionsModals = document.querySelectorAll(".yopto-main");
 
+      const inputSearch = document.querySelector(".yotpo-filters-container #searchInput");
       const emptyDivModal = document.querySelector(".yotpo-modal-mask");
       const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container .sr-only");
+
+      if(inputSearch) {
+        inputSearch.setAttribute("aria-label", "Fix");
+      }
 
       if(srOnlyList) {
         srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
