@@ -8660,18 +8660,18 @@ theme.recentlyViewed = {
       const emptyDivModal = document.querySelector(".yotpo-modal-mask");
       const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container .sr-only");
 
-      const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
+      // const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
 
-      if(labelSearch) {
-        const input = labelSearch.querySelector("input");
-        if(input) {
-          const labelText = input.getAttribute("placeholder");
-          const newElementHidden = document.createElement("span");
-          newElementHidden.classList.add("visually-hidden");
-          newElementHidden.innerText = labelText;
-          labelSearch.appendChild(newElementHidden);
-        }
-      }
+      // if(labelSearch) {
+      //   const input = labelSearch.querySelector("input");
+      //   if(input) {
+      //     const labelText = input.getAttribute("placeholder");
+      //     const newElementHidden = document.createElement("span");
+      //     newElementHidden.classList.add("visually-hidden");
+      //     newElementHidden.innerText = labelText;
+      //     labelSearch.appendChild(newElementHidden);
+      //   }
+      // }
 
       if(srOnlyList) {
         srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
