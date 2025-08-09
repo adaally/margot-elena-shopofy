@@ -8661,7 +8661,7 @@ theme.recentlyViewed = {
         const input = labelSearch.querySelector("input");
         if(input) {
           const labelText = input.getAttribute("placeholder");
-          const newElementHidden = document.createElement("span");
+          const newElementHidden = document.createElement("div");
           newElementHidden.classList.add("visually-hidden");
           newElementHidden.innerText = labelText;
           labelSearch.appendChild(newElementHidden);
