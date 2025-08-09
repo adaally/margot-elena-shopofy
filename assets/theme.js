@@ -8664,14 +8664,18 @@ theme.recentlyViewed = {
 
       if(labelSearch) {
         const input = labelSearch.querySelector("input");
-        console.log(input, "input")
-        // if(input) {
-        //   const labelText = input.getAttribute("placeholder");
-        //   const newElementHidden = document.createElement("span");
-        //   newElementHidden.classList.add("visually-hidden");
-        //   newElementHidden.innerText = labelText;
-        //   labelSearch.appendChild(newElementHidden);
-        // }
+        if(input) {
+          
+          
+          const labelText = input.getAttribute("placeholder");
+          
+          console.log(input, "input")
+          const newElementHidden = document.createElement("span");
+          newElementHidden.classList.add("visually-hidden");
+          newElementHidden.innerText = labelText;
+          labelSearch.appendChild(newElementHidden);
+          console.log(input, "input2")
+        }
       }
 
       if(srOnlyList) {
