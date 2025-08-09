@@ -8648,6 +8648,30 @@ theme.recentlyViewed = {
       }
   }
 
+  function addFieldSetToRechangeSubscriptionOnProduct() {
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    },6000);
+
+    const interval = setInterval(() => {
+      const rcTemplate = document.querySelector(".rc-template");
+      if(rcTemplate) {
+        const container = rcTemplate.querySelector(".rc-template__legacy-radio");
+        const fieldSetContainer = document.createElement("fieldset");
+        const legend = document.createElement("legend");
+        fieldSetContainer.className = container.className;
+        [...container.attributes].forEach(attr => {
+          fieldSetContainer.setAttribute(attr.name, attr.value);
+        });
+        fieldSetContainer.classList.add("fieldset-no-style");
+        container.querySelectorAll(".rc-radio").forEach(item => fieldSetContainer.appendChild(item));
+        container.replaceWith(fieldSetContainer);
+        clearInterval(interval);
+        clearTimeout(timeout);
+      }
+    });
+  }
+
   function addLabelTextToYoptoSearch() {
     const timeout = setTimeout(() => {
       clearInterval(interval);
@@ -8655,9 +8679,6 @@ theme.recentlyViewed = {
 
     const interval = setInterval(() => {
       const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
-
-
-
       if(labelSearch) {
         const input = labelSearch.querySelector("input");
         if(input) {
