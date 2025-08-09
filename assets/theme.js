@@ -8672,6 +8672,8 @@ theme.recentlyViewed = {
     });
   }
 
+  addFieldSetToRechangeSubscriptionOnProduct();
+
   function addLabelTextToYoptoSearch() {
     const timeout = setTimeout(() => {
       clearInterval(interval);
