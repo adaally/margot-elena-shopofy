@@ -24,7 +24,7 @@
 -%}
 
 <div role="listitem" class="grid__item {{ gridView }}" {{ block.shopify_attributes }}>
-  <a prueba href="{{ collection.url }}" class="collection-item collection-item--{{ settings.collection_grid_style }}" data-aos="row-of-{{ per_row }}">
+  <a href="{{ collection.url }}" class="collection-item collection-item--{{ settings.collection_grid_style }}" data-aos="row-of-{{ per_row }}">
 
     {%- if collection == blank or collection_image == blank -%}
       {%- capture placeholder -%}collection-{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
