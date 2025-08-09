@@ -8781,10 +8781,17 @@ theme.recentlyViewed = {
   }
 
   function runWhenYotpoIsReady(callback) {
+    const timeout = setTimeout(() => {
+      clearInterval(checkYotpo);
+    console.log("YOPTO FOUND1 xdddddd")
+    }, 6000);
+
     const checkYotpo = setInterval(() => {
-    console.log("YOPTO FOUND1")
-      if (window.yotpo && typeof yotpo.initialized === 'boolean') {
+      console.log("YOPTO FOUND1")
+      const yoptoContainer = document.querySelector(".yotpo-main-layout");
+      if (yoptoContainer) {
         clearInterval(checkYotpo);
+        clearTimeout(timeout)
         callback();
       }
     }, 100);
@@ -8792,11 +8799,9 @@ theme.recentlyViewed = {
 
   runWhenYotpoIsReady(() => {
     changeReviewTitleTag();
-    console.log("YOPTO FOUND2")
   });
 
   function changeReviewTitleTag() {
-    console.log("YOPTO FOUND3")
     const titleContainer = document.querySelector(".yotpo-head");
     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
     if(reviewTitle) {
@@ -8808,7 +8813,7 @@ theme.recentlyViewed = {
     }
     setTimeout(() => {
       removeTitleFromUsernamesReviews();
-    },3000);
+    },2000);
   }
 
   function removeTitleFromUsernamesReviews() {
