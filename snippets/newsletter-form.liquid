@@ -10,7 +10,7 @@
   {%- endif -%}
 
   {%- unless form.posted_successfully? -%}
-    <label aria-hidden="true" tabindex="-1" for="newsletter-form-submit-{{ section_id }}" class="hidden-label">{{ 'general.newsletter_form.submit' | t }}</label>
+    {% comment %} <label aria-hidden="true" tabindex="-1" for="newsletter-form-submit-{{ section_id }}" class="hidden-label">{{ 'general.newsletter_form.submit' | t }}</label> {% endcomment %}
     <input aria-hidden="true" tabindex="-1" type="hidden" name="contact[tags]" value="prospect,newsletter">
     <input aria-hidden="true" tabindex="-1" type="hidden" name="contact[context]" value="{{ snippet_context }}">
     <div class="input-group newsletter__input-group">
