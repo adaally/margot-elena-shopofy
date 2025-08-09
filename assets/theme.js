@@ -8648,6 +8648,34 @@ theme.recentlyViewed = {
       }
   }
 
+  function addLabelTextToYoptoSearch() {
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+      console.log("finished-yopto")
+    },6000);
+
+    const interval = setInterval(() => {
+      const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
+
+      if(labelSearch) {
+        const input = labelSearch.querySelector("input");
+        if(input) {
+          const labelText = input.getAttribute("placeholder");
+          const newElementHidden = document.createElement("span");
+          newElementHidden.classList.add("visually-hidden");
+          newElementHidden.innerText = labelText;
+          labelSearch.appendChild(newElementHidden);
+        }
+
+        clearInterval(interval);
+        clearTimeout(timeout);
+        console.log("found yopTO");
+      }
+    });
+  }
+
+  addLabelTextToYoptoSearch();
+
   function addAccessibilityToYopto() {
       const observer = new MutationObserver(() => {
       const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
@@ -8659,24 +8687,6 @@ theme.recentlyViewed = {
       const descriptionsModals = document.querySelectorAll(".yopto-main");
       const emptyDivModal = document.querySelector(".yotpo-modal-mask");
       const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container .sr-only");
-
-      const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
-
-      if(labelSearch) {
-        const input = labelSearch.querySelector("input");
-        if(input) {
-          
-          
-          const labelText = input.getAttribute("placeholder");
-          
-          console.log(input, "input")
-          const newElementHidden = document.createElement("span");
-          newElementHidden.classList.add("visually-hidden");
-          newElementHidden.innerText = labelText;
-          labelSearch.appendChild(newElementHidden);
-          console.log(input, "input2")
-        }
-      }
 
       if(srOnlyList) {
         srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
