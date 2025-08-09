@@ -126,7 +126,7 @@
 
                     {%- render 'image-element',
                       img: media.preview_image,
-                      alt: media.alt | escape | split: '#' | first,
+                      alt: "",
                       widths: '120, 360, 540, 720',
                       sizeVariable: '80px',
                       loading: loading,
