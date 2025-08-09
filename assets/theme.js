@@ -8668,13 +8668,16 @@ theme.recentlyViewed = {
           labelSearch.appendChild(newElementHidden);
         }
         
-        // const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
-        // if(sortLabel) {
-        //   const newElement = document.createElement("div");
-        //   newElement.className = sortLabel.className;
-        //   newElement.innerHTML = sortLabel.innerHTML;
-        //   sortLabel.replaceWith(newElement);
-        // }
+        const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
+        if(sortLabel) {
+          const newElement = document.createElement("span");
+          newElement.className = sortLabel.className;
+          newElement.innerHTML = sortLabel.innerHTML;
+          [...sortLabel.attributes].forEach(attr => {
+            newElement.setAttribute(attr.name, attr.value);
+          });
+          sortLabel.replaceWith(newElement);
+        }
 
         clearInterval(interval);
         clearTimeout(timeout);
