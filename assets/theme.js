@@ -8781,6 +8781,7 @@ theme.recentlyViewed = {
   }
 
   function runWhenYotpoIsReady(callback) {
+    console.log("YOPTO FOUND1")
     const checkYotpo = setInterval(() => {
       if (window.yotpo && typeof yotpo.initialized === 'boolean') {
         clearInterval(checkYotpo);
@@ -8791,10 +8792,11 @@ theme.recentlyViewed = {
 
   runWhenYotpoIsReady(() => {
     changeReviewTitleTag();
-    console.log("YOPTO FOUND")
+    console.log("YOPTO FOUND2")
   });
 
   function changeReviewTitleTag() {
+    console.log("YOPTO FOUND3")
     const titleContainer = document.querySelector(".yotpo-head");
     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
     if(reviewTitle) {
