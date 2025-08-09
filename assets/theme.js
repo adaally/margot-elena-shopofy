@@ -8656,6 +8656,8 @@ theme.recentlyViewed = {
     const interval = setInterval(() => {
       const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
 
+
+
       if(labelSearch) {
         const input = labelSearch.querySelector("input");
         if(input) {
@@ -8664,6 +8666,14 @@ theme.recentlyViewed = {
           newElementHidden.classList.add("visually-hidden");
           newElementHidden.innerText = labelText;
           labelSearch.appendChild(newElementHidden);
+        }
+        
+        const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
+        if(sortLabel) {
+          const newElement = document.createElement("div");
+          newElement.className = sortLabel.className;
+          newElement.innerHtml = sortLabel.innerHTML;
+          sortLabel.replaceWith(newElement);
         }
 
         clearInterval(interval);
