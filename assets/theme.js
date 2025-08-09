@@ -8663,11 +8663,14 @@ theme.recentlyViewed = {
       const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
 
       if(labelSearch) {
-        const labelText = labelSearch.querySelector("input").getAttribute("placeholder") || "";
-        const newElementHidden = document.createElement("span");
-        newElementHidden.classList.add("visually-hidden");
-        newElementHidden.innerText = labelText;
-        labelSearch.appendChild(newElementHidden);
+        const input = labelSearch.querySelector("input");
+        if(input) {
+          const labelText = input.getAttribute("placeholder");
+          const newElementHidden = document.createElement("span");
+          newElementHidden.classList.add("visually-hidden");
+          newElementHidden.innerText = labelText;
+          labelSearch.appendChild(newElementHidden);
+        }
       }
 
       if(srOnlyList) {
