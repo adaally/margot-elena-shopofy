@@ -8670,14 +8670,13 @@ theme.recentlyViewed = {
         
         const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
         if(sortLabel) {
-          sortLabel.setAttribute("role", "none")
-          // const newElement = document.createElement("span");
-          // newElement.className = sortLabel.className;
-          // newElement.innerHTML = sortLabel.innerHTML;
-          // [...sortLabel.attributes].forEach(attr => {
-          //   newElement.setAttribute(attr.name, attr.value);
-          // });
-          // sortLabel.replaceWith(newElement);
+          const newElement = document.createElement("input");
+          const id = sortLabel.getAttribute("for");
+          newElement.style.display = "none";
+          newElement.setAttribute("tabindex", "-1");
+          newElement.setAttribute("aria-hidden", "true");
+          newElement.setAttribute("id", id);
+          sortLabel.appendChild(newElement);
         }
 
         clearInterval(interval);
