@@ -8670,13 +8670,14 @@ theme.recentlyViewed = {
         
         const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
         if(sortLabel) {
-          const newElement = document.createElement("span");
-          newElement.className = sortLabel.className;
-          newElement.innerHTML = sortLabel.innerHTML;
-          [...sortLabel.attributes].forEach(attr => {
-            newElement.setAttribute(attr.name, attr.value);
-          });
-          sortLabel.replaceWith(newElement);
+          sortLabel.setAttribute("role", "none")
+          // const newElement = document.createElement("span");
+          // newElement.className = sortLabel.className;
+          // newElement.innerHTML = sortLabel.innerHTML;
+          // [...sortLabel.attributes].forEach(attr => {
+          //   newElement.setAttribute(attr.name, attr.value);
+          // });
+          // sortLabel.replaceWith(newElement);
         }
 
         clearInterval(interval);
