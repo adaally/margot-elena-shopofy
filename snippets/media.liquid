@@ -97,11 +97,12 @@
           endif
         -%}
 
+          {% comment %} alt: media.alt | escape | split: '#' | first, {% endcomment %}
         {%- render 'image-element',
           img: media.preview_image,
           type: 'photoswipe',
           classes: image_classes,
-          alt: media.alt | escape | split: '#' | first,
+          alt: "",
           widths: '360, 540, 720, 900, 1080',
           product_zoom_size: product_zoom_size,
           loopIndex: loopIndex,
