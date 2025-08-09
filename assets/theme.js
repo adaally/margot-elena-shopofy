@@ -8781,8 +8781,8 @@ theme.recentlyViewed = {
   }
 
   function runWhenYotpoIsReady(callback) {
-    console.log("YOPTO FOUND1")
     const checkYotpo = setInterval(() => {
+    console.log("YOPTO FOUND1")
       if (window.yotpo && typeof yotpo.initialized === 'boolean') {
         clearInterval(checkYotpo);
         callback();
