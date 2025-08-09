@@ -10915,24 +10915,25 @@ html[dir=rtl] .background-media-text__text{
   }
 
 .announcement-text{
-  display:block;
   font-size:0.9em;
   font-weight:700;
   letter-spacing:0.2em;
   text-transform:uppercase;
+  display: inline-block; /* removes underline from this section */
+  text-decoration: none; /* just in case */
+}
+
+.announcement-link {
+  text-decoration: underline;
 }
 
 .announcement-link-text{
   display:block;
 }
-
-.announcement-link .announcement-link-text{
-    
-}
-
+/* 
 .announcement-link-text a{
     color:inherit;
-  }
+  } */
 
 @media only screen and (min-width:769px){
     .announcement-slider[data-compact=true] .announcement-slider__slide{
