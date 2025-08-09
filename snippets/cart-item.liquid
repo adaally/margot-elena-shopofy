@@ -1,7 +1,7 @@
 <div class="cart__item" data-key="{{ product.key }}">
   <div class="cart__image">
     {% if product.image != blank %}
-      <a href="{{ product.url }}" class="image-wrap">
+      <a href="{{ product.url }}" aria-label="product.product.title" class="image-wrap">
         {%- render 'image-element',
           img: product,
           alt: product.product.title,
