@@ -271,6 +271,7 @@
       "blocks": {
         "template--15856104669339__81c07d74-f398-45f0-80fd-5673685783c1-1686070908502dfbeb-0": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "title": ""
           }
