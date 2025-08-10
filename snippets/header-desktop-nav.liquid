@@ -76,7 +76,7 @@
                     <a  href="{{ childlink.url }}" >
                       {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
                       {%- if collections[childlink.object.handle].image != blank and section.settings.mega_menu_images -%}
-                        <span tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" href="{{ childlink.url }}">
+                        <span tabindex="-1" aria-hidden="true" href="{{ childlink.url }}">
                           <div class="svg-mask svg-mask--landscape">
                           {%- render 'image-element',
                             img: collections[childlink.object.handle].image,
@@ -100,15 +100,15 @@
                         assign previous_column_type = 'single'
                       endif
                     -%}
+                    </a>
 
                     {%- for grandchildlink in childlink.links -%}
                       <div>
-                        <span href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
                           {{grandchildlink.title}}
-                        </span>
+                        </a>
                       </div>
                     {%- endfor -%}
-                    </a>
                   {%- endfor -%}
                 </div>
               </div>
