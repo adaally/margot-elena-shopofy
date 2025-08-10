@@ -52,7 +52,7 @@
           <div class="site-nav__dropdown megamenu text-left">
             <div class="page-width">
               <div class="grid{% if dropdown_alignment == 'center' %} grid--center{% endif %}" role="list">
-                <a href="{{ grandchildlink.url }}" class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}" role="listitem">
+                <div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}" role="listitem">
                   {%- assign animation_column = animation_column | plus: 1 -%}
 
                   {%- for childlink in link.links -%}
@@ -69,13 +69,13 @@
                     -%}
 
                     {%- if create_new_column -%}
-                      <div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}" role="listitem"></div>
+                      </div><div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}" role="listitem">
                       {%- assign animation_column = animation_column | plus: 1 -%}
                     {%- endif -%}
 
                     {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
                       {%- if collections[childlink.object.handle].image != blank and section.settings.mega_menu_images -%}
-                        <span tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail">
+                        <a tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" href="{{ childlink.url }}">
                           <div class="svg-mask svg-mask--landscape">
                           {%- render 'image-element',
                             img: collections[childlink.object.handle].image,
@@ -84,12 +84,12 @@
                             classes: 'megamenu__collection-image',
                           -%}
                           </div>
-                        </span>
+                        </a>
                       {%- endif -%}
                     {%- endif -%}
 
                     <div class="h5">
-                      <span class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</span>
+                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</a>
                     </div>
 
                     {%- liquid
@@ -102,13 +102,13 @@
 
                     {%- for grandchildlink in childlink.links -%}
                       <div>
-                        <span class="site-nav__dropdown-link">
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
                           {{grandchildlink.title}}
-                        </span>
+                        </a>
                       </div>
                     {%- endfor -%}
                   {%- endfor -%}
-                </a>
+                </div>
               </div>
             </div>
           </div>
