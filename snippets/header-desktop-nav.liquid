@@ -73,7 +73,7 @@
                       {%- assign animation_column = animation_column | plus: 1 -%}
                     {%- endif -%}
 
-                    <a  href="{{ childlink.url }}"  class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                    <a  href="{{ childlink.url }}" >
                       {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
                       {%- if collections[childlink.object.handle].image != blank and section.settings.mega_menu_images -%}
                         <span tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" href="{{ childlink.url }}">
