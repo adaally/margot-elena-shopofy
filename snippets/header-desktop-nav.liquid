@@ -73,9 +73,10 @@
                       {%- assign animation_column = animation_column | plus: 1 -%}
                     {%- endif -%}
 
+                    <a  href="{{ childlink.url }}" >
                       {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
                       {%- if collections[childlink.object.handle].image != blank and section.settings.mega_menu_images -%}
-                        <a tabindex="-1" aria-hidden="true" href="{{ childlink.url }}">
+                        <span tabindex="-1" aria-hidden="true">
                           <div class="svg-mask svg-mask--landscape">
                           {%- render 'image-element',
                             img: collections[childlink.object.handle].image,
@@ -84,12 +85,12 @@
                             classes: 'megamenu__collection-image',
                           -%}
                           </div>
-                        </a>
+                        </span>
                       {%- endif -%}
                     {%- endif -%}
 
                     <div class="h5">
-                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</a>
+                      <span class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</span>
                     </div>
 
                     {%- liquid
@@ -99,6 +100,7 @@
                         assign previous_column_type = 'single'
                       endif
                     -%}
+                    </a>
 
                     {%- for grandchildlink in childlink.links -%}
                       <div>
