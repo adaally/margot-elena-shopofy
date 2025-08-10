@@ -100,15 +100,15 @@
                         assign previous_column_type = 'single'
                       endif
                     -%}
-                    </a>
 
                     {%- for grandchildlink in childlink.links -%}
                       <div>
-                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                        <span href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
                           {{grandchildlink.title}}
-                        </a>
+                        </span>
                       </div>
                     {%- endfor -%}
+                    </a>
                   {%- endfor -%}
                 </div>
               </div>
