@@ -102,13 +102,13 @@
                     -%}
                     </a>
 
-                    {%- for grandchildlink in childlink.links -%}
+                    {% comment %} {%- for grandchildlink in childlink.links -%}
                       <div>
                         <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
                           {{grandchildlink.title}}
                         </a>
                       </div>
-                    {%- endfor -%}
+                    {%- endfor -%} {% endcomment %}
                   {%- endfor -%}
                   
                 </div>
