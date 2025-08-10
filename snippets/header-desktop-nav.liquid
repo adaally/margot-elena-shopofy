@@ -102,24 +102,24 @@
                     -%}
 
                     {%- for grandchildlink in childlink.links -%}
-                      <div>
-                        {% if childlink.url === grandchildlink.url %}
-                          <span class="site-nav__dropdown-link">
-                            {{grandchildlink.title}}
-                          </span>
+                        {% if childlink.url == grandchildlink.url %}
+                          <div>
+                            <span class="site-nav__dropdown-link">
+                                {{grandchildlink.title}}
+                            </span>
+                          </div>
                         {% endif %}
-                      </div>
                     {%- endfor -%}
                     </a>
 
                     {%- for grandchildlink in childlink.links -%}
-                      <div>
-                        {% if childlink.url !== grandchildlink.url %}
-                          <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
-                            {{grandchildlink.title}}
-                          </a>
+                        {% if childlink.url != grandchildlink.url %}
+                          <div>
+                            <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                              {{grandchildlink.title}}
+                            </a>
+                          </div>
                         {% endif %}
-                      </div>
                     {%- endfor -%}
                   {%- endfor -%}
                   
