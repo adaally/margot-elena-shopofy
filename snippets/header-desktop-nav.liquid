@@ -73,9 +73,10 @@
                       {%- assign animation_column = animation_column | plus: 1 -%}
                     {%- endif -%}
 
-                    {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
+                    <a  href="{{ childlink.url }}"  class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                      {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
                       {%- if collections[childlink.object.handle].image != blank and section.settings.mega_menu_images -%}
-                        <a tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" href="{{ childlink.url }}">
+                        <span tabindex="-1" aria-hidden="true" aria-label="{{ alt }} thumbnail" href="{{ childlink.url }}">
                           <div class="svg-mask svg-mask--landscape">
                           {%- render 'image-element',
                             img: collections[childlink.object.handle].image,
@@ -84,12 +85,12 @@
                             classes: 'megamenu__collection-image',
                           -%}
                           </div>
-                        </a>
+                        </span>
                       {%- endif -%}
                     {%- endif -%}
 
                     <div class="h5">
-                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</a>
+                      <span href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</span>
                     </div>
 
                     {%- liquid
@@ -102,11 +103,12 @@
 
                     {%- for grandchildlink in childlink.links -%}
                       <div>
-                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                        <span href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
                           {{grandchildlink.title}}
-                        </a>
+                        </span>
                       </div>
                     {%- endfor -%}
+                    </a>
                   {%- endfor -%}
                 </div>
               </div>
