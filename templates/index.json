@@ -690,7 +690,7 @@
           "settings": {
             "image": "shopify://shop_images/ME_Press_Comso.jpg",
             "image_alt": "Cosmopolitan logo",
-            "link": "https://margotelena.com/pages/press-page"
+            "link": ""
           }
         },
         "template--15840835993755__99816b04-76c2-4786-ae3a-b6b518e357d6-168416811027185454-2": {
@@ -698,7 +698,7 @@
           "settings": {
             "image": "shopify://shop_images/ME_Press_Popsugar.jpg",
             "image_alt": "Popsugar logo",
-            "link": "https://margotelena.com/pages/press-page"
+            "link": ""
           }
         },
         "template--15840835993755__99816b04-76c2-4786-ae3a-b6b518e357d6-168416811027185454-3": {
@@ -706,7 +706,7 @@
           "settings": {
             "image": "shopify://shop_images/ME_Press_Oprah_Daily.jpg",
             "image_alt": "Opal daily",
-            "link": "https://margotelena.com/pages/press-page"
+            "link": ""
           }
         },
         "571f01f9-c691-4385-9c06-ac51d65ef278": {
@@ -728,6 +728,7 @@
       ],
       "settings": {
         "title": "EDITORS' FAVES",
+        "link": "shopify://pages/press-page",
         "logo_opacity": 76,
         "divider": false
       }
