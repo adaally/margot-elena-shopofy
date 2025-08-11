@@ -9039,6 +9039,11 @@ theme.recentlyViewed = {
         dot.setAttribute("tabindex", "0");
         dot.setAttribute("role", "button");
       });
+
+      document.querySelectorAll(".product-main-slide").forEach(item => {
+        item.removeAttribute("tabindex");
+      });
+
       
       clearTimeout(timeout);
       clearInterval(interval);
