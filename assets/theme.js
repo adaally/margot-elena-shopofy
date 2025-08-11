@@ -9013,9 +9013,18 @@ theme.recentlyViewed = {
           newElement.innerHTML = link.innerHTML;
           link.replaceWith(newElement);
         });
+
+        console.log(cart.querySelector(".primary-title"), "primary")
+        const primaryTitle = cart.querySelector(".primary-title")
+        if(primaryTitle) {
+          const newTitle = document.createElement("h2");
+          newTitle.innerText = primaryTitle.innerText;
+          newTitle.className = primaryTitle.className;
+          primaryTitle.replaceWith(newTitle);
+        }
       }, 4000);
 
-      console.log(cart.querySelector(".primary-title"), "primary")
+      
       
 
       clearTimeout(timeout);
