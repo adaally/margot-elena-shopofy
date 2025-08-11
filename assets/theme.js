@@ -8992,6 +8992,24 @@ theme.recentlyViewed = {
 
   changePtoH2ToReviews();
 
+  function fixAccessibilityToCartThumnail() {
+    const timeout = setTimeout(() => {
+
+    }, 5000);
+
+    const interval = setInterval(() => {
+      const cart = document.querySelector("#rebuy-cart");
+      if(!cart) return;
+
+      cart.querySelector(".rebuy-cart__flyout-item-media a").forEach(link => {
+        const newElement = document.createElement("span");
+        span.innerHTML = link.innerHTML;
+        link.replaceWith(span);
+      });
+    }, 2000);
+    
+  }
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
