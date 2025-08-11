@@ -40,6 +40,7 @@
       - classes (Optional - String)
       - alt (Optional - String)
       - widths (Optional - String)
+      - ariaHidden (Optional - String)
 
   https://shopify.dev/api/liquid/filters#image_tag
   https://shopify.dev/api/liquid/filters#image_url
@@ -104,7 +105,7 @@
     {% if img_width == blank %}
       {% assign img_width = widths | split: ',' | last %}
     {% endif %}
-    <img alt="{{ alt }}" aria-hidden="true" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
+    <img alt="{{ alt }}" aria-hidden="{{ ariaHidden }}" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
       | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" role="{{ role }}" sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}" widths="{{ widths }}">
   {% else %}
     {% if img_width == blank %}
