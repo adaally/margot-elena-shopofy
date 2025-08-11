@@ -9003,8 +9003,8 @@ theme.recentlyViewed = {
       console.log(cart.querySelectorAll(".rebuy-cart__flyout-item-media a"), "prueba");
       cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
         const newElement = document.createElement("span");
-        span.innerHTML = link.innerHTML;
-        link.replaceWith(span);
+        newElement.innerHTML = link.innerHTML;
+        link.replaceWith(newElement);
       });
 
       clearTimeout(timeout);
