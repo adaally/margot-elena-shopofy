@@ -9010,6 +9010,8 @@ theme.recentlyViewed = {
     
   }
 
+  fixAccessibilityToCartThumnail();
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
