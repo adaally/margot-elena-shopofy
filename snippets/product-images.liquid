@@ -107,6 +107,7 @@
                   data-product-thumb
                   class="product__thumb"
                   data-index="{{ forloop.index0 }}"
+                  aria-label="Load image {{ forloop.index0 }} of {{ product.media.length }} in gallery view"
                   data-id="{{ media.id }}">
                   <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;">
                     {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
