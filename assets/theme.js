@@ -9024,6 +9024,29 @@ theme.recentlyViewed = {
 
   fixAccessibilityToCartThumnail();
 
+  function fixOwlDots() {
+        const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 5000);
+
+    const interval = setInterval(() => {
+      const owlDotsContainer = document.querySelector(".flickity-page-dots");
+      if(!owlDotsContainer) return;
+
+      const dots = owlDotsContainer.querySelectorAll(".dot");
+      dots.querySelectorAll(".dot").forEach((dot, index) => {
+        dot.setAttribute("aria-label", `Load image ${index + 1} of ${dots.length} in gallery view`);
+        dto.setAttribute("tabindex", "0");
+        dto.setAttribute("role", "button");
+      });
+      
+      clearTimeout(timeout);
+      clearInterval(interval);
+    }, 200);
+  }
+
+  fixOwlDots();
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
