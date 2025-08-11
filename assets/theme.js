@@ -9035,9 +9035,9 @@ theme.recentlyViewed = {
 
       const dots = owlDotsContainer.querySelectorAll(".dot");
       dots.forEach((dot, index) => {
-        dto.setAttribute("aria-label", `Load image ${index + 1} of ${dots.length} in gallery view`);
-        dto.setAttribute("tabindex", "0");
-        dto.setAttribute("role", "button");
+        dot.setAttribute("aria-label", `Load image ${index + 1} of ${dots.length} in gallery view`);
+        dot.setAttribute("tabindex", "0");
+        dot.setAttribute("role", "button");
       });
       
       clearTimeout(timeout);
