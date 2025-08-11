@@ -9014,6 +9014,8 @@ theme.recentlyViewed = {
           link.replaceWith(newElement);
         });
       }, 4000);
+
+      console.log(cart.querySelector(".primary-title"), "primary")
       
 
       clearTimeout(timeout);
