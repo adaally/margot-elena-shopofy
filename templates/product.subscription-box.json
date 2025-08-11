@@ -136,7 +136,7 @@
         "custom_LaTNrz": {
           "type": "custom",
           "settings": {
-            "code": "<div style=\"text-align: center; margin: 10px 0;\">\n  <a href=\"#faq-section-id-1\" style=\"text-decoration: none; padding: 6px 15px; color: black;\">\n   <u>See More FAQs</u>\n  </a>\n</div>",
+            "code": "<div style=\"text-align: center; margin: 10px 0;\">\n  <a style=\"text-decoration: underline;\" href=\"#faq-section-id-1\" style=\"text-decoration: none; padding: 6px 15px; color: black;\">\n   See More FAQs\n  </a>\n</div>",
             "ecls": ""
           }
         },
@@ -344,6 +344,7 @@
       ],
       "settings": {
         "title": "",
+        "link": "",
         "logo_opacity": 100,
         "divider": false
       }
