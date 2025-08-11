@@ -34,6 +34,7 @@
               sizeVariable: '160px',
               fallback: '110px',
               alt: block.settings.image_alt | escape,
+              ariaHidden: false
             -%}
           {%- else -%}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
