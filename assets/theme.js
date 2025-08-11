@@ -9001,7 +9001,7 @@ theme.recentlyViewed = {
       const cart = document.querySelector("#rebuy-cart");
       if(!cart) return;
 
-      cart.querySelector(".rebuy-cart__flyout-item-media a").forEach(link => {
+      cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
         const newElement = document.createElement("span");
         span.innerHTML = link.innerHTML;
         link.replaceWith(span);
