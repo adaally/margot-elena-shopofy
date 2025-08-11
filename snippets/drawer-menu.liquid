@@ -80,7 +80,7 @@
                     
                     {% assign show_parent_link = true %}
                     {% for grandChildLink in childlink.links %}
-                      {% if grandChildLink.url == child.url %}
+                      {% if grandChildLink.url == childlink.url %}
                         {% assign show_parent_link = false %}
                       {% endif %}
                     {% endfor %}
