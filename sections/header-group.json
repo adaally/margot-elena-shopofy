@@ -77,7 +77,7 @@
         "mega_menu_images": true,
         "main_menu_alignment": "center",
         "header_style": "sticky",
-        "sticky_index": true,
+        "sticky_index": false,
         "sticky_collection": false,
         "toolbar_menu": "",
         "toolbar_social": false,
