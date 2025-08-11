@@ -8994,7 +8994,7 @@ theme.recentlyViewed = {
 
   function fixAccessibilityToCartThumnail() {
     const timeout = setTimeout(() => {
-
+      clearInterval(interval);
     }, 5000);
 
     const interval = setInterval(() => {
@@ -9006,7 +9006,10 @@ theme.recentlyViewed = {
         span.innerHTML = link.innerHTML;
         link.replaceWith(span);
       });
-    }, 2000);
+
+      clearTimeout(timeout);
+      clearInterval(interval);
+    }, 200);
     
   }
 
