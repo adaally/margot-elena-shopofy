@@ -4814,7 +4814,8 @@ theme.recentlyViewed = {
     function addImageProperties(imageEl, imageSizes) {
       imageEl.src = product.image_responsive_url;
       imageEl.srcset = product.image_responsive_urls.toString();
-      imageEl.alt = product.title;
+      // imageEl.alt = product.title;
+      imageEl.alt = "";
       imageEl.sizes = imageSizes;
     }
   
