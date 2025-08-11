@@ -51,10 +51,11 @@
       {% comment %}
         .logo--has-inverted is only applied to the default logo if the inverted logo exists. That way it'll only be hidden on the slider when it has a backup.
       {% endcomment %}
-      <a
-        href="{{ routes.root_url }}"
+      <a 
+          href="{{ routes.root_url }}" 
+          aria-label="Margot elena">
+        <span
         itemprop="url"
-        aria-label="Margot elena"
         class="site-header__logo-link{% if block.settings.logo-inverted %} logo--has-inverted{% endif %}"
         style="padding-top: {{ 100 | divided_by: block.settings.logo.aspect_ratio }}%">
 
@@ -97,12 +98,10 @@
           loading: 'eager',
           alt: block.settings.logo.alt | default: shop.name,
         -%}
-      </a>
+        </span>
       {%- if block.settings.logo-inverted -%}
-        <a
-          href="{{ routes.root_url }}"
+        <span
           itemprop="url"
-          aria-label="Margot elena"
           class="site-header__logo-link logo--inverted"
           style="padding-top: {{ 100 | divided_by: block.settings.logo-inverted.aspect_ratio }}%">
 
@@ -145,8 +144,9 @@
             loading: 'eager',
             alt: block.settings.logo-inverted.alt | default: shop.name,
           -%}
-        </a>
+          </span>
       {%- endif -%}
+      </a>
     {%- else -%}
       <a href="{{ routes.root_url }}" itemprop="url">{{ shop.name }}</a>
     {%- endif -%}
