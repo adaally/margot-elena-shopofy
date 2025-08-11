@@ -70,18 +70,20 @@
                 {% if link.active or link.child_active %}style="height: auto;"{% endif %}>
                 <div class="collapsible-content__inner">
                   <ul class="mobile-nav__sublist">
-                    
-                    {% assign show_parent_link = true %}
+
                     {%- for childlink in link.links -%}
                       {%- assign has_sub_dropdown = false -%}
                       {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
                       {%- if childlink.links != blank -%}
                         {%- assign has_sub_dropdown = true -%}
                       {%- endif -%}
-
-                      {% if childlink.url == link.url %}
+                    
+                    {% assign show_parent_link = true %}
+                    {% for grandChildLink in childlink.links %}
+                      {% if grandChildLink.url == child.url %}
                         {% assign show_parent_link = false %}
                       {% endif %}
+                    {% endfor %}
 
                       <li class="mobile-nav__item">
                         <div class="mobile-nav__child-item">
