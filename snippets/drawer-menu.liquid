@@ -28,6 +28,12 @@
           {%- endif -%}
 
           <li class="mobile-nav__item appear-animation appear-delay-{{ animation_row }}">
+            {% assign show_parent_link = true %}
+            {% for childlink in link.links %}
+              {% if childlink.url == link.url %}
+                {% assign show_parent_link = false %}
+              {% endif %}
+            {% endfor %}
             {%- if has_dropdown -%}
               <div class="mobile-nav__has-sublist">
                 {%- if link.url == '#' -%}
@@ -61,7 +67,12 @@
                 {%- endif -%}
               </div>
             {%- else -%}
-              <a href="{{ link.url }}" class="mobile-nav__link mobile-nav__link--top-level"{% if link.active %} data-active="true"{% endif %}>{{ link.title }}</a>
+              {% if show_parent_link %}
+                <a href="{{ link.url }}" class="mobile-nav__link mobile-nav__link--top-level"{% if link.active %} data-active="true"{% endif %}>{{ link.title }}</a>
+              {% else %}
+                <span class="mobile-nav__link mobile-nav__link--top-level"{% if link.active %} data-active="true"{% endif %}>{{ link.title }}</span>
+              {% endif %}
+              
             {%- endif -%}
 
             {%- if has_dropdown -%}
