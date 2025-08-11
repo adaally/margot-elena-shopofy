@@ -8783,11 +8783,9 @@ theme.recentlyViewed = {
   function runWhenYotpoIsReady(callback) {
     const timeout = setTimeout(() => {
       clearInterval(checkYotpo);
-    console.log("YOPTO FOUND1 xdddddd")
     }, 6000);
 
     const checkYotpo = setInterval(() => {
-      console.log("YOPTO FOUND1")
       const yoptoContainer = document.querySelector(".yotpo-main-layout");
       if (yoptoContainer) {
         clearInterval(checkYotpo);
@@ -9014,14 +9012,16 @@ theme.recentlyViewed = {
           link.replaceWith(newElement);
         });
 
-        console.log(cart.querySelector(".primary-title"), "primary")
-        const primaryTitle = cart.querySelector(".primary-title")
-        if(primaryTitle) {
-          const newTitle = document.createElement("h2");
-          newTitle.innerText = primaryTitle.innerText;
-          newTitle.className = primaryTitle.className;
-          primaryTitle.replaceWith(newTitle);
-        }
+        cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
+          const primaryTitle = cart.querySelector(".primary-title")
+          if(primaryTitle) {
+            const newTitle = document.createElement("h2");
+            newTitle.innerText = primaryTitle.innerText;
+            newTitle.className = primaryTitle.className;
+            primaryTitle.replaceWith(newTitle);
+          }
+        })
+        
       }, 4000);
 
       
