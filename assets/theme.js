@@ -9013,7 +9013,7 @@ theme.recentlyViewed = {
           newElement.innerHTML = link.innerHTML;
           link.replaceWith(newElement);
         });
-      }, 2000);
+      }, 4000);
       
 
       clearTimeout(timeout);
