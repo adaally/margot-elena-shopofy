@@ -9013,7 +9013,6 @@ theme.recentlyViewed = {
         });
 
         cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
-          const primaryTitle = cart.querySelector(".primary-title")
           if(primaryTitle) {
             const newTitle = document.createElement("h2");
             newTitle.innerText = primaryTitle.innerText;
