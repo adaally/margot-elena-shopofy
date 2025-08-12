@@ -196,7 +196,7 @@
             "time": "Per Person",
             "elements": "<ul><li>40 high-quality headshots</li><li>20 different styles</li><li>90 minute turnaround time</li></ul>",
             "button_text": "Buy Starter",
-            "button_url": "dd-to-cart-1-month",
+            "button_url": "add-to-cart-1-month",
             "Text": "",
             "active": false
           }
