@@ -72,6 +72,10 @@
     margin-top: 5px;
   }
 
+  .arrow.up {
+    transform: rotate(180deg);
+  }
+
   .show {
     display: block;
   }
@@ -85,10 +89,8 @@
     const btn = document.querySelector("#toggleCollapseBtn");
     const container = document.querySelector("#AnnouncementSlider");
     btn.addEventListener('click', () => {
-      if(container.classList.contains("show")) {
-        
-      }
       container.classList.toggle("show");
+      btn.classList.toggle("up");
     });
   });
 </script>
