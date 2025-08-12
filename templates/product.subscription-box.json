@@ -185,59 +185,59 @@
     "ss_pricing_table_3_kgWX7P": {
       "type": "ss-pricing-table-3",
       "blocks": {
-        "item_EcbRdU": {
+        "item_FF3Nrh": {
           "type": "item",
           "settings": {
             "budges": "",
-            "heading": "STARTER",
+            "heading": "One-Time Box",
             "price_sale": "",
-            "price": "29",
+            "price": "94.99",
             "currency": "$",
-            "time": "Per Person",
-            "elements": "<ul><li>40 high-quality headshots</li><li>20 different styles</li><li>90 minute turnaround time</li></ul>",
-            "button_text": "Buy Starter",
+            "time": "Per Box",
+            "elements": "<ul><li>A single delivery of seasonal splendor—no subscription required</li><li>Curated with over $200 in luxe essentials</li><li>A perfect gift or first indulgence</li><li>Shipping Included</li></ul>",
+            "button_text": "Buy One-Time Box",
             "button_url": "add-to-cart-1-month",
             "Text": "",
             "active": false
           }
         },
-        "item_bK8WEh": {
+        "item_W6XH8Y": {
           "type": "item",
           "settings": {
-            "budges": "Most Popular",
-            "heading": "BASIC",
-            "price_sale": "",
-            "price": "39",
+            "budges": "",
+            "heading": "Seasonal Subscription",
+            "price_sale": "94.99",
+            "price": "76.94",
             "currency": "$",
-            "time": "Per Person",
-            "elements": "<ul><li>80 high-quality headshots</li><li>40+ different styles</li><li>75 minute turnaround time</li></ul>",
-            "button_text": "Buy Basic",
+            "time": "Per Box",
+            "elements": "<ul><li>Delivered every season</li><li>Cancel anytime—no long-term contract</li><li>Save 19% per box compared to one-time purchase</li><li>Shipping Included</li></ul>",
+            "button_text": "Buy Seasonal Subscription",
             "button_url": "add-to-cart-3-months",
             "Text": "",
-            "active": true
+            "active": false
           }
         },
-        "item_jLQQ3f": {
+        "item_htEecP": {
           "type": "item",
           "settings": {
-            "budges": "Best Value",
-            "heading": "PREMIUM",
-            "price_sale": "",
-            "price": "69",
+            "budges": "NEW! BEST VALUE",
+            "heading": "Annual Subscription",
+            "price_sale": "76.94",
+            "price": "66.94",
             "currency": "$",
-            "time": "Per Person",
-            "elements": "<ul><li>200 high-quality headshots</li><li>100+ different styles</li><li>60 minute turnaround time</li></ul>",
-            "button_text": "Buy Premium",
+            "time": "Per Box",
+            "elements": "<ul><li>Four seasons of luxury, prepaid for ease</li><li>Save 30% when you subscribe annually</li><li>$800+ in luxuries for only $267.76/year</li><li>Shipping Included</li></ul>",
+            "button_text": "Buy Annual Subscription",
             "button_url": "add-to-cart-12-months",
             "Text": "",
-            "active": false
+            "active": true
           }
         }
       },
       "block_order": [
-        "item_EcbRdU",
-        "item_bK8WEh",
-        "item_jLQQ3f"
+        "item_FF3Nrh",
+        "item_W6XH8Y",
+        "item_htEecP"
       ],
       "name": "SS - Pricing Table #3",
       "settings": {
