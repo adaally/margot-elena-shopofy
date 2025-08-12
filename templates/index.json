@@ -23,13 +23,13 @@
             "link_text": "Shop now",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#000000",
+            "slide_text_color": "#ffffff",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-left",
             "image": "shopify://shop_images/ME_webBanners_NAcards3_1.jpg",
             "image_mobile": "shopify://shop_images/ME_webBanners_NAcards4_1.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 10
+            "overlay_opacity": 46
           }
         },
         "image_N7Lerk": {
@@ -43,13 +43,13 @@
             "link_text": "Explore now",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#000000",
+            "slide_text_color": "#ffffff",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-left",
             "image": "shopify://shop_images/ME_WebBanners_SubBox_Homepage_3_1.jpg",
             "image_mobile": "shopify://shop_images/ME_WebBanners_SubBox_Homepage_4.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 10
+            "overlay_opacity": 46
           }
         },
         "image_gpQKBi": {
