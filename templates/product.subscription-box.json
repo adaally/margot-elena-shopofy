@@ -212,7 +212,7 @@
             "time": "Per Person",
             "elements": "<ul><li>80 high-quality headshots</li><li>40+ different styles</li><li>75 minute turnaround time</li></ul>",
             "button_text": "Buy Basic",
-            "button_url": "https://section.store/cart/add?id=43313928601849",
+            "button_url": "add-to-cart-3-months",
             "Text": "",
             "active": true
           }
@@ -228,7 +228,7 @@
             "time": "Per Person",
             "elements": "<ul><li>200 high-quality headshots</li><li>100+ different styles</li><li>60 minute turnaround time</li></ul>",
             "button_text": "Buy Premium",
-            "button_url": "https://section.store/cart/add?id=43313928601849",
+            "button_url": "add-to-cart-12-months",
             "Text": "",
             "active": false
           }
