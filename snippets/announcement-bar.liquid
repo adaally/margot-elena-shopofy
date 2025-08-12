@@ -93,6 +93,8 @@
     btn.addEventListener('click', () => {
       container.classList.toggle("show");
       btn.classList.toggle("up");
+      const toggleText = container.classList.contains("show") ? "Hide" : "Show"
+      btn.setAttribute("aria-label", toggleText + " announcement slider");
     });
   });
 </script>
