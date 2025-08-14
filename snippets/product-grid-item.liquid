@@ -472,6 +472,9 @@ display: inline-block;
       const btns = document.querySelectorAll(".grid-product__link .yotpo-sr-bottom-line-summary");
       console.log(btns);
       if(btns.length == 0) return;
+
+      clearInterval(interval);
+      clearTimeout(timeout);
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
       btns.forEach((btn, index) => {
@@ -487,9 +490,6 @@ display: inline-block;
         }
 
       });
-
-      clearInterval(interval);
-      clearTimeout(timeout);
     }, 200);
   });
 </script>
