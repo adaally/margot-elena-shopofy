@@ -470,11 +470,9 @@ display: inline-block;
 
     const interval = setInterval(() => {
       const btns = document.querySelectorAll(".grid-product__link .yotpo-sr-bottom-line-summary");
-      if(btns.length > 0){
       console.log(btns);
-        clearInterval(interval);
-        clearTimeout(timeout);
-      const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
+      if(btns.length > 0) {
+        const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
       btns.forEach((btn, index) => {
         const title = titles[index].innerText;
@@ -487,10 +485,13 @@ display: inline-block;
           const last = numbers[numbers.length - 1];
           btn.setAttribute("aria-label", `${first}stars. ${last} reviews. Go to ${title} Reviews`);
         }
-      }
-        
 
       });
+
+      clearInterval(interval);
+      clearTimeout(timeout);
+      }
+      
     }, 200);
   });
 </script>
