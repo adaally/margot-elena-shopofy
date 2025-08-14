@@ -475,6 +475,7 @@ display: inline-block;
 
       btns.forEach((btn, index) => {
         const title = titles[index].innerText;
+        console.log(btn.getAttribute("aria-label"))
         btn.setAttribute("aria-label", `Go to ${title} Reviews`);
       });
 
