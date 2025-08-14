@@ -471,10 +471,11 @@ display: inline-block;
     const interval = setInterval(() => {
       const btns = document.querySelectorAll(".grid-product__link .yotpo-sr-bottom-line-summary");
       if(btns.length == 0) return;
+      const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
-      btns.forEach(btn => {
+      btns.forEach((btn, index) => {
         console.log(btn, "btn")
-        const title = btn.closest(".grid-product__title").innerText;
+        const title = titles[index].innerText;
         btn.setAttribute("aria-label", `Go to ${title} Reviews`);
       });
 
