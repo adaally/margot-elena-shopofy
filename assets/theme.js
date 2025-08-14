@@ -9053,7 +9053,7 @@ theme.recentlyViewed = {
 
       });
   }
-
+  }
   setTimeout(() => {
 fixAriaLabelThumbnails()
   }, 4000);
