@@ -474,7 +474,6 @@ display: inline-block;
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
       btns.forEach((btn, index) => {
-        console.log(btn, "btn")
         const title = titles[index].innerText;
         btn.setAttribute("aria-label", `Go to ${title} Reviews`);
       });
