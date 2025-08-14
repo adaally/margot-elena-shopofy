@@ -462,6 +462,7 @@ display: inline-block;
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.grid.grid--uniform img').forEach(img => img.setAttribute("aria-label", ""));
+    console.log(document.querySelectorAll('.grid.grid--uniform img'))
+    document.querySelectorAll('.grid.grid--uniform img').forEach(img => img.setAttribute("alt", ""));
   });
 </script>
