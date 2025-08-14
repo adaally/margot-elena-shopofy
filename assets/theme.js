@@ -9035,7 +9035,6 @@ theme.recentlyViewed = {
 
   function fixAriaLabelThumbnails() {
       const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
-      console.log(btns);
       if(btns.length > 0) {
         const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
@@ -9048,7 +9047,7 @@ theme.recentlyViewed = {
         if (numbers) {
           const first = numbers[0];
           const last = numbers[numbers.length - 1];
-          btn.setAttribute("aria-label", `${first}stars. ${last} reviews. Go to ${title} Reviews`);
+          btn.setAttribute("aria-label", `${first} stars. ${last} reviews. Go to ${title} Reviews`);
         }
 
       });
