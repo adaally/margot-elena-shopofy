@@ -470,6 +470,7 @@ display: inline-block;
 
     const interval = setInterval(() => {
       const btns = document.querySelectorAll(".grid-product__link .yotpo-sr-bottom-line-summary");
+      console.log(btns);
       if(btns.length == 0) return;
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
@@ -477,7 +478,7 @@ display: inline-block;
         const title = titles[index].innerText;
         const labelBefore = btn.getAttribute("aria-label");
 
-        const numbers = text.match(/\d+(\.\d+)?/g);
+        const numbers = labelBefore.match(/\d+(\.\d+)?/g);
 
         if (matches) {
           const first = matches[0];
