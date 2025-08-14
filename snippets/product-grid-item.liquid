@@ -469,16 +469,13 @@ display: inline-block;
     }, 5000);
 
     const interval = setInterval(() => {
-      const containers = document.querySelectorAll(".grid-product__link");
-      if(containers.length == 0) return;
+      const btns = document.querySelectorAll(".grid-product__link .yotpo-sr-bottom-line-summary");
+      if(btns.length == 0) return;
 
-      containers.forEach(container => {
-        const btn = container.querySelector(".yotpo-sr-bottom-line-summary");
+      btns.forEach(btn => {
         console.log(btn, "btn")
-        if(btn) {
-          const title = container.querySelector(".grid-product__title").innerText;
-          btn.setAttribute("aria-label", `Go to ${title} Reviews`);
-        }
+        const title = btn.closest(".grid-product__title").innerText;
+        btn.setAttribute("aria-label", `Go to ${title} Reviews`);
       });
 
       clearInterval(interval);
