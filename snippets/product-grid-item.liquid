@@ -475,8 +475,16 @@ display: inline-block;
 
       btns.forEach((btn, index) => {
         const title = titles[index].innerText;
-        console.log(btn.getAttribute("aria-label"))
-        btn.setAttribute("aria-label", `Go to ${title} Reviews`);
+        const labelBefore = btn.getAttribute("aria-label");
+
+        const numbers = text.match(/\d+(\.\d+)?/g);
+
+        if (matches) {
+          const first = matches[0];
+          const last = matches[matches.length - 1];
+          btn.setAttribute("aria-label", `${matches[0]}stars. ${last} reviews. Go to ${title} Reviews`);
+        }
+
       });
 
       clearInterval(interval);
