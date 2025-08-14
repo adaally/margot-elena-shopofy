@@ -34,7 +34,7 @@
             "image": "shopify://shop_images/Careers_02.jpg",
             "image_mobile": "shopify://shop_images/Careers_02_Mobile.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 0
+            "overlay_opacity": 46
           }
         }
       },

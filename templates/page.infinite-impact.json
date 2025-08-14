@@ -34,7 +34,7 @@
             "image": "shopify://shop_images/Infinite_Impact_04.jpg",
             "image_mobile": "shopify://shop_images/Infinite_Impact_04_Mobile.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 0
+            "overlay_opacity": 58
           }
         }
       },
