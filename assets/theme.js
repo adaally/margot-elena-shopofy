@@ -8573,7 +8573,6 @@ theme.recentlyViewed = {
       const item = document.querySelector(".rte.cc-careers-script-container div.cc-filter-dropdown");
 
       if(item) {
-        console.log(item, 'container')
         clearInterval(interval);
         clearTimeout(timeout);
         item.setAttribute("role", "combobox");
@@ -8582,7 +8581,6 @@ theme.recentlyViewed = {
     }, 300);
 
     const timeout = setTimeout(() => {
-      clearInterval(interval);
       console.log("Stopped checking (timeout)");
     }, 5000);
   }
