@@ -480,10 +480,10 @@ display: inline-block;
 
         const numbers = labelBefore.match(/\d+(\.\d+)?/g);
 
-        if (matches) {
-          const first = matches[0];
-          const last = matches[matches.length - 1];
-          btn.setAttribute("aria-label", `${matches[0]}stars. ${last} reviews. Go to ${title} Reviews`);
+        if (numbers) {
+          const first = numbers[0];
+          const last = numbers[numbers.length - 1];
+          btn.setAttribute("aria-label", `${first}stars. ${last} reviews. Go to ${title} Reviews`);
         }
 
       });
