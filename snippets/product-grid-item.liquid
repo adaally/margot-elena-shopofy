@@ -462,7 +462,20 @@ display: inline-block;
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    console.log(document.querySelectorAll('.grid.grid--uniform img'))
     document.querySelectorAll('.grid.grid--uniform img').forEach(img => img.setAttribute("alt", ""));
+    const yoptoStarBtn = 
+    if(yoptoStarBtn) {
+      yoptoStarBtn
+    }
+
+    document.querySelectorAll(".grid-product__link").forEach(container => {
+      const btn = container.querySelector(".yotpo-sr-bottom-line-summary");
+      console.log(btn, "btn")
+      if(btn) {
+        const title = container.querySelector(".grid-product__title").innerText;
+        container.setAttribute("aria-label", `Go to ${title} Reviews`);
+      }
+      
+    });
   });
 </script>
