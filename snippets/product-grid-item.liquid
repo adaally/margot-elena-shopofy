@@ -463,7 +463,7 @@ display: inline-block;
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.grid.grid--uniform img').forEach(img => img.setAttribute("alt", ""));
-    const alreadyCalled = 0;
+    let alreadyCalled = 0;
     let timeout = setTimeout(() => {
       if(alreadyCalled>0) return;
       const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
