@@ -9033,6 +9033,31 @@ theme.recentlyViewed = {
 
   fixAccessibilityToCartThumnail();
 
+  function fixAriaLabelThumbnails() {
+      const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
+      console.log(btns);
+      if(btns.length > 0) {
+        const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
+
+      btns.forEach((btn, index) => {
+        const title = titles[index].innerText;
+        const labelBefore = btn.getAttribute("aria-label");
+
+        const numbers = labelBefore.match(/\d+(\.\d+)?/g);
+
+        if (numbers) {
+          const first = numbers[0];
+          const last = numbers[numbers.length - 1];
+          btn.setAttribute("aria-label", `${first}stars. ${last} reviews. Go to ${title} Reviews`);
+        }
+
+      });
+  }
+
+  setTimeout(() => {
+fixAriaLabelThumbnails()
+  }, 4000);
+
   function fixOwlDots() {
         const timeout = setTimeout(() => {
       clearInterval(interval);
