@@ -464,14 +464,25 @@ display: inline-block;
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.grid.grid--uniform img').forEach(img => img.setAttribute("alt", ""));
 
-    document.querySelectorAll(".grid-product__link").forEach(container => {
-      const btn = container.querySelector(".yotpo-sr-bottom-line-summary");
-      console.log(btn, "btn")
-      if(btn) {
-        const title = container.querySelector(".grid-product__title").innerText;
-        btn.setAttribute("aria-label", `Go to ${title} Reviews`);
-      }
-      
-    });
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 5000);
+
+    const interval = setInterval(() => {
+      const containers = document.querySelectorAll(".grid-product__link");
+      if(container.length == 0) return;
+
+      containers.forEach(container => {
+        const btn = container.querySelector(".yotpo-sr-bottom-line-summary");
+        console.log(btn, "btn")
+        if(btn) {
+          const title = container.querySelector(".grid-product__title").innerText;
+          btn.setAttribute("aria-label", `Go to ${title} Reviews`);
+        }
+      });
+
+      clearInterval(interval);
+      clearTimeout(timeout);
+    }, 200);
   });
 </script>
