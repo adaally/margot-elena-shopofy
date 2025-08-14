@@ -1,1 +1,111 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"24b87cbe-6306-4de8-85a1-ee8561c1f814":{"type":"slideshow","blocks":{"template--15818762453147__24b87cbe-6306-4de8-85a1-ee8561c1f814-167934319321f0a3ef-0":{"type":"image","settings":{"top_subheading":"","title":"Get in Touch","title_size":60,"subheading":"","link":"","link_text":"","link_2":"","link_text_2":"","slide_text_color":"#ffffff","color_accent":"rgba(0,0,0,0)","text_align":"vertical-center horizontal-left","image":"shopify:\/\/shop_images\/Careers_01.jpg","image_mobile":"shopify:\/\/shop_images\/Get_In_Touch_01_Mobile.jpg","parallax_direction":"top","overlay_opacity":0}}},"block_order":["template--15818762453147__24b87cbe-6306-4de8-85a1-ee8561c1f814-167934319321f0a3ef-0"],"settings":{"section_height":"natural","mobile_height":"auto","parallax":false,"style":"bars","autoplay":true,"autoplay_speed":5,"lazyload_images":true}},"rich-text":{"type":"rich-text","blocks":{"heading":{"type":"heading","disabled":true,"settings":{"title":"Get in touch"}},"text":{"type":"text","settings":{"enlarge_text":true,"text":"<p><strong>Customer Service<\/strong><\/p><p>Phone:<a href=\"tel:1-888-896-6398\" title=\"phone\">1-888-896-6398 <\/a><\/p><p>email: <a href=\"mailto:infodesk@margotelena.com\" title=\"email customer service\">infodesk@margotelena.com<\/a><\/p><p>Monday to Thursday 8:30 a.m. - 5 p.m. MST<br\/><\/p><p><strong>Address<\/strong><\/p><p>MARGOT ELENA COMPANIES & COLLECTIONS<br\/>6890 S. Emporia St.<br\/>Centennial, CO 80112 <\/p><p><strong>Press Inquiries<\/strong>:<a href=\"mailto:pr@margotelena.com\" title=\"press inquiries\">pr@margotelena.com<\/a><\/p>"}}},"block_order":["heading","text"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"form":{"type":"contact-form","settings":{"title":"Contact us","text":"","show_phone":false,"narrow_column":true}},"12d3037d-da97-4d36-b3ed-2ea5dbd3fcb2":{"type":"featured-collection","settings":{"title":"Best Sellers","home_featured_products":"mecc-best-sellers","per_row":4,"rows":1,"mobile_scrollable":false,"view_all":false,"divider":false}}},"order":["main","24b87cbe-6306-4de8-85a1-ee8561c1f814","rich-text","form","12d3037d-da97-4d36-b3ed-2ea5dbd3fcb2"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "24b87cbe-6306-4de8-85a1-ee8561c1f814": {
+      "type": "slideshow",
+      "blocks": {
+        "template--15818762453147__24b87cbe-6306-4de8-85a1-ee8561c1f814-167934319321f0a3ef-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "Get in Touch",
+            "title_size": 60,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Careers_01.jpg",
+            "image_mobile": "shopify://shop_images/Get_In_Touch_01_Mobile.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--15818762453147__24b87cbe-6306-4de8-85a1-ee8561c1f814-167934319321f0a3ef-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Get in touch"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p><strong>Customer Service</strong></p><p>Phone:<a href=\"tel:1-888-896-6398\" title=\"phone\">1-888-896-6398 </a></p><p>email: <a href=\"mailto:infodesk@margotelena.com\" title=\"email customer service\">infodesk@margotelena.com</a></p><p>Monday to Thursday 8:30 a.m. - 5 p.m. MST<br/></p><p><strong>Address</strong></p><p>MARGOT ELENA COMPANIES & COLLECTIONS<br/>6890 S. Emporia St.<br/>Centennial, CO 80112 </p><p><strong>Press Inquiries</strong>:<a href=\"mailto:pr@margotelena.com\" title=\"press inquiries\">pr@margotelena.com</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Contact us",
+        "text": "",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    },
+    "12d3037d-da97-4d36-b3ed-2ea5dbd3fcb2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "home_featured_products": "mecc-best-sellers",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "24b87cbe-6306-4de8-85a1-ee8561c1f814",
+    "rich-text",
+    "form",
+    "12d3037d-da97-4d36-b3ed-2ea5dbd3fcb2"
+  ]
+}
