@@ -73,10 +73,10 @@
                     <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
                         <label class="tag__checkbox-wrapper text-label" for="checkbox-{{filter_value.id }}">
                           <input type="checkbox"
-                                id="checkbox-{{filter_value.value }}-{{filter_value.param_name }}"
+                                id="checkbox-{{tag_count }}"
                                 class="tag__input"
                                 name="{{ filter_value.param_name }}"
-                                value="{{ filter_value.value }}"
+                                value="checkbox-{{tag_count }}"
                                 {% if filter_value.active %}checked{% endif %}>
                           {%- if is_color -%}
                           <span
