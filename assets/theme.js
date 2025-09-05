@@ -9168,9 +9168,12 @@ fixAriaLabelThumbnails()
 
 
 
-
+document.addEventListener('DOMContentLoaded', function() {
+  changeCartThumbnails();
+});
 function changeCartThumbnails() {
   const cartBtn = document.querySelector(".js-drawer-open-cart")
+  console.log(cartBtn)
   if(!cartBtn) return;
 
   cartBtn.addEventListener('click', () => {
