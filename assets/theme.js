@@ -9085,6 +9085,21 @@ fixAriaLabelThumbnails()
 
   fixOwlDots();
 
+  
+
+  function changeCartThumbnails() {
+  const cartBtn = document.querySelector(".js-drawer-open-cart")
+  console.log(cartBtn)
+  if(!cartBtn) return;
+
+  cartBtn.addEventListener('click', () => {
+    console.log(document.querySelector(".rebuy-cart__flyout"))
+  });
+}
+
+
+changeCartThumbnails();
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
@@ -9163,19 +9178,6 @@ fixAriaLabelThumbnails()
       el.setAttribute('aria-hidden', 'true');
     });
   }
-
-  function changeCartThumbnails() {
-  const cartBtn = document.querySelector(".js-drawer-open-cart")
-  console.log(cartBtn)
-  if(!cartBtn) return;
-
-  cartBtn.addEventListener('click', () => {
-    console.log(document.querySelector(".rebuy-cart__flyout"))
-  });
-}
-
-
-changeCartThumbnails();
 
 })();
 
