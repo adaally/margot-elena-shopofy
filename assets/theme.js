@@ -9103,7 +9103,6 @@ fixAriaLabelThumbnails()
 
   document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("pc--optOutFormContainer");
-    console.log("CONTAINER YES", container)
     if (!container) return;
 
     const observer = new MutationObserver(() => {
@@ -9122,6 +9121,25 @@ fixAriaLabelThumbnails()
         successMessage.removeAttribute("autofocus");
         successMessage.setAttribute("role", "alert");
       }
+
+      const captchaTextareas = container.querySelectorAll(
+        "textarea[id^='g-recaptcha-response'], textarea[id^='h-captcha-response']"
+      );
+
+      captchaTextareas.forEach((textarea) => {
+        if (!document.querySelector(`label[for="${textarea.id}"]`)) {
+          const label = document.createElement("label");
+          label.setAttribute("for", textarea.id);
+          label.className = "visually-hidden";
+          label.textContent =
+            textarea.id.indexOf("g-recaptcha") !== -1
+              ? "Google reCAPTCHA response"
+              : "hCaptcha response";
+
+          textarea.insertAdjacentElement("beforebegin", label);
+        }
+      });
+    });
     });
 
     observer.observe(container, { childList: true, subtree: true });
