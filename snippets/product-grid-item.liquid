@@ -80,7 +80,7 @@ Arguments
 
       assign preview_image = product.featured_media.preview_image
     -%}
-<a href="{{ product.url | within: collection }}">
+    <a href="{{ product.url | within: collection }}">
     <div class="grid__item-image-wrapper">
      
              <div class="grid-product__image-mask">
@@ -207,8 +207,8 @@ Arguments
       .yotpo .yotpo-bottomline a.text-m {
           text-align: center!important; 
       }
-    }
-</style> -->
+      }
+      </style> -->
           {%- if settings.vendor_enable -%}
             <div class="grid-product__vendor">{{ product.vendor }}</div>
                
@@ -264,38 +264,38 @@ Arguments
             <br>
             
           </div>
-            <div class="yotpo bottomLine" id="category" style="display:inline-block;"  data-product-id="{{ product.id }}"></div>
-<!-- <style>
-   
-        .collection .yotpo .standalone-bottomline .star-clickable {
-          display: grid !important;
-        }
-        .collection .yotpo .pull-right {
-        text-align: center !important;
-        float: none !important;
-        }
-  
-  </style> -->
-
-<style>
-div.yotpo.bottomLine .pull-left {
-/* float: none; */
-/* text-align: center; */
-}
-
-.yotpo a.text-m {
-display: inline-block;
-}
-.yotpo .standalone-bottomline .star-clickable {
-/* display: inline-block; */
-}
-
-.product-block{
-/* display: inline-block!important; */
-  /* text-align: center; */
-}  
-</style>
+            
+            <!-- <style>
           
+                .collection .yotpo .standalone-bottomline .star-clickable {
+                  display: grid !important;
+                }
+                .collection .yotpo .pull-right {
+                text-align: center !important;
+                float: none !important;
+                }
+          
+          </style> -->
+
+        <style>
+        div.yotpo.bottomLine .pull-left {
+        /* float: none; */
+        /* text-align: center; */
+        }
+
+        .yotpo a.text-m {
+        display: inline-block;
+        }
+        .yotpo .standalone-bottomline .star-clickable {
+        /* display: inline-block; */
+        }
+
+        .product-block{
+        /* display: inline-block!important; */
+          /* text-align: center; */
+        }  
+        </style>
+                  
           
  
        
@@ -367,6 +367,7 @@ display: inline-block;
     </div>
   
      </a>
+     <div class="yotpo bottomLine" id="category" style="display:inline-block;"  data-product-id="{{ product.id }}"></div>
   </div>
   
   {%- if settings.enable_swatches and type == blank -%}
