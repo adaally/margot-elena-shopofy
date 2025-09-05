@@ -87,10 +87,10 @@
                           </span>
                           <span class="tag__text hide">{{ filter_value.label | escape }}</span>
                           {%- else -%}
-                          <span class="tag__checkbox"></span>
                           <span>
                               <span class="tag__text">{{ filter_value.label | escape }}</span> ({{ filter_value.count }})
                           </span>
+                          <span class="tag__checkbox"></span>
                           {%- endif -%}
                       </label>
                     </li>
