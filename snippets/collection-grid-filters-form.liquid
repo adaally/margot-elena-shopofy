@@ -71,7 +71,7 @@
                     assign color_swatch_fallback = filter_value.label | split: ' ' | last | handle
                   -%}
 
-                    <li >
+                    <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
                         {% comment %} <span style="margin-bottom: 5px;" class="tag__checkbox-wrapper text-label" >
                           <input type="checkbox"
                                 id="filter-{{ filter_value.label | handleize }}-{{ id }}" 
@@ -98,7 +98,7 @@
                         <label for="filter-{{ filter_value.label | handleize }}-{{ id }}">
                           <span class="tag__text">{{ filter_value.label | escape }}</span> ({{ filter_value.count }})
                         </label>
-                        <input id="filter-{{ filter_value.label | handleize }}-{{ id }}" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}">
+                        <input type="checked" id="filter-{{ filter_value.label | handleize }}-{{ id }}" name="{{ filter_value.param_name }}" value="{{ filter_value.value }}">
                     </li>
                   {%- endfor -%}
               </ul>
