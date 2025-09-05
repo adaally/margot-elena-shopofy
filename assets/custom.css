@@ -30,5 +30,5 @@
 }
 
 .tag:has(input:focus) {
-    background: red;
+    outline: rgb(16, 16, 16) auto 1.25px;
 }
