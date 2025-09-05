@@ -9164,3 +9164,19 @@ fixAriaLabelThumbnails()
     });
   }
 })();
+
+
+
+
+
+function changeCartThumbnails() {
+  const cartBtn = document.querySelector(".js-drawer-open-cart")
+  if(!cartBtn) return;
+
+  cartBtn.addEventListener('click', () => {
+    console.log(document.querySelector(".rebuy-cart__flyout"))
+  });
+}
+
+
+changeCartThumbnails();
