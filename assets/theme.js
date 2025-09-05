@@ -9101,6 +9101,32 @@ fixAriaLabelThumbnails()
 
 // changeCartThumbnails();
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("pc--optOutFormContainer");
+    console.log("CONTAINER YES", container)
+    if (!container) return;
+
+    const observer = new MutationObserver(() => {
+      // 1) Add aria-required to the email input
+      const emailInput = container.querySelector("input[type='email']");
+      if (emailInput && !emailInput.hasAttribute("aria-required")) {
+        emailInput.setAttribute("aria-required", "true");
+      }
+
+      // 2) Fix the success message element
+      const successMessage = container.querySelector(
+        ".pc--opt-out-form-message--success"
+      );
+      if (successMessage) {
+        successMessage.removeAttribute("tabindex");
+        successMessage.removeAttribute("autofocus");
+        successMessage.setAttribute("role", "alert");
+      }
+    });
+
+    observer.observe(container, { childList: true, subtree: true });
+  });
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
