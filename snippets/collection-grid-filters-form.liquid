@@ -78,6 +78,7 @@
                                 class="tag__input"
                                 name="{{ filter_value.param_name }}"
                                 value="{{ filter_value.value }}"
+                                aria-labelledby="text-{{ filter_value.label | handleize }}-{{ id }}"
                                 {% if filter_value.active %}checked{% endif %}>
                           {%- if is_color -%}
                           <span
@@ -89,7 +90,7 @@
                           <span class="tag__text hide">{{ filter_value.label | escape }}</span>
                           {%- else -%}
                           <span class="tag__checkbox"></span>
-                          <label for="filter-{{ filter_value.label | handleize }}-{{ id }}">
+                          <label id="text-{{ filter_value.label | handleize }}-{{ id }}" for="filter-{{ filter_value.label | handleize }}-{{ id }}">
                               <span class="tag__text">{{ filter_value.label | escape }}</span> ({{ filter_value.count }})
                           </label>
                           {%- endif -%}
