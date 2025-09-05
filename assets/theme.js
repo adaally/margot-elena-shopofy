@@ -9140,7 +9140,6 @@ fixAriaLabelThumbnails()
         }
       });
     });
-    });
 
     observer.observe(container, { childList: true, subtree: true });
   });
