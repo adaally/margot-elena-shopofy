@@ -35,4 +35,5 @@
 
 .btn:focus-visible {
     outline: rgb(255, 255, 255) auto 1.25px;
+    outline-offset: -3px;
 }
