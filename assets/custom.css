@@ -29,6 +29,6 @@
     color: #000;
 }
 
-.tag:has(input:focus) {
+.tag:has(input:focus), .btn:.focus-visible {
     outline: rgb(16, 16, 16) auto 1.25px;
 }
