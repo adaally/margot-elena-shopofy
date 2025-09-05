@@ -8996,6 +8996,7 @@ theme.recentlyViewed = {
 
     const interval = setInterval(() => {
       const cart = document.querySelector("#rebuy-cart");
+      console.log("REBUY CART", cart)
       if(!cart) return;
 
       cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
@@ -9087,18 +9088,18 @@ fixAriaLabelThumbnails()
 
   
 
-  function changeCartThumbnails() {
-  const cartBtn = document.querySelector(".js-drawer-open-cart")
-  console.log(cartBtn)
-  if(!cartBtn) return;
+//   function changeCartThumbnails() {
+//   const cartBtn = document.querySelector(".js-drawer-open-cart")
+//   console.log(cartBtn)
+//   if(!cartBtn) return;
 
-  cartBtn.addEventListener('click', () => {
-    console.log(document.querySelector(".rebuy-cart__flyout"))
-  });
-}
+//   cartBtn.addEventListener('click', () => {
+//     console.log(document.querySelector(".rebuy-cart__flyout"))
+//   });
+// }
 
 
-changeCartThumbnails();
+// changeCartThumbnails();
 
   //Focus trap search
   const openButton = document.querySelector('#search--button');
