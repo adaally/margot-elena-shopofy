@@ -34,5 +34,5 @@
 }
 
 .btn:focus-visible {
-    outline-offset: 4px;
+    outline-offset: -4px;
 }
