@@ -9062,11 +9062,8 @@ theme.recentlyViewed = {
       clearInterval(interval);
     }
     }, 200);
-
-
-
-
   }
+  fixAriaLabelThumbnails()
   // setTimeout(() => {
   //   fixAriaLabelThumbnails()
   // }, 4000);
