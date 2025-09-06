@@ -72,7 +72,6 @@
 
                     <li class="tag{% if filter_value.active %} tag--active{% endif %}{% if is_color %} tag--swatch{% endif %}{% if filter_value.count == 0%} hide{% endif %}">
                         <label class="tag__checkbox-wrapper text-label" for="filter-{{ filter_value.label | handleize }}">
-                          {% comment %} <span class="visually-hidden">{{ filter_value.label | escape }} ({{ filter_value.count }})</span> {% endcomment %}
                           <input type="checkbox"
                                 id="filter-{{ filter_value.label | handleize }}" 
                                 class="sr-only"
