@@ -9038,7 +9038,7 @@ function fixAriaLabelThumbnails() {
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
-    const btns = document.querySelectorAll("button.yotpo-sr-bottom-line-summary");
+    const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
     console.log(btns)
     if (btns.length > 0) {
     const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
