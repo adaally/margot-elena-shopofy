@@ -8539,6 +8539,7 @@ theme.recentlyViewed = {
             aWrapper.removeAttribute("tabindex");
 
             const btnToCart = aWrapper.querySelector(".rebuy-button");
+            console.log(btnToCart, "button xd")
             if (btnToCart) {
               btnToCart.addEventListener("click", e => e.preventDefault());
               btnToCart.removeAttribute("tabindex")
