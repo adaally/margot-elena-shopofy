@@ -9040,39 +9040,35 @@ function fixAriaLabelThumbnails() {
   const observer = new MutationObserver((mutations, obs) => {
     setTimeout(() => {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
-    console.log(btns)
-    if (btns.length > 0) {
-    const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
-      btns.forEach((btn, index) => {
-        const title = titles[index]?.innerText?.trim();
-        const labelBefore = btn.getAttribute("aria-label");
-        const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
+      if (btns.length > 0) {
+      const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
+        btns.forEach((btn, index) => {
+          const title = titles[index]?.innerText?.trim();
+          const labelBefore = btn.getAttribute("aria-label");
+          const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
 
-        if (!labelBefore || !title) return;
+          if (!labelBefore || !title) return;
 
-        const numbers = labelBefore.match(/\d+(\.\d+)?/g);
-        if (numbers) {
-          const first = numbers[0];
-          const last = numbers[numbers.length - 1];
-          btn.setAttribute(
-            "aria-label",
-            `${title} ${first} out of ${last} stars (${totalReviewsText})`
-          );
-        }
-      });
+          const numbers = labelBefore.match(/\d+(\.\d+)?/g);
+          if (numbers) {
+            const first = numbers[0];
+            const last = numbers[numbers.length - 1];
+            btn.setAttribute(
+              "aria-label",
+              `${title} ${first} out of ${last} stars (${totalReviewsText})`
+            );
+          }
+        });
 
-      // If you only need to run once after buttons exist:
-      obs.disconnect();
-    }
+        // If you only need to run once after buttons exist:
+        obs.disconnect();
+      }
     }, 300);
   });
 
   observer.observe(targetNode, config);
 }
   fixAriaLabelThumbnails()
-  // setTimeout(() => {
-  //   fixAriaLabelThumbnails()
-  // }, 4000);
 
   function fixOwlDots() {
     const timeout = setTimeout(() => {
