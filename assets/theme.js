@@ -8536,13 +8536,10 @@ theme.recentlyViewed = {
             div.appendChild(aWrapper);
             div.setAttribute("role", "listitem");
             aWrapper.removeAttribute("aria-label");
-            aWrapper.removeAttribute("tabindex");
 
             const btnToCart = aWrapper.querySelector(".rebuy-button");
-            console.log(btnToCart, "button xd")
             if (btnToCart) {
               btnToCart.addEventListener("click", e => e.preventDefault());
-              btnToCart.removeAttribute("tabindex")
             }
 
             const actionsContainer = div.querySelector(".rebuy-product-actions");
