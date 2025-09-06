@@ -9033,36 +9033,39 @@ theme.recentlyViewed = {
 
   fixAccessibilityToCartThumnail();
 
-  function fixAriaLabelThumbnails() {
-    const timeout = setTimeout(() => {
-      clearInterval(interval);
-    }, 8000);
+function fixAriaLabelThumbnails() {
+  const targetNode = document.querySelector(".collection-grid__wrapper"); // or a more specific container if you know it
+  const config = { childList: true, subtree: true };
 
-    const interval = setInterval(() => {
-      const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
-      if(btns.length > 0) {
-      const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
-      console.log(titles)
+  const observer = new MutationObserver((mutations, obs) => {
+    const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
+    const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
+
+    if (btns.length > 0 && titles.length > 0) {
       btns.forEach((btn, index) => {
-        const title = titles[index].innerText;
+        const title = titles[index]?.innerText?.trim();
         const labelBefore = btn.getAttribute("aria-label");
 
-        const numbers = labelBefore.match(/\d+(\.\d+)?/g);
+        if (!labelBefore || !title) return;
 
+        const numbers = labelBefore.match(/\d+(\.\d+)?/g);
         if (numbers) {
           const first = numbers[0];
           const last = numbers[numbers.length - 1];
-          btn.setAttribute("aria-label", `${first} stars. ${last} reviews. Go to ${title} Reviews`);
+          btn.setAttribute(
+            "aria-label",
+            `${first} stars. ${last} reviews. Go to ${title} Reviews`
+          );
         }
-
       });
 
-      
-      clearTimeout(timeout);
-      clearInterval(interval);
+      // If you only need to run once after buttons exist:
+      obs.disconnect();
     }
-    }, 200);
-  }
+  });
+
+  observer.observe(targetNode, config);
+}
   fixAriaLabelThumbnails()
   // setTimeout(() => {
   //   fixAriaLabelThumbnails()
