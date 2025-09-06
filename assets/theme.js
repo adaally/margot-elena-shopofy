@@ -9120,9 +9120,9 @@ function addAlertToErrors() {
       }
 }
 
-    addAlertToErrors();
 
   document.addEventListener("DOMContentLoaded", function () {
+    addAlertToErrors();
     const container = document.getElementById("pc--optOutFormContainer");
     if (!container) return;
 
