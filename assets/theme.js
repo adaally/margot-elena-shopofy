@@ -9116,13 +9116,12 @@ function fixAriaLabelThumbnails() {
 function addAlertToErrors() {
     const errorMessage = document.querySelector(".form-vertical .errors");
     if (errorMessage) {
-        successMessage.setAttribute("role", "alert");
+        errorMessage.setAttribute("role", "alert");
       }
 }
-
+    addAlertToErrors();
 
   document.addEventListener("DOMContentLoaded", function () {
-    addAlertToErrors();
     const container = document.getElementById("pc--optOutFormContainer");
     if (!container) return;
 
