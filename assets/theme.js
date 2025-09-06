@@ -9046,6 +9046,7 @@ function fixAriaLabelThumbnails() {
       btns.forEach((btn, index) => {
         const title = titles[index]?.innerText?.trim();
         const labelBefore = btn.getAttribute("aria-label");
+        const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
 
         if (!labelBefore || !title) return;
 
@@ -9055,7 +9056,7 @@ function fixAriaLabelThumbnails() {
           const last = numbers[numbers.length - 1];
           btn.setAttribute(
             "aria-label",
-            `${first} stars. ${last} reviews. Go to ${title} Reviews`
+            `${title} ${first} out of ${last} stars (${totalReviewsText})`
           );
         }
       });
