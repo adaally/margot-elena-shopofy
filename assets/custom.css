@@ -30,7 +30,7 @@
 }
 
 .tag:has(input:focus), .btn:focus-visible, .rebuy-button:focus-visible, .rebuy-cart__flyout-empty-cart a:focus-visible {
-    outline: rgb(16, 16, 16) auto 1.25px;
+    outline: rgb(16, 16, 16) auto 1.25px !important;
 }
 
 .btn:focus-visible {
