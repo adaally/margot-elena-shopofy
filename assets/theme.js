@@ -8996,7 +8996,6 @@ theme.recentlyViewed = {
 
     const interval = setInterval(() => {
       const cart = document.querySelector("#rebuy-cart");
-      console.log("REBUY CART", cart)
       if(!cart) return;
 
       cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
@@ -9055,11 +9054,11 @@ theme.recentlyViewed = {
   }
   }
   setTimeout(() => {
-fixAriaLabelThumbnails()
+    fixAriaLabelThumbnails()
   }, 4000);
 
   function fixOwlDots() {
-        const timeout = setTimeout(() => {
+    const timeout = setTimeout(() => {
       clearInterval(interval);
     }, 5000);
 
@@ -9100,30 +9099,6 @@ fixAriaLabelThumbnails()
 
 
 // changeCartThumbnails();
-
-document.addEventListener("DOMContentLoaded", function () {
-  const faqBlocks = document.querySelectorAll(".block-faq");
-
-  let currentWrapper = null;
-
-  faqBlocks.forEach(block => {
-    const hasHeading = block.querySelector("h2");
-
-    if (hasHeading) {
-      // Start a new wrapper after this heading block
-      currentWrapper = document.createElement("div");
-      currentWrapper.setAttribute("role", "list");
-      currentWrapper.classList.add("faq-list");
-
-      // Insert wrapper after the heading block
-      block.insertAdjacentElement("afterend", currentWrapper);
-    } else if (currentWrapper) {
-      // Move block into current wrapper
-      currentWrapper.appendChild(block);
-      block.setAttribute("role", "listitem");
-    }
-  });
-});
 
   document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("pc--optOutFormContainer");
