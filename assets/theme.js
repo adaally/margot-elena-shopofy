@@ -8566,7 +8566,7 @@ theme.recentlyViewed = {
   }, 200);
 }
 
-  changeH3toH2InRebuyProductsBestSellersWhenReady();
+  // changeH3toH2InRebuyProductsBestSellersWhenReady();
 
   function fixAccessibilityCareers() {
     const interval = setInterval(() => {
