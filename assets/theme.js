@@ -9113,6 +9113,24 @@ function fixAriaLabelThumbnails() {
 
 // changeCartThumbnails();
 
+function addAlertToErrors() {
+    const container = document.querySelector(".form-vertical");
+    if (!container) return;
+
+    const observer = new MutationObserver(() => {
+      const errorMessage = container.querySelector(
+        ".errors"
+      );
+      if (errorMessage) {
+        successMessage.setAttribute("role", "alert");
+      }
+    });
+
+    observer.observe(container, { childList: true, subtree: true });
+}
+
+    addAlertToErrors();
+
   document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("pc--optOutFormContainer");
     if (!container) return;
