@@ -9037,7 +9037,7 @@ theme.recentlyViewed = {
       const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
       if(btns.length > 0) {
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
-
+      console.log(titles)
       btns.forEach((btn, index) => {
         const title = titles[index].innerText;
         const labelBefore = btn.getAttribute("aria-label");
