@@ -9036,7 +9036,7 @@ theme.recentlyViewed = {
   function fixAriaLabelThumbnails() {
       const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
       if(btns.length > 0) {
-        const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
+      const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
 
       btns.forEach((btn, index) => {
         const title = titles[index].innerText;
