@@ -9034,13 +9034,13 @@ theme.recentlyViewed = {
   fixAccessibilityToCartThumnail();
 
 function fixAriaLabelThumbnails() {
-  const targetNode = document.querySelector(".collection-grid__wrapper"); // or a more specific container if you know it
+  const targetNode = document.body; // or a more specific container if you know it
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
     const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
     const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
-
+    console.log(titles)
     if (btns.length > 0 && titles.length > 0) {
       btns.forEach((btn, index) => {
         const title = titles[index]?.innerText?.trim();
