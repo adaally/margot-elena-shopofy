@@ -9034,6 +9034,11 @@ theme.recentlyViewed = {
   fixAccessibilityToCartThumnail();
 
   function fixAriaLabelThumbnails() {
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 8000);
+
+    const interval = setInterval(() => {
       const btns = document.querySelectorAll(".grid-product__link button.yotpo-sr-bottom-line-summary");
       if(btns.length > 0) {
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
@@ -9051,11 +9056,20 @@ theme.recentlyViewed = {
         }
 
       });
+
+      
+      clearTimeout(timeout);
+      clearInterval(interval);
+    }
+    }, 200);
+
+
+
+
   }
-  }
-  setTimeout(() => {
-    fixAriaLabelThumbnails()
-  }, 4000);
+  // setTimeout(() => {
+  //   fixAriaLabelThumbnails()
+  // }, 4000);
 
   function fixOwlDots() {
     const timeout = setTimeout(() => {
