@@ -8474,7 +8474,7 @@ theme.recentlyViewed = {
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
   const processed = new Set();
   const expectedCount = 2;
-  const maxWaitTime = 10000; // 10 seconds
+  const maxWaitTime = 20000; // 20 seconds
 
   const startTime = Date.now();
 
