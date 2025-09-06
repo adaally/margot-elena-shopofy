@@ -9038,7 +9038,8 @@ function fixAriaLabelThumbnails() {
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
-    const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
+    setTimeout(() => {
+      const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
     console.log(btns)
     if (btns.length > 0) {
     const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
@@ -9062,6 +9063,7 @@ function fixAriaLabelThumbnails() {
       // If you only need to run once after buttons exist:
       obs.disconnect();
     }
+    }, 300);
   });
 
   observer.observe(targetNode, config);
