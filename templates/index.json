@@ -15,19 +15,19 @@
         "image_yTNJwV": {
           "type": "image",
           "settings": {
-            "top_subheading": "New Additions!",
-            "title": "NEW TokyoMilk \nStationery Delights",
+            "top_subheading": "SHE HAS ARRIVED!",
+            "title": "The Fall 2025\nSubscription Box",
             "title_size": 40,
-            "subheading": "Cheeky greetings for every occasion",
-            "link": "https://margotelena.com/collections/stationery-cards",
-            "link_text": "Shop now",
+            "subheading": "Seasonal Luxuries for Crisp, Colorful Fall",
+            "link": "https://margotelena.com/pages/subscription-box-fall-reveal-2025",
+            "link_text": "Explore now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#000000",
             "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_webBanners_NAcards3_1.jpg",
-            "image_mobile": "shopify://shop_images/ME_webBanners_NAcards4_1.jpg",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/ME_WebBanners_Fall25_FullReveal3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanners_Fall25_FullReveal4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
