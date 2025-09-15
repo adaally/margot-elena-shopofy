@@ -29,33 +29,21 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {}
         },
         "dd678b49-80db-41b5-b52b-f957c8c0296b": {
           "type": "custom",
           "settings": {
-            "code": "<br>",
+            "code": "<div style=\"background-color: #FCEDE6; padding: 16px; border: 1px solid #d4cfc8; border-radius: 4px; margin-top: 24px; text-align: center;\">\n  <strong>Current Subscriber?</strong>\n  <br>\n  <a href=\"https://margotelena.com/pages/upgrade-to-annual\" style=\"color: #5F2D29; text-decoration: underline; font-weight: bold;\">\n    Click here to upgrade to Annual\n  </a>\n</div>",
             "ecls": ""
           }
         },
-        "subscription_toggle_68kkDV": {
-          "type": "subscription_toggle",
+        "custom_8QGY6j": {
+          "type": "custom",
           "settings": {
-            "title": "Choose Your Membership",
-            "product_1": "annual-seasonal-discovery-box",
-            "product_1_label": "Annual",
-            "product_1_price": "$267.76",
-            "product_1_subtext": "/ YEAR",
-            "product_1_copy": "<p><strong>NEW! BEST VALUE</strong></p><ul><li>Four seasons of luxury, prepaid for ease</li><li>$66.94 Per box</li><li>Save 30% when you subscribe annually compared to One-Time</li><li>$800+ in luxuries for only $267.76/year</li></ul>",
-            "product_2": "seasonal-discovery-box",
-            "product_2_label": "Seasonal",
-            "product_2_price": " $76.94",
-            "product_2_subtext": "/ Box",
-            "product_2_copy": "<ul><li>Delivered every season</li><li>Cancel anytime—no long-term contract</li><li>Save 19% per box compared to one-time purchase</li></ul>",
-            "text_color": "#000000",
-            "button_background": "#fcede6",
-            "active_button_background": "#f9a782",
-            "active_content_background": "#f9a782"
+            "code": "<br>",
+            "ecls": ""
           }
         },
         "separator": {
@@ -78,6 +66,26 @@
           "disabled": true,
           "settings": {
             "product": "seasonal-discovery-box"
+          }
+        },
+        "subscription_toggle_68kkDV": {
+          "type": "subscription_toggle",
+          "settings": {
+            "title": "Choose Your Membership",
+            "product_1": "annual-seasonal-discovery-box",
+            "product_1_label": "Annual",
+            "product_1_price": "$267.76",
+            "product_1_subtext": "/ YEAR",
+            "product_1_copy": "<p><strong>NEW! BEST VALUE</strong></p><ul><li>Four seasons of luxury, prepaid for ease</li><li>$66.94 Per box</li><li>Save 30% when you subscribe annually compared to One-Time</li><li>$800+ in luxuries for only $267.76/year</li><li>Shipping Included</li></ul>",
+            "product_2": "seasonal-discovery-box",
+            "product_2_label": "Seasonal",
+            "product_2_price": " $76.94",
+            "product_2_subtext": "/ Box",
+            "product_2_copy": "<ul><li>Delivered every season</li><li>Cancel anytime—no long-term contract</li><li>Save 19% per box compared to one-time purchase</li><li>Shipping Included</li></ul>",
+            "text_color": "#000000",
+            "button_background": "#fcede6",
+            "active_button_background": "#fbd3c5",
+            "active_content_background": "#fbd3c5"
           }
         },
         "buy_buttons": {
@@ -150,10 +158,11 @@
         "375b67f3-d9e4-4949-bd2e-a0e2657242a6",
         "price",
         "dd678b49-80db-41b5-b52b-f957c8c0296b",
-        "subscription_toggle_68kkDV",
+        "custom_8QGY6j",
         "separator",
         "variant_picker",
         "3432895a-90b1-44fc-bdc6-8bdad8f28510",
+        "subscription_toggle_68kkDV",
         "buy_buttons",
         "description",
         "5b36dac3-ef67-47a0-92b6-747b5f5f727c",
