@@ -113,7 +113,7 @@
           "type": "tab",
           "settings": {
             "title": "When is my card charged?",
-            "content": "<p>Your card is charged when you enroll, so your first box is prepaid. It is charged again quarterly before each box ships, typically on March 1, June 1, September 1, December 1.</p>",
+            "content": "<p><strong>Seasonal Plan<br/></strong>Your card is charged when you enroll, so your first box is prepaid. It is charged again quarterly before each box ships, typically on March 1, June 1, September 1, and December 1.</p><p><strong>Annual Plan<br/></strong>Subscription renewal is charged once per year, aligned to the season you originally enrolled (for example: a Summer Box purchased in July would renew the following June, our summer anchor date). Seasonal anchor dates are as follows: March 1 (Spring Box), June 1 (Summer Box), September 1 (Fall Box), December 1 (Winter Box).</p>",
             "page": ""
           }
         },
@@ -121,7 +121,7 @@
           "type": "tab",
           "settings": {
             "title": "When does the box ship?",
-            "content": "<p>Subscribing now enrolls you in a seasonal subscription. Your first box will be the Summer 2025 Box, shipping in June. You can opt out at any time.</p>",
+            "content": "<p>Box ship dates align with our Seasonal anchor dates:<br/>Spring Box begins shipping in March, Summer Box begins shipping in June, Fall Box begins shipping in September, Winter Box begins shipping in December.</p>",
             "page": ""
           }
         },
@@ -129,7 +129,7 @@
           "type": "tab",
           "settings": {
             "title": "How do I cancel?",
-            "content": "<p>We'll contact you quarterly before charging your card with the opportunity to opt-out. You can cancel anytime before the charge date by logging into your account or contacting <a href=\"https://margotelena.com/pages/get-in-touch\">customer service</a>, 1-888-896-6398. Cancellations made after the charge date apply towards the following box.</p>",
+            "content": "<p><strong>Seasonal Plan<br/></strong>We'll contact you quarterly before charging your card with the opportunity to opt-out. You can cancel anytime before the charge date by logging into your account or contacting <a href=\"https://margotelena.com/pages/get-in-touch\" target=\"_blank\" title=\"https://margotelena.com/pages/get-in-touch\">customer service</a>, 1-888-896-6398. Cancellations made after the charge date apply towards the following box.</p><p><strong>Annual Plan<br/></strong>The yearly subscription is prepaid, and there are no refunds. Should you decide you do not want to continue with the Annual Plan, simply log into your account or contact <a href=\"https://margotelena.com/pages/get-in-touch\" target=\"_blank\" title=\"https://margotelena.com/pages/get-in-touch\">customer service</a>, 1-888-896-6398 to cancel. Please note: Cancelling will stop any future annual charges, but any prepaid boxes will still be delivered according to your yearly plan.</p>",
             "page": ""
           }
         },
@@ -714,15 +714,15 @@
         "template--15842292433051__26fa70ec-dbfa-437d-b88c-6d6bf494853b-16820925565b666daa-1": {
           "type": "question",
           "settings": {
-            "title": "How much is shipping?",
-            "text": "<p>Shipping is available to the 48 contiguous United States and is $6.95 per box.</p>"
+            "title": "How do I upgrade from seasonal to annual?",
+            "text": "<p>Please visit our <a href=\"https://margotelena.com/pages/upgrade-to-annual\" title=\"Upgrade to the Annual Subscription Box\">Upgrade To Annual page</a> and fill out the form. <a href=\"https://margotelena.com/pages/contact-us\" title=\"Contact Us\">Contact us</a> if you have any questions.</p>"
           }
         },
-        "bca089ee-56ab-45cc-9b75-fea61c1bb19f": {
+        "question_6kCEf3": {
           "type": "question",
           "settings": {
-            "title": "Can I add other items to my subscription, to combine shipping?",
-            "text": "<p>Because our subscription boxes are packaged separately from other orders, we're unable to add any additional items.</p>"
+            "title": "How much is shipping?",
+            "text": "<p>Shipping is free and available to the 48 contiguous United States.</p>"
           }
         },
         "6c3871da-a822-4575-a1e5-0de3d03326c9": {
@@ -764,7 +764,7 @@
       },
       "block_order": [
         "template--15842292433051__26fa70ec-dbfa-437d-b88c-6d6bf494853b-16820925565b666daa-1",
-        "bca089ee-56ab-45cc-9b75-fea61c1bb19f",
+        "question_6kCEf3",
         "6c3871da-a822-4575-a1e5-0de3d03326c9",
         "0993befe-b483-4672-9810-59b23e6878ab",
         "49c32065-5e5b-410a-a026-77216f4ac3cd",
