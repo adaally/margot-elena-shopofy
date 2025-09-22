@@ -9006,7 +9006,7 @@ theme.recentlyViewed = {
         title.replaceWith(newTitle);
       }
 
-      const progressBar = cart.querySelector("[role='progressbar']");
+      const progressBar = cart.querySelector(".rebuy-cart__flyout-shipping-bar-meter [role='progressbar']");
 
       if(progressBar) {
         progressBar.removeAttribute("tabindex");
