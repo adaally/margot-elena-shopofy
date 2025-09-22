@@ -198,6 +198,84 @@
             "text": "<p>As soon as we receive your order, we start working on it right away. Please review your order carefully, as it cannot be modified or canceled once submitted.</p>"
           }
         },
+        "rich_text_GMJYiR": {
+          "type": "rich-text",
+          "settings": {
+            "title": "SUB BOX FAQS",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "question_TFqGDa": {
+          "type": "question",
+          "settings": {
+            "title": "How do I upgrade from seasonal to annual?",
+            "text": "<p>Please visit our <a href=\"https://margotelena.com/pages/upgrade-to-annual\" title=\"Upgrade to the Annual Subscription Box\">Upgrade To Annual page </a>and fill out the form. <a href=\"https://margotelena.com/pages/contact-us\" title=\"Contact Us\">Contact us </a>if you have any questions.</p>"
+          }
+        },
+        "question_tipGm4": {
+          "type": "question",
+          "settings": {
+            "title": "How do I cancel?",
+            "text": "<p><strong>Seasonal Plan<br/></strong>We'll contact you quarterly before charging your card with the opportunity to opt-out. You can cancel anytime before the charge date by logging into your account or contacting <a href=\"https://margotelena.com/pages/get-in-touch\" target=\"_blank\" title=\"https://margotelena.com/pages/get-in-touch\">customer service</a>, 1-888-896-6398. Cancellations made after the charge date apply towards the following box.</p><p><strong>Annual Plan<br/></strong>The yearly subscription is prepaid, and there are no refunds. Should you decide you do not want to continue with the Annual Plan, simply log into your account or contact <a href=\"https://margotelena.com/pages/get-in-touch\" target=\"_blank\" title=\"https://margotelena.com/pages/get-in-touch\">customer service</a>, 1-888-896-6398 to cancel. Please note: Cancelling will stop any future annual charges, but any prepaid boxes will still be delivered according to your yearly plan.</p>"
+          }
+        },
+        "question_4Ltqxm": {
+          "type": "question",
+          "settings": {
+            "title": "When does the box ship?",
+            "text": "<p>Box ship dates align with our Seasonal anchor dates:<br/>Spring Box begins shipping in March, Summer Box begins shipping in June, Fall Box begins shipping in September, Winter Box begins shipping in December.</p>"
+          }
+        },
+        "question_Tj6fVV": {
+          "type": "question",
+          "settings": {
+            "title": "How much is shipping?",
+            "text": "<p>Shipping is free and available to the 48 contiguous United States.</p>"
+          }
+        },
+        "question_YJJeDz": {
+          "type": "question",
+          "settings": {
+            "title": "When is my card charged?",
+            "text": "<p><strong>Seasonal Plan<br/></strong>Your card is charged when you enroll, so your first box is prepaid. It is charged again quarterly before each box ships, typically on March 1, June 1, September 1, and December 1.</p><p><strong>Annual Plan<br/></strong>Subscription renewal is charged once per year, aligned to the season you originally enrolled (for example: a Summer Box purchased in July would renew the following June, our summer anchor date). Seasonal anchor dates are as follows: March 1 (Spring Box), June 1 (Summer Box), September 1 (Fall Box), December 1 (Winter Box).</p>"
+          }
+        },
+        "question_rGKRm3": {
+          "type": "question",
+          "settings": {
+            "title": "How can I track my Subscription Box?",
+            "text": "<p>A FedEx tracking number will be emailed to you when your order leaves our warehouse so you can count down 'til its arrival!</p>"
+          }
+        },
+        "question_xTeTgM": {
+          "type": "question",
+          "settings": {
+            "title": "When will I find out what's in my box?",
+            "text": "<p>Follow us on social media or sign up for our email here for exciting reveals before your box ships. Revel in the surprise of the full box when it arrives!</p>"
+          }
+        },
+        "question_b6c4gz": {
+          "type": "question",
+          "settings": {
+            "title": "Can I send a box as a gift?",
+            "text": "<p>Sure thing! If you're sending boxes to different addresses, you'll need to check out separately for each box.</p>"
+          }
+        },
+        "question_7KiCyT": {
+          "type": "question",
+          "settings": {
+            "title": "What discount codes work with the Subscription Box?",
+            "text": "<p>Not all discount codes apply to the Subscription Box. When available, codes apply only to the initial purchase of a <strong>Seasonal Subscription Box</strong> at checkout. They do not apply to renewals, the <strong>Prepaid Annual Subscription</strong>, or <strong>one-time</strong> box purchases.</p>"
+          }
+        },
+        "question_nt3aUm": {
+          "type": "question",
+          "settings": {
+            "title": "How can I update the shipping address for my Subscription Box?",
+            "text": "<p>Please visit <a href=\"https://margotelena.com/pages/subscription-box-address-changes\" title=\"Subscription Box Address Change Instructions\">Subscription Box Address Change Instructions</a></p>"
+          }
+        },
         "aaa24db0-a349-4f73-8844-6422ed4ea7f9": {
           "type": "rich-text",
           "settings": {
@@ -249,6 +327,17 @@
         "b1cfe64d-fb1a-4cc5-82a3-ea74dd2a034a",
         "6898cef0-62b7-4a76-ab6f-9fa447170389",
         "988fdb49-8a16-4d8c-8cdf-68f3ba282ace",
+        "rich_text_GMJYiR",
+        "question_TFqGDa",
+        "question_tipGm4",
+        "question_4Ltqxm",
+        "question_Tj6fVV",
+        "question_YJJeDz",
+        "question_rGKRm3",
+        "question_xTeTgM",
+        "question_b6c4gz",
+        "question_7KiCyT",
+        "question_nt3aUm",
         "aaa24db0-a349-4f73-8844-6422ed4ea7f9",
         "65405cb4-7b50-4ee5-9234-72b4a54575e0",
         "d6a58922-9f21-41df-b424-28d92b38294d",
