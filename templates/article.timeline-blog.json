@@ -15,19 +15,21 @@
         "slide_LFMXV6": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 260,
-            "image_ratio": "landscape",
-            "image_ratio_mobile": "landscape"
+            "date": "1995",
+            "text": "<p><strong>Making Beauty More Beautiful</strong><br/>We’ve spent over 30 years lovingly developing products & brand worlds, creating each to capture the imagination & provide artful experiences intentionally & thoughtfully created to connect personally with our customers.  </p>",
+            "image": "shopify://shop_images/ME_30AnniversaryLogo_Open_K_Square_1.jpg",
+            "image_width": 250,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         },
         "slide_nxWt4t": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 200,
+            "date": "1997",
+            "text": "<p><strong>Balanced Formulation & Innovative Packaging</strong><br/>Bloom was our first nationally distributed collection, making its mark at the forefront of a reinvented bath & beauty industry and helped pioneer to lead the way as one of the first brands to elegantly balance fragrance & formulation and innovate the market with unique package design.</p>",
+            "image": "shopify://shop_images/30yrs_images10.jpg",
+            "image_width": 300,
             "image_ratio": "square",
             "image_ratio_mobile": "square"
           }
