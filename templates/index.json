@@ -34,21 +34,20 @@
         },
         "image_N7Lerk": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "top_subheading": "Good Day, Sunshine",
-            "title": "Summer Has Arrived!",
+            "top_subheading": "12 Magical Days",
+            "title": "The 2025 Advent \nCalendar Is Here",
             "title_size": 40,
-            "subheading": "Relax & Recharge with our Summer Subscription Box",
-            "link": "https://margotelena.com/pages/subscription-box-summer-reveal-2025",
+            "subheading": "Last Year’s Sold Out in 1 Day!",
+            "link": "https://margotelena.com/products/margot-elena-advent-calendar-holiday-2025",
             "link_text": "Explore now",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#ffffff",
+            "slide_text_color": "#000000",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_WebBanners_SubBox_Homepage_3_1.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanners_SubBox_Homepage_4.jpg",
+            "image": "shopify://shop_images/ME_WebBanners_25SubBox_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanners_25SubBox_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
