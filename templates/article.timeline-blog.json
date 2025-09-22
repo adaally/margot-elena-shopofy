@@ -84,7 +84,7 @@
             "date": "2012",
             "text": "<p><strong>TokyoMilk Dark</strong><br/>Inspired by bestselling fragrance TokyoMilk Dead Sexy, TokyoMilk Dark is not for the faint of heart. TokyoMilk Dark draws you into a world where elegant design meets irresistible fragrances & formulas for a provocative collection unlike any other. The midnight bottles are visual statement pieces, while the daring fragrance compositions deliver scents you don’t experience every day. </p>",
             "image": "shopify://shop_images/30yrs_images5.jpg",
-            "image_width": 200,
+            "image_width": 300,
             "image_ratio": "square",
             "image_ratio_mobile": "square"
           }
@@ -92,11 +92,12 @@
         "slide_nrYcim": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 220,
-            "image_ratio": "portrait",
-            "image_ratio_mobile": "portrait"
+            "date": "2013",
+            "text": "<p><strong>Library of Flowers / American Small Batch Perfumery<br/></strong>Carefully crafted to create memorable journeys through sight & scent, Library of Flowers is a collection that has a handcrafted feel filled with personality & soul. With hand-drawn illustrations, and a free-spirited approach, Library of Flowers embodies living richly while letting go of conventional expectations. Embraced by media & retail outlets alike, Library of Flowers quickly established itself as a beloved fragrance line.</p>",
+            "image": "shopify://shop_images/30yrs_images3.jpg",
+            "image_width": 300,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         },
         "slide_UVyT67": {
