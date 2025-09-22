@@ -9,30 +9,237 @@
  */
 {
   "sections": {
+    "ss_timeline_4_nWpyPf": {
+      "type": "ss-timeline-4",
+      "blocks": {
+        "slide_LFMXV6": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 260,
+            "image_ratio": "landscape",
+            "image_ratio_mobile": "landscape"
+          }
+        },
+        "slide_nxWt4t": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 200,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
+          }
+        },
+        "slide_YjUrmt": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 280,
+            "image_ratio": "landscape",
+            "image_ratio_mobile": "landscape"
+          }
+        },
+        "slide_qCjpDz": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 190,
+            "image_ratio": "landscape",
+            "image_ratio_mobile": "landscape"
+          }
+        },
+        "slide_ra9PxV": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 190,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        },
+        "slide_D67zq9": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 140,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        },
+        "slide_brAryb": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 200,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
+          }
+        },
+        "slide_nrYcim": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 220,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        },
+        "slide_UVyT67": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 220,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        },
+        "slide_i8bzLt": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 220,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        },
+        "slide_8hdcUQ": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 220,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        },
+        "slide_yCbMLh": {
+          "type": "slide",
+          "settings": {
+            "date": "2020",
+            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
+            "image_width": 220,
+            "image_ratio": "portrait",
+            "image_ratio_mobile": "portrait"
+          }
+        }
+      },
+      "block_order": [
+        "slide_LFMXV6",
+        "slide_nxWt4t",
+        "slide_YjUrmt",
+        "slide_qCjpDz",
+        "slide_ra9PxV",
+        "slide_D67zq9",
+        "slide_brAryb",
+        "slide_nrYcim",
+        "slide_UVyT67",
+        "slide_i8bzLt",
+        "slide_8hdcUQ",
+        "slide_yCbMLh"
+      ],
+      "name": "SS - Timeline #4",
+      "settings": {
+        "heading": "<h1>CELEBRATING THIRTY YEARS</h1>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 34,
+        "heading_size_mobile": 32,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "dots_size": 8,
+        "dots_size_mobile": 8,
+        "dots_mt": 20,
+        "dots_mt_mobile": 16,
+        "dots_show_desktop": true,
+        "dots_show_mobile": true,
+        "dots_align": "center",
+        "dots_align_mobile": "center",
+        "slider_gap": 10,
+        "slider_gap_mobile": 10,
+        "slider_mt": 32,
+        "slider_mt_mobile": 24,
+        "image_radius": 0,
+        "image_border_thickness": 0,
+        "slide_content_gap": 30,
+        "slide_content_gap_mobile": 12,
+        "slide_content_mt": 32,
+        "slide_content_mt_mobile": 20,
+        "slide_content_align": "left",
+        "slide_content_align_mobile": "left",
+        "date_custom": true,
+        "date_font": "serif",
+        "date_size": 72,
+        "date_size_mobile": 42,
+        "date_height": 130,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 15,
+        "text_height": 150,
+        "arrow_size": 48,
+        "arrow_size_mobile": 38,
+        "arrow_icon_size": 10,
+        "arrow_icon_size_mobile": 8,
+        "arrow_border_thickness": 1,
+        "arrow_radius": 100,
+        "arrow_hover_effect": "color",
+        "arrow_mt": 0,
+        "arrow_mt_mobile": 20,
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": false,
+        "arrow_align": "center",
+        "arrow_align_mobile": "center",
+        "heading_color": "#121212",
+        "heading_highlight_color": "#AFAFAF",
+        "image_border_color": "#121212",
+        "date_color": "#000000",
+        "text_color": "#121212",
+        "text_highlight_color": "#000000",
+        "arrow_color": "#121212",
+        "arrow_hover_color": "#121212",
+        "arrow_bg_color": "",
+        "arrow_bg_hover_color": "",
+        "arrow_border_color": "#C7C7C7",
+        "arrow_border_hover_color": "#C7C7C7",
+        "dots_color": "#121212",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 2000,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": false
+      }
+    },
     "main": {
       "type": "article-template",
       "settings": {
-        "image_hero": true,
+        "image_hero": false,
         "blog_show_tags": false,
         "blog_show_date": false,
         "blog_show_comments": false,
         "blog_show_author": false,
         "social_sharing_blog": true
-      }
-    },
-    "blog-posts": {
-      "type": "blog-posts",
-      "settings": {
-        "title": "Placeholder",
-        "blog": "margot-elena",
-        "post_limit": 6,
-        "blog_show_tags": false,
-        "blog_show_date": true,
-        "blog_show_comments": false,
-        "blog_show_author": false,
-        "view_all": false,
-        "blog_image_size": "wide",
-        "divider": false
       }
     },
     "316e6fb4-9a86-4709-bbfe-f80b6efd98cb": {
@@ -46,11 +253,27 @@
         "view_all": false,
         "divider": false
       }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "More to Explore",
+        "blog": "margot-elena",
+        "post_limit": 6,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "wide",
+        "divider": false
+      }
     }
   },
   "order": [
+    "ss_timeline_4_nWpyPf",
     "main",
-    "blog-posts",
-    "316e6fb4-9a86-4709-bbfe-f80b6efd98cb"
+    "316e6fb4-9a86-4709-bbfe-f80b6efd98cb",
+    "blog-posts"
   ]
 }
