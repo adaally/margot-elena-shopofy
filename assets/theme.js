@@ -9035,7 +9035,7 @@ theme.recentlyViewed = {
 
       cart.querySelectorAll(".rebuy-product-info").forEach(element => {
         const titleLink = element.querySelector("a");
-        const replaceLinkElement = documnet.createElement("span");
+        const replaceLinkElement = document.createElement("span");
         replaceLinkElement.innerText = titleLink.innerText;
         replaceLinkElement.className = titleLink.className;
         titleLink.replaceWith(replaceLinkElement);
