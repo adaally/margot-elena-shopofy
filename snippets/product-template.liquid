@@ -277,44 +277,68 @@
 
                     <script>
                       document.addEventListener("DOMContentLoaded", function () {
-                      const buttons = document.querySelectorAll('.subscription-option');
-                      const form = document.querySelector('form.product-single__form');
-                      const copyEl = document.getElementById('subscriptionToggleCopy');
-                      const addToCartBtn = document.querySelector('button.btn.btn--full.add-to-cart');
+const buttons = document.querySelectorAll('.subscription-option');
+  const form = document.querySelector('form.product-single__form');
+  const copyEl = document.getElementById('subscriptionToggleCopy');
+  const addToCartBtn = document.querySelector('button.btn.btn--full.add-to-cart');
 
-                      let selectedVariantId = null;
-                      let selectedSellingPlanId = null;
+  let selectedVariantId = null;
+  let selectedSellingPlanId = null;
+  let selectedIndex = 0; // track current selection
 
-                      if (!form || buttons.length === 0 || !addToCartBtn) return;
+  if (!form || buttons.length === 0 || !addToCartBtn) return;
 
-                      // Handle subscription toggle clicks
-                      buttons.forEach((button, index) => {
-                        button.addEventListener('click', () => {
-                          // Reset all
-                          buttons.forEach(b => {
-                            b.classList.remove('active');
-                            b.setAttribute('aria-checked', 'false');
-                          });
+  function updateSelection(newIndex) {
+    buttons.forEach((btn, i) => {
+      const isSelected = i === newIndex;
+      btn.classList.toggle('active', isSelected);
+      btn.setAttribute('aria-checked', isSelected);
+      btn.setAttribute('tabindex', isSelected ? '0' : '-1');
+    });
 
-                          // Mark this one active
-                          button.classList.add('active');
-                          button.setAttribute('aria-checked', 'true');
+    const selectedBtn = buttons[newIndex];
+    selectedVariantId = selectedBtn.dataset.variantId;
+    selectedSellingPlanId = selectedBtn.dataset.sellingPlanId;
 
-                          // Update values
-                          selectedVariantId = button.dataset.variantId;
-                          selectedSellingPlanId = button.dataset.sellingPlanId;
+    document.getElementById('subscription-variant-id').value = selectedVariantId;
+    document.getElementById('subscription-selling-plan-id').value = selectedSellingPlanId || '';
 
-                          document.getElementById('subscription-variant-id').value = selectedVariantId;
-                          document.getElementById('subscription-selling-plan-id').value = selectedSellingPlanId || '';
+    if (copyEl) {
+      copyEl.innerHTML = selectedBtn.dataset.copy
+        ? `<div style="padding:12px;">${selectedBtn.dataset.copy}</div>`
+        : "";
+    }
 
-                          if (copyEl) {
-                            copyEl.innerHTML = button.dataset.copy ? `<div style="padding:12px;">${button.dataset.copy}</div>` : "";
-                          }
-                        });
+    selectedIndex = newIndex;
+  }
 
-                        // Default select the first button
-                        if (index === 0) button.click();
-                      });
+  buttons.forEach((button, index) => {
+    // Mouse click
+    button.addEventListener('click', () => updateSelection(index));
+
+    // Keyboard arrows
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = (selectedIndex + 1) % buttons.length;
+        updateSelection(next);
+        buttons[next].focus();
+      }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = (selectedIndex - 1 + buttons.length) % buttons.length;
+        updateSelection(prev);
+        buttons[prev].focus();
+      }
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        updateSelection(index);
+      }
+    });
+  });
+
+  // Initialize to the first button
+  updateSelection(0);
 
                       // Handle Add to Cart via JS
                       addToCartBtn.addEventListener('click', function (e) {
