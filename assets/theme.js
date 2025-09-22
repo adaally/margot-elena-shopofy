@@ -9012,10 +9012,6 @@ theme.recentlyViewed = {
         progressBar.removeAttribute("tabindex");
       }
 
-      cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
-        element.setAttribute("alt", "");
-      });;
-
       cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
         const newElement = document.createElement("span");
         newElement.innerHTML = link.innerHTML;
@@ -9050,6 +9046,10 @@ theme.recentlyViewed = {
         newTitle.classList.add("h4");
         emptyCartTitle.replaceWith(newTitle);
       }
+
+      cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
+        element.setAttribute("alt", "");
+      });;
       }, 4000);
 
       
