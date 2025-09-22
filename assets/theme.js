@@ -8998,6 +8998,15 @@ theme.recentlyViewed = {
       const cart = document.querySelector("#rebuy-cart");
       if(!cart) return;
 
+      const title = cart.querySelector("#SmartCart_title");
+      if(title) {
+        const newTitle = cart.createElement("h1");
+        newTitle.innerText = title.innerText;
+        newTitle.className = title.className;
+        newTitle.id = title.id;
+        title.replaceWith(newTitle);
+      }
+
       cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
         const newElement = document.createElement("span");
         newElement.innerHTML = link.innerHTML;
