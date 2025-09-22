@@ -8327,7 +8327,7 @@ theme.recentlyViewed = {
     const title = document.querySelector(".product-block .rte strong");
     const newTitle = document.createElement("h2");
     newTitle.classList.add("default-text");
-
+    newTitle.innerText = title.innerText;
     title.replaceWith(newTitle);
   }
 
