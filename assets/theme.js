@@ -9006,6 +9006,12 @@ theme.recentlyViewed = {
         title.replaceWith(newTitle);
       }
 
+      const progressBar = cart.querySelector("[role='progressbar']");
+
+      if(progressBar) {
+        progressBar.removeAttribute("tabindex");
+      }
+
       cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
         const newElement = document.createElement("span");
         newElement.innerHTML = link.innerHTML;
