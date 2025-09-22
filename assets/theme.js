@@ -9095,7 +9095,7 @@ function fixAriaLabelThumbnails() {
           const labelBefore = btn.getAttribute("aria-label");
           const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
 
-          console.log(labelBefore, title)
+          console.log(titles, titles[index])
           if (!labelBefore || !title) return;
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
