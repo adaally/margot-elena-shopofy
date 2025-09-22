@@ -9043,6 +9043,7 @@ theme.recentlyViewed = {
         const newTitle = document.createElement("h2");
         newTitle.innerText = emptyCartTitle.innerText;
         newTitle.className = emptyCartTitle.className;
+        newTitle.classList.add("h4");
         emptyCartTitle.replaceWith(newTitle);
       }
       }, 4000);
