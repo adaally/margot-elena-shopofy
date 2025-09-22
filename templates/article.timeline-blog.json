@@ -48,11 +48,12 @@
         "slide_qCjpDz": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 190,
-            "image_ratio": "landscape",
-            "image_ratio_mobile": "landscape"
+            "date": "2001",
+            "text": "<p><strong>Lollia / Modern Romantic Luxury<br/></strong>Margot Elena’s most recognizable & buzzed-about brand, Lollia, is a world of boudoir luxuries filled with lovely details, blushing fragrances & flirtatious touches. Coyly telling a story of modern romantic luxury, signature mix-and-match patterns adorn each sophisticated fragrance line. Lollia, with its air of quiet elegance, earned huge press accolades & sales. </p>",
+            "image": "shopify://shop_images/30yrs_images2.jpg",
+            "image_width": 300,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         },
         "slide_ra9PxV": {
