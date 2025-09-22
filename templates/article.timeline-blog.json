@@ -70,11 +70,12 @@
         "slide_D67zq9": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 140,
-            "image_ratio": "portrait",
-            "image_ratio_mobile": "portrait"
+            "date": "2007",
+            "text": "<p><strong>TokyoMilk / Objects to Desire<br/></strong>TokyoMilk was born out of a vision where nothing is as it seems, daring the owner to follow the twists, turns and secrets hidden in the packaging. Retailers clamored for TokyoMilk as it defied a changing economy & was a highly successful launch in fall 2008. Editorial coverage from high profile media solidified TokyoMilk as the next must-have brand. </p>",
+            "image": "shopify://shop_images/30yrs_images4.jpg",
+            "image_width": 300,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         },
         "slide_brAryb": {
