@@ -37,11 +37,12 @@
         "slide_YjUrmt": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 280,
-            "image_ratio": "landscape",
-            "image_ratio_mobile": "landscape"
+            "date": "1999",
+            "text": "<p><strong>Archive / Apothecary Studio<br/></strong>Archive started as a product introduction & quickly became a beloved minimalist luxury bath line carried by over 5,000 retailers including Barney’s and Fred Segal. The success of Archive paved the way for long-standing partnerships with brands like Anthropologie. </p>",
+            "image": "shopify://shop_images/30yrs_images15.jpg",
+            "image_width": 300,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         },
         "slide_qCjpDz": {
