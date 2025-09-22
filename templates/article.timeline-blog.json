@@ -136,11 +136,12 @@
         "slide_yCbMLh": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 220,
-            "image_ratio": "portrait",
-            "image_ratio_mobile": "portrait"
+            "date": "2025",
+            "text": "<p><strong>Celebrating 30 Years<br/></strong>After three decades of Making Beauty More Beautiful, Margot Elena forges ahead as a leader in the industry, launching trends & always innovating while constantly developing our beloved brand libraries. To help celebrate 30 years, we have some surprises in store for our devotees, including a brand new Lollia collection with a fragrance and range of luxuries that truly celebrate the core of Margot Elena—artful experiences intentionally & thoughtfully crafted to connect with our customers.</p>",
+            "image": "shopify://shop_images/30yrs_images16.jpg",
+            "image_width": 300,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         }
       },
