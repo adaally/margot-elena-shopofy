@@ -792,6 +792,7 @@
         "text": "<p>With $200 of beauty luxuries for just $66.94, seasonal boxes sell out fast! Ready to join the Margot Elena Subscription Box community?</p>",
         "button_label": "Join Now",
         "button_link": "shopify://pages/subscription-box-fall-reveal-2022",
+        "button_aria-label": "Join the Margot Elena Subscription Box community now",
         "image": "shopify://shop_images/ME_Sub_Box_Mini_Banner_Desktop.jpg",
         "layout": "left",
         "height": 550,
