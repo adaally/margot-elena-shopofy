@@ -8340,9 +8340,9 @@ theme.recentlyViewed = {
     const firstTab = tabs[0];
     const container = document.createElement("div");
     container.setAttribute("role", "list");
-
+    container.setAttribute("aria-label", "Subscription questions");
     firstTab.parentNode.insertBefore(container, firstTab);
-    
+
     tabs.forEach(element => {
       element.setAttribute("role","listitem");
       container.appendChild(element);
