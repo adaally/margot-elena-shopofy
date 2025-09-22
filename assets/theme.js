@@ -9092,7 +9092,7 @@ function fixAriaLabelThumbnails() {
         btns.forEach((btn, index) => {
           const labelBefore = btn.getAttribute("aria-label");
           const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
-
+          console.log(labelBefore)
           if(btn.classList.contains("aria-label-changed")) return;
 
           if (!labelBefore) return;
