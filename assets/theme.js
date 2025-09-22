@@ -9031,6 +9031,14 @@ theme.recentlyViewed = {
         element.removeAttribute("aria-level");
         element.removeAttribute("role");
       });
+
+      const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
+      if(emptyCartTitle) {
+        const newTitle = document.createElement("h2");
+        newTitle.innerText = emptyCartTitle.innerText;
+        newTitle.className = emptyCartTitle.className;
+        emptyCartTitle.replaceWith(newTitle);
+      }
       }, 4000);
 
       
