@@ -9093,10 +9093,11 @@ function fixAriaLabelThumbnails() {
           const labelBefore = btn.getAttribute("aria-label");
           const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
 
+          if(btn.classList.container("aria-label-changed")) return;
+
           if (!labelBefore) return;
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
-          console.log(numbers, 'numbers')
           if (numbers) {
             const first = numbers[0];
             const last = numbers[numbers.length - 1];
@@ -9104,6 +9105,7 @@ function fixAriaLabelThumbnails() {
               "aria-label",
               `${first} out of ${last} stars: ${totalReviewsText} reviews`
             );
+            btn.classList.add("aria-label-changed");
           }
         });
 
