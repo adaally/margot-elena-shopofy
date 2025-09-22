@@ -71,7 +71,7 @@
         "title": "Join the Annual Box Experience",
         "align_text": "center",
         "desktop_columns_per_row": 3,
-        "icon_color": "#f55b6f",
+        "icon_color": "#000000",
         "button_label": "",
         "button_link": "",
         "divider": false
@@ -157,15 +157,6 @@
         "align_text": "left",
         "divider": false
       }
-    },
-    "dfa0f8ba-e60d-4812-a3fe-d7858b07f0c1": {
-      "type": "contact-form",
-      "settings": {
-        "title": "Questions?",
-        "text": "<h3><br/>Feel Free to Contact Us</h3>",
-        "show_phone": false,
-        "narrow_column": true
-      }
     }
   },
   "order": [
@@ -174,7 +165,6 @@
     "4b01beeb-a65f-48cf-b2ff-e034ec02295a",
     "41df49cc-7a48-4aea-9e44-787085932b6f",
     "rich_text_pJJhgi",
-    "text_columns_d6btAC",
-    "dfa0f8ba-e60d-4812-a3fe-d7858b07f0c1"
+    "text_columns_d6btAC"
   ]
 }
