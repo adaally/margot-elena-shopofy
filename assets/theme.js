@@ -9089,14 +9089,11 @@ function fixAriaLabelThumbnails() {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
 
       if (btns.length > 0) {
-      const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
         btns.forEach((btn, index) => {
-          const title = titles[index]?.innerText?.trim();
           const labelBefore = btn.getAttribute("aria-label");
           const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
 
-          console.log(titles, titles[index])
-          if (!labelBefore || !title) return;
+          if (!labelBefore) return;
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           console.log(numbers, 'numbers')
