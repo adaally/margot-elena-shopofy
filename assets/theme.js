@@ -9087,6 +9087,7 @@ function fixAriaLabelThumbnails() {
   const observer = new MutationObserver((mutations, obs) => {
     setTimeout(() => {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
+      console.log(btns)
       if (btns.length > 0) {
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
         btns.forEach((btn, index) => {
