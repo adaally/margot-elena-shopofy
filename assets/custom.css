@@ -36,3 +36,8 @@
 .btn:focus-visible {
     outline-offset: -4px;
 }
+
+.rebuy-cart__flyout-empty-cart h2 {
+    font-family: inherit;
+    font-weight: 700;
+}
