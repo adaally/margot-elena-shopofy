@@ -9087,7 +9087,7 @@ function fixAriaLabelThumbnails() {
   const observer = new MutationObserver((mutations, obs) => {
     setTimeout(() => {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
-      console.log(btns)
+
       if (btns.length > 0) {
       const titles = document.querySelectorAll(".grid-product__link .grid-product__title");
         btns.forEach((btn, index) => {
@@ -9095,6 +9095,7 @@ function fixAriaLabelThumbnails() {
           const labelBefore = btn.getAttribute("aria-label");
           const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
 
+          console.log(labelBefore, title)
           if (!labelBefore || !title) return;
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
