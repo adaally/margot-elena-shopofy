@@ -8323,6 +8323,16 @@ theme.recentlyViewed = {
 
   })
 
+  function addH2ToproductDescription() {
+    const title = document.querySelector(".product-block .rte strong");
+    const newTitle = document.createElement("h2");
+    newTitle.classList.add("default-text");
+
+    title.replaceWith(newTitle);
+  }
+
+  addH2ToproductDescription();
+
   function listenToAddToWishlistBtn() {
     const interval = setInterval(() => {
       const btn = document.querySelector(".frcp-wishlist-wrapper .frcp-wishlist-btn");
