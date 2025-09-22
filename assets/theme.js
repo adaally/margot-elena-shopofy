@@ -8333,6 +8333,24 @@ theme.recentlyViewed = {
 
   addH2ToproductDescription();
 
+  function addListSemanticsToProductTabs() {
+    const tabs = document.querySelectorAll(".product-block--tab");
+    if(tabs.length === 0) return;
+
+    const firstTab = tabs[0];
+    const container = document.createElement("div");
+    container.setAttribute("role", "list");
+    tabs.forEach(element => {
+      element.setAttribute("role","listitem");
+      container.appendChild(element);
+    });
+
+    firstTab.parentNode.insertBefore(container, firstTab);
+    
+  }
+
+  addListSemanticsToProductTabs();
+
   function listenToAddToWishlistBtn() {
     const interval = setInterval(() => {
       const btn = document.querySelector(".frcp-wishlist-wrapper .frcp-wishlist-btn");
