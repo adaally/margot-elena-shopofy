@@ -9100,10 +9100,9 @@ function fixAriaLabelThumbnails() {
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           if (numbers) {
             const first = numbers[0];
-            const last = numbers[numbers.length - 1];
             btn.setAttribute(
               "aria-label",
-              `${first} out of ${last} stars: ${totalReviewsText} reviews`
+              `${first} out of 5 stars: ${totalReviewsText}`
             );
             btn.classList.add("aria-label-changed");
           }
