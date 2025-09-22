@@ -9000,7 +9000,7 @@ theme.recentlyViewed = {
 
       const title = cart.querySelector("#SmartCart_title");
       if(title) {
-        const newTitle = cart.createElement("h1");
+        const newTitle = document.createElement("h1");
         newTitle.innerText = title.innerText;
         newTitle.className = title.className;
         newTitle.id = title.id;
