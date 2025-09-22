@@ -9099,6 +9099,7 @@ function fixAriaLabelThumbnails() {
           if (!labelBefore || !title) return;
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
+          console.log(numbers, 'numbers')
           if (numbers) {
             const first = numbers[0];
             const last = numbers[numbers.length - 1];
