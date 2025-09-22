@@ -9102,7 +9102,7 @@ function fixAriaLabelThumbnails() {
             const last = numbers[numbers.length - 1];
             btn.setAttribute(
               "aria-label",
-              `${title} ${first} out of ${last} stars (${totalReviewsText})`
+              `${first} out of ${last} stars: ${totalReviewsText} reviews`
             );
           }
         });
