@@ -7,7 +7,7 @@
     </div>
   {%- endif -%}
 
-  <div class="grid{% unless section.blocks.size == 5 %} grid--uniform{% endunless %} grid--flush-bottom">
+  <div class="grid{% unless section.blocks.size == 5 %} grid--uniform{% endunless %} grid--flush-bottom" role="list">
     {%- liquid
       assign grid_item_width = 'medium-up--one-third'
       case section.blocks.size
@@ -25,7 +25,7 @@
       {%- else -%}
         {%- assign column_width = grid_item_width -%}
       {%- endif -%}
-      <div class="grid__item {{ column_width }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }} data-aos="row-of-3">
+      <div role="listitem" class="grid__item {{ column_width }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }} data-aos="row-of-3">
         {%- if block.settings.enable_image -%}
           <div style="{% if section.settings.align_text == 'center' %}margin: 0 auto;{% endif %} max-width: {{ block.settings.image_width }}px;">
             {%- if block.settings.button_link != blank -%}
