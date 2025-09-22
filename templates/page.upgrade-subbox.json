@@ -34,117 +34,31 @@
         "divider": false
       }
     },
-    "b1b9b62d-355f-496d-94ab-ed008a005420": {
-      "type": "text-columns",
-      "blocks": {
-        "template--15932617228443__b1b9b62d-355f-496d-94ab-ed008a005420-text_block-1": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Who we serve",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "template--15932617228443__b1b9b62d-355f-496d-94ab-ed008a005420-text_block-2": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Benefits",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "template--15932617228443__b1b9b62d-355f-496d-94ab-ed008a005420-text_block-3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Global Sourcing",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15932617228443__b1b9b62d-355f-496d-94ab-ed008a005420-text_block-1",
-        "template--15932617228443__b1b9b62d-355f-496d-94ab-ed008a005420-text_block-2",
-        "template--15932617228443__b1b9b62d-355f-496d-94ab-ed008a005420-text_block-3"
-      ],
-      "settings": {
-        "title": "Join the Annual Box Experience",
-        "align_text": "center",
-        "divider": false
-      }
-    },
-    "2276d4e2-5d3e-4f1f-a7b0-2037a4f05dae": {
-      "type": "slideshow",
-      "blocks": {
-        "template--15932617228443__2276d4e2-5d3e-4f1f-a7b0-2037a4f05dae-image-1": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "",
-            "title": "Our Capabilities",
-            "title_size": 80,
-            "subheading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-left",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "template--15932617228443__2276d4e2-5d3e-4f1f-a7b0-2037a4f05dae-image-1"
-      ],
-      "settings": {
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5,
-        "lazyload_images": true
-      }
-    },
     "4b01beeb-a65f-48cf-b2ff-e034ec02295a": {
       "type": "text-with-icons",
       "blocks": {
         "template--15932617228443__4b01beeb-a65f-48cf-b2ff-e034ec02295a-text_block-1": {
           "type": "text_block",
           "settings": {
-            "icon": "ribbon",
-            "title": "Quality",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>"
+            "icon": "sales-tag",
+            "title": "Preserve Your Preferred Price",
+            "text": "<p>Enjoy our legacy rate of $267.76 for a full year of quarterly boxes—our best value, a 13% savings from our Seasonal Subscription. </p>"
           }
         },
         "template--15932617228443__4b01beeb-a65f-48cf-b2ff-e034ec02295a-text_block-2": {
           "type": "text_block",
           "settings": {
-            "icon": "charity",
-            "title": "Customer Service",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>"
+            "icon": "gift",
+            "title": "The Gift of Uninterrupted Indulgence",
+            "text": "<p>Delight in four seasons of beauty without pause. With your upgrade, each box arrives effortlessly, timed to the rhythm of the year</p>"
           }
         },
         "template--15932617228443__4b01beeb-a65f-48cf-b2ff-e034ec02295a-text_block-3": {
           "type": "text_block",
           "settings": {
-            "icon": "trophy",
-            "title": "Competitiveness",
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+            "icon": "calendar",
+            "title": "One Simple Charge, One Full Year",
+            "text": "<p>Simplify your subscription experience with a single annual payment. No quarterly billing, just a full year of effortless indulgence.</p>"
           }
         }
       },
@@ -154,10 +68,10 @@
         "template--15932617228443__4b01beeb-a65f-48cf-b2ff-e034ec02295a-text_block-3"
       ],
       "settings": {
-        "title": "What we offer",
+        "title": "Join the Annual Box Experience",
         "align_text": "center",
         "desktop_columns_per_row": 3,
-        "icon_color": "#e68491",
+        "icon_color": "#f55b6f",
         "button_label": "",
         "button_link": "",
         "divider": false
@@ -169,7 +83,7 @@
         "template--15932617228443__41df49cc-7a48-4aea-9e44-787085932b6f-liquid-1": {
           "type": "liquid",
           "settings": {
-            "code": "</span></div>\n<div style=\"text-align: center;\"><span data-void-detect=\"true\"></span></div>\n<h1 style=\"text-align: center;\">Request Access</h1>\n<div class=\"row cc-one-column\"><iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSfXmUulhbZvT2XoIQSJRffZ4khLuAcW10E0b9HboXuW3YB4xw/viewform?embedded=true\" width=\"3000\" height=\"2430\" frameborder=\"0\" marginheight=\"1000\" marginwidth=\"0\">Loading…</iframe></div>",
+            "code": "<iframe src=\"https://docs.google.com/forms/d/e/1FAIpQLSejwzSSWBaXKNQKn9AgkFxbyBOa_jRyCJZ_PrqZ8Hbj6C1WAQ/viewform?embedded=true\" width=\"1300\" height=\"1373\" frameborder=\"0\" marginheight=\"0\" marginwidth=\"0\">Loading…</iframe>",
             "width": "100%",
             "alignment": "center"
           }
@@ -185,71 +99,63 @@
         "lazyload_images": true
       }
     },
-    "151e5065-2d0d-498a-93ee-f37dbe5d5772": {
-      "type": "testimonials",
+    "rich_text_pJJhgi": {
+      "type": "rich-text",
       "blocks": {
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-1": {
-          "type": "testimonial",
+        "heading_tX4Waz": {
+          "type": "heading",
           "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
-          }
-        },
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-2": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
-          }
-        },
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-3": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
-          }
-        },
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-4": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
-          }
-        },
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-5": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "5-stars",
-            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
-            "author_info": "Los Angeles, CA"
+            "title": "Please Note:"
           }
         }
       },
       "block_order": [
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-1",
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-2",
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-3",
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-4",
-        "template--15932617228443__151e5065-2d0d-498a-93ee-f37dbe5d5772-testimonial-5"
+        "heading_tX4Waz"
       ],
-      "custom_css": [
-        ".testimonials-slide.is-selected .testimonials-slider__text {box-shadow: 0 10px 25px rgb(251 235 229); position: relative; transform: scale(1.1); z-index: 10;}"
-      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
       "settings": {
-        "title": "Testimonials",
         "align_text": "center",
-        "round_images": true,
-        "color_background": "#fbebe5",
-        "color_text": "#1c1d1d"
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text_columns_d6btAC": {
+      "type": "text-columns",
+      "blocks": {
+        "text_block_fk6FQB": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Additional Considerations:",
+            "text": "<p>• Your Prepaid Subscription will automatically renew at the same seasonal cadence, unless canceled before the renewal date<br/><br/>• Renewal is charged once per year, aligned to the season you originally purchased <em>(e.g., a Summer Box purchased in July will renew the following June—our anchor date for Summer subscriptions).</em><br/><br/>• Any address changes must be made prior to the next billing date to ensure proper delivery<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "text_block_GPftaT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image_mask": "none",
+            "image_width": 650,
+            "title": "Disclaimers",
+            "text": "<p>• Prepaid Subscriptions are non-refundable<br/><br/>• Promotional codes and discounts do not apply to Prepaid Subscriptions<br/><br/>• Skips and pauses are not available with Prepaid Subscriptions</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_block_fk6FQB",
+        "text_block_GPftaT"
+      ],
+      "name": "t:sections.text-columns.presets.text_columns_with_images.name",
+      "settings": {
+        "title": "",
+        "align_text": "left",
+        "divider": false
       }
     },
     "dfa0f8ba-e60d-4812-a3fe-d7858b07f0c1": {
@@ -265,11 +171,10 @@
   "order": [
     "main",
     "89570a47-ba8c-4864-bc40-8f5402ff0d97",
-    "b1b9b62d-355f-496d-94ab-ed008a005420",
-    "2276d4e2-5d3e-4f1f-a7b0-2037a4f05dae",
     "4b01beeb-a65f-48cf-b2ff-e034ec02295a",
     "41df49cc-7a48-4aea-9e44-787085932b6f",
-    "151e5065-2d0d-498a-93ee-f37dbe5d5772",
+    "rich_text_pJJhgi",
+    "text_columns_d6btAC",
     "dfa0f8ba-e60d-4812-a3fe-d7858b07f0c1"
   ]
 }
