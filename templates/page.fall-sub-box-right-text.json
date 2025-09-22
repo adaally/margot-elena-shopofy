@@ -246,7 +246,7 @@
     "30852ee2-53c7-4d6f-acc9-9b35a3530050": {
       "type": "text-and-image",
       "custom_css": [
-        ".btn {background-color: #055891; border-color: transparent; color: #ffffff;}"
+        ".btn {background-color: #aa1d53; border-color: transparent; color: #ffffff;}"
       ],
       "settings": {
         "image": "{{ page.metafields.custom.image_w_text_.value }}",
