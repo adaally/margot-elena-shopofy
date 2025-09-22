@@ -9011,10 +9011,6 @@ theme.recentlyViewed = {
         newElement.innerHTML = link.innerHTML;
         link.replaceWith(newElement);
       });
-      cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
-        element.removeAttribute("aria-level");
-        element.removeAttribute("role");
-      });
       setTimeout(() => {
         cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
           const newElement = document.createElement("span");
@@ -9031,6 +9027,10 @@ theme.recentlyViewed = {
           }
         })
         
+      cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
+        element.removeAttribute("aria-level");
+        element.removeAttribute("role");
+      });
       }, 4000);
 
       
