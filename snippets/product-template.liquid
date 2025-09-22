@@ -233,8 +233,9 @@
                     <div class="purchase-options">
                       {% if block.settings.title %}<h2 class="h3">{{ block.settings.title }}</h2>{% endif %}
 
-                      <div class="subscription-toggle">
-                        <button type="button"
+                      <div class="subscription-toggle" role="radiogroup">
+                        <button type="button" role="radio"
+                                aria-checked="true"
                                 class="subscription-option"
                                 data-option="1"
                                 data-variant-id="{{ variant_1.id }}"
@@ -247,7 +248,8 @@
                             </div>
                         </button>
 
-                        <button type="button"
+                        <button type="button" role="radio"
+                                aria-checked="false"
                                 class="subscription-option"
                                 data-option="2"
                                 data-variant-id="{{ variant_2.id }}"
@@ -284,18 +286,29 @@
                       // Handle subscription toggle clicks
                       buttons.forEach((button, index) => {
                         button.addEventListener('click', () => {
-                          buttons.forEach(b => b.classList.remove('active'));
-                          button.classList.add('active');
+                          // Reset all
+                          buttons.forEach(b => {
+                            b.classList.remove('active');
+                            b.setAttribute('aria-checked', 'false');
+                          });
 
+                          // Mark this one active
+                          button.classList.add('active');
+                          button.setAttribute('aria-checked', 'true');
+
+                          // Update values
                           selectedVariantId = button.dataset.variantId;
                           selectedSellingPlanId = button.dataset.sellingPlanId;
+
+                          document.getElementById('subscription-variant-id').value = selectedVariantId;
+                          document.getElementById('subscription-selling-plan-id').value = selectedSellingPlanId || '';
 
                           if (copyEl) {
                             copyEl.innerHTML = button.dataset.copy ? `<div style="padding:12px;">${button.dataset.copy}</div>` : "";
                           }
                         });
 
-                        // Set first button active on load
+                        // Default select the first button
                         if (index === 0) button.click();
                       });
 
