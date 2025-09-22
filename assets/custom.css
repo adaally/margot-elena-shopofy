@@ -41,3 +41,11 @@
     font-family: inherit;
     font-weight: 700;
 }
+
+.product-block .default-text {
+    font-size: 16px;
+    margin: 0;
+    text-transform: none;
+    font-family: inherit;
+    font-weight: 700;
+}
