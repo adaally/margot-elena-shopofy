@@ -32,43 +32,45 @@
         ]
       }
     </script>
-
+    <div role="list">
     {%- for block in section.blocks -%}
-      <div class="block-faq" {{ block.shopify_attributes }}>
-        {% case block.type %}
-          {% when 'rich-text'%}
-            <div class="index-section index-section--faq">
-              <div class="text-{{ block.settings.align_text }}">
-                {%- if block.settings.title != blank -%}
-                  <h2 class="h2">
-                    {{ block.settings.title | escape }}
-                  </h2>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="rte">
-                    {%- if block.settings.enlarge_text %}<div class="enlarge-text">{% endif -%}
-                      {{ block.settings.text }}
-                    {%- if block.settings.enlarge_text %}</div>{% endif -%}
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
-
-          {% when 'question'%}
-            <div>
-              <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ block.id }}">
-                {%- render 'collapsible-icons-alt', no_circle: true -%}
-                <span>{{ block.settings.title }}</span>
-              </button>
-              <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all">
-                <div class="collapsible-content__inner collapsible-content__inner--faq rte">
-                  {{ block.settings.text }}
+        <div class="block-faq" {{ block.shopify_attributes }} role="listitem">
+          {% case block.type %}
+            {% when 'rich-text'%}
+              <div class="index-section index-section--faq">
+                <div class="text-{{ block.settings.align_text }}">
+                  {%- if block.settings.title != blank -%}
+                    <h2 class="h2">
+                      {{ block.settings.title | escape }}
+                    </h2>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <div class="rte">
+                      {%- if block.settings.enlarge_text %}<div class="enlarge-text">{% endif -%}
+                        {{ block.settings.text }}
+                      {%- if block.settings.enlarge_text %}</div>{% endif -%}
+                    </div>
+                  {%- endif -%}
                 </div>
               </div>
-            </div>
-        {% endcase %}
-      </div>
-    {%- endfor -%}
+
+            {% when 'question'%}
+              <div>
+                <button type="button" class="collapsible-trigger collapsible-trigger--inline collapsible--auto-height text-left" aria-controls="FAQ-content-{{ block.id }}">
+                  {%- render 'collapsible-icons-alt', no_circle: true -%}
+                  <span>{{ block.settings.title }}</span>
+                </button>
+                <div id="FAQ-content-{{ block.id }}" class="collapsible-content collapsible-content--all">
+                  <div class="collapsible-content__inner collapsible-content__inner--faq rte">
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        </div>
+      {%- endfor -%}
+    </div>
+    
   {%- endif -%}
 
   {%- if section.blocks.size == 0 -%}
