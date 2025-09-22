@@ -73,7 +73,7 @@
             "top_subheading": "",
             "title": "30-YEAR \nANNIVERSARY \nCONTEST",
             "title_size": 47,
-            "subheading": "30-YEAR ANNIVERSARY CONTEST",
+            "subheading": "Enter for a chance to win!",
             "link": "",
             "link_text": "",
             "link_2": "",
@@ -164,6 +164,28 @@
         "space_around": true
       }
     },
+    "advanced_content_fqHeTf": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_N9DzFf": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;\">\n  <a href=\"https://www.instagram.com/margotelena/\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Follow Us on Instagram\n  </a>\n\n  <a href=\"https://margotelena.com/pages/giveaway-terms-and-conditions\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Contest Terms & Conditions\n  </a>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_N9DzFf"
+      ],
+      "name": "t:sections.advanced-content.presets.custom_content.name",
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "lazyload_images": false
+      }
+    },
     "609606f8-171a-4052-88e2-9383e01a68a3": {
       "type": "rich-text",
       "blocks": {
@@ -228,28 +250,6 @@
         "align_text": "center",
         "narrow_column": true,
         "divider": false
-      }
-    },
-    "advanced_content_fqHeTf": {
-      "type": "advanced-content",
-      "blocks": {
-        "liquid_N9DzFf": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div style=\"display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;\">\n  <a href=\"https://www.instagram.com/margotelena/\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Follow Us on Instagram\n  </a>\n\n  <a href=\"https://margotelena.com/pages/giveaway-terms-and-conditions\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Contest Terms & Conditions\n  </a>\n</div>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "liquid_N9DzFf"
-      ],
-      "name": "t:sections.advanced-content.presets.custom_content.name",
-      "settings": {
-        "full_width": false,
-        "space_around": false,
-        "lazyload_images": false
       }
     }
   },
