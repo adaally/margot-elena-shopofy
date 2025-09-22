@@ -829,9 +829,9 @@
                 </div>
               {% endif %}
               {% if block.settings.heading != blank %}
-                <p class="pricing-table-title-{{ section.id }}">{{ block.settings.heading }}</p>
+                <h3 style="text-transform: none; font-family: var(--typeBasePrimary), var(--typeBaseFallbac);" class="pricing-table-title-{{ section.id }}">{{ block.settings.heading }}</h3>
               {% endif %}
-              <h3 style="text-transform: none; font-family: var(--typeBasePrimary), var(--typeBaseFallbac);" class="pricing-table-price-{{ section.id }}">{% if block.settings.price_sale != blank %}<span class="pricing-table-price-sale-{{ section.id }}">{% if block.settings.currency != blank %}{{ block.settings.currency }}{% endif %}{{ block.settings.price_sale }}</span>{% endif %}{% if block.settings.currency != blank %}{{ block.settings.currency }}{% endif %}{{ block.settings.price }}{% if block.settings.time != blank %}<span>{{ block.settings.time }}</span>{% endif %}</h3>
+              <p class="pricing-table-price-{{ section.id }}">{% if block.settings.price_sale != blank %}<span class="pricing-table-price-sale-{{ section.id }}">{% if block.settings.currency != blank %}{{ block.settings.currency }}{% endif %}{{ block.settings.price_sale }}</span>{% endif %}{% if block.settings.currency != blank %}{{ block.settings.currency }}{% endif %}{{ block.settings.price }}{% if block.settings.time != blank %}<span>{{ block.settings.time }}</span>{% endif %}</p>
               {% if elements_position == "before" %}
                 <div class="pricing-table-list-{{ section.id }}"> 
                 {{ block.settings.elements }}
