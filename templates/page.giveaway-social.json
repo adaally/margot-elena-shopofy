@@ -11,6 +11,7 @@
   "sections": {
     "2a56a64c-fa8c-46cc-a04b-f74e6186bac2": {
       "type": "background-image-text",
+      "disabled": true,
       "settings": {
         "subtitle": "",
         "title": "",
@@ -56,6 +57,81 @@
         "template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-text-1",
         "4b1f840d-b357-4098-83d3-8a6a68b62b45"
       ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "slideshow_VxRkNG": {
+      "type": "slideshow",
+      "blocks": {
+        "image_QWaWmG": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "30-YEAR \nANNIVERSARY \nCONTEST",
+            "title_size": 47,
+            "subheading": "30-YEAR ANNIVERSARY CONTEST",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#000000",
+            "color_accent": "rgba(0,0,0)",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/ME_WebBanner_Anniv_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanner_Anniv_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "image_QWaWmG"
+      ],
+      "name": "t:sections.slideshow.presets.hero_optional_slideshow.name",
+      "settings": {
+        "section_height": "550px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "lazyload_images": false
+      }
+    },
+    "rich_text_KCNt3w": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_46ibKa": {
+          "type": "heading",
+          "settings": {
+            "title": "30-YEAR ANNIVERSARY CONTEST"
+          }
+        },
+        "text_eKqgix": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We’re celebrating 30 Years of Making Beauty More Beautiful.</p><p>Sign up below for a chance to win a $100, $200 or $300 MargotElena.com gift card!<br/><br/>Ends 11/15/25. 1st, 2nd and 3rd prize winners will be announced 11/20/25.</p>"
+          }
+        },
+        "text_ifJkYL": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>What’s on your wishlist? Tap the heart icon on any item and start saving! Sign up below for a chance to win a $300, $200, or $100 MargotElena.com gift card, just in time for holiday shopping! Winners will be chosen in late November. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_46ibKa",
+        "text_eKqgix",
+        "text_ifJkYL"
+      ],
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -68,12 +144,20 @@
         "fff93dc8-444d-443a-8cbb-ef3c16ae32d4": {
           "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
           "settings": {
+            "formId": "RvbbeL"
+          }
+        },
+        "klaviyo_email_marketing_sms_form_embed_block_t7mjKB": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "disabled": true,
+          "settings": {
             "formId": "VZwwdT"
           }
         }
       },
       "block_order": [
-        "fff93dc8-444d-443a-8cbb-ef3c16ae32d4"
+        "fff93dc8-444d-443a-8cbb-ef3c16ae32d4",
+        "klaviyo_email_marketing_sms_form_embed_block_t7mjKB"
       ],
       "settings": {
         "full_width": false,
@@ -94,6 +178,7 @@
       "block_order": [
         "template--16034554380443__609606f8-171a-4052-88e2-9383e01a68a3-text-1"
       ],
+      "disabled": true,
       "settings": {
         "align_text": "center",
         "narrow_column": true,
@@ -144,12 +229,37 @@
         "narrow_column": true,
         "divider": false
       }
+    },
+    "advanced_content_fqHeTf": {
+      "type": "advanced-content",
+      "blocks": {
+        "liquid_N9DzFf": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div style=\"display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;\">\n  <a href=\"https://www.instagram.com/margotelena/\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Follow Us on Instagram\n  </a>\n\n  <a href=\"https://margotelena.com/pages/giveaway-terms-and-conditions\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Contest Terms & Conditions\n  </a>\n</div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "liquid_N9DzFf"
+      ],
+      "name": "t:sections.advanced-content.presets.custom_content.name",
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "lazyload_images": false
+      }
     }
   },
   "order": [
     "2a56a64c-fa8c-46cc-a04b-f74e6186bac2",
     "d78b2ceb-f20b-4290-9141-d644aec1b569",
+    "slideshow_VxRkNG",
+    "rich_text_KCNt3w",
     "1698256029e1be9d6d",
+    "advanced_content_fqHeTf",
     "609606f8-171a-4052-88e2-9383e01a68a3",
     "main",
     "featured-collection",
