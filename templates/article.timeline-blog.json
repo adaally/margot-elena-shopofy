@@ -59,11 +59,12 @@
         "slide_ra9PxV": {
           "type": "slide",
           "settings": {
-            "date": "2020",
-            "text": "<p>Add text content about <strong>a certain step</strong> your company has taken to get here</p>",
-            "image_width": 190,
-            "image_ratio": "portrait",
-            "image_ratio_mobile": "portrait"
+            "date": "2004",
+            "text": "<p><strong>First Appearance on Oprah’s Favorite Things</strong><br/>2004 marked a milestone in our media presence. Lollia Breathe and Relax Bubble Bath appeared on Oprah’s Favorite Things for the first time. This was the beginning of a beautiful relationship with Oprah and O, The Oprah Magazine. As a self-professed bath connoisseur, Oprah repeatedly has selected Margot Elena bath luxuries as a self-care must-have that is good to give and even better to keep. </p>",
+            "image": "shopify://shop_images/30yrs_images6.jpg",
+            "image_width": 300,
+            "image_ratio": "square",
+            "image_ratio_mobile": "square"
           }
         },
         "slide_D67zq9": {
