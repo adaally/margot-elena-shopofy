@@ -45,7 +45,10 @@
                 <div class="rte background-media-text__subtext">{{ section.settings.text }}</div>
               {%- endif -%}
               {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
-                <a href="{{ section.settings.button_link }}" class="btn">
+                <a href="{{ section.settings.button_link }}" class="btn" 
+                  {%- if section.settings.button_aria-label != blank -%} 
+                    aria-label="{{ section.settings.button_aria-label }}" 
+                  {%- endif -%}>
                   {{ section.settings.button_label }}
                 </a>
               {%- endif -%}
@@ -91,6 +94,11 @@
       "type": "url",
       "id": "button_link",
       "label": "t:sections.background-image-text.settings.button_link.label"
+    },
+    {
+      "type": "text",
+      "id": "button_aria-label",
+      "label": "Button aria-label"
     },
     {
       "type": "image_picker",
