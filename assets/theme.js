@@ -8340,12 +8340,13 @@ theme.recentlyViewed = {
     const firstTab = tabs[0];
     const container = document.createElement("div");
     container.setAttribute("role", "list");
+
+    firstTab.parentNode.insertBefore(container, firstTab);
+    
     tabs.forEach(element => {
       element.setAttribute("role","listitem");
       container.appendChild(element);
     });
-
-    firstTab.parentNode.insertBefore(container, firstTab);
     
   }
 
