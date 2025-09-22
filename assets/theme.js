@@ -8440,7 +8440,6 @@ theme.recentlyViewed = {
       .filter(el => el.offsetParent !== null); // removes hidden elements
   
     if (focusableElements.length === 0) return;
-    console.log(focusableElements)
     const firstEl = focusableElements[0];
     const lastEl = focusableElements[focusableElements.length - 1];
   
@@ -8536,7 +8535,6 @@ theme.recentlyViewed = {
             div.appendChild(aWrapper);
             div.setAttribute("role", "listitem");
             aWrapper.removeAttribute("aria-label");
-            console.log(aWrapper)
 
             const btnToCart = aWrapper.querySelector(".rebuy-button");
             if (btnToCart) {
@@ -9013,7 +9011,10 @@ theme.recentlyViewed = {
         newElement.innerHTML = link.innerHTML;
         link.replaceWith(newElement);
       });
-
+      cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
+        element.removeAttribute("aria-level");
+        element.removeAttribute("role");
+      });
       setTimeout(() => {
         cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
           const newElement = document.createElement("span");
