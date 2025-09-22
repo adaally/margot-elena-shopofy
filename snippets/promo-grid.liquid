@@ -401,7 +401,7 @@
                   {%- endif -%}
                   <div class="type-banner__text">
                     {%- if block.settings.heading != blank -%}
-                      <h2 class="h3">{{ block.settings.heading }}</h2>
+                      <div class="h3" aria-hidden="true">{{ block.settings.heading }}</div>
                     {%- endif -%}
                     {%- if block.settings.text != blank -%}
                       <p>{{ block.settings.text }}</p>
