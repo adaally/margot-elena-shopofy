@@ -838,7 +838,7 @@
                 </div>
               {% endif %}
               {% if block.settings.button_text != blank %}
-                <a id="{{ block.settings.button_url }}" class="btn add-to-cart pricing-table-btn-{{ section.id }}" {%- if forloop.index == 100 -%}onclick="checkRadioInputAndClickButton()"{%- endif -%} >
+                <a role="button" tabindex="0" id="{{ block.settings.button_url }}" class="btn add-to-cart pricing-table-btn-{{ section.id }}" {%- if forloop.index == 100 -%}onclick="checkRadioInputAndClickButton()"{%- endif -%} >
                   {% if button_icon != blank %}
                     <img src="{{ button_icon | image_url }}" alt="{{ button_icon.alt }}" {% if lazy %}loading="lazy"{% endif %}>
                   {% endif %}
