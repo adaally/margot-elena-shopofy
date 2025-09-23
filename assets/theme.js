@@ -9281,15 +9281,19 @@ function fixChatbotAccessibility() {
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
 
-          const btnObserver = new MutationObserver((mutations) => {
+        const btnObserver = new MutationObserver((mutations) => {
           for (const mutation of mutations) {
-            if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
-                toggleBtn.removeAttribute("aria-expanded");
+            if (mutation.type === "attributes" && mutation.attributeName === "class") {
+              console.log("Button classes changed:", mutation.target.className);
+              // 👉 run your method here
             }
-            }
-          });
+          }
+        });
 
-          btnObserver.observe(toggleBtn, { attributes: true, attributeFilter: ["aria-expanded"] });
+        btnObserver.observe(toggleBtn, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
       }
         
       }, 1000);
