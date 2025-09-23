@@ -9273,18 +9273,17 @@ function addAlertToErrors() {
     const observer = new MutationObserver(() => {
       const chatBox = document.querySelector("inbox-online-store-chat");
       if(!chatBox) return;
-      setTimeout(() => {
-        console.log(chatBox, 'chatBox')
-        const chatToggle = chatBox.shadowRoot;
-        console.log(chatToggle, 'chatToggle')
-        console.log(chatToggle.querySelector("button"), "button")
-        // if(chatToggle) {
-        //   chatToggle.removeAttribute("aria-expanded");
-        // }
-      }, 1000);
 
+      const observerChatContainer = new MutationObserver(() => {
+        const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
+        if(containerChat) {
+          console.log(containerChat.querySelector("button"), "button")
+          observerChatContainer.disconnect();
+        }
+        
+      });
 
-
+      observerChatContainer.observe(chatBox, { childList: true, subtree: true });
       observer.disconnect();
     });
 
