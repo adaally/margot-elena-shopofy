@@ -9279,22 +9279,14 @@ function fixChatbotAccessibility() {
     const shadowObserver = new MutationObserver(() => {
       const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app > button");
       if (toggleBtn) {
-      const btnObserver = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
-            toggleBtn.removeAttribute("aria-expanded");
-            console.log("Removed aria-expanded from toggleBtn");
-          }
-        });
-      });
+        setTimeout(() => {
+          toggleBtn.removeAttribute("aria-expanded");
+        }, 500);
 
-      btnObserver.observe(toggleBtn, { attributes: true, attributeFilter: ["aria-expanded"] });
 
       shadowObserver.disconnect();
       }
     });
-
-    shadowObserver.observe(chatBox.shadowRoot, { childList: true, subtree: true });
 
     observer.disconnect();
   });
