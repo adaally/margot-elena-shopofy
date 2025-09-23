@@ -9276,10 +9276,10 @@ function addAlertToErrors() {
       console.log(chatBox, 'chatBox')
       const chatToggle = chatBox.shadowRoot;
       console.log(chatToggle, 'chatToggle')
-      
-      if(chatToggle) {
-        chatToggle.removeAttribute("aria-expanded");
-      }
+      console.log(chatToggle.querySelector("button"), "button")
+      // if(chatToggle) {
+      //   chatToggle.removeAttribute("aria-expanded");
+      // }
 
 
       observer.disconnect();
