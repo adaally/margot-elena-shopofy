@@ -9270,40 +9270,35 @@ function addAlertToErrors() {
 
 
 function fixChatbotAccessibility() {
-  // Watch for the custom element
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (chatBox) {
-      const shadowRoot = chatBox.shadowRoot;
-      setTimeout(() => {
-        const toggleBtn = shadowRoot.querySelector(".chat-app button");
+    if (!chatBox || !chatBox.shadowRoot) return;
 
-        if(toggleBtn) {
-          toggleBtn.removeAttribute("aria-expanded");
+    const container = chatBox.shadowRoot.querySelector(".chat-app");
+    if (!container) return;
 
-          toggleBtn.addEventListener('click', () => {
-            setTimeout(() => {
-              console.log('click')
-              
-              const item = document.querySelector("#shopify-chat inbox-online-store-chat");
-              const shadowRoot2 = item.shadowRoot;
-              const toggleBtn2 = shadowRoot2.querySelector(".chat-app > button");
-              console.log(toggleBtn2)
-              toggleBtn2.removeAttribute("aria-expanded");
-            }, 200);
-          })
+    // Watch for class changes on the chat-app container
+    const containerObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+          console.log("chat-app classes changed:", container.className);
 
+          // 👉 Get the button each time the classes change
+          const toggleBtn = container.querySelector("button");
+          if (toggleBtn) {
+            toggleBtn.removeAttribute("aria-expanded");
+            console.log("Removed aria-expanded from button");
+          }
+        }
       }
-        
-      }, 1000);
-      
+    });
 
-      observer.disconnect();
-    }
+    containerObserver.observe(container, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
-
-
-
+    observer.disconnect(); // no need to keep watching <body> once hooked
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
