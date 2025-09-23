@@ -9186,7 +9186,8 @@ function fixAriaLabelThumbnails() {
         });
 
         const ul = yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination");
-
+        ul.setAttribute("role", "navigation");
+        ul.setAttribute("aria-label", "Customer reviews pagination");
           const observerUl = new MutationObserver((mutationsList) => {
             for (const mutation of mutationsList) {
               if (mutation.type === 'attributes') {
