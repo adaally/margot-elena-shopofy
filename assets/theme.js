@@ -9299,25 +9299,29 @@ function fixChatbotAccessibility() {
               enableFocusTrap(container, toggleBtn);
 
               const title = container.querySelector("h2:not(.changed)");
-              const newTitle = document.createElement("h1");
-              newTitle.innerText = title.innerText;
-              newTitle.setAttribute("dir", "auto");
-              newTitle.style.fontSize = '16px';
-              newTitle.style.color = '#fff';
-              newTitle.classList.add('changed');
-              title.replaceWith(newTitle);
+              if(title) {
+                const newTitle = document.createElement("h1");
+                newTitle.innerText = title.innerText;
+                newTitle.setAttribute("dir", "auto");
+                newTitle.style.fontSize = '16px';
+                newTitle.style.color = '#fff';
+                newTitle.classList.add('changed');
+                title.replaceWith(newTitle);
+              }
 
               const title2 = container.querySelector("h3:not(.changed)");
-              const newTitle2 = document.createElement("h2");
-              newTitle2.innerText = title2.innerText;
-              newTitle2.setAttribute("dir", "auto");
-              newTitle2.style.fontSize = '1em';
-              newTitle2.style.fontWeight = '600';
-              newTitle2.style.margin = '8px auto 16px';
-              newTitle2.style.textAlign = 'center';
-              newTitle2.classList.add('instant-answers');
-              newTitle2.classList.add('changed');
-              title2.replaceWith(newTitle2);
+              if(title2) {
+                const newTitle2 = document.createElement("h2");
+                newTitle2.innerText = title2.innerText;
+                newTitle2.setAttribute("dir", "auto");
+                newTitle2.style.fontSize = '1em';
+                newTitle2.style.fontWeight = '600';
+                newTitle2.style.margin = '8px auto 16px';
+                newTitle2.style.textAlign = 'center';
+                newTitle2.classList.add('instant-answers');
+                newTitle2.classList.add('changed');
+                title2.replaceWith(newTitle2);
+              }
             } else {
               disableFocusTrap();
             }
