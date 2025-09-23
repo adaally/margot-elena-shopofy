@@ -9307,7 +9307,7 @@ function fixChatbotAccessibility() {
               newTitle.classList.add('changed');
               title.replaceWith(newTitle);
 
-              const title2 = container.querySelector(".instant-answers:not(.changed)");
+              const title2 = container.querySelector("h3:not(.changed)");
               const newTitle2 = document.createElement("h2");
               newTitle2.innerText = title2.innerText;
               newTitle2.setAttribute("dir", "auto");
