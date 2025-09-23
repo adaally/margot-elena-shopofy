@@ -9270,44 +9270,55 @@ function addAlertToErrors() {
 
 
 function fixChatbotAccessibility() {
-  // Watch for the custom element
+  // 1. Watch for the Shopify chat custom element to appear
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (chatBox) {
-      const shadowRoot = chatBox.shadowRoot;
-      setTimeout(() => {
-        const toggleBtn = shadowRoot.querySelector(".chat-app button");
+    if (!chatBox || !chatBox.shadowRoot) return;
 
-        if (toggleBtn) {
-          toggleBtn.removeAttribute("aria-expanded");
+    // 2. Watch inside the shadow root for the toggle button
+    const shadowObserver = new MutationObserver(() => {
+      const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app button");
+      if (!toggleBtn) return;
 
-          const btnObserver = new MutationObserver((mutations) => {
-            for (const mutation of mutations) {
-              if (
-                mutation.type === "attributes" &&
-                mutation.attributeName === "aria-expanded"
-              ) {
-                toggleBtn.removeAttribute("aria-expanded");
-                console.log("Blocked aria-expanded from being set");
-              }
-            }
-          });
+      // Remove aria-expanded immediately if present
+      toggleBtn.removeAttribute("aria-expanded");
 
-          btnObserver.observe(toggleBtn, {
-            attributes: true,
-            attributeFilter: ["aria-expanded"],
-          });
+      // 3. Now observe just this button for attribute changes
+      const btnObserver = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (
+            mutation.type === "attributes" &&
+            mutation.attributeName === "aria-expanded"
+          ) {
+            toggleBtn.removeAttribute("aria-expanded");
+            console.log("Blocked aria-expanded from being set");
+          }
         }
-      }, 1000);
+      });
 
-      observer.disconnect();
-    }
+      btnObserver.observe(toggleBtn, {
+        attributes: true,
+        attributeFilter: ["aria-expanded"],
+      });
+
+      // We found the button, so we can stop watching the shadow root
+      shadowObserver.disconnect();
+    });
+
+    shadowObserver.observe(chatBox.shadowRoot, { childList: true, subtree: true });
+
+    // Stop the outer observer once the chatBox is found
+    observer.disconnect();
   });
 
+  // Start watching the document for the Shopify chat element
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-  fixChatbotAccessibility();
+// Call it on page load
+document.addEventListener("DOMContentLoaded", fixChatbotAccessibility);
+
+  // fixChatbotAccessibility();
 
   //Focus trap search
   const openButton = document.querySelector('#search--button');
