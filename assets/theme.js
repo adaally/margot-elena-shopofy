@@ -9288,7 +9288,7 @@ function fixChatbotAccessibility() {
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             console.log("Removed aria-expanded from button", container.classList.contains(".chat-app--is-open"));
-            if(container.classList.contains(".chat-app--is-open")) {
+            if(toggleBtn.classList.contains("chat-app--close-button")) {
               console.log("ADDE aria-label from button");
               toggleBtn.setAttribute("aria-label", "Close chat window")
             }
