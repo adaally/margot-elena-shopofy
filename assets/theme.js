@@ -9281,7 +9281,9 @@ function fixChatbotAccessibility() {
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
 
-          toggleBtn.addEventListener('click', () => console.log("cicked"))
+          toggleBtn.addEventListener('click', () => {
+            toggleBtn.removeAttribute("aria-expanded");
+          })
 
       }
         
