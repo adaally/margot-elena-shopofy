@@ -9312,10 +9312,6 @@ function fixChatbotAccessibility() {
       // }
       observer.disconnect();
     }
-
-
-
-
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
