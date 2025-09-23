@@ -9274,27 +9274,14 @@ function fixChatbotAccessibility() {
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (!chatBox) return;
-    console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat1")
+
     setTimeout(() => {
-      console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat2")
+      const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app > button");
+      if(toggleBtn) {
+        toggleBtn.removeAttribute("aria-expanded");
+      }
     }, 100);
-    // Watch inside shadow DOM
-    // const observerChatContainer = new MutationObserver(() => {
-    //   const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
-    //   if (containerChat) {
-    //     const button = containerChat.querySelector("button");
-    //     console.log(button, "button");
 
-    //     // 👉 run your accessibility fix here
-
-    //     observerChatContainer.disconnect();
-    //   }
-    // });
-
-    // // Observe shadow DOM children
-    // observerChatContainer.observe(chatBox.shadowRoot, { childList: true, subtree: true });
-
-    // Stop watching once we’ve hooked into the shadow DOM
     observer.disconnect();
   });
 
