@@ -9295,6 +9295,10 @@ function fixChatbotAccessibility() {
     observer.disconnect();
   });
 
+  // Watch document for the chatbot element
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
   fixChatbotAccessibility();
 
   //Focus trap search
