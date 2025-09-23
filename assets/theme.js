@@ -9284,7 +9284,7 @@ function fixChatbotAccessibility() {
           console.log("chat-app classes changed:", container.className);
 
           // 👉 Get the button each time the classes change
-          const toggleBtn = container.querySelector("button");
+          const toggleBtn = container.querySelector(":scope > button");
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             console.log("Removed aria-expanded from button");
