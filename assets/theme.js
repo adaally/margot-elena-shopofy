@@ -9283,7 +9283,7 @@ function fixChatbotAccessibility() {
         toggleBtn.addEventListener('click', () => {
           setTimeout(() => {
             toggleBtn.removeAttribute("aria-expanded");
-          }, 100);
+          }, 300);
         });
       }
     }, 100);
