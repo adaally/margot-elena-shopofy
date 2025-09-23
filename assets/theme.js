@@ -9296,8 +9296,14 @@ function fixChatbotAccessibility() {
             if(toggleBtn.classList.contains("chat-app--close-button")) {
               toggleBtn.setAttribute("aria-label", "Close chat window");
               enableFocusTrap(container, toggleBtn);
+
+              const title = container.querySelector("h2");
+              const newTitle = document.createElement("h1");
+              newTitle.innerText = title.innerText;
+              newTitle.setAttribute("dir", "auto");
+              title.replaceWith(newTitle);
             } else {
-              // disableFocusTrap();
+              disableFocusTrap();
             }
           }
         }
