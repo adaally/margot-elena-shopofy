@@ -9176,7 +9176,16 @@ function fixAriaLabelThumbnails() {
     const observer = new MutationObserver(() => {
       const yoptoContainer = document.querySelector("#yotpo-reviews-container");
       if(yoptoContainer) {
-        console.log(yoptoContainer, "found");
+        
+        yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination > a").forEach(element => {
+          element.setAttribute("aria-hidden", "true");
+        });
+
+        yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
+          element.setAttribute("aria-label", `Page ${element.innerText}`);
+        });
+
+
         observer.disconnect();
       }
     });
