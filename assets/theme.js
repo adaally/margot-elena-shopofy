@@ -9280,6 +9280,10 @@ function fixChatbotAccessibility() {
 
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
+
+          toggleBtn.addEventListener('click', () => {
+            toggleBtn.removeAttribute("aria-expanded");
+          });
         }
         
       }, 1000);
