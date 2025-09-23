@@ -9229,7 +9229,7 @@ function addAlertToErrors() {
     const container = document.getElementById("pc--optOutFormContainer");
     if (!container) return;
 
-    const observer = new (() => {
+    const observer = new MutationObserver(() => {
       // 1) Add aria-required to the email input
       const emailInput = container.querySelector("input[type='email']");
       if (emailInput && !emailInput.hasAttribute("aria-required")) {
