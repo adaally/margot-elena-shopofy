@@ -9331,15 +9331,11 @@ function enableFocusTrap(container, toggleBtn) {
   const focusable = container.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
-    focusable.forEach(el => {
-    el.addEventListener("focus", () => el.classList.add("focus-trap-highlight"));
-    el.addEventListener("blur", () => el.classList.remove("focus-trap-highlight"));
-  });
   console.log(focusable)
   focusable.forEach(el => addFocusIndicator(el));
   const first = focusable[0];
   const last = focusable[focusable.length - 1];
-
+  console.log(first, last)
   
   trapHandler = (e) => {
     if (e.key !== "Tab") return;
