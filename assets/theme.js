@@ -9273,7 +9273,7 @@ function fixChatbotAccessibility() {
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (!chatBox || !chatBox.shadowRoot) return;
-
+    chatBox.setAttribute("role", "dialog");
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
@@ -9310,8 +9310,7 @@ function fixChatbotAccessibility() {
       if (e.key === "Escape" && container.classList.contains("chat-app--is-open")) {
         const toggleBtn = container.querySelector(":scope > button");
         if (toggleBtn) {
-          toggleBtn.click(); // simulate button click to close chat
-          console.log("ESC pressed → closed chat");
+          toggleBtn.click();
         }
       }
     });
