@@ -9184,7 +9184,9 @@ function fixAriaLabelThumbnails() {
         yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
           element.setAttribute("aria-label", `Page ${element.innerText}`);
           element.addEventListener('click', () => {
-            element.setAttribute("aria-label", `Page ${element.innerText}`);
+            setTimeout(() => {
+              element.setAttribute("aria-label", `Page ${element.innerText}`);
+            }, 500);
           });
         });
 
