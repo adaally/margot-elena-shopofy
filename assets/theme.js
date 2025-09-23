@@ -9268,6 +9268,14 @@ function addAlertToErrors() {
     observer.observe(container, { childList: true, subtree: true });
   });
 
+
+  function fixChatbotAccessibility() {
+    const chatBox = document.querySelector("inbox-online-store-chat");
+    console.log(chatBox, "chatbox")
+  }
+
+  fixChatbotAccessibility();
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
