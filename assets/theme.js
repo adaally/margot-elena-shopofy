@@ -9270,55 +9270,38 @@ function addAlertToErrors() {
 
 
 function fixChatbotAccessibility() {
-  // 1. Watch for the Shopify chat custom element to appear
+  // Watch for the custom element
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (!chatBox || !chatBox.shadowRoot) return;
+    if (chatBox) {
+      const shadowRoot = chatBox.shadowRoot;
+      setTimeout(() => {
+        const toggleBtn = shadowRoot.querySelector(".chat-app button");
 
-    // 2. Watch inside the shadow root for the toggle button
-    const shadowObserver = new MutationObserver(() => {
-      const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app button");
-      if (!toggleBtn) return;
+        if(toggleBtn) {
+          toggleBtn.removeAttribute("aria-expanded");
 
-      // Remove aria-expanded immediately if present
-      toggleBtn.removeAttribute("aria-expanded");
-
-      // 3. Now observe just this button for attribute changes
-      const btnObserver = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          if (
-            mutation.type === "attributes" &&
-            mutation.attributeName === "aria-expanded"
-          ) {
+        toggleBtn.addEventListener('click', () => {
+          setTimeout(() => {
             toggleBtn.removeAttribute("aria-expanded");
-            console.log("Blocked aria-expanded from being set");
-          }
-        }
-      });
+          }, 2000);
+        });
+        
+      }, 1000);
+      
 
-      btnObserver.observe(toggleBtn, {
-        attributes: true,
-        attributeFilter: ["aria-expanded"],
-      });
+      observer.disconnect();
+    }
 
-      // We found the button, so we can stop watching the shadow root
-      shadowObserver.disconnect();
-    });
 
-    shadowObserver.observe(chatBox.shadowRoot, { childList: true, subtree: true });
 
-    // Stop the outer observer once the chatBox is found
-    observer.disconnect();
+
   });
 
-  // Start watching the document for the Shopify chat element
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-// Call it on page load
-document.addEventListener("DOMContentLoaded", fixChatbotAccessibility);
-
-  // fixChatbotAccessibility();
+  fixChatbotAccessibility();
 
   //Focus trap search
   const openButton = document.querySelector('#search--button');
