@@ -9288,6 +9288,9 @@ function fixChatbotAccessibility() {
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             console.log("Removed aria-expanded from button");
+            if(container.classList.includes(".chat-app--is-open")) {
+              toggleBtn.setAttribute("aria-label", "Close chat window")
+            }
           }
         }
       }
