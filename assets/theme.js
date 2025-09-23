@@ -9322,6 +9322,16 @@ function fixChatbotAccessibility() {
                 newTitle2.classList.add('changed');
                 title2.replaceWith(newTitle2);
               }
+
+              // Adding list semantics to buttons
+              const container = document.createElement('div');
+              container.setAttribute('role', 'list')
+
+              container.querySelector(".interstitial-view__instant-answers-list button").forEach(element => {
+                element.setAttribute('role', 'listitem');
+                container.appendChild(element);
+              });
+
             } else {
               disableFocusTrap();
             }
