@@ -9295,9 +9295,9 @@ function fixChatbotAccessibility() {
             toggleBtn.removeAttribute("aria-expanded");
             if(toggleBtn.classList.contains("chat-app--close-button")) {
               toggleBtn.setAttribute("aria-label", "Close chat window");
-              enableFocusTrap(container, toggleBtn);
+              // enableFocusTrap(container, toggleBtn);
             } else {
-              disableFocusTrap();
+              // disableFocusTrap();
             }
           }
         }
@@ -9324,47 +9324,47 @@ function fixChatbotAccessibility() {
   observer.observe(document.body, { childList: true, subtree: true });
 
   // --- Focus trap helpers ---
-let trapHandler = null;
+// let trapHandler = null;
 
 function enableFocusTrap(container, toggleBtn) {
   // Find focusable elements in chat
-  const focusable = container.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-    focusable.forEach(el => {
-    el.addEventListener("focus", () => el.classList.add("focus-trap-highlight"));
-    el.addEventListener("blur", () => el.classList.remove("focus-trap-highlight"));
-  });
-  console.log(focusable)
-  focusable.forEach(el => addFocusIndicator(el));
-  const first = focusable[0];
-  const last = focusable[focusable.length - 1];
+  // const focusable = container.querySelectorAll(
+  //   'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  // );
+  //   focusable.forEach(el => {
+  //   el.addEventListener("focus", () => el.classList.add("focus-trap-highlight"));
+  //   el.addEventListener("blur", () => el.classList.remove("focus-trap-highlight"));
+  // });
+  // console.log(focusable)
+  // focusable.forEach(el => addFocusIndicator(el));
+  // const first = focusable[0];
+  // const last = focusable[focusable.length - 1];
 
   // Handler for Tab/Shift+Tab
-  trapHandler = (e) => {
-    if (e.key !== "Tab") return;
+  // trapHandler = (e) => {
+  //   if (e.key !== "Tab") return;
 
-    if (e.shiftKey) {
-      // If Shift+Tab on first, loop to last
-      if (document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      }
-    } else {
-      // If Tab on last, loop to first
-      if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-  };
+  //   if (e.shiftKey) {
+  //     // If Shift+Tab on first, loop to last
+  //     if (document.activeElement === first) {
+  //       e.preventDefault();
+  //       last.focus();
+  //     }
+  //   } else {
+  //     // If Tab on last, loop to first
+  //     if (document.activeElement === last) {
+  //       e.preventDefault();
+  //       first.focus();
+  //     }
+  //   }
+  // };
 
-  document.addEventListener("keydown", trapHandler);
+  // document.addEventListener("keydown", trapHandler);
 
   // Move focus to chat when opened
-  setTimeout(() => {
-    (first || toggleBtn).focus();
-  }, 50);
+  // setTimeout(() => {
+  //   (first || toggleBtn).focus();
+  // }, 50);
 
 }
 
@@ -9379,13 +9379,13 @@ function addFocusIndicator(el) {
   });
 }
 
-function disableFocusTrap() {
-  if (trapHandler) {
-    document.removeEventListener("keydown", trapHandler);
-    trapHandler = null;
-    console.log("Focus trap disabled");
-  }
-}
+  // function disableFocusTrap() {
+  //   if (trapHandler) {
+  //     document.removeEventListener("keydown", trapHandler);
+  //     trapHandler = null;
+  //     console.log("Focus trap disabled");
+  //   }
+  // }
 }
 
   fixChatbotAccessibility();
