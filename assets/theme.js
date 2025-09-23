@@ -9274,8 +9274,9 @@ function fixChatbotAccessibility() {
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (!chatBox) return;
+    console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat1")
     setTimeout(() => {
-      console.log(chatBox.shadowRoot, "chat")
+      console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat2")
     }, 4000);
     // Watch inside shadow DOM
     // const observerChatContainer = new MutationObserver(() => {
