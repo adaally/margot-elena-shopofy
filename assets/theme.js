@@ -9287,6 +9287,7 @@ function fixChatbotAccessibility() {
             toggleBtn.removeAttribute("aria-expanded");
           }, 2000);
         });
+      }
         
       }, 1000);
       
