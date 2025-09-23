@@ -9272,7 +9272,7 @@ function addAlertToErrors() {
   function fixChatbotAccessibility() {
     const observer = new MutationObserver(() => {
       const chatBox = document.querySelector("inbox-online-store-chat");
-      if(!chatBox && (chatBox && !chatBox.shadowRoot) ) return;
+      if(!chatBox && (chatBox && !chatBox.shadowRoot.querySelector(".chat-app")) ) return;
       console.log(chatBox, 'chatBox')
       const chatToggle = chatBox.shadowRoot;
       console.log(chatToggle, 'chatToggle')
