@@ -9326,6 +9326,7 @@ function fixChatbotAccessibility() {
               // Adding list semantics to buttons
               const newContainerList = document.createElement('div');
               newContainerList.setAttribute('role', 'list')
+              newContainerList.style.width = '100%';
               const buttons = container.querySelectorAll(".interstitial-view__instant-answers-list button");
               console.log(buttons)
               buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
