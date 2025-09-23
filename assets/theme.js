@@ -9298,15 +9298,16 @@ function fixChatbotAccessibility() {
               toggleBtn.setAttribute("aria-label", "Close chat window");
               enableFocusTrap(container, toggleBtn);
 
-              const title = container.querySelector("h2");
+              const title = container.querySelector("h2:not(.changed)");
               const newTitle = document.createElement("h1");
               newTitle.innerText = title.innerText;
               newTitle.setAttribute("dir", "auto");
               newTitle.style.fontSize = '16px';
               newTitle.style.color = '#fff';
+              newTitle.classList.add('changed');
               title.replaceWith(newTitle);
 
-              const title2 = container.querySelector(".instant-answers");
+              const title2 = container.querySelector(".instant-answers:not(.changed)");
               const newTitle2 = document.createElement("h2");
               newTitle2.innerText = title2.innerText;
               newTitle2.setAttribute("dir", "auto");
@@ -9314,7 +9315,9 @@ function fixChatbotAccessibility() {
               newTitle2.style.fontWeight = '600';
               newTitle2.style.margin = '8px auto 16px';
               newTitle2.style.textAlign = 'center';
-              title2.replaceWith(newTitle2);
+              newTitle.classList.add('instant-answers');
+              newTitle.classList.add('changed');
+              newTitle2.replaceWith(newTitle2);
             } else {
               disableFocusTrap();
             }
