@@ -9279,6 +9279,8 @@ function fixChatbotAccessibility() {
       const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app > button");
       if(toggleBtn) {
         toggleBtn.removeAttribute("aria-expanded");
+
+        toggleBtn.addEventListener('click', () => toggleBtn.removeAttribute("aria-expanded"));
       }
     }, 100);
 
