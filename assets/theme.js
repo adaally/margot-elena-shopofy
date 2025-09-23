@@ -9302,6 +9302,7 @@ function fixChatbotAccessibility() {
               newTitle.innerText = title.innerText;
               newTitle.setAttribute("dir", "auto");
               newTitle.style.fontSize = '16px';
+              newTitle.style.color = '#fff';
               title.replaceWith(newTitle);
             } else {
               disableFocusTrap();
