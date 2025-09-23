@@ -9428,6 +9428,44 @@ function addFocusIndicator(el) {
 
   fixChatbotAccessibility();
 
+function watchChatMessagesList() {
+  // Step 1: Wait until the custom chat element exists
+  const outerObserver = new MutationObserver(() => {
+    const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
+    if (!chatBox || !chatBox.shadowRoot) return;
+
+    // Step 2: Watch inside the shadow root
+    const shadowObserver = new MutationObserver(() => {
+      const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
+      if (messagesList) {
+        console.log("Found chat-messages__list:", messagesList);
+
+        // 👉 run your code here
+        // e.g. messagesList.setAttribute("role", "log");
+
+        // stop observing once found
+        shadowObserver.disconnect();
+      }
+    });
+
+    shadowObserver.observe(chatBox.shadowRoot, {
+      childList: true,
+      subtree: true,
+    });
+
+    outerObserver.disconnect(); // stop watching <body> once chat widget is found
+  });
+
+  outerObserver.observe(document.body, { childList: true, subtree: true });
+}
+
+document.addEventListener("DOMContentLoaded", watchChatMessagesList);
+
+
+
+
+
+
   //Focus trap search
   const openButton = document.querySelector('#search--button');
   const searchForm = document.querySelector('predictive-search form');
