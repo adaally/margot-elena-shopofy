@@ -9319,6 +9319,54 @@ function fixChatbotAccessibility() {
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
+
+  // --- Focus trap helpers ---
+let trapHandler = null;
+
+function enableFocusTrap(container, toggleBtn) {
+  // Find focusable elements in chat
+  const focusable = container.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  // Handler for Tab/Shift+Tab
+  trapHandler = (e) => {
+    if (e.key !== "Tab") return;
+
+    if (e.shiftKey) {
+      // If Shift+Tab on first, loop to last
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      // If Tab on last, loop to first
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  };
+
+  document.addEventListener("keydown", trapHandler);
+
+  // Move focus to chat when opened
+  setTimeout(() => {
+    (first || toggleBtn).focus();
+  }, 50);
+
+  console.log("Focus trap enabled");
+}
+
+function disableFocusTrap() {
+  if (trapHandler) {
+    document.removeEventListener("keydown", trapHandler);
+    trapHandler = null;
+    console.log("Focus trap disabled");
+  }
+}
 }
 
   fixChatbotAccessibility();
