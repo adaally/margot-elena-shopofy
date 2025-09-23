@@ -9317,7 +9317,7 @@ function fixChatbotAccessibility() {
               newTitle2.style.textAlign = 'center';
               newTitle2.classList.add('instant-answers');
               newTitle2.classList.add('changed');
-              newTitle2.replaceWith(newTitle2);
+              title2.replaceWith(newTitle2);
             } else {
               disableFocusTrap();
             }
