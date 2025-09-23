@@ -9281,7 +9281,7 @@ function fixChatbotAccessibility() {
       if (toggleBtn) {
         setTimeout(() => {
           toggleBtn.removeAttribute("aria-expanded");
-        }, 500);
+        }, 1000);
 
 
       shadowObserver.disconnect();
