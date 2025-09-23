@@ -9272,14 +9272,17 @@ function addAlertToErrors() {
   function fixChatbotAccessibility() {
     const observer = new MutationObserver(() => {
       const chatBox = document.querySelector("inbox-online-store-chat");
-      if(!chatBox && (chatBox && !chatBox.shadowRoot.querySelector(".chat-app")) ) return;
-      console.log(chatBox, 'chatBox')
-      const chatToggle = chatBox.shadowRoot;
-      console.log(chatToggle, 'chatToggle')
-      console.log(chatToggle.querySelector("button"), "button")
-      // if(chatToggle) {
-      //   chatToggle.removeAttribute("aria-expanded");
-      // }
+      if(!chatBox) return;
+      setTimeout(() => {
+        console.log(chatBox, 'chatBox')
+        const chatToggle = chatBox.shadowRoot;
+        console.log(chatToggle, 'chatToggle')
+        console.log(chatToggle.querySelector("button"), "button")
+        // if(chatToggle) {
+        //   chatToggle.removeAttribute("aria-expanded");
+        // }
+      }, 1000);
+
 
 
       observer.disconnect();
