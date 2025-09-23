@@ -9366,12 +9366,11 @@ function enableFocusTrap(container, toggleBtn) {
     (first || toggleBtn).focus();
   }, 50);
 
-  console.log("Focus trap enabled");
 }
 
 function addFocusIndicator(el) {
   el.addEventListener("focus", () => {
-    el.style.outline = "2px solid #3b3f9f";   // your highlight color
+    el.style.outline = "2px solid #000";   // your highlight color
     el.style.outlineOffset = "2px";
   });
   el.addEventListener("blur", () => {
