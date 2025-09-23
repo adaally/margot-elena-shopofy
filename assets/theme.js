@@ -9273,25 +9273,32 @@ function fixChatbotAccessibility() {
   // Watch for the custom element
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (!chatBox) return;
+    if (!chatBox || !chatBox.shadowRoot) return;
 
-    setTimeout(() => {
+    // Watch inside shadow root
+    const shadowObserver = new MutationObserver(() => {
       const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app > button");
-      if(toggleBtn) {
-        toggleBtn.removeAttribute("aria-expanded");
-
-        toggleBtn.addEventListener('click', () => {
-          setTimeout(() => {
+      if (toggleBtn) {
+      const btnObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
             toggleBtn.removeAttribute("aria-expanded");
-          }, 300);
+            console.log("Removed aria-expanded from toggleBtn");
+          }
         });
+      });
+
+      btnObserver.observe(toggleBtn, { attributes: true, attributeFilter: ["aria-expanded"] });
+
+      shadowObserver.disconnect();
       }
-    }, 100);
+    });
+
+    shadowObserver.observe(chatBox.shadowRoot, { childList: true, subtree: true });
 
     observer.disconnect();
   });
 
-  // Watch document for the chatbot element
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
