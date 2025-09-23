@@ -9276,32 +9276,20 @@ function fixChatbotAccessibility() {
     if (chatBox) {
       const shadowRoot = chatBox.shadowRoot;
       setTimeout(() => {
-        const toggleBtn = document.querySelector("#shopify-chat inbox-online-store-chat .chat-app button");
+        const toggleBtn = shadowRoot.querySelector(".chat-app button");
 
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
 
           const btnObserver = new MutationObserver((mutations) => {
           for (const mutation of mutations) {
-            console.log("Removed aria-expanded", mutation);
             if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
               mutation.target.removeAttribute("aria-expanded");
-              setTimeout(() => {
-                console.log(mutation.target)
-              });
-              console.log("Removed aria-expanded");
             }
             }
           });
 
           btnObserver.observe(toggleBtn, { attributes: true, attributeFilter: ["aria-expanded"] });
-
-        // toggleBtn.addEventListener('click', (e) => {
-        //   e.stopImmediatePropagation = function() { return false; };
-        //   setTimeout(() => {
-        //     toggleBtn.removeAttribute("aria-expanded");
-        //   }, 2000);
-        // });
       }
         
       }, 1000);
