@@ -9328,7 +9328,7 @@ function fixChatbotAccessibility() {
               newContainerList.setAttribute('role', 'list')
               const buttons = container.querySelectorAll(".interstitial-view__instant-answers-list button");
               console.log(buttons)
-              buttons[0].parentNode.insertBefore(buttons[0], newContainerList);
+              buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
               buttons.forEach(element => {
                 element.setAttribute('role', 'listitem');
                 newContainerList.appendChild(element);
