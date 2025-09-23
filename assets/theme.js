@@ -9274,8 +9274,9 @@ function fixChatbotAccessibility() {
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (chatBox) {
-      const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app");
+      const toggleBtn = chatBox.shadowRoot.querySelector("div");
       console.log(toggleBtn)
+      observer.disconnect();
     }
 
 
@@ -9285,7 +9286,6 @@ function fixChatbotAccessibility() {
       //   }, 1000);
       // }
 
-    observer.disconnect();
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
