@@ -9277,7 +9277,7 @@ function fixChatbotAccessibility() {
     console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat1")
     setTimeout(() => {
       console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat2")
-    }, 1000);
+    }, 100);
     // Watch inside shadow DOM
     // const observerChatContainer = new MutationObserver(() => {
     //   const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
