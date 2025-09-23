@@ -9284,7 +9284,7 @@ function fixChatbotAccessibility() {
           const btnObserver = new MutationObserver((mutations) => {
           for (const mutation of mutations) {
             if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
-              mutation.target.removeAttribute("aria-expanded");
+                toggleBtn.removeAttribute("aria-expanded");
             }
             }
           });
