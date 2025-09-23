@@ -33,11 +33,6 @@
     outline: rgb(16, 16, 16) auto 1.25px !important;
 }
 
-.focus-trap-highlight {
-  outline: 2px solid #3b3f9f;
-  outline-offset: 2px;
-}
-
 .btn:focus-visible {
     outline-offset: -4px;
 }
