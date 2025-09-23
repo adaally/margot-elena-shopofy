@@ -9185,6 +9185,8 @@ function fixAriaLabelThumbnails() {
           element.setAttribute("aria-label", `Page ${element.innerText}`);
         });
 
+        const ul = yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination");
+
           const observerUl = new MutationObserver((mutationsList) => {
             for (const mutation of mutationsList) {
               if (mutation.type === 'attributes') {
