@@ -9183,12 +9183,23 @@ function fixAriaLabelThumbnails() {
 
         yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
           element.setAttribute("aria-label", `Page ${element.innerText}`);
-          element.addEventListener('click', () => {
-            setTimeout(() => {
-              element.setAttribute("aria-label", `Page ${element.innerText}`);
-            }, 1000);
-          });
         });
+
+          const observerUl = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+              if (mutation.type === 'attributes') {
+                  yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
+                    element.setAttribute("aria-label", `Page ${element.innerText}`);
+                  });
+              }
+            }
+          });
+
+            observerUl.observe(ul, {
+              attributes: true,
+              subtree: true,
+              attributeFilter: ['class']
+            });
 
 
         observer.disconnect();
