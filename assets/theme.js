@@ -9273,25 +9273,25 @@ function fixChatbotAccessibility() {
   // Watch for the custom element
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("inbox-online-store-chat");
-    if (!chatBox || !chatBox.shadowRoot) return;
+    if (!chatBox) return;
     setTimeout(() => {
-      console.log(chatBox.shadowRoot.querySelector(".chat-app"))
+      console.log(chatBox.shadowRoot.querySelector(".chat-app"), "chat")
     }, 4000);
     // Watch inside shadow DOM
-    const observerChatContainer = new MutationObserver(() => {
-      const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
-      if (containerChat) {
-        const button = containerChat.querySelector("button");
-        console.log(button, "button");
+    // const observerChatContainer = new MutationObserver(() => {
+    //   const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
+    //   if (containerChat) {
+    //     const button = containerChat.querySelector("button");
+    //     console.log(button, "button");
 
-        // 👉 run your accessibility fix here
+    //     // 👉 run your accessibility fix here
 
-        observerChatContainer.disconnect();
-      }
-    });
+    //     observerChatContainer.disconnect();
+    //   }
+    // });
 
-    // Observe shadow DOM children
-    observerChatContainer.observe(chatBox.shadowRoot, { childList: true, subtree: true });
+    // // Observe shadow DOM children
+    // observerChatContainer.observe(chatBox.shadowRoot, { childList: true, subtree: true });
 
     // Stop watching once we’ve hooked into the shadow DOM
     observer.disconnect();
