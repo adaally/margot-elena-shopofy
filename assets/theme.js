@@ -9281,9 +9281,26 @@ function fixChatbotAccessibility() {
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
 
-          toggleBtn.addEventListener('click', () => {
-            toggleBtn.removeAttribute("aria-expanded");
-          });
+          // toggleBtn.addEventListener('click', () => {
+          //   toggleBtn.removeAttribute("aria-expanded");
+          // });
+            if (toggleBtn) {
+    const btnObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "aria-expanded"
+        ) {
+          toggleBtn.removeAttribute("aria-expanded");
+          console.log("Blocked aria-expanded from being set");
+        }
+      }
+    });
+
+    btnObserver.observe(toggleBtn, {
+      attributes: true,
+      attributeFilter: ["aria-expanded"],
+    });
         }
         
       }, 1000);
