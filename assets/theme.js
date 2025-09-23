@@ -9269,27 +9269,31 @@ function addAlertToErrors() {
   });
 
 
-  function fixChatbotAccessibility() {
-    const observer = new MutationObserver(() => {
-      const chatBox = document.querySelector("inbox-online-store-chat");
-      if(!chatBox) return;
+function fixChatbotAccessibility() {
+  // Watch for the custom element
+  const observer = new MutationObserver(() => {
+    const chatBox = document.querySelector("inbox-online-store-chat");
+    if (!chatBox || !chatBox.shadowRoot) return;
 
-      const observerChatContainer = new MutationObserver(() => {
-        const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
-        console.log(containerChat)
-        if(containerChat) {
-          console.log("button")
-          observerChatContainer.disconnect();
-        }
-        
-      });
+    // Watch inside shadow DOM
+    const observerChatContainer = new MutationObserver(() => {
+      const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
+      if (containerChat) {
+        const button = containerChat.querySelector("button");
+        console.log(button, "button");
 
-      observerChatContainer.observe(chatBox, { childList: true, subtree: true });
-      observer.disconnect();
+        // 👉 run your accessibility fix here
+
+        observerChatContainer.disconnect();
+      }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
-  }
+    // Observe shadow DOM children
+    observerChatContainer.observe(chatBox.shadowRoot, { childList: true, subtree: true });
+
+    // Stop watching once we’ve hooked into the shadow DOM
+    observer.disconnect();
+  });
 
   fixChatbotAccessibility();
 
