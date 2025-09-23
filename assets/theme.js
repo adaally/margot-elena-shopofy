@@ -9273,14 +9273,15 @@ function fixChatbotAccessibility() {
   // Watch for the custom element
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (!chatBox || !chatBox.shadowRoot) return;
+    if (!chatBox) return;
 
-      const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app > button");
-      if (toggleBtn) {
-        setTimeout(() => {
-          toggleBtn.removeAttribute("aria-expanded");
-        }, 1000);
-      }
+      const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app");
+      console.log(toggleBtn)
+      // if (toggleBtn) {
+      //   setTimeout(() => {
+      //     toggleBtn.removeAttribute("aria-expanded");
+      //   }, 1000);
+      // }
 
     observer.disconnect();
   });
