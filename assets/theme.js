@@ -9185,7 +9185,7 @@ function fixAriaLabelThumbnails() {
           element.setAttribute("aria-label", `Page ${element.innerText}`);
         });
 
-        const ul = yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination");
+        const ul = yoptoContainer.querySelector(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination");
         if(ul) {
           ul.setAttribute("role", "navigation");
           ul.setAttribute("aria-label", "Customer reviews pagination");
