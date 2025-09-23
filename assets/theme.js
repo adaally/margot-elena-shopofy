@@ -9273,8 +9273,8 @@ function addAlertToErrors() {
     const observer = new MutationObserver(() => {
       const chatBox = document.querySelector("inbox-online-store-chat");
       if(!chatBox) return;
-      
-      const chatToggle = chatBox.shadowRoot.querySelector(".chat-toggle");
+      console.log(chatBox, 'chatBox')
+      const chatToggle = chatBox.shadowRoot;
       console.log(chatToggle, 'chatToggle')
       
       if(chatToggle) {
