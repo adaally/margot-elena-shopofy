@@ -9277,13 +9277,19 @@ function fixChatbotAccessibility() {
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
+    const toggleBtn = container.querySelector(":scope > button");
+    if (toggleBtn) {
+      toggleBtn.removeAttribute("aria-expanded");
+      if(toggleBtn.classList.contains("chat-app--close-button")) {;
+        toggleBtn.setAttribute("aria-label", "Close chat window")
+      }    
+    }
+
     // Watch for class changes on the chat-app container
     const containerObserver = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
         if (mutation.type === "attributes" && mutation.attributeName === "class") {
-          console.log("chat-app classes changed:", container.className);
 
-          // 👉 Get the button each time the classes change
           const toggleBtn = container.querySelector(":scope > button");
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
