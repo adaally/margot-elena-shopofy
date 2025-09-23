@@ -9229,7 +9229,7 @@ function addAlertToErrors() {
     const container = document.getElementById("pc--optOutFormContainer");
     if (!container) return;
 
-    const observer = new MutationObserver(() => {
+    const observer = new (() => {
       // 1) Add aria-required to the email input
       const emailInput = container.querySelector("input[type='email']");
       if (emailInput && !emailInput.hasAttribute("aria-required")) {
@@ -9270,8 +9270,14 @@ function addAlertToErrors() {
 
 
   function fixChatbotAccessibility() {
-    const chatBox = document.querySelector("inbox-online-store-chat");
-    console.log(chatBox, "chatbox")
+    const observer = new MutationObserver(() => {
+      const chatBox = document.querySelector("inbox-online-store-chat");
+      if(!chatBox) return;
+      console.log(chatBox, 'chatbox')
+      observer.disconnect();
+    });
+
+    observer.observer(document.body, { childList: true, subtree: true });
   }
 
   fixChatbotAccessibility();
