@@ -9324,14 +9324,14 @@ function fixChatbotAccessibility() {
               }
 
               // Adding list semantics to buttons
-              const newContainer = document.createElement('div');
-              newContainer.setAttribute('role', 'list')
+              const newContainerList = document.createElement('div');
+              newContainerList.setAttribute('role', 'list')
               const buttons = container.querySelectorAll(".interstitial-view__instant-answers-list button");
               console.log(buttons)
-              buttons[0].parentNode.insertBefore(newContainer);
+              buttons[0].parentNode.insertBefore(buttons[0], newContainerList);
               buttons.forEach(element => {
                 element.setAttribute('role', 'listitem');
-                newContainer.appendChild(element);
+                newContainerList.appendChild(element);
               });
 
             } else {
