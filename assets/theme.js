@@ -9277,7 +9277,7 @@ function addAlertToErrors() {
       observer.disconnect();
     });
 
-    observer.observer(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   fixChatbotAccessibility();
