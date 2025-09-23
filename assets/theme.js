@@ -9301,6 +9301,7 @@ function fixChatbotAccessibility() {
               const newTitle = document.createElement("h1");
               newTitle.innerText = title.innerText;
               newTitle.setAttribute("dir", "auto");
+              newTitle.style.fontSize = '16px';
               title.replaceWith(newTitle);
             } else {
               disableFocusTrap();
