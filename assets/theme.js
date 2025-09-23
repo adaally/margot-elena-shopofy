@@ -9278,38 +9278,28 @@ function fixChatbotAccessibility() {
       setTimeout(() => {
         const toggleBtn = shadowRoot.querySelector(".chat-app button");
 
-        if(toggleBtn) {
+        if (toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
 
-          // toggleBtn.addEventListener('click', () => {
-          //   toggleBtn.removeAttribute("aria-expanded");
-          // });
-            if (toggleBtn) {
-              const btnObserver = new MutationObserver((mutations) => {
-                for (const mutation of mutations) {
-                  if (
-                    mutation.type === "attributes" &&
-                    mutation.attributeName === "aria-expanded"
-                  ) {
-                    toggleBtn.removeAttribute("aria-expanded");
-                    console.log("Blocked aria-expanded from being set");
-                  }
-                }
-              });
+          const btnObserver = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+              if (
+                mutation.type === "attributes" &&
+                mutation.attributeName === "aria-expanded"
+              ) {
+                toggleBtn.removeAttribute("aria-expanded");
+                console.log("Blocked aria-expanded from being set");
+              }
+            }
+          });
 
-              btnObserver.observe(toggleBtn, {
-                attributes: true,
-                attributeFilter: ["aria-expanded"],
-              });
+          btnObserver.observe(toggleBtn, {
+            attributes: true,
+            attributeFilter: ["aria-expanded"],
+          });
         }
-        
       }, 1000);
-      
-      // if (toggleBtn) {
-      //   setTimeout(() => {
-      //     toggleBtn.removeAttribute("aria-expanded");
-      //   }, 1000);
-      // }
+
       observer.disconnect();
     }
   });
