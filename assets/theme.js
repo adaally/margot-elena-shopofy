@@ -9285,13 +9285,12 @@ function fixChatbotAccessibility() {
             setTimeout(() => {
               console.log('click')
               
-              
-            }, 2000);
-            const item = document.querySelector("#shopify-chat inbox-online-store-chat");
+              const item = document.querySelector("#shopify-chat inbox-online-store-chat");
               const shadowRoot2 = item.shadowRoot;
               const toggleBtn2 = shadowRoot2.querySelector(".chat-app > button");
               console.log(toggleBtn2)
               toggleBtn2.removeAttribute("aria-expanded");
+            }, 200);
           })
 
       }
