@@ -9275,7 +9275,7 @@ function fixChatbotAccessibility() {
     const chatBox = document.querySelector("inbox-online-store-chat");
     if (!chatBox || !chatBox.shadowRoot) return;
     setTimeout(() => {
-      chatBox.shadowRoot.querySelector(".chat-app");
+      console.log(chatBox.shadowRoot.querySelector(".chat-app"))
     }, 4000);
     // Watch inside shadow DOM
     const observerChatContainer = new MutationObserver(() => {
