@@ -9186,7 +9186,7 @@ function fixAriaLabelThumbnails() {
           element.addEventListener('click', () => {
             setTimeout(() => {
               element.setAttribute("aria-label", `Page ${element.innerText}`);
-            }, 500);
+            }, 1000);
           });
         });
 
