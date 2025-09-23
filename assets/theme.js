@@ -9098,9 +9098,6 @@ theme.recentlyViewed = {
       });;
       }, 4000);
 
-      
-      
-
       clearTimeout(timeout);
       clearInterval(interval);
     }, 200);
@@ -9174,20 +9171,21 @@ function fixAriaLabelThumbnails() {
 
   fixOwlDots();
 
-  
+  function fixYoptoReviewSection() {
+    
+    const observer = new MutationObserver(() => {
+      const yoptoContainer = document.querySelector("#yotpo-reviews-container");
+      if(yoptoContainer) {
+        console.log(yoptoContainer, "found");
+        observer.disconnect();
+      }
+    });
 
-//   function changeCartThumbnails() {
-//   const cartBtn = document.querySelector(".js-drawer-open-cart")
-//   console.log(cartBtn)
-//   if(!cartBtn) return;
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 
-//   cartBtn.addEventListener('click', () => {
-//     console.log(document.querySelector(".rebuy-cart__flyout"))
-//   });
-// }
+  fixYoptoReviewSection();
 
-
-// changeCartThumbnails();
 
 function addAlertToErrors() {
     const errorMessage = document.querySelector(".form-vertical .errors");
