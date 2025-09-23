@@ -9284,7 +9284,10 @@ function fixChatbotAccessibility() {
           toggleBtn.addEventListener('click', () => {
             setTimeout(() => {
               console.log('click')
-              toggleBtn.removeAttribute("aria-expanded");
+              
+              const item = document.querySelector("#shopify-chat inbox-online-store-chat .chat-app button");
+              console.log(item)
+              item.removeAttribute("aria-expanded");
             }, 2000);
           })
 
