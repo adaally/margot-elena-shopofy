@@ -9276,7 +9276,7 @@ function fixChatbotAccessibility() {
     if (chatBox) {
       const shadowRoot = chatBox.shadowRoot;
       setTimeout(() => {
-        const toggleBtn = shadowRoot.querySelector(".chat-app button");
+        const toggleBtn = document.querySelector("#shopify-chat inbox-online-store-chat .chat-app button");
 
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
