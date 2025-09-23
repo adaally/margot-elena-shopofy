@@ -9274,119 +9274,108 @@ function fixChatbotAccessibility() {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (!chatBox || !chatBox.shadowRoot) return;
     chatBox.setAttribute("role", "dialog");
+
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
     const toggleBtn = container.querySelector(":scope > button");
     if (toggleBtn) {
       toggleBtn.removeAttribute("aria-expanded");
-      if(toggleBtn.classList.contains("chat-app--close-button")) {;
-        toggleBtn.setAttribute("aria-label", "Close chat window")
-      }    
+      if (toggleBtn.classList.contains("chat-app--close-button")) {
+        toggleBtn.setAttribute("aria-label", "Close chat window");
+      }
     }
 
-    // Watch for class changes on the chat-app container
-    const containerObserver = new MutationObserver((mutations) => {
-      for (const mutation of mutations) {
-        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+    // Watch for class changes
+    const containerObserver = new MutationObserver(() => {
+      const toggleBtn = container.querySelector(":scope > button");
+      if (!toggleBtn) return;
 
-          const toggleBtn = container.querySelector(":scope > button");
-          if (toggleBtn) {
-            toggleBtn.removeAttribute("aria-expanded");
-            if(toggleBtn.classList.contains("chat-app--close-button")) {
-              toggleBtn.setAttribute("aria-label", "Close chat window");
-              enableFocusTrap(container, toggleBtn);
-            } else {
-              disableFocusTrap();
-            }
-          }
+      toggleBtn.removeAttribute("aria-expanded");
+      if (toggleBtn.classList.contains("chat-app--close-button")) {
+        toggleBtn.setAttribute("aria-label", "Close chat window");
+
+        if (container.classList.contains("chat-app--is-open")) {
+          enableFocusTrap(container, toggleBtn);
+        } else {
+          disableFocusTrap();
         }
       }
     });
 
-    containerObserver.observe(container, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
+    containerObserver.observe(container, { attributes: true, attributeFilter: ["class"] });
 
+    // ESC closes the chat
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && container.classList.contains("chat-app--is-open")) {
         const toggleBtn = container.querySelector(":scope > button");
-        if (toggleBtn) {
-          toggleBtn.click();
-        }
+        if (toggleBtn) toggleBtn.click();
       }
     });
 
-    observer.disconnect(); // no need to keep watching <body> once hooked
+    observer.disconnect();
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
 
   // --- Focus trap helpers ---
-let trapHandler = null;
+  let trapHandler = null;
 
-function enableFocusTrap(container, toggleBtn) {
-  // Find focusable elements in chat
-  const focusable = container.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-    focusable.forEach(el => {
-    el.addEventListener("focus", () => el.classList.add("focus-trap-highlight"));
-    el.addEventListener("blur", () => el.classList.remove("focus-trap-highlight"));
-  });
-  console.log(focusable)
-  focusable.forEach(el => addFocusIndicator(el));
-  const first = focusable[0];
-  const last = focusable[focusable.length - 1];
+  function enableFocusTrap(container, toggleBtn) {
+    const focusable = container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusable.length) return; // guard
 
-  // Handler for Tab/Shift+Tab
-  trapHandler = (e) => {
-    if (e.key !== "Tab") return;
+    focusable.forEach(el => addFocusIndicator(el));
 
-    if (e.shiftKey) {
-      // If Shift+Tab on first, loop to last
-      if (document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    trapHandler = (e) => {
+      if (e.key !== "Tab") return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
-    } else {
-      // If Tab on last, loop to first
-      if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+    };
+
+    document.addEventListener("keydown", trapHandler);
+
+    // Focus into the chat when opened
+    setTimeout(() => (first || toggleBtn).focus(), 50);
+
+    console.log("Focus trap enabled with", focusable.length, "elements");
+  }
+
+  function disableFocusTrap() {
+    if (trapHandler) {
+      document.removeEventListener("keydown", trapHandler);
+      trapHandler = null;
+      console.log("Focus trap disabled");
     }
-  };
+  }
 
-  document.addEventListener("keydown", trapHandler);
-
-  // Move focus to chat when opened
-  setTimeout(() => {
-    (first || toggleBtn).focus();
-  }, 50);
-
-}
-
-function addFocusIndicator(el) {
-  el.addEventListener("focus", () => {
-    el.style.outline = "2px solid #000";   // your highlight color
-    el.style.outlineOffset = "2px";
-  });
-  el.addEventListener("blur", () => {
-    el.style.outline = "";
-    el.style.outlineOffset = "";
-  });
-}
-
-function disableFocusTrap() {
-  if (trapHandler) {
-    document.removeEventListener("keydown", trapHandler);
-    trapHandler = null;
-    console.log("Focus trap disabled");
+  function addFocusIndicator(el) {
+    el.addEventListener("focus", () => {
+      el.style.outline = "2px solid #000";
+      el.style.outlineOffset = "2px";
+    });
+    el.addEventListener("blur", () => {
+      el.style.outline = "";
+      el.style.outlineOffset = "";
+    });
   }
 }
-}
+
 
   fixChatbotAccessibility();
 
