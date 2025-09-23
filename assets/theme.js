@@ -9276,7 +9276,7 @@ function fixChatbotAccessibility() {
     if (chatBox) {
       const toggleBtn = chatBox.shadowRoot;
       setTimeout(() => {
-        console.log(toggleBtn, toggleBtn.querySelector("div"))
+        console.log(toggleBtn, toggleBtn.querySelector(".chat-app button"))
       }, 1000);
       
       // if (toggleBtn) {
