@@ -9283,8 +9283,8 @@ function fixChatbotAccessibility() {
 
           toggleBtn.addEventListener('click', () => {
             setTimeout(() => {
-              toggleBtn.removeAttribute("aria-expanded");
               console.log('click')
+              toggleBtn.removeAttribute("aria-expanded");
             }, 2000);
           })
 
