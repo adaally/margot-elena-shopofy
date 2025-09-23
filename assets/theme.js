@@ -9272,8 +9272,16 @@ function addAlertToErrors() {
   function fixChatbotAccessibility() {
     const observer = new MutationObserver(() => {
       const chatBox = document.querySelector("inbox-online-store-chat");
-      if(!chatBox) return;
+      if(!chatBox && !chatBox.shadowRoot) return;
       console.log(chatBox, 'chatbox')
+      
+      const chatToggle = chatBox.shadowRoot.querySelector(".chat-toggle");
+      
+      if(chatToggle) {
+        chatToggle.removeAttribute("aria-expanded");
+      }
+
+
       observer.disconnect();
     });
 
