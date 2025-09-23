@@ -9328,11 +9328,13 @@ function fixChatbotAccessibility() {
               newContainerList.setAttribute('role', 'list')
               newContainerList.style.width = '100%';
               const buttons = container.querySelectorAll(".interstitial-view__instant-answers-list button");
-              console.log(buttons)
               buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
               buttons.forEach(element => {
                 element.setAttribute('role', 'listitem');
-                newContainerList.appendChild(element);
+                const listitem = document.createElement('div');
+                listitem.setAttribute('role', 'listitem');
+                listitem.appendChild(element);
+                newContainerList.appendChild(listitem);
               });
 
             } else {
