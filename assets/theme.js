@@ -9294,7 +9294,10 @@ function fixChatbotAccessibility() {
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             if(toggleBtn.classList.contains("chat-app--close-button")) {
-              toggleBtn.setAttribute("aria-label", "Close chat window")
+              toggleBtn.setAttribute("aria-label", "Close chat window");
+              enableFocusTrap(container, toggleBtn);
+            } else {
+              disableFocusTrap();
             }
           }
         }
