@@ -9276,8 +9276,9 @@ function addAlertToErrors() {
 
       const observerChatContainer = new MutationObserver(() => {
         const containerChat = chatBox.shadowRoot.querySelector(".chat-app");
+        console.log(containerChat)
         if(containerChat) {
-          console.log(containerChat.querySelector("button"), "button")
+          console.log("button")
           observerChatContainer.disconnect();
         }
         
