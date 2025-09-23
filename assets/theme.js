@@ -9273,10 +9273,12 @@ function fixChatbotAccessibility() {
   // Watch for the custom element
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (!chatBox) return;
-
+    if (chatBox) {
       const toggleBtn = chatBox.shadowRoot.querySelector(".chat-app");
       console.log(toggleBtn)
+    }
+
+
       // if (toggleBtn) {
       //   setTimeout(() => {
       //     toggleBtn.removeAttribute("aria-expanded");
