@@ -9286,6 +9286,9 @@ function fixChatbotAccessibility() {
             console.log("Removed aria-expanded", mutation);
             if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
               mutation.target.removeAttribute("aria-expanded");
+              setTimeout(() => {
+                console.log(mutation.target)
+              });
               console.log("Removed aria-expanded");
             }
             }
