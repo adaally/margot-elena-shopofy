@@ -9336,6 +9336,7 @@ function enableFocusTrap(container, toggleBtn) {
     el.addEventListener("blur", () => el.classList.remove("focus-trap-highlight"));
   });
   console.log(focusable)
+  focusable.forEach(el => addFocusIndicator(el));
   const first = focusable[0];
   const last = focusable[focusable.length - 1];
 
@@ -9366,6 +9367,17 @@ function enableFocusTrap(container, toggleBtn) {
   }, 50);
 
   console.log("Focus trap enabled");
+}
+
+function addFocusIndicator(el) {
+  el.addEventListener("focus", () => {
+    el.style.outline = "2px solid #3b3f9f";   // your highlight color
+    el.style.outlineOffset = "2px";
+  });
+  el.addEventListener("blur", () => {
+    el.style.outline = "";
+    el.style.outlineOffset = "";
+  });
 }
 
 function disableFocusTrap() {
