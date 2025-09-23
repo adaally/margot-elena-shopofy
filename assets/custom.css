@@ -29,8 +29,13 @@
     color: #000;
 }
 
-.tag:has(input:focus), .btn:focus-visible, .rebuy-button:focus-visible, .rebuy-cart__flyout-empty-cart a:focus-visible, .outline-button.instant-answers-list__prompt:focus-visible {
+.tag:has(input:focus), .btn:focus-visible, .rebuy-button:focus-visible, .rebuy-cart__flyout-empty-cart a:focus-visible {
     outline: rgb(16, 16, 16) auto 1.25px !important;
+}
+
+.chat-app :focus {
+  outline: 2px solid #3b3f9f;  /* your brand color */
+  outline-offset: 2px;
 }
 
 .btn:focus-visible {
