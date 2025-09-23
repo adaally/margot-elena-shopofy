@@ -9281,12 +9281,24 @@ function fixChatbotAccessibility() {
         if(toggleBtn) {
           toggleBtn.removeAttribute("aria-expanded");
 
-        toggleBtn.addEventListener('click', (e) => {
-          e.stopImmediatePropagation = function() { return false; };
-          setTimeout(() => {
-            toggleBtn.removeAttribute("aria-expanded");
-          }, 2000);
-        });
+          const btnObserver = new MutationObserver((mutations) => {
+          for (const mutation of mutations) {
+            console.log("Removed aria-expanded", mutation);
+            if (mutation.type === "attributes" && mutation.attributeName === "aria-expanded") {
+              mutation.target.removeAttribute("aria-expanded");
+              console.log("Removed aria-expanded");
+            }
+            }
+          });
+
+          btnObserver.observe(toggleBtn, { attributes: true, attributeFilter: ["aria-expanded"] });
+
+        // toggleBtn.addEventListener('click', (e) => {
+        //   e.stopImmediatePropagation = function() { return false; };
+        //   setTimeout(() => {
+        //     toggleBtn.removeAttribute("aria-expanded");
+        //   }, 2000);
+        // });
       }
         
       }, 1000);
