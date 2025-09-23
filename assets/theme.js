@@ -9275,8 +9275,10 @@ function fixChatbotAccessibility() {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (chatBox) {
       const toggleBtn = chatBox.shadowRoot;
-      console.log(toggleBtn)
-
+      setTimeout(() => {
+        console.log(toggleBtn, toggleBtn.querySelector("div"))
+      }, 1000);
+      
       // if (toggleBtn) {
       //   setTimeout(() => {
       //     toggleBtn.removeAttribute("aria-expanded");
