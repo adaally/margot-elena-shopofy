@@ -9315,8 +9315,8 @@ function fixChatbotAccessibility() {
               newTitle2.style.fontWeight = '600';
               newTitle2.style.margin = '8px auto 16px';
               newTitle2.style.textAlign = 'center';
-              newTitle.classList.add('instant-answers');
-              newTitle.classList.add('changed');
+              newTitle2.classList.add('instant-answers');
+              newTitle2.classList.add('changed');
               newTitle2.replaceWith(newTitle2);
             } else {
               disableFocusTrap();
