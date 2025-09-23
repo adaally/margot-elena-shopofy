@@ -9273,9 +9273,9 @@ function addAlertToErrors() {
     const observer = new MutationObserver(() => {
       const chatBox = document.querySelector("inbox-online-store-chat");
       if(!chatBox) return;
-      console.log(chatBox, 'chatbox')
       
       const chatToggle = chatBox.shadowRoot.querySelector(".chat-toggle");
+      console.log(chatToggle, 'chatToggle')
       
       if(chatToggle) {
         chatToggle.removeAttribute("aria-expanded");
