@@ -9331,6 +9331,7 @@ function enableFocusTrap(container, toggleBtn) {
   const focusable = container.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
+  console.log(focusable)
   const first = focusable[0];
   const last = focusable[focusable.length - 1];
 
