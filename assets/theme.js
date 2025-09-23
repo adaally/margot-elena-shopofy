@@ -9319,7 +9319,7 @@ function fixChatbotAccessibility() {
               disableFocusTrap();
             }
           }
-          }, 100);
+          }, 500);
         }
       }
     });
