@@ -9290,7 +9290,8 @@ function fixChatbotAccessibility() {
       for (const mutation of mutations) {
         if (mutation.type === "attributes" && mutation.attributeName === "class") {
 
-          const toggleBtn = container.querySelector(":scope > button");
+          setTimeout(() => {
+            const toggleBtn = container.querySelector(":scope > button");
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             if(toggleBtn.classList.contains("chat-app--close-button")) {
@@ -9318,6 +9319,7 @@ function fixChatbotAccessibility() {
               disableFocusTrap();
             }
           }
+          }, 100);
         }
       }
     });
