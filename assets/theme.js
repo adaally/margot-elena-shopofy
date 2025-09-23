@@ -9272,7 +9272,7 @@ function addAlertToErrors() {
 function fixChatbotAccessibility() {
   // Watch for the custom element
   const observer = new MutationObserver(() => {
-    const chatBox = document.querySelector("inbox-online-store-chat");
+    const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (!chatBox) return;
     setTimeout(() => {
       console.log(chatBox.shadowRoot, "chat")
