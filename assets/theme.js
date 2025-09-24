@@ -9386,7 +9386,7 @@ function fixChatList(container) {
         const newItem = document.createElement("div");
         newItem.setAttribute('role', 'listitem')
         const youText = document.createElement("span");
-        youText.classList.add('visually-hidden');
+        makeVisuallyHidden(youText);
         youText.innerText = 'You:';
         copyAttributes(element, newItem);
         newItem.innerHTML = element.innerHTML;
@@ -9415,6 +9415,18 @@ function fixChatList(container) {
     for (let attr of source.attributes) {
       target.setAttribute(attr.name, attr.value);
     }
+  }
+
+  function makeVisuallyHidden(el) {
+    if (!el) return;
+    el.style.clip = "rect(0 0 0 0)";
+    el.style.border = "0";
+    el.style.height = "1px";
+    el.style.margin = "-1px";
+    el.style.overflow = "hidden";
+    el.style.padding = "0";
+    el.style.position = "absolute";
+    el.style.width = "1px";
   }
 
   shadowObserver.observe(container, { childList: true, subtree: true });
