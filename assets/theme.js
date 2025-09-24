@@ -9285,6 +9285,28 @@ function fixChatbotAccessibility() {
       }    
     }
 
+        setTimeout(() => {
+        // Step 2: Watch inside the shadow root
+      const shadowObserver = new MutationObserver(() => {
+        const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
+        console.log("prueba", chatBox.shadowRoot)
+        if (messagesList) {
+          console.log("Found chat-messages__list:", messagesList);
+
+          // 👉 run your code here
+          // e.g. messagesList.setAttribute("role", "log");
+
+          // stop observing once found
+          shadowObserver.disconnect();
+        }
+      }, 1000);
+
+      shadowObserver.observe(chatBox.shadowRoot, {
+        childList: true,
+        subtree: true,
+      });
+    });
+
     // Watch for class changes on the chat-app container
     const containerObserver = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
