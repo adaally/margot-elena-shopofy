@@ -9341,30 +9341,13 @@ function fixChatbotAccessibility() {
               }
 
 
-              const shadowObserver = new MutationObserver(() => {
-              const messagesList = container.querySelector(".chat-ui.chat-view");
-              console.log("prueba chatlist", messagesList)
-              if (messagesList) {
-                console.log("Found chat-messages__list:", messagesList);
-
-                // 👉 run your code here
-                // e.g. messagesList.setAttribute("role", "log");
-
-                // stop observing once found
-                shadowObserver.disconnect();
-              }
-            })
-
-            shadowObserver.observe(chatBox.shadowRoot, {
-              childList: true,
-              subtree: true,
-            });
+              fixChatList(container)
 
             } else {
               disableFocusTrap();
             }
           }
-          }, 1000);
+          }, 500);
         }
       }
     });
@@ -9387,6 +9370,27 @@ function fixChatbotAccessibility() {
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
+
+  function fixChatList(container) {
+    const shadowObserver = new MutationObserver(() => {
+              const messagesList = container.querySelector(".chat-ui.chat-view");
+              console.log("prueba chatlist", messagesList)
+              if (messagesList) {
+                console.log("Found chat-messages__list:", messagesList);
+
+                // 👉 run your code here
+                // e.g. messagesList.setAttribute("role", "log");
+
+                // stop observing once found
+                shadowObserver.disconnect();
+              }
+            })
+
+            shadowObserver.observe(chatBox.shadowRoot, {
+              childList: true,
+              subtree: true,
+            });
+  }
 
   // --- Focus trap helpers ---
 let trapHandler = null;
