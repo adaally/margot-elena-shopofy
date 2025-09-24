@@ -9374,7 +9374,7 @@ function fixChatbotAccessibility() {
 function fixChatList(container) {
   let messagesList = container.querySelector(".chat-ui.chat-view");
 
-  const beforeStartModal = messagesList.querySelector(".info-modal");
+  const beforeStartModal = container.querySelector(".info-modal");
   if(beforeStartModal) {
     const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
     if(beforeWeGetStartedText) {
@@ -9387,7 +9387,6 @@ function fixChatList(container) {
   }
 
   if (messagesList) {
-      console.log("Found chat-messages__list immediately:", messagesList);
       const chat = messagesList.querySelector(".chat-messages__list");
 
       if(!chat) return;
