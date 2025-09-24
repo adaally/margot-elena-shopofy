@@ -521,6 +521,12 @@
             "title": ""
           }
         },
+        "heading_CybJ3X": {
+          "type": "heading",
+          "settings": {
+            "title": "placeholder"
+          }
+        },
         "template--15856104669339__81c07d74-f398-45f0-80fd-5673685783c1-1686070908502dfbeb-1": {
           "type": "text",
           "settings": {
@@ -531,6 +537,7 @@
       },
       "block_order": [
         "template--15856104669339__81c07d74-f398-45f0-80fd-5673685783c1-1686070908502dfbeb-0",
+        "heading_CybJ3X",
         "template--15856104669339__81c07d74-f398-45f0-80fd-5673685783c1-1686070908502dfbeb-1"
       ],
       "settings": {
