@@ -7,6 +7,7 @@
 
 {%- if section.settings.image_hero and article.image -%}
   <div class="collection-hero">
+    <div class="overlay"></div>
     {% comment %} Full width image so don't need to adjust sizes attribute, fallback is 100vw {% endcomment %}
     {%- render 'image-element',
       img: article.image,
@@ -193,6 +194,23 @@
   </div>
 </div>
 
+<style>
+  .collection-hero {
+    position: relative;
+  }
+  .collection-hero .overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: {{ section.settings.overlay_color }};
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    pointer-events: none; /* so overlay doesn’t block clicks */
+  }
+  .collection-hero .content {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -245,6 +263,16 @@
       "label": "t:sections.article-template.settings.image_hero.label",
       "info": "t:sections.article-template.settings.image_hero.info",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 50
     },
     {
       "type": "checkbox",
