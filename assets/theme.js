@@ -9380,6 +9380,7 @@ function fixChatList(container) {
     if(beforeWeGetStartedText) {
       const newText = document.createElement("h2");
       newText.style.marginTop = '0';
+      newText.className = beforeWeGetStartedText.className;
       newText.innerText = beforeWeGetStartedText.innerText;
       beforeWeGetStartedText.replaceWith(newText)
     }
