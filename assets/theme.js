@@ -9395,11 +9395,14 @@ function fixChatList(container) {
             newItem.classList.add('changed');
             const bubble = element.querySelector(".message-bubble");
             bubble.prepend(youText)
+            newChatListContainer.appendChild(newItem)
           }
+        } else {
+          newChatListContainer.appendChild(element)
         }
 
 
-        newChatListContainer.appendChild(newItem)
+        
       });
 
 
