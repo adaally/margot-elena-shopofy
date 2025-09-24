@@ -9302,8 +9302,7 @@ function fixChatbotAccessibility() {
               if(title) {
                 const newTitle = document.createElement("h1");
                 newTitle.innerText = title.innerText;
-                copyAttributes(title, newTitle)
-                newTitle.setAttribute("dir", "auto");
+                copyAttributes(title, newTitle);
                 newTitle.style.fontSize = '16px';
                 newTitle.style.color = '#fff';
                 newTitle.classList.add('changed');
@@ -9314,7 +9313,7 @@ function fixChatbotAccessibility() {
               if(title2) {
                 const newTitle2 = document.createElement("h2");
                 newTitle2.innerText = title2.innerText;
-                newTitle2.setAttribute("dir", "auto");
+                copyAttributes(newTittitle2le2, newTitle2);
                 newTitle2.style.fontSize = '1em';
                 newTitle2.style.fontWeight = '600';
                 newTitle2.style.margin = '8px auto 16px';
