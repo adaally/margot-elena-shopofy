@@ -9450,42 +9450,6 @@ function addFocusIndicator(el) {
 
   fixChatbotAccessibility();
 
-function watchChatMessagesList() {
-  // Step 1: Wait until the custom chat element exists
-  const outerObserver = new MutationObserver(() => {
-    const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (!chatBox) return;
-
-    setTimeout(() => {
-        // Step 2: Watch inside the shadow root
-      const shadowObserver = new MutationObserver(() => {
-        const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
-        console.log("prueba", chatBox.shadowRoot)
-        if (messagesList) {
-          console.log("Found chat-messages__list:", messagesList);
-
-          // 👉 run your code here
-          // e.g. messagesList.setAttribute("role", "log");
-
-          // stop observing once found
-          shadowObserver.disconnect();
-        }
-      }, 1000);
-
-      shadowObserver.observe(chatBox.shadowRoot, {
-        childList: true,
-        subtree: true,
-      });
-    });
-
-    outerObserver.disconnect(); // stop watching <body> once chat widget is found
-  });
-
-  outerObserver.observe(document.body, { childList: true, subtree: true });
-}
-
-watchChatMessagesList()
-
 
 
 
