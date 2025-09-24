@@ -9299,7 +9299,7 @@ function fixChatbotAccessibility() {
               enableFocusTrap(container, toggleBtn);
 
               const interstitialView = container.querySelector('.chat-ui.interstitial-view')
-
+              console.log(container, interstitialView)
               const title = interstitialView.querySelector("h2:not(.changed)");
               if(title) {
                 const newTitle = document.createElement("h1");
