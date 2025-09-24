@@ -9376,17 +9376,21 @@ function fixChatList(container) {
   if (messagesList) {
       console.log("Found chat-messages__list immediately:", messagesList);
       const chat = messagesList.querySelector(".chat-messages__list");
-      chat.setAttribute('role', 'region');
-      chat.setAttribute('aria-label', 'Conversation');
       const newChatListContainer = document.createElement("div");
       newChatListContainer.setAttribute("role", "list");
+      copyAttributes(chat, newChatListContainer);
+      newChatListContainer.setAttribute('role', 'region');
+      newChatListContainer.setAttribute('aria-label', 'Conversation');
 
       messagesList.querySelectorAll(".chat-messages__list .message-container").forEach(element => {
         const newItem = document.createElement("div");
         newItem.setAttribute('role', 'listitem')
-        copyAttributesAndContent(element, newItem);
+        copyAttributes(element, newItem);
+
+        newItem.innerHTML = element.innerHTML;
         newChatListContainer.appendChild(newItem)
       });
+
 
       chat.replaceWith(newChatListContainer);
     return;
@@ -9396,31 +9400,18 @@ function fixChatList(container) {
   const shadowObserver = new MutationObserver(() => {
     messagesList = container.querySelector(".chat-ui.chat-view");
     if (messagesList) {
-      console.log("Found chat-messages__list via observer:", messagesList);
-      const chat = messagesList.querySelector(".chat-messages__list");
-      const newChatListContainer = document.createElement("div");
-      newChatListContainer.setAttribute("role", "list");
 
-      messagesList.querySelector(".chat-messages__list .message-container").forEach(element => {
-        const newItem = document.createElement("div");
-        copyAttributesAndContent(element, newItem);
-        newChatListContainer.appendChild(newItem)
-      });
-      // chat.parentNode.insertBefore(newChatListContainer, chat);
-      chat.replaceWith(newChatListContainer);
       
       shadowObserver.disconnect();
     }
   });
 
-  function copyAttributesAndContent(source, target) {
+  function copyAttributes(source, target) {
     if (!source || !target) return;
 
     for (let attr of source.attributes) {
       target.setAttribute(attr.name, attr.value);
     }
-
-    target.innerHTML = source.innerHTML;
   }
 
   shadowObserver.observe(container, { childList: true, subtree: true });
