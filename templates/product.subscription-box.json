@@ -191,6 +191,26 @@
         "product_video_style": "muted"
       }
     },
+    "rich_text_JeN496": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KMtafQ": {
+          "type": "heading",
+          "settings": {
+            "title": "Placerholder"
+          }
+        }
+      },
+      "block_order": [
+        "heading_KMtafQ"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "ss_pricing_table_3_kgWX7P": {
       "type": "ss-pricing-table-3",
       "blocks": {
@@ -853,6 +873,7 @@
   },
   "order": [
     "main",
+    "rich_text_JeN496",
     "ss_pricing_table_3_kgWX7P",
     "aef09e79-abea-48ba-a7d2-ebe488c880b6",
     "text-and-image",
