@@ -9185,7 +9185,7 @@ function fixAriaLabelThumbnails() {
           element.setAttribute("aria-label", `Page ${element.innerText}`);
         });
 
-        const navPagination = yoptoContainer.querySelector(".yotpo-reviews-pagination-container nav");
+        const navPagination = yoptoContainer.querySelector(".yotpo-reviews-pagination-container");
         if(navPagination) {
           unavPaginationl.removeAttribute("role");
           navPagination.setAttribute("aria-label", "Customer reviews pagination");
