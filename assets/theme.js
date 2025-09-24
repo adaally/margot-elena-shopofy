@@ -9376,7 +9376,7 @@ function fixChatList(container) {
   let messagesList = container.querySelector(".chat-ui.chat-view");
 
   const beforeStartModal = container.querySelector(".info-modal");
-  if(beforeStartModal) {
+  if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
     const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
     if(beforeWeGetStartedText) {
       const newText = document.createElement("h2");
@@ -9420,6 +9420,7 @@ function fixChatList(container) {
 
       observer.observe(btnSubmit, { attributes: true });
     }
+    beforeStartModal.classList.add('changed');
   }
 
   if (messagesList) {
