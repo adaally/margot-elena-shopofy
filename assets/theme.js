@@ -9385,6 +9385,12 @@ function fixChatList(container) {
       newText.innerText = beforeWeGetStartedText.innerText;
       beforeWeGetStartedText.replaceWith(newText)
     }
+    const autocompleteInputs = ['given-name', 'family-name', 'email'];
+    beforeStartModal.querySelectorAll("input").forEach((element, index) => {
+      if(autocompleteInputs[index]) {
+        element.setAttribute('autocomplete', autocompleteInputs[index]);
+      }
+    });;
   }
 
   if (messagesList) {
