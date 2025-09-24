@@ -9342,7 +9342,7 @@ function fixChatbotAccessibility() {
 
 
               const shadowObserver = new MutationObserver(() => {
-              const messagesList = container.querySelector(".chat-messages__list");
+              const messagesList = container.querySelector(".chat-ui.chat-view");
               console.log("prueba chatlist", container)
               if (messagesList) {
                 console.log("Found chat-messages__list:", messagesList);
