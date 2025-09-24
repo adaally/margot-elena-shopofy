@@ -9385,10 +9385,21 @@ function fixChatList(container) {
       newText.innerText = beforeWeGetStartedText.innerText;
       beforeWeGetStartedText.replaceWith(newText)
     }
+
+    //Current autocomplete input order
     const autocompleteInputs = ['given-name', 'family-name', 'email'];
+    const INPUT_EMAIL_INDEX = 2;
     beforeStartModal.querySelectorAll("input").forEach((element, index) => {
       if(autocompleteInputs[index]) {
         element.setAttribute('autocomplete', autocompleteInputs[index]);
+
+        if(index === INPUT_EMAIL_INDEX) {
+          const placeholder = element.getAttribute('placeholder');
+          element.setAttribute('placeholder', placeholder + '(example@example.com)');
+        }
+
+        const placeholder = element.getAttribute('placeholder');
+        element.setAttribute('placeholder', placeholder + ' *');
       }
     });;
   }
