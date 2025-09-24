@@ -9413,7 +9413,7 @@ function fixChatList(container) {
             if (!btn.disabled) {
               // button just became enabled
               const background = btn.querySelector('.background');
-              background?.style.background = '#000';
+              background.style.background = '#000';
             }
           }
         }
