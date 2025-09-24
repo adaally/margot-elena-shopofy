@@ -9302,6 +9302,7 @@ function fixChatbotAccessibility() {
               if(title) {
                 const newTitle = document.createElement("h1");
                 newTitle.innerText = title.innerText;
+                copyAttributes(title, newTitle)
                 newTitle.setAttribute("dir", "auto");
                 newTitle.style.fontSize = '16px';
                 newTitle.style.color = '#fff';
