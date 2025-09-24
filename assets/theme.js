@@ -9405,7 +9405,7 @@ function fixChatList(container) {
       }
     });
 
-    const btnSubmit = beforeStartModal.querySelector(".background");
+    const btnSubmit = beforeStartModal.querySelector("form button");
     console.log(btnSubmit, beforeStartModal)
     if (btnSubmit) {
       btnSubmit.style.background = '#000';
