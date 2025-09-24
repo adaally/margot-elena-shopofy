@@ -9364,7 +9364,7 @@ function fixChatbotAccessibility() {
               disableFocusTrap();
             }
           }
-          }, 500);
+          }, 1000);
         }
       }
     });
