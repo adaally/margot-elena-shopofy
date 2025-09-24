@@ -9295,7 +9295,6 @@ function fixChatbotAccessibility() {
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             if(toggleBtn.classList.contains("chat-app--close-button")) {
-              console.log("loaded")
               toggleBtn.setAttribute("aria-label", "Close chat window");
               enableFocusTrap(container, toggleBtn);
 
