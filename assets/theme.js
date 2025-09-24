@@ -9401,7 +9401,26 @@ function fixChatList(container) {
         const placeholder = element.getAttribute('placeholder');
         element.setAttribute('placeholder', placeholder + ' *');
       }
-    });;
+    });
+
+    const btnSubmit = beforeStartModal.querySelector(".hover-effect-button");
+
+    if (btnSubmit) {
+      const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
+            if (!btnSubmit.disabled) {
+              // button just became enabled
+              btnSubmit.style.backgroundColor = "#000";
+            } else {
+              btnSubmit.style.backgroundColor = "inherit";
+            }
+          }
+        }
+      });
+
+      observer.observe(btnSubmit, { attributes: true });
+    }
   }
 
   if (messagesList) {
