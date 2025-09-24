@@ -159,11 +159,16 @@
           "custom_css": ""
         }
       },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": false,
+        "settings": {}
+      },
       "11074193060611426105": {
-        "type": "shopify://apps/accounts-concierge/blocks/product_wishlist/3c495b68-652c-468d-a0ef-5bad6935d104",
+        "type": "shopify://apps/froonze-loyalty-wishlist/blocks/product_wishlist/3c495b68-652c-468d-a0ef-5bad6935d104",
         "disabled": false,
         "settings": {
-          "add_button_color": "#ffffff",
+          "add_button_color": "#000000",
           "add_button_text_color": "#000000",
           "remove_button_color": "#fcd3c8",
           "remove_button_text_color": "#000000",
@@ -186,11 +191,6 @@
           "navigation_link_css_selector": "",
           "custom_css": ""
         }
-      },
-      "17676059084223943535": {
-        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
