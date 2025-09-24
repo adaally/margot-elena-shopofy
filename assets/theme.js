@@ -9295,28 +9295,9 @@ function fixChatbotAccessibility() {
           if (toggleBtn) {
             toggleBtn.removeAttribute("aria-expanded");
             if(toggleBtn.classList.contains("chat-app--close-button")) {
+              console.log("loaded")
               toggleBtn.setAttribute("aria-label", "Close chat window");
               enableFocusTrap(container, toggleBtn);
-
-
-                    const shadowObserver = new MutationObserver(() => {
-        const messagesList = container.querySelector(".chat-messages__list");
-        console.log("prueba", container)
-        if (messagesList) {
-          console.log("Found chat-messages__list:", messagesList);
-
-          // 👉 run your code here
-          // e.g. messagesList.setAttribute("role", "log");
-
-          // stop observing once found
-          shadowObserver.disconnect();
-        }
-      })
-
-      shadowObserver.observe(chatBox.shadowRoot, {
-        childList: true,
-        subtree: true,
-      });
 
               const title = container.querySelector("h2:not(.changed)");
               if(title) {
