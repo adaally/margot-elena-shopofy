@@ -9372,7 +9372,8 @@ function fixChatbotAccessibility() {
   observer.observe(document.body, { childList: true, subtree: true });
 
   function fixChatList(container) {
-    const shadowObserver = new MutationObserver(() => {
+    setTimeout(() => {
+      const shadowObserver = new MutationObserver(() => {
               const messagesList = container.querySelector(".chat-ui.chat-view");
               console.log("prueba chatlist", messagesList)
               if (messagesList) {
@@ -9390,6 +9391,7 @@ function fixChatbotAccessibility() {
               childList: true,
               subtree: true,
             });
+    }, 500)
   }
 
   // --- Focus trap helpers ---
