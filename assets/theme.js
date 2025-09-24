@@ -9185,10 +9185,10 @@ function fixAriaLabelThumbnails() {
           element.setAttribute("aria-label", `Page ${element.innerText}`);
         });
 
-        const ul = yoptoContainer.querySelector(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination");
-        if(ul) {
-          ul.setAttribute("role", "navigation");
-          ul.setAttribute("aria-label", "Customer reviews pagination");
+        const navPagination = yoptoContainer.querySelector(".yotpo-reviews-pagination-container nav");
+        if(navPagination) {
+          unavPaginationl.removeAttribute("role");
+          navPagination.setAttribute("aria-label", "Customer reviews pagination");
 
           const observerUl = new MutationObserver((mutationsList) => {
             for (const mutation of mutationsList) {
@@ -9200,7 +9200,7 @@ function fixAriaLabelThumbnails() {
             }
           });
 
-          observerUl.observe(ul, {
+          observerUl.observe(navPagination, {
               attributes: true,
               subtree: true,
               attributeFilter: ['class']
