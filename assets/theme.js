@@ -9386,7 +9386,7 @@ function fixChatList(container) {
       const chat = messagesList.querySelector(".chat-messages__list");
       messagesList.querySelector(".chat-messages__list .message-container").forEach(element => {
         const newItem = document.createElement("div");
-        
+        copyAttributes(element, newItem);
       });;
       const newList = document.createElement("div");
       newList.setAttribute("role", "list");
@@ -9395,12 +9395,14 @@ function fixChatList(container) {
     }
   });
 
-  function copyAttributes(source, target) {
+  function copyAttributesAndContent(source, target) {
     if (!source || !target) return;
 
     for (let attr of source.attributes) {
       target.setAttribute(attr.name, attr.value);
     }
+
+    target.innerHTML = source.innerHTML;
   }
 
   shadowObserver.observe(container, { childList: true, subtree: true });
