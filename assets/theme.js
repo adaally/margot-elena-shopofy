@@ -9383,7 +9383,6 @@ function fixChatList(container) {
       newChatListContainer.setAttribute('aria-label', 'Conversation');
 
       messagesList.querySelectorAll(".chat-messages__list .message-container").forEach((element, index) => {
-        console.log(index, 'index')
         const newItem = document.createElement("div");
         newItem.setAttribute('role', 'listitem')
         const youText = document.createElement("span");
@@ -9391,7 +9390,11 @@ function fixChatList(container) {
         youText.innerText = 'You:';
         copyAttributes(element, newItem);
         newItem.innerHTML = element.innerHTML;
-        newItem.prepend(youText);
+        if(newItem.contains('changed')) {
+          newItem.classList.add('changed');
+          newItem.prepend(youText);
+        }
+        
         newChatListContainer.appendChild(newItem)
       });
 
