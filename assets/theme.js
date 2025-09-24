@@ -9383,7 +9383,7 @@ function fixChatList(container) {
       newChatListContainer.setAttribute('aria-label', 'Conversation');
 
       messagesList.querySelectorAll(".chat-messages__list > *").forEach((element, index) => {
-        if(element.classList.includes('.message-container')) {
+        if(element.classList.contains('message-container')) {
           const newItem = document.createElement("div");
           newItem.setAttribute('role', 'listitem')
           copyAttributes(element, newItem);
