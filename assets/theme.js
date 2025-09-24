@@ -9432,25 +9432,27 @@ function watchChatMessagesList() {
   // Step 1: Wait until the custom chat element exists
   const outerObserver = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-    if (!chatBox || !chatBox.shadowRoot) return;
+    if (!chatBox) return;
 
-    // Step 2: Watch inside the shadow root
-    const shadowObserver = new MutationObserver(() => {
-      const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
-      if (messagesList) {
-        console.log("Found chat-messages__list:", messagesList);
+    setTimeout(() => {
+        // Step 2: Watch inside the shadow root
+      const shadowObserver = new MutationObserver(() => {
+        const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
+        if (messagesList) {
+          console.log("Found chat-messages__list:", messagesList);
 
-        // 👉 run your code here
-        // e.g. messagesList.setAttribute("role", "log");
+          // 👉 run your code here
+          // e.g. messagesList.setAttribute("role", "log");
 
-        // stop observing once found
-        shadowObserver.disconnect();
-      }
-    });
+          // stop observing once found
+          shadowObserver.disconnect();
+        }
+      }, 1000);
 
-    shadowObserver.observe(chatBox.shadowRoot, {
-      childList: true,
-      subtree: true,
+      shadowObserver.observe(chatBox.shadowRoot, {
+        childList: true,
+        subtree: true,
+      });
     });
 
     outerObserver.disconnect(); // stop watching <body> once chat widget is found
