@@ -9305,6 +9305,7 @@ function fixChatbotAccessibility() {
                 copyAttributes(title, newTitle);
                 newTitle.style.fontSize = '18px';
                 newTitle.style.margin = '0';
+                newTitle.style.color = '#fff';
                 newTitle.classList.add('changed');
                 title.replaceWith(newTitle);
               }
