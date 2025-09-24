@@ -9298,7 +9298,9 @@ function fixChatbotAccessibility() {
               toggleBtn.setAttribute("aria-label", "Close chat window");
               enableFocusTrap(container, toggleBtn);
 
-              const title = container.querySelector("h2:not(.changed)");
+              const interstitialView = container.querySelector('.chat-ui.interstitial-view')
+
+              const title = interstitialView.querySelector("h2:not(.changed)");
               if(title) {
                 const newTitle = document.createElement("h1");
                 newTitle.innerText = title.innerText;
@@ -9310,7 +9312,7 @@ function fixChatbotAccessibility() {
                 title.replaceWith(newTitle);
               }
 
-              const title2 = container.querySelector("h3:not(.changed)");
+              const title2 = interstitialView.querySelector("h3:not(.changed)");
               if(title2) {
                 const newTitle2 = document.createElement("h2");
                 newTitle2.innerText = title2.innerText;
@@ -9328,7 +9330,7 @@ function fixChatbotAccessibility() {
               const newContainerList = document.createElement('div');
               newContainerList.setAttribute('role', 'list')
               newContainerList.style.width = '100%';
-              const buttons = container.querySelectorAll(".interstitial-view__instant-answers-list button");
+              const buttons = interstitialView.querySelectorAll(".interstitial-view__instant-answers-list button");
               if(buttons.length > 0){
                 buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
                 buttons.forEach(element => {
