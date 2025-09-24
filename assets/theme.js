@@ -9385,12 +9385,12 @@ function fixChatList(container) {
       messagesList.querySelectorAll(".chat-messages__list .message-container").forEach((element, index) => {
         const newItem = document.createElement("div");
         newItem.setAttribute('role', 'listitem')
-        const youText = document.createElement("span");
-        makeVisuallyHidden(youText);
-        youText.innerText = 'You:';
         copyAttributes(element, newItem);
         newItem.innerHTML = element.innerHTML;
-        if(newItem.contains('changed')) {
+        if(!newItem.contains('changed')) {
+          const youText = document.createElement("span");
+          makeVisuallyHidden(youText);
+          youText.innerText = 'You:';
           newItem.classList.add('changed');
           newItem.prepend(youText);
         }
