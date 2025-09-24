@@ -9285,9 +9285,21 @@ function fixChatbotAccessibility() {
       }    
     }
 
-        setTimeout(() => {
-        // Step 2: Watch inside the shadow root
-      const shadowObserver = new MutationObserver(() => {
+    // Watch for class changes on the chat-app container
+    const containerObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+
+          setTimeout(() => {
+            const toggleBtn = container.querySelector(":scope > button");
+          if (toggleBtn) {
+            toggleBtn.removeAttribute("aria-expanded");
+            if(toggleBtn.classList.contains("chat-app--close-button")) {
+              toggleBtn.setAttribute("aria-label", "Close chat window");
+              enableFocusTrap(container, toggleBtn);
+
+
+                    const shadowObserver = new MutationObserver(() => {
         const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
         console.log("prueba", chatBox.shadowRoot)
         if (messagesList) {
@@ -9305,20 +9317,6 @@ function fixChatbotAccessibility() {
         childList: true,
         subtree: true,
       });
-    });
-
-    // Watch for class changes on the chat-app container
-    const containerObserver = new MutationObserver((mutations) => {
-      for (const mutation of mutations) {
-        if (mutation.type === "attributes" && mutation.attributeName === "class") {
-
-          setTimeout(() => {
-            const toggleBtn = container.querySelector(":scope > button");
-          if (toggleBtn) {
-            toggleBtn.removeAttribute("aria-expanded");
-            if(toggleBtn.classList.contains("chat-app--close-button")) {
-              toggleBtn.setAttribute("aria-label", "Close chat window");
-              enableFocusTrap(container, toggleBtn);
 
               const title = container.querySelector("h2:not(.changed)");
               if(title) {
