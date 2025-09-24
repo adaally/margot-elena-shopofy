@@ -9409,20 +9409,20 @@ function fixChatList(container) {
     });
 
     const btnSubmit = beforeStartModal.querySelector("form button");
-    if (btn) {
+    if (btnSubmit) {
       const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-            if (!btn.disabled) {
+            if (!btnSubmit.disabled) {
               // button just became enabled
-              const background = btn.querySelector('.background');
+              const background = btnSubmit.querySelector('.background');
               background.style.background = '#000';
             }
           }
         }
       });
 
-      observer.observe(btn, { attributes: true });
+      observer.observe(btnSubmit, { attributes: true });
     }
     beforeStartModal.classList.add('changed');
   }
