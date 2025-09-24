@@ -9389,8 +9389,8 @@ function fixChatList(container) {
         youText.classList.add('visually-hidden');
         youText.innerText = 'You:';
         copyAttributes(element, newItem);
-        newItem.appendChild(youText);
         newItem.innerHTML = element.innerHTML;
+        newItem.prepend(youText);
         newChatListContainer.appendChild(newItem)
       });
 
