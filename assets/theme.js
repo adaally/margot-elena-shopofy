@@ -9303,8 +9303,7 @@ function fixChatbotAccessibility() {
                 const newTitle = document.createElement("h1");
                 newTitle.innerText = title.innerText;
                 copyAttributes(title, newTitle);
-                newTitle.style.fontSize = '16px';
-                newTitle.style.color = '#fff';
+                newTitle.style.fontSize = '18px';
                 newTitle.style.margin = '0';
                 newTitle.classList.add('changed');
                 title.replaceWith(newTitle);
