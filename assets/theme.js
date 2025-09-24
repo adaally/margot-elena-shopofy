@@ -9382,23 +9382,22 @@ function fixChatList(container) {
       newChatListContainer.setAttribute('role', 'region');
       newChatListContainer.setAttribute('aria-label', 'Conversation');
 
-      messagesList.querySelectorAll(".chat-messages__list .message-container").forEach((element, index) => {
-        const newItem = document.createElement("div");
-        newItem.setAttribute('role', 'listitem')
-        copyAttributes(element, newItem);
-        newItem.innerHTML = element.innerHTML;
-        if(!newItem.classList.contains('changed')) {
-
-          
-
-
-          const youText = document.createElement("span");
-          makeVisuallyHidden(youText);
-          youText.innerText = 'You:';
-          newItem.classList.add('changed');
-          const bubble = element.querySelector(".message-bubble");
-          bubble.prepend(youText)
+      messagesList.querySelectorAll(".chat-messages__list > *").forEach((element, index) => {
+        if(element.classList.includes('.message-container')) {
+          const newItem = document.createElement("div");
+          newItem.setAttribute('role', 'listitem')
+          copyAttributes(element, newItem);
+          newItem.innerHTML = element.innerHTML;
+          if(!newItem.classList.contains('changed')) {
+            const youText = document.createElement("span");
+            makeVisuallyHidden(youText);
+            youText.innerText = 'You:';
+            newItem.classList.add('changed');
+            const bubble = element.querySelector(".message-bubble");
+            bubble.prepend(youText)
+          }
         }
+
 
         newChatListContainer.appendChild(newItem)
       });
