@@ -9387,7 +9387,7 @@ function fixChatbotAccessibility() {
               }
             })
 
-            shadowObserver.observe(chatBox.shadowRoot, {
+            shadowObserver.observe(container, {
               childList: true,
               subtree: true,
             });
