@@ -168,7 +168,7 @@
         "type": "shopify://apps/froonze-loyalty-wishlist/blocks/product_wishlist/3c495b68-652c-468d-a0ef-5bad6935d104",
         "disabled": false,
         "settings": {
-          "add_button_color": "#000000",
+          "add_button_color": "#ffffff",
           "add_button_text_color": "#000000",
           "remove_button_color": "#fcd3c8",
           "remove_button_text_color": "#000000",
