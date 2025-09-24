@@ -9410,7 +9410,6 @@ function fixChatList(container) {
         for (const mutation of mutations) {
           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
             if (!btnSubmit.disabled) {
-              // button just became enabled
               btnSubmit.style.backgroundColor = "#000";
             } else {
               btnSubmit.style.backgroundColor = "inherit";
