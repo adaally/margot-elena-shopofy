@@ -9300,47 +9300,50 @@ function fixChatbotAccessibility() {
 
               const interstitialView = container.querySelector('.chat-ui.interstitial-view')
               console.log(container, interstitialView)
-              const title = interstitialView.querySelector("h2:not(.changed)");
-              if(title) {
-                const newTitle = document.createElement("h1");
-                newTitle.innerText = title.innerText;
-                copyAttributes(title, newTitle);
-                newTitle.style.fontSize = '18px';
-                newTitle.style.margin = '0';
-                newTitle.style.color = '#fff';
-                newTitle.classList.add('changed');
-                title.replaceWith(newTitle);
+              if(interstitialView) {
+                const title = interstitialView.querySelector("h2:not(.changed)");
+                if(title) {
+                  const newTitle = document.createElement("h1");
+                  newTitle.innerText = title.innerText;
+                  copyAttributes(title, newTitle);
+                  newTitle.style.fontSize = '18px';
+                  newTitle.style.margin = '0';
+                  newTitle.style.color = '#fff';
+                  newTitle.classList.add('changed');
+                  title.replaceWith(newTitle);
+                }
+
+                const title2 = interstitialView.querySelector("h3:not(.changed)");
+                if(title2) {
+                  const newTitle2 = document.createElement("h2");
+                  newTitle2.innerText = title2.innerText;
+                  copyAttributes(title2, newTitle2);
+                  newTitle2.style.fontSize = '1em';
+                  newTitle2.style.fontWeight = '600';
+                  newTitle2.style.margin = '8px auto 16px';
+                  newTitle2.style.textAlign = 'center';
+                  newTitle2.classList.add('instant-answers');
+                  newTitle2.classList.add('changed');
+                  title2.replaceWith(newTitle2);
+                }
+
+                // Adding list semantics to buttons
+                const newContainerList = document.createElement('div');
+                newContainerList.setAttribute('role', 'list')
+                newContainerList.style.width = '100%';
+                const buttons = interstitialView.querySelectorAll(".interstitial-view__instant-answers-list button");
+                if(buttons.length > 0){
+                  buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
+                  buttons.forEach(element => {
+                    element.setAttribute('role', 'listitem');
+                    const listitem = document.createElement('div');
+                    listitem.setAttribute('role', 'listitem');
+                    listitem.appendChild(element);
+                    newContainerList.appendChild(listitem);
+                  });
+                }
               }
 
-              const title2 = interstitialView.querySelector("h3:not(.changed)");
-              if(title2) {
-                const newTitle2 = document.createElement("h2");
-                newTitle2.innerText = title2.innerText;
-                copyAttributes(title2, newTitle2);
-                newTitle2.style.fontSize = '1em';
-                newTitle2.style.fontWeight = '600';
-                newTitle2.style.margin = '8px auto 16px';
-                newTitle2.style.textAlign = 'center';
-                newTitle2.classList.add('instant-answers');
-                newTitle2.classList.add('changed');
-                title2.replaceWith(newTitle2);
-              }
-
-              // Adding list semantics to buttons
-              const newContainerList = document.createElement('div');
-              newContainerList.setAttribute('role', 'list')
-              newContainerList.style.width = '100%';
-              const buttons = interstitialView.querySelectorAll(".interstitial-view__instant-answers-list button");
-              if(buttons.length > 0){
-                buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
-                buttons.forEach(element => {
-                  element.setAttribute('role', 'listitem');
-                  const listitem = document.createElement('div');
-                  listitem.setAttribute('role', 'listitem');
-                  listitem.appendChild(element);
-                  newContainerList.appendChild(listitem);
-                });
-              }
 
 
               fixChatList(container)
