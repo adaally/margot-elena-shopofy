@@ -9372,26 +9372,27 @@ function fixChatbotAccessibility() {
   observer.observe(document.body, { childList: true, subtree: true });
 
   function fixChatList(container) {
-    setTimeout(() => {
-      const shadowObserver = new MutationObserver(() => {
-              const messagesList = container.querySelector(".chat-ui.chat-view");
-              console.log("prueba chatlist", messagesList)
-              if (messagesList) {
-                console.log("Found chat-messages__list:", messagesList);
+function fixChatList(container) {
+  // Check right away
+  let messagesList = container.querySelector(".chat-ui.chat-view");
+  if (messagesList) {
+    console.log("Found chat-messages__list immediately:", messagesList);
+    // run your code here
+    return;
+  }
 
-                // 👉 run your code here
-                // e.g. messagesList.setAttribute("role", "log");
+  // Otherwise, watch for it
+  const shadowObserver = new MutationObserver(() => {
+    messagesList = container.querySelector(".chat-ui.chat-view");
+    if (messagesList) {
+      console.log("Found chat-messages__list via observer:", messagesList);
+      // run your code here
+      shadowObserver.disconnect();
+    }
+  });
 
-                // stop observing once found
-                shadowObserver.disconnect();
-              }
-            })
-
-            shadowObserver.observe(container, {
-              childList: true,
-              subtree: true,
-            });
-    }, 1500)
+  shadowObserver.observe(container, { childList: true, subtree: true });
+}
   }
 
   // --- Focus trap helpers ---
