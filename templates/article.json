@@ -13,6 +13,7 @@
       "type": "article-template",
       "settings": {
         "image_hero": true,
+        "overlay_opacity": 30,
         "blog_show_tags": false,
         "blog_show_date": false,
         "blog_show_comments": false,
