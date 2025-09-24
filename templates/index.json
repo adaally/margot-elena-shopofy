@@ -734,6 +734,26 @@
         "divider": false
       }
     },
+    "rich_text_49qW6E": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_g6Vwe6": {
+          "type": "heading",
+          "settings": {
+            "title": "Placeholder"
+          }
+        }
+      },
+      "block_order": [
+        "heading_g6Vwe6"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "2d0e7db1-9082-449e-9800-b82cf35bd4e6": {
       "type": "advanced-content",
       "blocks": {
@@ -791,6 +811,7 @@
     "c2ad6e45-db2b-48ff-9fcc-5633edb6c0ad",
     "624d3b5f-8449-400f-b8e6-c60b318f4e5f",
     "99816b04-76c2-4786-ae3a-b6b518e357d6",
+    "rich_text_49qW6E",
     "2d0e7db1-9082-449e-9800-b82cf35bd4e6",
     "rich_text_f9bipi"
   ]
