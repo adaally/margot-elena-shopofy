@@ -9450,6 +9450,11 @@ function fixChatList(container) {
     }
   });
 
+  shadowObserver.observe(container, { childList: true, subtree: true });
+}
+
+
+
   function copyAttributes(source, target) {
     if (!source || !target) return;
 
@@ -9469,9 +9474,6 @@ function fixChatList(container) {
     el.style.position = "absolute";
     el.style.width = "1px";
   }
-
-  shadowObserver.observe(container, { childList: true, subtree: true });
-}
   
 
   // --- Focus trap helpers ---
