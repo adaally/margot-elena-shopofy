@@ -9372,11 +9372,9 @@ function fixChatbotAccessibility() {
 
 
 function fixChatList(container) {
-  // Check right away
   let messagesList = container.querySelector(".chat-ui.chat-view");
   if (messagesList) {
     console.log("Found chat-messages__list immediately:", messagesList);
-    // run your code here
     return;
   }
 
@@ -9385,10 +9383,25 @@ function fixChatList(container) {
     messagesList = container.querySelector(".chat-ui.chat-view");
     if (messagesList) {
       console.log("Found chat-messages__list via observer:", messagesList);
-      // run your code here
+      const chat = messagesList.querySelector(".chat-messages__list");
+      messagesList.querySelector(".chat-messages__list .message-container").forEach(element => {
+        const newItem = document.createElement("div");
+        
+      });;
+      const newList = document.createElement("div");
+      newList.setAttribute("role", "list");
+
       shadowObserver.disconnect();
     }
   });
+
+  function copyAttributes(source, target) {
+    if (!source || !target) return;
+
+    for (let attr of source.attributes) {
+      target.setAttribute(attr.name, attr.value);
+    }
+  }
 
   shadowObserver.observe(container, { childList: true, subtree: true });
 }
