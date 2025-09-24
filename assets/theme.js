@@ -9374,7 +9374,18 @@ function fixChatbotAccessibility() {
 function fixChatList(container) {
   let messagesList = container.querySelector(".chat-ui.chat-view");
   if (messagesList) {
-    console.log("Found chat-messages__list immediately:", messagesList);
+      console.log("Found chat-messages__list immediately:", messagesList);
+      const chat = messagesList.querySelector(".chat-messages__list");
+      const newChatListContainer = document.createElement("div");
+      newChatListContainer.setAttribute("role", "list");
+
+      messagesList.querySelector(".chat-messages__list .message-container").forEach(element => {
+        const newItem = document.createElement("div");
+        copyAttributesAndContent(element, newItem);
+        newChatListContainer.appendChild(newItem)
+      });
+      // chat.parentNode.insertBefore(newChatListContainer, chat);
+      chat.replaceWith(newChatListContainer);
     return;
   }
 
