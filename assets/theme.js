@@ -9408,7 +9408,12 @@ function fixChatList(container) {
           }
 
         } else {
-          newChatListContainer.appendChild(element)
+          const newElement = document.createElement('h2');
+          copyAttributes(element, newElement);
+          newElement.innerText = element.innerText;
+          newElement.style.fontWeight = '400';
+          element.replaceWith(newElement);
+          newChatListContainer.appendChild(newElement)
         }
 
 
