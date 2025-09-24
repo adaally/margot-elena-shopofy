@@ -9462,7 +9462,7 @@ function watchChatMessagesList() {
   outerObserver.observe(document.body, { childList: true, subtree: true });
 }
 
-document.addEventListener("DOMContentLoaded", watchChatMessagesList);
+watchChatMessagesList()
 
 
 
