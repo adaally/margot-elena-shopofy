@@ -11,8 +11,9 @@
   <div class="announcement-bar">
     <div class="page-width">
       <div class="slideshow-wrapper" style="display: flex;">
-        <span class="arrow" id="toggleCollapseBtn" role="button" tabindex="0" aria-label="Hide announcement slider"></span>
-
+        {%- if announcement_block_count > 1 -%}
+          <span class="arrow" id="toggleCollapseBtn" role="button" tabindex="0" aria-label="Hide announcement slider"></span>
+        {%- endif  -%}
         <div
           id="AnnouncementSlider"
           class="announcement-slider show" style="width: 100%;"
