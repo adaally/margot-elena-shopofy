@@ -9300,8 +9300,8 @@ function fixChatbotAccessibility() {
 
 
                     const shadowObserver = new MutationObserver(() => {
-        const messagesList = chatBox.shadowRoot.querySelector(".chat-messages__list");
-        console.log("prueba", chatBox.shadowRoot)
+        const messagesList = container.querySelector(".chat-messages__list");
+        console.log("prueba", container)
         if (messagesList) {
           console.log("Found chat-messages__list:", messagesList);
 
@@ -9311,7 +9311,7 @@ function fixChatbotAccessibility() {
           // stop observing once found
           shadowObserver.disconnect();
         }
-      }, 1000);
+      })
 
       shadowObserver.observe(chatBox.shadowRoot, {
         childList: true,
