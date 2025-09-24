@@ -9338,6 +9338,25 @@ function fixChatbotAccessibility() {
                 newContainerList.appendChild(listitem);
               });
 
+              const shadowObserver = new MutationObserver(() => {
+              const messagesList = container.querySelector(".chat-messages__list");
+              console.log("prueba chatlist", container)
+              if (messagesList) {
+                console.log("Found chat-messages__list:", messagesList);
+
+                // 👉 run your code here
+                // e.g. messagesList.setAttribute("role", "log");
+
+                // stop observing once found
+                shadowObserver.disconnect();
+              }
+            })
+
+            shadowObserver.observe(chatBox.shadowRoot, {
+              childList: true,
+              subtree: true,
+            });
+
             } else {
               disableFocusTrap();
             }
