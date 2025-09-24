@@ -9391,7 +9391,7 @@ function fixChatbotAccessibility() {
               childList: true,
               subtree: true,
             });
-    }, 500)
+    }, 1500)
   }
 
   // --- Focus trap helpers ---
