@@ -9381,6 +9381,7 @@ function fixChatList(container) {
       copyAttributes(chat, newChatListContainer);
       newChatListContainer.setAttribute('role', 'region');
       newChatListContainer.setAttribute('aria-label', 'Conversation');
+      const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
 
       messagesList.querySelectorAll(".chat-messages__list > *").forEach((element, index) => {
         if(element.classList.contains('message-container')) {
@@ -9388,15 +9389,24 @@ function fixChatList(container) {
           newItem.setAttribute('role', 'listitem')
           copyAttributes(element, newItem);
           newItem.innerHTML = element.innerHTML;
+
           if(!newItem.classList.contains('changed')) {
+            const titleText = document.createElement("span");
+            makeVisuallyHidden(titleText);
+            titleText.innerText = h1Text;
+            newItem.prepend(titleText);
+
             const youText = document.createElement("span");
             makeVisuallyHidden(youText);
             youText.innerText = 'You:';
             newItem.classList.add('changed');
+
             const bubble = newItem.querySelector(".message-bubble");
             bubble.prepend(youText)
+
             newChatListContainer.appendChild(newItem)
           }
+
         } else {
           newChatListContainer.appendChild(element)
         }
