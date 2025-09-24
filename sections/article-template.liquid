@@ -7,7 +7,9 @@
 
 {%- if section.settings.image_hero and article.image -%}
   <div class="collection-hero">
-    <div class="overlay"></div>
+    {% if section.settings.image_hero %}
+      <div class="overlay"></div>
+    {% endif %}
     {% comment %} Full width image so don't need to adjust sizes attribute, fallback is 100vw {% endcomment %}
     {%- render 'image-element',
       img: article.image,
@@ -193,7 +195,7 @@
     <a href="{{ blog.url }}" class="btn return-link"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><title>icon-left-arrow</title><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38Z"/></svg> {{ 'blogs.article.back_to_blog' | t: title: blog.title }}</a>
   </div>
 </div>
-
+{% if section.settings.image_hero %}
 <style>
   .collection-hero {
     position: relative;
@@ -210,6 +212,7 @@
     z-index: 3;
   }
 </style>
+{% endif %}
 
 <script type="application/ld+json">
 {
