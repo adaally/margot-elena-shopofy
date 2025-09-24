@@ -9388,13 +9388,18 @@ function fixChatList(container) {
         copyAttributes(element, newItem);
         newItem.innerHTML = element.innerHTML;
         if(!newItem.classList.contains('changed')) {
+
+          
+
+
           const youText = document.createElement("span");
           makeVisuallyHidden(youText);
           youText.innerText = 'You:';
           newItem.classList.add('changed');
-          newItem.prepend(youText);
+          const bubble = element.querySelector(".message-bubble");
+          bubble.prepend(youText)
         }
-        
+
         newChatListContainer.appendChild(newItem)
       });
 
