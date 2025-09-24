@@ -9373,6 +9373,18 @@ function fixChatbotAccessibility() {
 
 function fixChatList(container) {
   let messagesList = container.querySelector(".chat-ui.chat-view");
+
+  const beforeStartModal = messagesList.querySelector(".info-modal");
+  if(beforeStartModal) {
+    const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
+    if(beforeWeGetStartedText) {
+      const newText = document.createElement("h2");
+      newText.style.marginTop = '0';
+      newText.innerText = beforeWeGetStartedText.innerText;
+      beforeWeGetStartedText.replaceWith(newText)
+    }
+  }
+
   if (messagesList) {
       console.log("Found chat-messages__list immediately:", messagesList);
       const chat = messagesList.querySelector(".chat-messages__list");
@@ -9382,13 +9394,6 @@ function fixChatList(container) {
       copyAttributes(chat, newChatListContainer);
       newChatListContainer.setAttribute('role', 'region');
       newChatListContainer.setAttribute('aria-label', 'Conversation');
-
-      const beforeWeGetStartedText = chat.querySelector(".info-modal__header-text");
-      if(beforeWeGetStartedText) {
-        const newText = document.createElement("h2");
-        newText.style.marginTop = '0';
-        beforeWeGetStartedText.replaceWith(newText)
-      }
 
       const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
 
