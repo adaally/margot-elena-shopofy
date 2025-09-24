@@ -9379,7 +9379,7 @@ function fixChatList(container) {
       const newChatListContainer = document.createElement("div");
       newChatListContainer.setAttribute("role", "list");
 
-      messagesList.querySelector(".chat-messages__list .message-container").forEach(element => {
+      messagesList.querySelectorAll(".chat-messages__list .message-container").forEach(element => {
         const newItem = document.createElement("div");
         copyAttributesAndContent(element, newItem);
         newChatListContainer.appendChild(newItem)
