@@ -9387,7 +9387,7 @@ function fixChatList(container) {
         newItem.setAttribute('role', 'listitem')
         copyAttributes(element, newItem);
         newItem.innerHTML = element.innerHTML;
-        if(!newItem.contains('changed')) {
+        if(!newItem.classList.contains('changed')) {
           const youText = document.createElement("span");
           makeVisuallyHidden(youText);
           youText.innerText = 'You:';
