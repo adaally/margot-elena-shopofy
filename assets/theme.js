@@ -9403,7 +9403,7 @@ function fixChatList(container) {
       }
     });
 
-    const btnSubmit = beforeStartModal.querySelector(".hover-effect-button");
+    const btnSubmit = beforeStartModal.querySelector(".background);
 
     if (btnSubmit) {
       const observer = new MutationObserver((mutations) => {
