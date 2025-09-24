@@ -9370,7 +9370,7 @@ function fixChatbotAccessibility() {
 
   observer.observe(document.body, { childList: true, subtree: true });
 
-  function fixChatList(container) {
+
 function fixChatList(container) {
   // Check right away
   let messagesList = container.querySelector(".chat-ui.chat-view");
@@ -9392,7 +9392,7 @@ function fixChatList(container) {
 
   shadowObserver.observe(container, { childList: true, subtree: true });
 }
-  }
+  
 
   // --- Focus trap helpers ---
 let trapHandler = null;
