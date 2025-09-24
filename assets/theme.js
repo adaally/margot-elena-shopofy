@@ -9314,7 +9314,7 @@ function fixChatbotAccessibility() {
               if(title2) {
                 const newTitle2 = document.createElement("h2");
                 newTitle2.innerText = title2.innerText;
-                copyAttributes(newTittitle2le2, newTitle2);
+                copyAttributes(title2, newTitle2);
                 newTitle2.style.fontSize = '1em';
                 newTitle2.style.fontWeight = '600';
                 newTitle2.style.margin = '8px auto 16px';
