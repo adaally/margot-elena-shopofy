@@ -9391,6 +9391,8 @@ function fixChatList(container) {
       console.log("Found chat-messages__list immediately:", messagesList);
       const chat = messagesList.querySelector(".chat-messages__list");
 
+      if(!chat) return;
+
       const newChatListContainer = document.createElement("div");
       newChatListContainer.setAttribute("role", "list");
       copyAttributes(chat, newChatListContainer);
@@ -9431,9 +9433,6 @@ function fixChatList(container) {
           element.replaceWith(newElement);
           newChatListContainer.appendChild(newElement)
         }
-
-
-        
       });
 
 
