@@ -4616,6 +4616,7 @@ theme.recentlyViewed = {
       }
   
       var stickyHeader = document.querySelector('#' + config.stickyHeaderWrapper);
+      console.log(h, 'height')
       stickyHeader.style.height = h + 'px';
     }
   
