@@ -9384,13 +9384,17 @@ function fixChatList(container) {
     if (messagesList) {
       console.log("Found chat-messages__list via observer:", messagesList);
       const chat = messagesList.querySelector(".chat-messages__list");
+      const newChatListContainer = document.createElement("div");
+      newChatListContainer.setAttribute("role", "list");
+
       messagesList.querySelector(".chat-messages__list .message-container").forEach(element => {
         const newItem = document.createElement("div");
-        copyAttributes(element, newItem);
-      });;
-      const newList = document.createElement("div");
-      newList.setAttribute("role", "list");
-
+        copyAttributesAndContent(element, newItem);
+        newChatListContainer.appendChild(newItem)
+      });
+      // chat.parentNode.insertBefore(newChatListContainer, chat);
+      chat.replaceWith(newChatListContainer);
+      
       shadowObserver.disconnect();
     }
   });
