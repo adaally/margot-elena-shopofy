@@ -9393,7 +9393,7 @@ function fixChatList(container) {
             makeVisuallyHidden(youText);
             youText.innerText = 'You:';
             newItem.classList.add('changed');
-            const bubble = element.querySelector(".message-bubble");
+            const bubble = newItem.querySelector(".message-bubble");
             bubble.prepend(youText)
             newChatListContainer.appendChild(newItem)
           }
