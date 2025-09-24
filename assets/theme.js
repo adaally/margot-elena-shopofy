@@ -9381,10 +9381,11 @@ function fixChatList(container) {
 
       messagesList.querySelectorAll(".chat-messages__list .message-container").forEach(element => {
         const newItem = document.createElement("div");
+        newItem.setAttribute('role', 'listitem')
         copyAttributesAndContent(element, newItem);
         newChatListContainer.appendChild(newItem)
       });
-      // chat.parentNode.insertBefore(newChatListContainer, chat);
+
       chat.replaceWith(newChatListContainer);
     return;
   }
