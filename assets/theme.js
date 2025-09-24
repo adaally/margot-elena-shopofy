@@ -9403,22 +9403,11 @@ function fixChatList(container) {
       }
     });
 
-    const btnSubmit = beforeStartModal.querySelector(".background);
+    const btnSubmit = beforeStartModal.querySelector(".background");
 
     if (btnSubmit) {
-      const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-            if (!btnSubmit.disabled) {
-              btnSubmit.style.backgroundColor = "#000";
-            } else {
-              btnSubmit.style.backgroundColor = "inherit";
-            }
-          }
-        }
-      });
+      btnSubmit.style.background = '#000';
 
-      observer.observe(btnSubmit, { attributes: true });
     }
     beforeStartModal.classList.add('changed');
   }
