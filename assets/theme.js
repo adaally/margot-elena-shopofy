@@ -9187,7 +9187,7 @@ function fixAriaLabelThumbnails() {
 
         const navPagination = yoptoContainer.querySelector(".yotpo-reviews-pagination-container");
         if(navPagination) {
-          unavPaginationl.removeAttribute("role");
+          navPagination.removeAttribute("role");
           navPagination.setAttribute("aria-label", "Customer reviews pagination");
 
           const observerUl = new MutationObserver((mutationsList) => {
