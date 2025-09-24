@@ -9376,6 +9376,8 @@ function fixChatList(container) {
   if (messagesList) {
       console.log("Found chat-messages__list immediately:", messagesList);
       const chat = messagesList.querySelector(".chat-messages__list");
+      chat.setAttribute('role', 'region');
+      chat.setAttribute('aria-label', 'Conversation');
       const newChatListContainer = document.createElement("div");
       newChatListContainer.setAttribute("role", "list");
 
