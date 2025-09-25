@@ -9439,6 +9439,13 @@ function fixChatList(container) {
 
       const chat = messagesList.querySelector(".chat-messages__list");
 
+
+      const uploadImgBtn = messagesList.querySelector("[data-spec='image-upload']");
+
+      if(uploadImgBtn) {
+        uploadImgBtn.setAttribute('aria-label', 'Add file');
+      }
+
       if(!chat) return;
 
       const newChatListContainer = document.createElement("div");
