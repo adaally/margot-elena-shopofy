@@ -9278,6 +9278,7 @@ function addAlertToErrors() {
       function handleFirstChildChange(newChild) {
         console.log("First child changed:", newChild);
         // 👉 your logic here
+        fixChatList(container1)
       }
 
       // Create observer
@@ -9384,7 +9385,7 @@ function fixChatbotAccessibility() {
                   }
                 }
 
-                fixChatList(container);
+                // fixChatList(container);
                 listenToChanges(container);
 
               } else {
