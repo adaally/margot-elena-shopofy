@@ -9522,8 +9522,11 @@ function fixChatList(container) {
             youText.innerText = 'You:';
             newItem.classList.add('changed');
 
-            const bubble = newItem.querySelector(".message-bubble");
-            bubble.prepend(youText)
+            const bubble = newItem.querySelector(".message-bubble.message-bubble-outgoing");
+            if(bubble) {
+              bubble.prepend(youText);
+            }
+            
 
             newChatListContainer.appendChild(newItem)
           }
