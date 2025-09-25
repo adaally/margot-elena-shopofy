@@ -9282,36 +9282,28 @@ function fixChatbotAccessibility() {
     if (!container) return;
 
 
-    const content = container.querySelector('.chat-open div');
+    const content = container.querySelector('.chat-ui');
 
-    function myMethod(newFirstChild) {
-      console.log("First child changed:", newFirstChild);
-      // your logic here
+    function handleAttributeChange(mutation) {
+      console.log(`Attribute "${mutation.attributeName}" changed!`);
+      console.log("New value:", mutation.target.getAttribute(mutation.attributeName));
+      // 👉 Your logic here
     }
 
-    // Create an observer
+    // Create observer
     const observer = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
-        if (mutation.type === 'childList') {
-          // Whenever children of .chat-open change, check its first child
-          const firstChild = content.firstElementChild;
-          if (firstChild) {
-            myMethod(firstChild);
-          }
+        if (mutation.type === "attributes") {
+          handleAttributeChange(mutation);
         }
       });
     });
 
-    // Start observing only direct children of .chat-open
+    // Watch attributes (class, style, any others)
     observer.observe(content, {
-      childList: true,   // watch for direct children changes
-      subtree: false     // don’t go deep, just first level
+      attributes: true,           // watch attribute changes
+      attributeOldValue: true     // store old value if you want
     });
-
-    // Run once initially (optional)
-    if (content.firstElementChild) {
-      myMethod(content.firstElementChild);
-    }
 
     const toggleBtn = container.querySelector(":scope > button");
     if (toggleBtn) {
