@@ -9662,7 +9662,8 @@ function addFocusIndicator(el) {
     
     const inputSearchMain = document.querySelector('#main--search predictive-search input');
     const searchFormMain = document.querySelector('#main--search predictive-search form');
-    const closeButtonMain = searchFormMain.querySelector('.btn--close-search');
+    
+    const closeButtonMain = searchFormMain ? searchFormMain.querySelector('.btn--close-search') : undefined;
     
     let focusableElements = [];
     let firstEl, lastEl;
@@ -9719,7 +9720,7 @@ function addFocusIndicator(el) {
     openButton.addEventListener('click', openSearch);
     closeButton.addEventListener('click', closeSearch);
     
-    if(inputSearchMain) {
+    if(searchFormMain) {
       inputSearchMain.addEventListener('input', openSearchMain);
       closeButtonMain.addEventListener('click', closeSearchMain);
     }
