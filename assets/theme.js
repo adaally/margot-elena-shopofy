@@ -9504,6 +9504,7 @@ function fixChatList(container) {
 
       const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
       const chatElements = messagesList.querySelectorAll(".chat-messages__list > *");
+
       chatElements.forEach((element, index) => {
         if(element.classList.contains('message-container')) {
           const newItem = document.createElement("div");
@@ -9537,15 +9538,14 @@ function fixChatList(container) {
           newChatListContainer.appendChild(newElement)
         }
 
-        if((chatElements.length - 1) === index) {
-          console.log('inside', element)
-          element.setAttribute('tabindex', '-1');
-          element.focus();
-        }
       });
 
 
       chat.replaceWith(newChatListContainer);
+
+      const chatElements2 = newChatListContainer.querySelectorAll(".chat-messages__list > *");
+      chatElements2[chatElements2.length - 1].setAttribute('tabindex', '-1');
+      chatElements2[chatElements2.length - 1].focus();
     return;
   }
 
