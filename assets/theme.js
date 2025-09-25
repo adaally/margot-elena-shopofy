@@ -9538,6 +9538,7 @@ function fixChatList(container) {
         }
 
         if((chatElements.length - 1) === index) {
+          console.log('inside', element)
           element.setAttribute('tabindex', '-1');
           element.focus();
         }
