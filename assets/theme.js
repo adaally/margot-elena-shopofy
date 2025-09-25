@@ -9543,10 +9543,10 @@ function fixChatList(container) {
 
       chat.replaceWith(newChatListContainer);
 
-      const chatElements2 = newChatListContainer.querySelectorAll(".chat-messages__list > *");
-      chatElements2[chatElements2.length - 1].setAttribute('tabindex', '-1');
-      chatElements2[chatElements2.length - 1].style.outline = 'none';
-      chatElements2[chatElements2.length - 1].focus();
+      const newChatElements = newChatListContainer.querySelectorAll(".chat-messages__list > *");
+      newChatElements[newChatElements.length - 1].setAttribute('tabindex', '-1');
+      newChatElements[newChatElements.length - 1].style.outline = 'none';
+      newChatElements[newChatElements.length - 1].focus();
     return;
   }
 
@@ -9629,7 +9629,7 @@ function enableFocusTrap(container, toggleBtn) {
 
 function addFocusIndicator(el) {
   el.addEventListener("focus", () => {
-    el.style.outline = "2px solid #000";   // your highlight color
+    el.style.outline = "2px solid #000";
     el.style.outlineOffset = "2px";
   });
   el.addEventListener("blur", () => {
@@ -9654,74 +9654,80 @@ function addFocusIndicator(el) {
 
 
 
-  //Focus trap search
-  const openButton = document.querySelector('#search--button');
-  const searchForm = document.querySelector('predictive-search form');
-  const closeButton = searchForm.querySelector('.btn--close-search');
-  
-  const inputSearchMain = document.querySelector('#main--search predictive-search input');
-  const searchFormMain = document.querySelector('#main--search predictive-search form');
-  const closeButtonMain = searchFormMain.querySelector('.btn--close-search');
-  
-  let focusableElements = [];
-  let firstEl, lastEl;
-  
-  function trapFocus(container) {
-    focusableElements = container.querySelectorAll(
-      'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
-    );
-    firstEl = focusableElements[0];
-    lastEl = focusableElements[focusableElements.length - 1];
-  
-    container.addEventListener('keydown', handleTrap);
-  }
-  
-  function handleTrap(e) {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstEl) {
-          e.preventDefault();
-          lastEl.focus();
-        }
-      } else {
-        if (document.activeElement === lastEl) {
-          e.preventDefault();
-          firstEl.focus();
+  function headerFocusTrap() {
+      //Focus trap search
+    const openButton = document.querySelector('#search--button');
+    const searchForm = document.querySelector('predictive-search form');
+    const closeButton = searchForm.querySelector('.btn--close-search');
+    
+    const inputSearchMain = document.querySelector('#main--search predictive-search input');
+    const searchFormMain = document.querySelector('#main--search predictive-search form');
+    const closeButtonMain = searchFormMain.querySelector('.btn--close-search');
+    
+    let focusableElements = [];
+    let firstEl, lastEl;
+    
+    function trapFocus(container) {
+      focusableElements = container.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      firstEl = focusableElements[0];
+      lastEl = focusableElements[focusableElements.length - 1];
+    
+      container.addEventListener('keydown', handleTrap);
+    }
+    
+    function handleTrap(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
         }
       }
     }
-  }
-  
-  function openSearch() {
-    searchForm.classList.add('is-active');
-    trapFocus(searchForm);
-    firstEl.focus();
-  }
-  
-  function closeSearch() {
-    searchForm.classList.remove('is-active');
-    searchForm.removeEventListener('keydown', handleTrap);
-    openButton.focus();
+    
+    function openSearch() {
+      searchForm.classList.add('is-active');
+      trapFocus(searchForm);
+      firstEl.focus();
+    }
+    
+    function closeSearch() {
+      searchForm.classList.remove('is-active');
+      searchForm.removeEventListener('keydown', handleTrap);
+      openButton.focus();
+    }
+
+    function closeSearchMain() {
+      searchFormMain.removeEventListener('keydown', handleTrap);
+      inputSearchMain.focus();
+    }
+
+    function openSearchMain() {
+      trapFocus(searchFormMain);
+      firstEl.focus();
+    }
+    
+    // Open/Close bindings
+    openButton.addEventListener('click', openSearch);
+    closeButton.addEventListener('click', closeSearch);
+    
+    if(inputSearchMain) {
+      inputSearchMain.addEventListener('input', openSearchMain);
+      closeButtonMain.addEventListener('click', closeSearchMain);
+    }
   }
 
-  function closeSearchMain() {
-    searchFormMain.removeEventListener('keydown', handleTrap);
-    inputSearchMain.focus();
-  }
-
-  function openSearchMain() {
-    trapFocus(searchFormMain);
-    firstEl.focus();
-  }
-  
-  // Open/Close bindings
-  openButton.addEventListener('click', openSearch);
-  closeButton.addEventListener('click', closeSearch);
-  
-  if(inputSearchMain) {
-    inputSearchMain.addEventListener('input', openSearchMain);
-    closeButtonMain.addEventListener('click', closeSearchMain);
-  }
+  setTimeout(() => {
+    headerFocusTrap()
+  });
 
   function addAriaHiddenToBrAndHr() {
     document.querySelectorAll('br').forEach(el => {
