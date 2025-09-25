@@ -9282,6 +9282,8 @@ function fixChatbotAccessibility() {
       const container = container1.querySelector('div');
       let lastFirstChild = null;
 
+      if(!container) return
+
       function handleFirstChildChange(newChild) {
         console.log("First child changed:", newChild);
         // 👉 your logic here
