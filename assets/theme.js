@@ -9636,7 +9636,7 @@ function addFocusIndicator(el) {
   }
 }
 
-  fixChatbotAccessibility();
+  // fixChatbotAccessibility();
 
 
 
