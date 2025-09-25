@@ -9275,6 +9275,46 @@ function addAlertToErrors() {
 
 
 function fixChatbotAccessibility() {
+
+
+
+    function listenToChanges(container1) {
+      const container = container1.querySelector('div');
+      let lastFirstChild = null;
+
+      function handleFirstChildChange(newChild) {
+        console.log("First child changed:", newChild);
+        // 👉 your logic here
+        fixChatList(container1)
+      }
+
+      // Create observer
+      const observer = new MutationObserver(mutations => {
+        const currentFirstChild = container.firstElementChild;
+
+        if (currentFirstChild !== lastFirstChild) {
+          lastFirstChild = currentFirstChild;
+          if (currentFirstChild) {
+            handleFirstChildChange(currentFirstChild);
+          }
+        }
+      });
+
+      // Watch only direct children (not deep inside)
+      observer.observe(container, {
+        childList: true,
+        subtree: false
+      });
+
+      // Run once initially
+      if (container.firstElementChild) {
+        lastFirstChild = container.firstElementChild;
+        handleFirstChildChange(lastFirstChild);
+      }
+  }
+
+
+
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
     if (!chatBox || !chatBox.shadowRoot) return;
@@ -9382,41 +9422,6 @@ function fixChatbotAccessibility() {
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
-
-    function listenToChanges(container1) {
-      const container = container1.querySelector('div');
-      let lastFirstChild = null;
-
-      function handleFirstChildChange(newChild) {
-        console.log("First child changed:", newChild);
-        // 👉 your logic here
-        fixChatList(container1)
-      }
-
-      // Create observer
-      const observer = new MutationObserver(mutations => {
-        const currentFirstChild = container.firstElementChild;
-
-        if (currentFirstChild !== lastFirstChild) {
-          lastFirstChild = currentFirstChild;
-          if (currentFirstChild) {
-            handleFirstChildChange(currentFirstChild);
-          }
-        }
-      });
-
-      // Watch only direct children (not deep inside)
-      observer.observe(container, {
-        childList: true,
-        subtree: false
-      });
-
-      // Run once initially
-      if (container.firstElementChild) {
-        lastFirstChild = container.firstElementChild;
-        handleFirstChildChange(lastFirstChild);
-      }
-  }
 
 
 function fixChatList(container) {
