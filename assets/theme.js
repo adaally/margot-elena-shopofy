@@ -9283,7 +9283,7 @@ function fixChatbotAccessibility() {
 
 
     const content = container.querySelector('.chat-ui');
-    console.log(content, 'content')
+    console.log(container, 'content')
 
     function handleAttributeChange(mutation) {
       console.log(`Attribute "${mutation.attributeName}" changed!`);
