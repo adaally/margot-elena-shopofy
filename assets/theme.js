@@ -9287,7 +9287,9 @@ function fixChatbotAccessibility() {
       function handleFirstChildChange(newChild) {
         console.log("First child changed:", newChild);
         // 👉 your logic here
-        fixChatList(container1)
+        setTimeout(() => {
+          fixChatList(container1)
+        }, 500)
       }
 
       // Create observer
