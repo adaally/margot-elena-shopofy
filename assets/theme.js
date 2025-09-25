@@ -9503,8 +9503,8 @@ function fixChatList(container) {
       newChatListContainer.setAttribute('aria-label', 'Conversation');
 
       const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
-
-      messagesList.querySelectorAll(".chat-messages__list > *").forEach((element, index) => {
+      const chatElements = messagesList.querySelectorAll(".chat-messages__list > *");
+      chatElements.forEach((element, index) => {
         if(element.classList.contains('message-container')) {
           const newItem = document.createElement("div");
           newItem.setAttribute('role', 'listitem')
@@ -9535,6 +9535,11 @@ function fixChatList(container) {
           newElement.style.fontWeight = '400';
           element.replaceWith(newElement);
           newChatListContainer.appendChild(newElement)
+        }
+
+        if((chatElements.length - 1) === index) {
+          element[index].setAttribute('tabindex', '-1');
+          element[index].focus();
         }
       });
 
