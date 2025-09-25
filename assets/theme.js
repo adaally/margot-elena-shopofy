@@ -9271,6 +9271,34 @@ function addAlertToErrors() {
     observer.observe(container, { childList: true, subtree: true });
   });
 
+  function listenToChanges(container) {
+    setTimeout(() => {
+      const content = container.querySelector('.chat-ui');
+      console.log(content, 'content')
+
+      function handleAttributeChange(mutation) {
+        console.log(`Attribute "${mutation.attributeName}" changed!`);
+        console.log("New value:", mutation.target.getAttribute(mutation.attributeName));
+        // 👉 Your logic here
+      }
+
+      // Create observer
+      const observerContent = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          if (mutation.type === "attributes") {
+            handleAttributeChange(mutation);
+          }
+        });
+      });
+
+      // Watch attributes (class, style, any others)
+      observerContent.observe(content, {
+        attributes: true,           // watch attribute changes
+        attributeOldValue: true     // store old value if you want
+      });
+    }, 500);
+  }
+
 
 function fixChatbotAccessibility() {
   const observer = new MutationObserver(() => {
@@ -9281,32 +9309,8 @@ function fixChatbotAccessibility() {
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
-    setTimeout(() => {
-    const content = container.querySelector('.chat-ui');
-    console.log(content, 'content')
 
-    function handleAttributeChange(mutation) {
-      console.log(`Attribute "${mutation.attributeName}" changed!`);
-      console.log("New value:", mutation.target.getAttribute(mutation.attributeName));
-      // 👉 Your logic here
-    }
-
-    // Create observer
-    const observerContent = new MutationObserver(mutations => {
-      mutations.forEach(mutation => {
-        if (mutation.type === "attributes") {
-          handleAttributeChange(mutation);
-        }
-      });
-    });
-
-    // Watch attributes (class, style, any others)
-    observerContent.observe(content, {
-      attributes: true,           // watch attribute changes
-      attributeOldValue: true     // store old value if you want
-    });
-    }, 500);
-
+    listenToChanges(container);
 
     const toggleBtn = container.querySelector(":scope > button");
     if (toggleBtn) {
@@ -9374,7 +9378,8 @@ function fixChatbotAccessibility() {
                   }
                 }
 
-                fixChatList(container)
+                fixChatList(container);
+                listenToChanges(container);
 
               } else {
                 disableFocusTrap();
