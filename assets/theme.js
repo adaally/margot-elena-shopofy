@@ -9545,6 +9545,7 @@ function fixChatList(container) {
 
       const chatElements2 = newChatListContainer.querySelectorAll(".chat-messages__list > *");
       chatElements2[chatElements2.length - 1].setAttribute('tabindex', '-1');
+      chatElements2[chatElements2.length - 1].style.outline = 'none';
       chatElements2[chatElements2.length - 1].focus();
     return;
   }
