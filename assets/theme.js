@@ -9281,7 +9281,7 @@ function fixChatbotAccessibility() {
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
-
+    setTimeout(() => {
     const content = container.querySelector('.chat-ui');
     console.log(container, 'content')
 
@@ -9305,6 +9305,8 @@ function fixChatbotAccessibility() {
       attributes: true,           // watch attribute changes
       attributeOldValue: true     // store old value if you want
     });
+    }, 500);
+
 
     const toggleBtn = container.querySelector(":scope > button");
     if (toggleBtn) {
