@@ -9289,7 +9289,7 @@ function fixChatbotAccessibility() {
         // 👉 your logic here
         setTimeout(() => {
           fixChatList(container1)
-        }, 500)
+        }, 100)
       }
 
       // Create observer
