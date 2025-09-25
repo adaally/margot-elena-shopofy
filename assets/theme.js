@@ -9272,7 +9272,7 @@ function addAlertToErrors() {
   });
 
   function listenToChanges(container1) {
-      const container = container1.querySelector('.chat-ui div');
+      const container = container1.querySelector('div');
       let lastFirstChild = null;
 
       function handleFirstChildChange(newChild) {
