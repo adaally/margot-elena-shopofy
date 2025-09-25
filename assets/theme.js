@@ -9272,7 +9272,6 @@ function addAlertToErrors() {
   });
 
   function listenToChanges(container) {
-    setTimeout(() => {
       const content = container.querySelector('.chat-ui');
       console.log(content, 'content')
 
@@ -9296,7 +9295,6 @@ function addAlertToErrors() {
         attributes: true,           // watch attribute changes
         attributeOldValue: true     // store old value if you want
       });
-    }, 500);
   }
 
 
