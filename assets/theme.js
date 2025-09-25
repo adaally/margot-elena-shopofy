@@ -9272,29 +9272,37 @@ function addAlertToErrors() {
   });
 
   function listenToChanges(container) {
-      const content = container.querySelector('.chat-ui');
-      console.log(content, 'content')
+      const container = document.querySelector('.chat-ui');
+      let lastFirstChild = null;
 
-      function handleAttributeChange(mutation) {
-        console.log(`Attribute "${mutation.attributeName}" changed!`);
-        console.log("New value:", mutation.target.getAttribute(mutation.attributeName));
-        // 👉 Your logic here
+      function handleFirstChildChange(newChild) {
+        console.log("First child changed:", newChild);
+        // 👉 your logic here
       }
 
       // Create observer
-      const observerContent = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-          if (mutation.type === "attributes") {
-            handleAttributeChange(mutation);
+      const observer = new MutationObserver(mutations => {
+        const currentFirstChild = container.firstElementChild;
+
+        if (currentFirstChild !== lastFirstChild) {
+          lastFirstChild = currentFirstChild;
+          if (currentFirstChild) {
+            handleFirstChildChange(currentFirstChild);
           }
-        });
+        }
       });
 
-      // Watch attributes (class, style, any others)
-      observerContent.observe(content, {
-        attributes: true,           // watch attribute changes
-        attributeOldValue: true     // store old value if you want
+      // Watch only direct children (not deep inside)
+      observer.observe(container, {
+        childList: true,
+        subtree: false
       });
+
+      // Run once initially
+      if (container.firstElementChild) {
+        lastFirstChild = container.firstElementChild;
+        handleFirstChildChange(lastFirstChild);
+      }
   }
 
 
