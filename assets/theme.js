@@ -9538,8 +9538,8 @@ function fixChatList(container) {
         }
 
         if((chatElements.length - 1) === index) {
-          element[index].setAttribute('tabindex', '-1');
-          element[index].focus();
+          element.setAttribute('tabindex', '-1');
+          element.focus();
         }
       });
 
