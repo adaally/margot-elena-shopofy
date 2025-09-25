@@ -9271,8 +9271,8 @@ function addAlertToErrors() {
     observer.observe(container, { childList: true, subtree: true });
   });
 
-  function listenToChanges(container) {
-      const container = document.querySelector('.chat-ui');
+  function listenToChanges(container1) {
+      const container = container1.querySelector('.chat-ui');
       let lastFirstChild = null;
 
       function handleFirstChildChange(newChild) {
