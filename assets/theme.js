@@ -9431,6 +9431,12 @@ function fixChatList(container) {
   }
 
   if (messagesList) {
+      const submitbtn = messagesList.querySelector(".composer-bar__footer-button");
+
+      if(submitbtn) {
+        submitbtn.setAttribute('aria-label', 'Submit message');
+      }
+
       const chat = messagesList.querySelector(".chat-messages__list");
 
       if(!chat) return;
