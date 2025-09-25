@@ -9291,7 +9291,7 @@ function fixChatbotAccessibility() {
     }
 
     // Create observer
-    const observer = new MutationObserver(mutations => {
+    const observerContent = new MutationObserver(mutations => {
       mutations.forEach(mutation => {
         if (mutation.type === "attributes") {
           handleAttributeChange(mutation);
@@ -9300,7 +9300,7 @@ function fixChatbotAccessibility() {
     });
 
     // Watch attributes (class, style, any others)
-    observer.observe(content, {
+    observerContent.observe(content, {
       attributes: true,           // watch attribute changes
       attributeOldValue: true     // store old value if you want
     });
