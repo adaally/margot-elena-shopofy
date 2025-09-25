@@ -8312,7 +8312,7 @@ theme.recentlyViewed = {
       theme.customerTemplates();
     }
     closeDropdownWithEscape();
-    // toggleDropdown();
+    toggleDropdown();
     addAriaHiddenToBrAndHr();
     addListSemanticsToProductInfo();
     addAccessibilityToYopto();
