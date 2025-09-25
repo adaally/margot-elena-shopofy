@@ -8325,10 +8325,13 @@ theme.recentlyViewed = {
 
   function addH2ToproductDescription() {
     const title = document.querySelector(".product-block .rte strong");
-    const newTitle = document.createElement("h2");
-    newTitle.classList.add("default-text");
-    newTitle.innerText = title.innerText;
-    title.replaceWith(newTitle);
+
+    if(title) {
+      const newTitle = document.createElement("h2");
+      newTitle.classList.add("default-text");
+      newTitle.innerText = title.innerText;
+      title.replaceWith(newTitle);
+    }
   }
 
   addH2ToproductDescription();
