@@ -9429,7 +9429,6 @@ function fixChatbotAccessibility() {
 
 
 function fixChatList(container) {
-  let messagesList = container.querySelector(".chat-ui.chat-view");
 
   const beforeStartModal = container.querySelector(".info-modal");
   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
@@ -9465,7 +9464,6 @@ function fixChatList(container) {
         for (const mutation of mutations) {
           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
             if (!btnSubmit.disabled) {
-              // button just became enabled
               const background = btnSubmit.querySelector('.background');
               background.style.background = '#000';
             }
@@ -9478,17 +9476,18 @@ function fixChatList(container) {
     beforeStartModal.classList.add('changed');
   }
 
-  if (messagesList) {
-      const submitbtn = messagesList.querySelector(".composer-bar__footer-button");
+  let chatUiContainer = container.querySelector(".chat-ui.chat-view");
+  if (chatUiContainer) {
+      const submitbtn = chatUiContainer.querySelector(".composer-bar__footer-button");
 
       if(submitbtn) {
         submitbtn.setAttribute('aria-label', 'Submit message');
       }
 
-      const chat = messagesList.querySelector(".chat-messages__list");
+      const chat = chatUiContainer.querySelector(".chat-messages__list");
 
 
-      const uploadImgBtn = messagesList.querySelector("[data-spec='image-upload']");
+      const uploadImgBtn = chatUiContainer.querySelector("[data-spec='image-upload']");
 
       if(uploadImgBtn) {
         uploadImgBtn.setAttribute('aria-label', 'Add file');
@@ -9503,7 +9502,7 @@ function fixChatList(container) {
       newChatListContainer.setAttribute('aria-label', 'Conversation');
 
       const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
-      const chatElements = messagesList.querySelectorAll(".chat-messages__list > *");
+      const chatElements = chat.querySelectorAll(":host > *");
 
       chatElements.forEach((element, index) => {
         if(element.classList.contains('message-container')) {
@@ -9552,8 +9551,8 @@ function fixChatList(container) {
 
   // Otherwise, watch for it
   const shadowObserver = new MutationObserver(() => {
-    messagesList = container.querySelector(".chat-ui.chat-view");
-    if (messagesList) {
+    chatUiContainer = container.querySelector(".chat-ui.chat-view");
+    if (chatUiContainer) {
 
       
       shadowObserver.disconnect();
@@ -9563,7 +9562,65 @@ function fixChatList(container) {
   shadowObserver.observe(container, { childList: true, subtree: true });
 }
 
+    // --- Focus trap helpers ---
+  let trapHandler = null;
 
+  function enableFocusTrap(container, toggleBtn) {
+    
+    const focusable = container.querySelectorAll(
+      'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    console.log(focusable)
+    focusable.forEach(el => addFocusIndicator(el));
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    console.log(first, last)
+    
+    trapHandler = (e) => {
+      if (e.key !== "Tab") return;
+
+      if (e.shiftKey) {
+        // If Shift+Tab on first, loop to last
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        // If Tab on last, loop to first
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", trapHandler);
+
+    
+    setTimeout(() => {
+      (first || toggleBtn).focus();
+    }, 50);
+
+  }
+
+  function addFocusIndicator(el) {
+    el.addEventListener("focus", () => {
+      el.style.outline = "2px solid #000";
+      el.style.outlineOffset = "2px";
+    });
+    el.addEventListener("blur", () => {
+      el.style.outline = "";
+      el.style.outlineOffset = "";
+    });
+  }
+
+  function disableFocusTrap() {
+    if (trapHandler) {
+      document.removeEventListener("keydown", trapHandler);
+      trapHandler = null;
+      console.log("Focus trap disabled");
+    }
+  }
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
@@ -9583,67 +9640,6 @@ function fixChatList(container) {
     el.style.padding = "0";
     el.style.position = "absolute";
     el.style.width = "1px";
-  }
-  
-
-  // --- Focus trap helpers ---
-let trapHandler = null;
-
-function enableFocusTrap(container, toggleBtn) {
-  
-  const focusable = container.querySelectorAll(
-    'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  console.log(focusable)
-  focusable.forEach(el => addFocusIndicator(el));
-  const first = focusable[0];
-  const last = focusable[focusable.length - 1];
-  console.log(first, last)
-  
-  trapHandler = (e) => {
-    if (e.key !== "Tab") return;
-
-    if (e.shiftKey) {
-      // If Shift+Tab on first, loop to last
-      if (document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      }
-    } else {
-      // If Tab on last, loop to first
-      if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-  };
-
-  document.addEventListener("keydown", trapHandler);
-
-  
-  setTimeout(() => {
-    (first || toggleBtn).focus();
-  }, 50);
-
-}
-
-function addFocusIndicator(el) {
-  el.addEventListener("focus", () => {
-    el.style.outline = "2px solid #000";
-    el.style.outlineOffset = "2px";
-  });
-  el.addEventListener("blur", () => {
-    el.style.outline = "";
-    el.style.outlineOffset = "";
-  });
-}
-
-  function disableFocusTrap() {
-    if (trapHandler) {
-      document.removeEventListener("keydown", trapHandler);
-      trapHandler = null;
-      console.log("Focus trap disabled");
-    }
   }
 }
 
@@ -9726,9 +9722,7 @@ function addFocusIndicator(el) {
     }
   }
 
-  setTimeout(() => {
-    headerFocusTrap()
-  });
+  headerFocusTrap();
 
   function addAriaHiddenToBrAndHr() {
     document.querySelectorAll('br').forEach(el => {
