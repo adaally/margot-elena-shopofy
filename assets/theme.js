@@ -9502,7 +9502,7 @@ function fixChatList(container) {
       newChatListContainer.setAttribute('aria-label', 'Conversation');
 
       const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
-      const chatElements = chat.querySelectorAll(":host > *");
+      const chatElements = chat.querySelectorAll(":scope > *");
 
       chatElements.forEach((element, index) => {
         if(element.classList.contains('message-container')) {
