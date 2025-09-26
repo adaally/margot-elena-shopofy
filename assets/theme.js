@@ -9642,13 +9642,13 @@ function fixChatList(container) {
   function addFocusIndicator(el) {
     el.addEventListener("focus", () => {
       el.style.outline = "2px solid #000";
-      el.style.outlineOffset = "2px";
+      el.style.outlineOffset = "3px";
       el.style.border = '1px solid #fff';
     });
     el.addEventListener("blur", () => {
       el.style.outline = "";
       el.style.outlineOffset = "";
-      el.style.border = '';
+      el.style.border = '1px solid rgb(106, 106, 106)';
     });
   }
 
