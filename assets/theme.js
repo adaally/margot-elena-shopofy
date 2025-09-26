@@ -9580,7 +9580,6 @@ function fixChatList(container) {
     focusable.forEach(el => addFocusIndicator(el));
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
-    console.log(first, last)
     
     trapHandler = (e) => {
       if (e.key !== "Tab") return;
@@ -9594,6 +9593,7 @@ function fixChatList(container) {
       } else {
         // If Tab on last, loop to first
         if (document.activeElement === last) {
+          console.log("should be the first", document.activeElement)
           e.preventDefault();
           first.focus();
         }
@@ -9611,7 +9611,7 @@ function fixChatList(container) {
 
   function addFocusIndicator(el) {
     el.addEventListener("focus", () => {
-      el.style.outline = "2px solid #000";
+      el.style.outline = "2px solid red";
       el.style.outlineOffset = "2px";
     });
     el.addEventListener("blur", () => {
