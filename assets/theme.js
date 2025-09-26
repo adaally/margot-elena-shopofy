@@ -9576,7 +9576,7 @@ function fixChatList(container) {
     const focusable = container.querySelectorAll(
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    toggleBtn.push(toggleBtn);
+    focusable.push(toggleBtn);
     console.log(focusable)
     focusable.forEach(el => addFocusIndicator(el));
     const first = focusable[0];
