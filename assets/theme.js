@@ -8336,24 +8336,24 @@ theme.recentlyViewed = {
 
   addH2ToproductDescription();
 
-  function addListSemanticsToProductTabs() {
-    const tabs = document.querySelectorAll(".product-block--tab");
-    if(tabs.length === 0) return;
+  // function addListSemanticsToProductTabs() {
+  //   const tabs = document.querySelectorAll(".product-block--tab");
+  //   if(tabs.length === 0) return;
 
-    const firstTab = tabs[0];
-    const container = document.createElement("div");
-    container.setAttribute("role", "list");
-    container.setAttribute("aria-label", "Subscription questions");
-    firstTab.parentNode.insertBefore(container, firstTab);
+  //   const firstTab = tabs[0];
+  //   const container = document.createElement("div");
+  //   container.setAttribute("role", "list");
+  //   container.setAttribute("aria-label", "Subscription questions");
+  //   firstTab.parentNode.insertBefore(container, firstTab);
 
-    tabs.forEach(element => {
-      element.setAttribute("role","listitem");
-      container.appendChild(element);
-    });
+  //   tabs.forEach(element => {
+  //     element.setAttribute("role","listitem");
+  //     container.appendChild(element);
+  //   });
     
-  }
+  // }
 
-  addListSemanticsToProductTabs();
+  // addListSemanticsToProductTabs();
 
   function listenToAddToWishlistBtn() {
     const interval = setInterval(() => {
