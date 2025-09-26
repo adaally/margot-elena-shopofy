@@ -9187,6 +9187,30 @@ function fixAriaLabelThumbnails() {
     const observer = new MutationObserver(() => {
       const yoptoContainer = document.querySelector("#yotpo-reviews-container");
       if(yoptoContainer) {
+
+        const reviewListContainer = yoptoContainer.querySelectorAll('yotpo-reviews-list');
+
+        if(reviewListContainer) {
+
+          const items = Array.from(reviewListContainer.children);
+          for (let i = 0; i < items.length; i++) {
+            const el = items[i];
+
+            if (el.classList.contains('class1')) {
+              const next = items[i + 1];
+
+              if (next && next.classList.contains('class2')) {
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('wrapper');
+
+                reviewListContainer.insertBefore(wrapper, el);
+
+                wrapper.appendChild(el);
+                wrapper.appendChild(next);
+              }
+            }
+          }
+        }
         
         yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination > a").forEach(element => {
           element.setAttribute("aria-hidden", "true");
