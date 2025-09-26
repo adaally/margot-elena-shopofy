@@ -7699,11 +7699,18 @@ details[open]>.megamenu .appear-animation{
 }
 
 .collapsible-content--sidebar fieldset{
-      display: none;
+  backface-visibility:hidden;
+  height:0;
+  opacity:0;
+  overflow:hidden;
+  visibility:hidden;
     }
 
     .collapsible-content--sidebar.is-open fieldset{
-      display: inline-block;
+      height:auto;
+      opacity:1;
+      overflow:initial;
+      visibility:visible;
     }
 
 @media only screen and (min-width:769px){
