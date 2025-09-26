@@ -9617,19 +9617,19 @@ function fixChatList(container) {
 
       console.log(el.tagName.toLowerCase())
     el.addEventListener("focus", () => {
-      if(el.tagName.toLowerCase() === 'a' || el.tagName.toLowerCase() === 'button') {
+      if(el.tagName.toLowerCase() === 'a') {
         el.style.outline = '2px solid #000';
       }else {
         el.style.outline = "none";
-        el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black';
       }
+      el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black';
     });
     el.addEventListener("blur", () => {
-      if(el.tagName.toLowerCase() === 'a' || el.tagName.toLowerCase() === 'button') {
+      if(el.tagName.toLowerCase() === 'a') {
         el.style.outline = 'none';
-      } else {
-        el.style.boxShadow = 'none';
       }
+
+      el.style.boxShadow = 'none';
     });
   }
 
