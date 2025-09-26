@@ -9586,6 +9586,7 @@ function fixChatList(container) {
     const last = focusable[focusable.length - 1];
     
     trapHandler = (e) => {
+      console.log('TAB')
       if (e.key !== "Tab") return;
 
       if (e.shiftKey) {
