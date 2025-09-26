@@ -7698,8 +7698,12 @@ details[open]>.megamenu .appear-animation{
   visibility:hidden;
 }
 
-.collapsible-content--sidebar:not(.is-open) fieldset{
+.collapsible-content--sidebar fieldset{
       display: none;
+    }
+
+    .collapsible-content--sidebar.is-open fieldset{
+      display: inline-block;
     }
 
 @media only screen and (min-width:769px){
