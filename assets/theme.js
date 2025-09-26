@@ -9282,7 +9282,7 @@ function fixChatbotAccessibility() {
       return undefined;
     } 
 
-    return chatBoxContainer.shadowRoot.querySelector('.chat-app');
+    return chatBoxContainer.shadowRoot.querySelector('.chat-app .chat-toggle');
   }
 
     function listenToChanges(container1, toggleBtn) {
@@ -9377,14 +9377,15 @@ function fixChatbotAccessibility() {
         const toggleBtn = container.querySelector(":scope > button");
         if (toggleBtn) {
           toggleBtn.click();
-          const openBtn = getOpenChatBotBtn();
-          console.log(openBtn, 'open')
-          if(openBtn) {
-            setTimeout(() => {
+          setTimeout(() => {
+            const openBtn = getOpenChatBotBtn();
+            if(openBtn) {
+              console.log(openBtn, 'open')
               openBtn.focus();
               addFocusIndicator(openBtn);
-            }, 500);
-          }
+            }
+          }, 500);
+          
         }
       }
     });
