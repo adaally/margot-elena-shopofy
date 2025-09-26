@@ -9616,7 +9616,7 @@ function fixChatList(container) {
     if(!el) return;
 
     el.addEventListener("focus", () => {
-      if(el.tagName.toLowerCase() === 'a') {
+      if(el.tagName.toLowerCase() === 'a' || el.tagName.toLowerCase() === 'button') {
         el.style.outline = '2px solid #000';
       }else {
         el.style.outline = "none";
@@ -9624,7 +9624,7 @@ function fixChatList(container) {
       }
     });
     el.addEventListener("blur", () => {
-      if(el.tagName.toLowerCase() === 'a') {
+      if(el.tagName.toLowerCase() === 'a' || el.tagName.toLowerCase() === 'button') {
         el.style.outline = 'none';
       } else {
         el.style.boxShadow = 'none';
