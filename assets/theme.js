@@ -9612,6 +9612,7 @@ function fixChatList(container) {
   }
 
   function getFocusableElements(container, toggleBtn) {
+    console.log('called again')
     return [
       ...container.querySelectorAll(
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
