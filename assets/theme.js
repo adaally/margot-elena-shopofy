@@ -9200,7 +9200,7 @@ function fixAriaLabelThumbnails() {
               const next = items[i + 1];
               const reviewId = el.getAttribute('data-id');
               const user = el.querySelector('.yotpo-reviewer-name');
-              user.id = reviewId:
+              user.id = reviewId;
               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('wrapper');
