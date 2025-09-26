@@ -9366,7 +9366,7 @@ function fixChatbotAccessibility() {
                     addFocusIndicator(openBtn);
                     openBtn.focus();
                   }
-                }, 500);
+                }, 100);
               }
             }
           }, 500);
