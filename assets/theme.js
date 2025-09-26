@@ -9446,7 +9446,7 @@ function fixChatList(container) {
 
 
   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
-    const titleModal = beforeStartModal.querySelector("#chat-title");
+    const titleModal = container.querySelector("#chat-title");
     if(titleModal) {
       const newText = document.createElement("h1");
       newText.style.marginTop = '0';
