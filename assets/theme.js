@@ -9285,8 +9285,6 @@ function fixChatbotAccessibility() {
       if(!container) return
 
       function handleFirstChildChange(newChild) {
-        console.log("First child changed:", newChild);
-        // 👉 your logic here
         setTimeout(() => {
           fixChatList(container1)
         }, 100)
@@ -9297,7 +9295,6 @@ function fixChatbotAccessibility() {
         }, 300)
       }
 
-      // Create observer
       const observer = new MutationObserver(mutations => {
         const currentFirstChild = container.firstElementChild;
 
@@ -9309,13 +9306,11 @@ function fixChatbotAccessibility() {
         }
       });
 
-      // Watch only direct children (not deep inside)
       observer.observe(container, {
         childList: true,
         subtree: false
       });
 
-      // Run once initially
       if (container.firstElementChild) {
         lastFirstChild = container.firstElementChild;
         handleFirstChildChange(lastFirstChild);
@@ -9361,9 +9356,6 @@ function fixChatbotAccessibility() {
               if(toggleBtn.classList.contains("chat-app--close-button")) {
                 toggleBtn.setAttribute("aria-label", "Close chat window");
 
-
-
-                // fixChatList(container);
                 listenToChanges(container, toggleBtn);
               } else {
                 disableFocusTrap();
@@ -9388,7 +9380,7 @@ function fixChatbotAccessibility() {
       }
     });
 
-    observer.disconnect(); // no need to keep watching <body> once hooked
+    observer.disconnect();
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
@@ -9488,8 +9480,17 @@ function fixChatList(container) {
 
   let chatUiContainer = container.querySelector(".chat-ui.chat-view");
   if (chatUiContainer) {
-      const submitbtn = chatUiContainer.querySelector(".composer-bar__footer-button");
+      const title = chatUiContainer.querySelector('#chat-title');
+      if(title) {
+        const newText = document.createElement("h1");
+        newText.style.margin = '0';
+        newText.style.fontSize = '18px';
+        copyAttributes(titleModal, newText);
+        newText.innerText = titleModal.innerText;
+        titleModal.replaceWith(newText)
+      }
 
+      const submitbtn = chatUiContainer.querySelector(".composer-bar__footer-button");
       if(submitbtn) {
         submitbtn.setAttribute('aria-label', 'Submit message');
         listenToButtonDisabled(container, submitbtn)
@@ -9683,11 +9684,6 @@ function fixChatList(container) {
 }
 
   fixChatbotAccessibility();
-
-
-
-
-
 
   function headerFocusTrap() {
       //Focus trap search
