@@ -9575,11 +9575,7 @@ function fixChatList(container) {
 
   function enableFocusTrap(container, toggleBtn) {
     
-    const focusable = [
-      ...container.querySelectorAll(
-      'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
-    ), toggleBtn
-    ]
+    
     console.log(focusable)
     focusable.forEach(el => addFocusIndicator(el));
     const first = focusable[0];
@@ -9619,6 +9615,14 @@ function fixChatList(container) {
       (first || toggleBtn).focus();
     }, 50);
 
+  }
+
+  function getFocusableElements(container, toggleBtn) {
+    return [
+      ...container.querySelectorAll(
+      'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
+    ), toggleBtn
+    ];
   }
 
   function addFocusIndicator(el) {
