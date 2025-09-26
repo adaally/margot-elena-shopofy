@@ -9198,10 +9198,14 @@ function fixAriaLabelThumbnails() {
 
             if (el.classList.contains('yotpo-review')) {
               const next = items[i + 1];
-
+              const reviewId = el.getAttribute('data-id');
+              const user = el.querySelector('.yotpo-reviewer-name');
+              user.id = reviewId:
               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('wrapper');
+                wrapper.setAttribute('role', 'region');
+                wrapper.setAttribute('aria-labelledby', reviewId);
 
                 reviewListContainer.insertBefore(wrapper, el);
 
