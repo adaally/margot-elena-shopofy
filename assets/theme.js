@@ -9631,7 +9631,7 @@ function fixChatList(container) {
     const elementos = [
       ...container.querySelectorAll(
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
-    ), toggleBtn ? toggle : []
+    ), toggleBtn ? toggleBtn : []
     ];
     console.log('called again', elementos)
     return elementos;
