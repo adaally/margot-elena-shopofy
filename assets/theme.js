@@ -9508,7 +9508,7 @@ function fixChatList(container) {
             } else {
               getFocusableElements(container, submitbtn);
             }
-            }, 300)
+            })
           }
         }
       });
