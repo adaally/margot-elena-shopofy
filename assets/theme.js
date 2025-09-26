@@ -9360,13 +9360,11 @@ function fixChatbotAccessibility() {
                 listenToChanges(container, toggleBtn);
               } else {
                 disableFocusTrap();
-                setTimeout(() => {
-                  const openBtn = getOpenChatBotBtn();
-                  if(openBtn) {
-                    addFocusIndicator(openBtn);
-                    openBtn.focus();
-                  }
-                }, 100);
+                const openBtn = getOpenChatBotBtn();
+                if(openBtn) {
+                  addFocusIndicator(openBtn);
+                  openBtn.focus();
+                }
               }
             }
           }, 500);
@@ -9384,14 +9382,6 @@ function fixChatbotAccessibility() {
         const toggleBtn = container.querySelector(":scope > button");
         if (toggleBtn) {
           toggleBtn.click();
-          setTimeout(() => {
-            const openBtn = getOpenChatBotBtn();
-            if(openBtn) {
-              addFocusIndicator(openBtn);
-              openBtn.focus();
-            }
-          }, 500);
-          
         }
       }
     });
