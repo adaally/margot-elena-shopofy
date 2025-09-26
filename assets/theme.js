@@ -9648,6 +9648,7 @@ function fixChatList(container) {
     el.addEventListener("blur", () => {
       el.style.outline = "";
       el.style.outlineOffset = "";
+      el.style.border = '';
     });
   }
 
