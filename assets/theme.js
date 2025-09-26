@@ -9746,10 +9746,11 @@ function fixChatList(container) {
           if (el) {
             console.log('Element is now available:', el.shadowRoot);
             // 👉 do your logic here
-            el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer button').forEach(element => {
-              element.setAttribute('aria-hidden', 'true')
-              element.setAttribute('tabindex', '-1')
-            });
+            console.log(el.shadowRoot.querySelector('.prequalAmountContainer'))
+            // el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer button').forEach(element => {
+            //   element.setAttribute('aria-hidden', 'true')
+            //   element.setAttribute('tabindex', '-1')
+            // });
             // stop observing if you only need it once
             observer.disconnect();
           }
