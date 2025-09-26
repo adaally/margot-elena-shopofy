@@ -9446,6 +9446,16 @@ function fixChatList(container) {
 
 
   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
+    const titleModal = beforeStartModal.querySelector("#chat-title");
+    if(titleModal) {
+      const newText = document.createElement("h1");
+      newText.style.marginTop = '0';
+      newText.style.fontSize = '18px';
+      copyAttributes(titleModal, newText);
+      newText.innerText = titleModal.innerText;
+      titleModal.replaceWith(newText)
+    }
+
     const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
     if(beforeWeGetStartedText) {
       const newText = document.createElement("h2");
