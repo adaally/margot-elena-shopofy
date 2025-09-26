@@ -9474,21 +9474,7 @@ function fixChatList(container) {
 
     const btnSubmit = beforeStartModal.querySelector("form button");
     if (btnSubmit) {
-      const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-            if (!btnSubmit.disabled) {
-              const background = btnSubmit.querySelector('.background');
-              background.style.background = '#000';
-              getFocusableElements(container, btnSubmit);
-            } else {
-              getFocusableElements(container, btnSubmit);
-            }
-          }
-        }
-      });
-
-      observer.observe(btnSubmit, { attributes: true });
+      listenToButtonDisabled(container, btnSubmit);
     }
     beforeStartModal.classList.add('changed');
   }
@@ -9499,21 +9485,7 @@ function fixChatList(container) {
 
       if(submitbtn) {
         submitbtn.setAttribute('aria-label', 'Submit message');
-        const observer = new MutationObserver((mutations) => {
-        for (const mutation of mutations) {
-          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-            setTimeout(() => {
-              if (!submitbtn.disabled) {
-              getFocusableElements(container);
-            } else {
-              getFocusableElements(container);
-            }
-            })
-          }
-        }
-      });
-
-      observer.observe(submitbtn, { attributes: true });
+        listenToButtonDisabled(container, submitbtn)
       }
 
       const chat = chatUiContainer.querySelector(".chat-messages__list");
@@ -9663,6 +9635,26 @@ function fixChatList(container) {
       trapHandler = null;
       console.log("Focus trap disabled");
     }
+  }
+
+  function listenToButtonDisabled(container, btnSubmit) {
+    const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
+            if (!btnSubmit.disabled) {
+              const background = btnSubmit.querySelector('.background');
+              if(background) {
+                background.style.background = '#000';
+              }
+              getFocusableElements(container);
+            } else {
+              getFocusableElements(container);
+            }
+          }
+        }
+      });
+
+    observer.observe(btnSubmit, { attributes: true });
   }
 
   function copyAttributes(source, target) {
