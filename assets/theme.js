@@ -9587,19 +9587,29 @@ function fixChatList(container) {
     
     function handleTrap(e) {
       if (e.key === 'Tab') {
-        console.log(document.activeElement)
+        const active = getDeepActiveElement(); // instead of document.activeElement
+        console.log("Focused element:", active);
+
         if (e.shiftKey) {
-          if (document.activeElement === first) {
+          if (active === first) {
             e.preventDefault();
             last.focus();
           }
         } else {
-          if (document.activeElement === last) {
+          if (active === last) {
             e.preventDefault();
             first.focus();
           }
         }
       }
+    }
+
+    function getDeepActiveElement(doc = document) {
+      let active = doc.activeElement;
+      while (active && active.shadowRoot && active.shadowRoot.activeElement) {
+        active = active.shadowRoot.activeElement;
+      }
+      return active;
     }
 
     document.addEventListener("keydown", handleTrap);
