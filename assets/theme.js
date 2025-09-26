@@ -9323,6 +9323,9 @@ function fixChatbotAccessibility() {
   }
 
 
+    // --- Focus trap helpers ---
+  let trapHandler = null;
+  let focusable = [];
 
   const observer = new MutationObserver(() => {
     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
@@ -9441,9 +9444,6 @@ function fixChatList(container) {
   const beforeStartModal = container.querySelector(".info-modal");
 
 
-    // --- Focus trap helpers ---
-  let trapHandler = null;
-  let focusable = [];
 
   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
     const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
@@ -9565,18 +9565,6 @@ function fixChatList(container) {
       newChatElements[newChatElements.length - 1].focus();
     return;
   }
-
-  // Otherwise, watch for it
-  const shadowObserver = new MutationObserver(() => {
-    chatUiContainer = container.querySelector(".chat-ui.chat-view");
-    if (chatUiContainer) {
-
-      
-      shadowObserver.disconnect();
-    }
-  });
-
-  shadowObserver.observe(container, { childList: true, subtree: true });
 }
 
   function enableFocusTrap(container, toggleBtn) {
