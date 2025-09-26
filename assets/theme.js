@@ -9736,7 +9736,7 @@ function fixChatList(container) {
       }
     });
 
-    console.log(document.querySelector('.prequalAmountContainer');)
+    console.log(document.querySelector('.prequalAmountContainer'))
   }
 
   fix()
