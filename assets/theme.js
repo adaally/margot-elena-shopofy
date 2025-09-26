@@ -9724,10 +9724,10 @@ function fixChatList(container) {
   function fix() {
     document.querySelectorAll('#CollectionSidebar .collection-sidebar__group').forEach(element => {
       const button = element.querySelector('.collapsible-trigger')
-
+      const fieldset = element.querySelector('fieldset')
+      fieldset.style.display = 'none'
       if(button) {
         button.addEventListener('click', () => {
-          const fieldset = element.querySelector('fieldset')
           if(fieldset) {
               fieldset.style.display = button.classList.contains('is-open') ? 'block' : 'none'
             }
