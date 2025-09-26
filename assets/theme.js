@@ -9282,7 +9282,7 @@ function fixChatbotAccessibility() {
       return undefined;
     } 
 
-    return chatBoxContainer.shadowRoot('.chat-app .chat-toggle');
+    return chatBoxContainer.shadowRoot.querySelector('.chat-app .chat-toggle');
   }
 
     function listenToChanges(container1, toggleBtn) {
