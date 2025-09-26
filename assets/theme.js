@@ -9608,6 +9608,7 @@ function fixChatList(container) {
     elementos.forEach(element => {
       addFocusIndicator(element)
     });
+    console.log(elementos)
     return elementos;
   }
 
