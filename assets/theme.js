@@ -9439,6 +9439,12 @@ function fixChatbotAccessibility() {
 function fixChatList(container) {
 
   const beforeStartModal = container.querySelector(".info-modal");
+
+
+    // --- Focus trap helpers ---
+  let trapHandler = null;
+  let focusable = [];
+
   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
     const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
     if(beforeWeGetStartedText) {
@@ -9474,6 +9480,9 @@ function fixChatList(container) {
             if (!btnSubmit.disabled) {
               const background = btnSubmit.querySelector('.background');
               background.style.background = '#000';
+              getFocusableElements(container, btnSubmit);
+            } else {
+              getFocusableElements(container, btnSubmit);
             }
           }
         }
@@ -9570,11 +9579,8 @@ function fixChatList(container) {
   shadowObserver.observe(container, { childList: true, subtree: true });
 }
 
-    // --- Focus trap helpers ---
-  let trapHandler = null;
-
   function enableFocusTrap(container, toggleBtn) {
-    
+    focusable = getFocusableElements(container, toggleBtn);
     
     console.log(focusable)
     focusable.forEach(el => addFocusIndicator(el));
