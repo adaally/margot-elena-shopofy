@@ -9585,25 +9585,21 @@ function fixChatList(container) {
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
     
-    trapHandler = (e) => {
-      if (e.key !== "Tab") return;
-
-      console.log(e.shiftKey, e.key)
-      if (e.shiftKey) {
-        // If Shift+Tab on first, loop to last
-        if (document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        }
-      } else {
-        // If Tab on last, loop to first
-        if (document.activeElement === last) {
-          console.log("should be the first", document.activeElement)
-          e.preventDefault();
-          first.focus();
+    function handleTrap(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
         }
       }
-    };
+    }
 
     document.addEventListener("keydown", trapHandler);
 
