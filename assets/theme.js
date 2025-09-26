@@ -9359,7 +9359,6 @@ function fixChatbotAccessibility() {
 
 
                 // fixChatList(container);
-                listenToChanges(container);
                 listenToChanges(container, toggleBtn);
               } else {
                 disableFocusTrap();
