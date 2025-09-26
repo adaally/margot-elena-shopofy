@@ -9602,7 +9602,7 @@ function fixChatList(container) {
       }
     }
 
-    document.addEventListener("keydown", trapHandler);
+    document.addEventListener("keydown", handleTrap);
 
     
     setTimeout(() => {
