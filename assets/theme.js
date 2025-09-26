@@ -9616,6 +9616,7 @@ function fixChatList(container) {
     if(!el) return;
 
     el.addEventListener("focus", () => {
+      console.log(el.tagName.toLowerCase())
       if(el.tagName.toLowerCase() === 'a' || el.tagName.toLowerCase() === 'button') {
         el.style.outline = '2px solid #000';
       }else {
