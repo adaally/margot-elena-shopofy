@@ -9440,10 +9440,7 @@ function fixChatbotAccessibility() {
 
 
 function fixChatList(container) {
-
   const beforeStartModal = container.querySelector(".info-modal");
-
-
 
   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
     const titleModal = container.querySelector("#chat-title");
@@ -9550,9 +9547,7 @@ function fixChatList(container) {
           element.replaceWith(newElement);
           newChatListContainer.appendChild(newElement)
         }
-
       });
-
 
       chat.replaceWith(newChatListContainer);
 
@@ -9566,15 +9561,13 @@ function fixChatList(container) {
 
   function enableFocusTrap(container, toggleBtn) {
     focusable = getFocusableElements(container, toggleBtn);
-    
-    console.log(focusable)
     focusable.forEach(el => addFocusIndicator(el));
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
     
     function handleTrap(e) {
       if (e.key === 'Tab') {
-        const active = getDeepActiveElement(); // instead of document.activeElement
+        const active = getDeepActiveElement();
         console.log("Focused element:", active);
 
         if (e.shiftKey) {
@@ -9609,23 +9602,20 @@ function fixChatList(container) {
   }
 
   function getFocusableElements(container, toggleBtn) {
-    
-    const elementos = [
+    const focusables = [
       ...container.querySelectorAll(
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
     ), toggleBtn ? toggleBtn : []
     ];
-    elementos.forEach(element => {
+    focusables.forEach(element => {
       addFocusIndicator(element)
     });
-    console.log(elementos)
-    return elementos;
+    return focusables;
   }
 
   function addFocusIndicator(el) {
     if(!el) return;
 
-      console.log(el.tagName.toLowerCase())
     el.addEventListener("focus", () => {
       if(el.tagName.toLowerCase() === 'a') {
         el.style.outline = '2px solid #000';
