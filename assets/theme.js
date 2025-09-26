@@ -9278,7 +9278,7 @@ function fixChatbotAccessibility() {
 
 
 
-    function listenToChanges(container1) {
+    function listenToChanges(container1, toggleBtn) {
       const container = container1.querySelector('div');
       let lastFirstChild = null;
 
@@ -9292,6 +9292,7 @@ function fixChatbotAccessibility() {
         }, 100)
         fixInitialChatTemplate(container1);
 
+        enableFocusTrap(container, toggleBtn);
       }
 
       // Create observer
@@ -9330,15 +9331,18 @@ function fixChatbotAccessibility() {
     if (!container) return;
 
 
-    listenToChanges(container);
 
     const toggleBtn = container.querySelector(":scope > button");
     if (toggleBtn) {
       toggleBtn.removeAttribute("aria-expanded");
       if(toggleBtn.classList.contains("chat-app--close-button")) {;
         toggleBtn.setAttribute("aria-label", "Close chat window")
-      }    
+      }
+
+
+    listenToChanges(container, toggleBtn);
     }
+
 
     // Watch for class changes on the chat-app container
     const containerObserver = new MutationObserver((mutations) => {
@@ -9351,13 +9355,12 @@ function fixChatbotAccessibility() {
               toggleBtn.removeAttribute("aria-expanded");
               if(toggleBtn.classList.contains("chat-app--close-button")) {
                 toggleBtn.setAttribute("aria-label", "Close chat window");
-                enableFocusTrap(container, toggleBtn);
 
 
 
                 // fixChatList(container);
                 listenToChanges(container);
-
+                listenToChanges(container, toggleBtn);
               } else {
                 disableFocusTrap();
               }
