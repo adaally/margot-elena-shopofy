@@ -9644,7 +9644,7 @@ function fixChatList(container) {
       el.style.outline = "none";
       el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black';
       if(el.tagName.toLowerCase() === 'a') {
-        el.style.outline = '1px solid #000';
+        el.style.outline = '2px solid #000';
       }
     });
     el.addEventListener("blur", () => {
