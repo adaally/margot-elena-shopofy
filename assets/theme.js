@@ -9292,7 +9292,9 @@ function fixChatbotAccessibility() {
         }, 100)
         fixInitialChatTemplate(container1);
 
-        enableFocusTrap(container, toggleBtn);
+        setTimeout(() => {
+          enableFocusTrap(container, toggleBtn);
+        }, 300)
       }
 
       // Create observer
