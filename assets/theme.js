@@ -9499,6 +9499,19 @@ function fixChatList(container) {
 
       if(submitbtn) {
         submitbtn.setAttribute('aria-label', 'Submit message');
+        const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
+            if (!btnSubmit.disabled) {
+              getFocusableElements(container, btnSubmit);
+            } else {
+              getFocusableElements(container, btnSubmit);
+            }
+          }
+        }
+      });
+
+      observer.observe(submitbtn, { attributes: true });
       }
 
       const chat = chatUiContainer.querySelector(".chat-messages__list");
