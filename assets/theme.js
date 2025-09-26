@@ -9378,6 +9378,7 @@ function fixChatbotAccessibility() {
         if (toggleBtn) {
           toggleBtn.click();
           const openBtn = getOpenChatBotBtn();
+          console.log(openBtn, 'open')
           if(openBtn) {
             setTimeout(() => {
               openBtn.focus();
