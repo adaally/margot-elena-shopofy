@@ -9360,6 +9360,13 @@ function fixChatbotAccessibility() {
                 listenToChanges(container, toggleBtn);
               } else {
                 disableFocusTrap();
+                setTimeout(() => {
+                  const openBtn = getOpenChatBotBtn();
+                  if(openBtn) {
+                    addFocusIndicator(openBtn);
+                    openBtn.focus();
+                  }
+                }, 500);
               }
             }
           }, 500);
@@ -9380,7 +9387,6 @@ function fixChatbotAccessibility() {
           setTimeout(() => {
             const openBtn = getOpenChatBotBtn();
             if(openBtn) {
-              console.log(openBtn, 'open')
               addFocusIndicator(openBtn);
               openBtn.focus();
             }
