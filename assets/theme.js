@@ -8556,6 +8556,14 @@ theme.recentlyViewed = {
               a.replaceWith(span);
             });
 
+            block.querySelectorAll('h5').forEach(item => {
+              const newProductTitle = document.createElement('div');
+              newProductTitle.className = item.className;
+              newProductTitle.classList.add('h5');
+              newProductTitle.innerHTML = item.innerHTML
+              item.replaceWith(newProductTitle);
+            });
+
             const div = document.createElement('div');
             const aWrapper = document.createElement('a');
             aWrapper.href = href;
@@ -8744,7 +8752,7 @@ theme.recentlyViewed = {
   addLabelTextToYoptoSearch();
 
   function addAccessibilityToYopto() {
-      const observer = new MutationObserver(() => {
+    const observer = new MutationObserver(() => {
       const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
       imgs.forEach(item => item.setAttribute("alt",""))
       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
@@ -8941,7 +8949,7 @@ theme.recentlyViewed = {
     });
   }
 
-    function toggleDropdown() {
+  function toggleDropdown() {
     document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
       document.addEventListener('keydown', function (e) {
         if (e.code === 'Enter' || e.key === 'Enter') {
@@ -9270,9 +9278,6 @@ function addAlertToErrors() {
 
     observer.observe(container, { childList: true, subtree: true });
   });
-
-
-
 
 function fixChatbotAccessibility() {
 
