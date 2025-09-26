@@ -9744,7 +9744,7 @@ function fixChatList(container) {
           // check if the element is now in the DOM
           const el = document.querySelector('shopify-payment-terms');
           if (el) {
-            console.log('Element is now available:', el);
+            console.log('Element is now available:', el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer'));
             // 👉 do your logic here
             el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer').forEach(element => {
               element.setAttribute('aria-hidden', 'true')
