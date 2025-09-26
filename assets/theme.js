@@ -9574,7 +9574,7 @@ function fixChatList(container) {
   function enableFocusTrap(container, toggleBtn) {
     
     const focusable = container.querySelectorAll(
-      'button:not([disabled]), [href], input:not([type='file']), select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     toggleBtn.push(toggleBtn);
     console.log(focusable)
