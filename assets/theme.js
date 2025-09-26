@@ -9725,11 +9725,11 @@ function fixChatList(container) {
     document.querySelectorAll('#CollectionSidebar .collection-sidebar__group').forEach(element => {
       const button = element.querySelector('.collapsible-trigger')
       const fieldset = element.querySelector('fieldset')
-      fieldset.style.display = 'none'
+      // fieldset.style.display = 'none'
       if(button) {
         button.addEventListener('click', () => {
           if(fieldset) {
-              fieldset.style.display = button.classList.contains('is-open') ? 'block' : 'none'
+              // fieldset.style.display = button.classList.contains('is-open') ? 'block' : 'none'
             }
           
         })
