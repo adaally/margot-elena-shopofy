@@ -9743,10 +9743,13 @@ function fixChatList(container) {
         if (mutation.type === 'childList') {
           // check if the element is now in the DOM
           const el = document.querySelector('shopify-payment-terms');
-          if (el) {
+          if (el && el.shadowRoot) {
             console.log('Element is now available:', el.shadowRoot);
             // 👉 do your logic here
-            console.log(el.shadowRoot.querySelector('.prequalAmountContainer'))
+            setTimeout(() => {
+                console.log(el.shadowRoot.querySelector('.prequalAmountContainer'))
+            }, 1000);
+            
             // el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer button').forEach(element => {
             //   element.setAttribute('aria-hidden', 'true')
             //   element.setAttribute('tabindex', '-1')
