@@ -9276,7 +9276,7 @@ function addAlertToErrors() {
 
 function fixChatbotAccessibility() {
 
-
+  function getOpenChatBotBtn( {})
 
     function listenToChanges(container1, toggleBtn) {
       const container = container1.querySelector('div');
@@ -9317,7 +9317,6 @@ function fixChatbotAccessibility() {
       }
   }
 
-
     // --- Focus trap helpers ---
   let trapHandler = null;
   let focusable = [];
@@ -9330,21 +9329,16 @@ function fixChatbotAccessibility() {
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
-
-
     const toggleBtn = container.querySelector(":scope > button");
     if (toggleBtn) {
       toggleBtn.removeAttribute("aria-expanded");
-      if(toggleBtn.classList.contains("chat-app--close-button")) {;
-        toggleBtn.setAttribute("aria-label", "Close chat window")
+      if(toggleBtn.classList.contains("chat-app--close-button")) {
+        toggleBtn.setAttribute("aria-label", "Close chat window");
       }
-
 
     listenToChanges(container, toggleBtn);
     }
 
-
-    // Watch for class changes on the chat-app container
     const containerObserver = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
         if (mutation.type === "attributes" && mutation.attributeName === "class") {
@@ -9497,8 +9491,6 @@ function fixChatList(container) {
       }
 
       const chat = chatUiContainer.querySelector(".chat-messages__list");
-
-
       const uploadImgBtn = chatUiContainer.querySelector("[data-spec='image-upload']");
 
       if(uploadImgBtn) {
@@ -9569,7 +9561,6 @@ function fixChatList(container) {
     function handleTrap(e) {
       if (e.key === 'Tab') {
         const active = getDeepActiveElement();
-        console.log("Focused element:", active);
 
         if (e.shiftKey) {
           if (active === first) {
