@@ -9641,14 +9641,14 @@ function fixChatList(container) {
 
   function addFocusIndicator(el) {
     el.addEventListener("focus", () => {
-      el.style.outline = "2px solid #000";
-      el.style.outlineOffset = "3px";
-      el.style.border = '1px solid #fff';
+      el.style.outline = "none";
+      el.style.boxShadow = 'box-shadow: 0 0 0 2px white, 0 0 0 4px black;'
     });
     el.addEventListener("blur", () => {
-      el.style.outline = "";
-      el.style.outlineOffset = "";
-      el.style.border = '1px solid rgb(106, 106, 106)';
+      // el.style.outline = "";
+      // el.style.outlineOffset = "";
+      // el.style.border = '1px solid rgb(106, 106, 106)';
+      el.style.boxShadow = 'box-shadow: 0 0 0 2px white, 0 0 0 4px black;'
     });
   }
 
