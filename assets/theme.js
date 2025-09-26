@@ -9196,10 +9196,10 @@ function fixAriaLabelThumbnails() {
           for (let i = 0; i < items.length; i++) {
             const el = items[i];
 
-            if (el.classList.contains('class1')) {
+            if (el.classList.contains('yotpo-review')) {
               const next = items[i + 1];
 
-              if (next && next.classList.contains('class2')) {
+              if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('wrapper');
 
