@@ -9502,10 +9502,10 @@ function fixChatList(container) {
         const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-            if (!btnSubmit.disabled) {
-              getFocusableElements(container, btnSubmit);
+            if (!submitbtn.disabled) {
+              getFocusableElements(container, submitbtn);
             } else {
-              getFocusableElements(container, btnSubmit);
+              getFocusableElements(container, submitbtn);
             }
           }
         }
