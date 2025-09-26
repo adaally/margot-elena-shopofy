@@ -9735,6 +9735,8 @@ function fixChatList(container) {
         })
       }
     });
+
+    console.log(document.querySelector('.prequalAmountContainer');)
   }
 
   fix()
