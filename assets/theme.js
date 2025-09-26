@@ -9746,7 +9746,7 @@ function fixChatList(container) {
           if (el) {
             console.log('Element is now available:', el);
             // 👉 do your logic here
-            el.shadowRoot.querySelector('.prequalAmountContainer div, .prequalAmountContainer').forEach(element => {
+            el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer').forEach(element => {
               element.setAttribute('aria-hidden', 'true')
               element.setAttribute('tabindex', '-1')
             });
