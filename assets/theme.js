@@ -9636,14 +9636,14 @@ function fixChatList(container) {
     elementos.forEach(element => {
       addFocusIndicator(element)
     });
-    console.log('called again', elementos)
     return elementos;
   }
 
   function addFocusIndicator(el) {
     el.addEventListener("focus", () => {
-      el.style.outline = "2px solid red";
+      el.style.outline = "2px solid #000";
       el.style.outlineOffset = "2px";
+      el.style.border = '1px solid #fff';
     });
     el.addEventListener("blur", () => {
       el.style.outline = "";
