@@ -9736,7 +9736,32 @@ function fixChatList(container) {
       }
     });
 
-    console.log(document.querySelector('.prequalAmountContainer'))
+    const targetNode = document.body; // or a more specific container
+
+    const observer = new MutationObserver(mutations => {
+      for (const mutation of mutations) {
+        if (mutation.type === 'childList') {
+          // check if the element is now in the DOM
+          const el = document.querySelector('.prequalAmountContainer');
+          if (el) {
+            console.log('Element is now available:', el);
+            el.querySelectorAll("div, button").forEach(element => {
+              element.setAttribute('aria-hidden', 'true')
+              element.setAttribute('tabindex', '-1')
+            });
+            // 👉 do your logic here
+
+            // stop observing if you only need it once
+            observer.disconnect();
+          }
+        }
+      }
+    });
+
+    observer.observe(targetNode, {
+      childList: true,
+      subtree: true
+    });
   }
 
   fix()
