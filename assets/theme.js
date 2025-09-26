@@ -9188,7 +9188,7 @@ function fixAriaLabelThumbnails() {
       const yoptoContainer = document.querySelector("#yotpo-reviews-container");
       if(yoptoContainer) {
 
-        const reviewListContainer = yoptoContainer.querySelectorAll('yotpo-reviews-list');
+        const reviewListContainer = yoptoContainer.querySelector('.yotpo-reviews-list');
 
         if(reviewListContainer) {
 
