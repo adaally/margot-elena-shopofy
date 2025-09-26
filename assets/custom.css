@@ -49,3 +49,7 @@
     font-family: inherit;
     font-weight: 700;
 }
+
+.megamenu a:has(img) .h5 {
+    margin-bottom: -10px;
+}
