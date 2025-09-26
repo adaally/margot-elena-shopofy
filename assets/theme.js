@@ -9587,6 +9587,7 @@ function fixChatList(container) {
     
     function handleTrap(e) {
       if (e.key === 'Tab') {
+        console.log(document.activeElement)
         if (e.shiftKey) {
           if (document.activeElement === firstEl) {
             e.preventDefault();
