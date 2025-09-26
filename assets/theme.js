@@ -9573,10 +9573,10 @@ function fixChatList(container) {
 
   function enableFocusTrap(container, toggleBtn) {
     
-    const focusable = container.querySelectorAll(
+    let focusable = container.querySelectorAll(
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    focusable.push(toggleBtn);
+    focusable = Array.from(focusable).push(toggleBtn);
     console.log(focusable)
     focusable.forEach(el => addFocusIndicator(el));
     const first = focusable[0];
