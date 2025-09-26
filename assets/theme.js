@@ -9586,9 +9586,9 @@ function fixChatList(container) {
     const last = focusable[focusable.length - 1];
     
     trapHandler = (e) => {
-      console.log('TAB', e.key)
       if (e.key !== "Tab") return;
 
+      console.log(e.shiftKey, e.key)
       if (e.shiftKey) {
         // If Shift+Tab on first, loop to last
         if (document.activeElement === first) {
