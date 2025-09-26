@@ -9504,9 +9504,9 @@ function fixChatList(container) {
           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
             setTimeout(() => {
               if (!submitbtn.disabled) {
-              getFocusableElements(container, submitbtn);
+              getFocusableElements(container);
             } else {
-              getFocusableElements(container, submitbtn);
+              getFocusableElements(container);
             }
             })
           }
@@ -9631,7 +9631,7 @@ function fixChatList(container) {
     const elementos = [
       ...container.querySelectorAll(
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
-    ), toggleBtn
+    ), toggleBtn ? toggle : []
     ];
     console.log('called again', elementos)
     return elementos;
