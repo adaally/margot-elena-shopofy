@@ -9485,9 +9485,9 @@ function fixChatList(container) {
         const newText = document.createElement("h1");
         newText.style.margin = '0';
         newText.style.fontSize = '18px';
-        copyAttributes(titleModal, newText);
-        newText.innerText = titleModal.innerText;
-        titleModal.replaceWith(newText)
+        copyAttributes(title, newText);
+        newText.innerText = title.innerText;
+        title.replaceWith(newText)
       }
 
       const submitbtn = chatUiContainer.querySelector(".composer-bar__footer-button");
