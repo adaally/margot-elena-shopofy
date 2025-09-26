@@ -9502,11 +9502,13 @@ function fixChatList(container) {
         const observer = new MutationObserver((mutations) => {
         for (const mutation of mutations) {
           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-            if (!submitbtn.disabled) {
+            setTimeout(() => {
+              if (!submitbtn.disabled) {
               getFocusableElements(container, submitbtn);
             } else {
               getFocusableElements(container, submitbtn);
             }
+            }, 300)
           }
         }
       });
@@ -9632,7 +9634,7 @@ function fixChatList(container) {
     ), toggleBtn
     ];
     console.log('called again', elementos)
-    return elementos
+    return elementos;
   }
 
   function addFocusIndicator(el) {
