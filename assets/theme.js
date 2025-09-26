@@ -9276,7 +9276,14 @@ function addAlertToErrors() {
 
 function fixChatbotAccessibility() {
 
-  function getOpenChatBotBtn( {})
+  function getOpenChatBotBtn() {
+    const chatBoxContainer = document.querySelector("#shopify-chat inbox-online-store-chat");
+    if(!chatBoxContainer) {
+      return undefined;
+    } 
+
+    return chatBoxContainer.shadowRoot('.chat-app .chat-toggle');
+  }
 
     function listenToChanges(container1, toggleBtn) {
       const container = container1.querySelector('div');
@@ -9370,6 +9377,13 @@ function fixChatbotAccessibility() {
         const toggleBtn = container.querySelector(":scope > button");
         if (toggleBtn) {
           toggleBtn.click();
+          const openBtn = getOpenChatBotBtn();
+          if(openBtn) {
+            setTimeout(() => {
+              openBtn.focus();
+              addFocusIndicator(openBtn);
+            }, 500);
+          }
         }
       }
     });
