@@ -9449,7 +9449,7 @@ function fixChatList(container) {
     const titleModal = container.querySelector("#chat-title");
     if(titleModal) {
       const newText = document.createElement("h1");
-      newText.style.marginTop = '0';
+      newText.style.margin = '0';
       newText.style.fontSize = '18px';
       copyAttributes(titleModal, newText);
       newText.innerText = titleModal.innerText;
