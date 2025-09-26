@@ -9589,14 +9589,14 @@ function fixChatList(container) {
       if (e.key === 'Tab') {
         console.log(document.activeElement)
         if (e.shiftKey) {
-          if (document.activeElement === firstEl) {
+          if (document.activeElement === first) {
             e.preventDefault();
-            lastEl.focus();
+            last.focus();
           }
         } else {
-          if (document.activeElement === lastEl) {
+          if (document.activeElement === last) {
             e.preventDefault();
-            firstEl.focus();
+            first.focus();
           }
         }
       }
