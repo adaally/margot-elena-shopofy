@@ -9613,6 +9613,8 @@ function fixChatList(container) {
   }
 
   function addFocusIndicator(el) {
+    if(!el) return;
+
     el.addEventListener("focus", () => {
       if(el.tagName.toLowerCase() === 'a') {
         el.style.outline = '2px solid #000';
