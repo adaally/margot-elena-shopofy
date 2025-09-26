@@ -9381,8 +9381,8 @@ function fixChatbotAccessibility() {
             const openBtn = getOpenChatBotBtn();
             if(openBtn) {
               console.log(openBtn, 'open')
-              openBtn.focus();
               addFocusIndicator(openBtn);
+              openBtn.focus();
             }
           }, 500);
           
