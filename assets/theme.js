@@ -9204,7 +9204,7 @@ function fixAriaLabelThumbnails() {
               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('wrapper');
-                wrapper.setAttribute('role', 'region');
+                wrapper.setAttribute('role', 'group');
                 wrapper.setAttribute('aria-labelledby', reviewId);
 
                 reviewListContainer.insertBefore(wrapper, el);
