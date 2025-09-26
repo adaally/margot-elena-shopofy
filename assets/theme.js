@@ -9648,7 +9648,7 @@ function fixChatList(container) {
       // el.style.outline = "";
       // el.style.outlineOffset = "";
       // el.style.border = '1px solid rgb(106, 106, 106)';
-      el.style.boxShadow = 'box-shadow: 0 0 0 2px white, 0 0 0 4px black;'
+      el.style.boxShadow = 'none'
     });
   }
 
