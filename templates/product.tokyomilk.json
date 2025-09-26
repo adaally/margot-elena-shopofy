@@ -488,6 +488,26 @@
       "disabled": true,
       "settings": {}
     },
+    "rich_text_fPrcX3": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wN4ffX": {
+          "type": "heading",
+          "settings": {
+            "title": "Placeholder"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wN4ffX"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "e01048c8-732f-47a1-bc74-d307e0f69ecc": {
       "type": "advanced-content",
       "blocks": {
@@ -526,6 +546,7 @@
     "product-recommendations",
     "recently-viewed",
     "collection-return",
+    "rich_text_fPrcX3",
     "e01048c8-732f-47a1-bc74-d307e0f69ecc"
   ]
 }
