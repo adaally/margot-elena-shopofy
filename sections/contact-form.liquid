@@ -26,12 +26,12 @@
         <div class="grid grid--small">
           <div class="grid__item medium-up--one-half">
             <label for="ContactFormName-{{ section.id }}">{{ 'contact.form.name' | t }}</label>
-            <input type="text" id="ContactFormName-{{ section.id }}" class="input-full" name="contact[name]" autocapitalize="words" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+            <input type="text" id="ContactFormName-{{ section.id }}" autocomplete="name" class="input-full" name="contact[name]" autocapitalize="words" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
           </div>
 
           <div class="grid__item medium-up--one-half">
             <label for="ContactFormEmail-{{ section.id }}">{{ 'contact.form.email' | t }}*</label>
-            <input type="email" aria-required="true" id="ContactFormEmail-{{ section.id }}" class="input-full" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+            <input type="email" aria-required="true" id="ContactFormEmail-{{ section.id }}" autocomplete="email" class="input-full" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
           </div>
         </div>
 
