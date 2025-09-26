@@ -9642,7 +9642,7 @@ function fixChatList(container) {
   function addFocusIndicator(el) {
     el.addEventListener("focus", () => {
       el.style.outline = "none";
-      el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black;'
+      el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black'
     });
     el.addEventListener("blur", () => {
       // el.style.outline = "";
