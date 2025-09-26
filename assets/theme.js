@@ -9633,6 +9633,9 @@ function fixChatList(container) {
       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
     ), toggleBtn ? toggleBtn : []
     ];
+    elementos.forEach(element => {
+      addFocusIndicator(element)
+    });
     console.log('called again', elementos)
     return elementos;
   }
