@@ -9121,6 +9121,7 @@ theme.recentlyViewed = {
   function fixAccessibilityToCartThumnail() {
     const observerRebuyCart = new MutationObserver(() => {
       const cart = document.querySelector("#rebuy-cart");
+      console.log(cart, 'cart loaded')
       if(!cart) return;
 
       const title = cart.querySelector("#SmartCart_title");
