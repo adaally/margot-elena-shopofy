@@ -1988,12 +1988,18 @@ theme.recentlyViewed = {
         isTransitioning = false;
         return;
       }
-  
+      const moduleInner = container.querySelector(selectors.moduleInner + ' fieldset');
+
+      const style = window.getComputedStyle(moduleInner);
+      if (style.display === 'none') {
+        moduleInner.style.display = 'block';
+      } else {
+        moduleInner.style.display = 'none';
+      }
       var height = container.querySelector(selectors.moduleInner).offsetHeight;
       var isAutoHeight = container.classList.contains(classes.autoHeight);
       var parentCollapsibleEl = container.parentNode.closest(selectors.module);
       var childHeight = height;
-      console.log(height)
   
       if (isTab) {
         if(isOpen) {
