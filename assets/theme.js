@@ -9011,17 +9011,17 @@ theme.recentlyViewed = {
         const modal = document.querySelector('#yotpo-modal');
         if (modal) {
           listenToInputWarning(modal);
-          // modal.removeAttribute('aria-describedby');
-          // modal.removeAttribute('aria-labelledby');
+          modal.removeAttribute('aria-describedby');
+          modal.removeAttribute('aria-labelledby');
           const header = modal.querySelector("h2.yotpo-modal-header");
           if(header) {
             const newHeader = document.createElement("h1");
             newHeader.className = header.className;
             newHeader.innerHTML = header.innerHTML;
-            // newHeader.id = 'titleModalChanged';
+            newHeader.id = 'titleModalChanged';
             header.parentNode.replaceChild(newHeader, header);
 
-            // modal.setAttribute('aria-labelledby', newHeader.id);
+            modal.setAttribute('aria-labelledby', newHeader.id);
           }
 
           //Add autocomplete
