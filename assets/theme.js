@@ -9209,7 +9209,7 @@ theme.recentlyViewed = {
         });
 
         observerContentWeLove.disconnect();
-      }):
+      });
 
       observerContentWeLove.observe(cart, {
         childList: true, subtree: true
