@@ -9741,20 +9741,13 @@ function fixChatList(container) {
     const observer = new MutationObserver(mutations => {
       for (const mutation of mutations) {
         if (mutation.type === 'childList') {
-          // check if the element is now in the DOM
           const el = document.querySelector('shopify-payment-terms');
           if (el && el.shadowRoot) {
-            console.log('Element is now available:', el.shadowRoot);
-            // 👉 do your logic here
-            setTimeout(() => {
-                console.log(el.shadowRoot.querySelector('#shopify-installments'))
-            }, 4000);
+            const el.shadowRoot.querySelector('#prequalAmountContainer div, #prequalAmountContainer button').forEach(element => {
+              element.setAttribute('aria-hidden', 'true')
+              element.setAttribute('tabindex', '-1')
+            });
             
-            // el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer button').forEach(element => {
-            //   element.setAttribute('aria-hidden', 'true')
-            //   element.setAttribute('tabindex', '-1')
-            // });
-            // stop observing if you only need it once
             observer.disconnect();
           }
         }
