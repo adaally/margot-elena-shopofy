@@ -56,8 +56,8 @@
                 endif
               -%}
 
-              <div class="fieldset-no-style" role='group' aria-labelledby="{{ filter.label | escape }}">
-                <div class='visually-hidden' id='{{ filter.label | escape }}'>{{ filter.label | escape }}</div>
+              <fieldset class="fieldset-no-style">
+                <legend class='visually-hidden'>{{ filter.label | escape }}</legend>
                 <ul aria-label="{{ filter.label | escape }}" class="no-bullets tag-list">
                   {%- assign tag_count = filter.values.size -%}
                   {%- for filter_value in filter.values -%}
@@ -96,7 +96,7 @@
                     </li>
                   {%- endfor -%}
               </ul>
-            </div>
+              </fieldset>
 
               {%- if tag_count == 0 -%}
                 {%- style -%}
