@@ -8984,6 +8984,9 @@ theme.recentlyViewed = {
   removeEmptyLinkFromBlogTags();
   
   document.addEventListener('click', function (e) {
+    const nameInputId = '#name';
+    const emailInputId = '#email';
+
     if (e.target.matches('#yotpo-main-widget-btn')) {
       // Delay to wait for modal render
       setTimeout(() => {
@@ -9000,6 +9003,15 @@ theme.recentlyViewed = {
             header.parentNode.replaceChild(newHeader, header);
 
             modal.setAttribute('aria-labelledby', newHeader.id);
+          }
+
+          //Add autocomplete
+          const name = modal.querySelector(nameInputId);
+          const email = modal.querySelector(emailInputId);
+
+          if(name && email) {
+            name.setAttribute('autocomplete', 'name');
+            email.setAttribute('autocomplete', 'email');
           }
 
           const fileInput = modal.querySelector('.yotpo-file-upload .yotpo-upload-label');
