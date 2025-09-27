@@ -1948,8 +1948,10 @@ theme.recentlyViewed = {
         trigger.setAttribute('aria-expanded', state);
         trigger.removeAttribute("title");
         trigger.off('click' + namespace);
-        trigger.on('click' + namespace, () => {
-          toggle
+        trigger.on('click' + namespace, (evt) => {
+          setTimeout(() => {
+            toggle(evt);
+          }, 50)
         });
       });
     }
