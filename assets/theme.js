@@ -9180,6 +9180,8 @@ theme.recentlyViewed = {
               const replaceLinkElement = document.createElement("span");
               replaceLinkElement.innerHTML = element.innerHTML;
               replaceLinkElement.className = element.className;
+              replaceLinkElement.style.display = 'block';
+              replaceLinkElement.style.height = '100px';
               element.replaceWith(replaceLinkElement);
             }
           });
