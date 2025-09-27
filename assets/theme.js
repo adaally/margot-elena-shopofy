@@ -8989,7 +8989,7 @@ theme.recentlyViewed = {
 
     function listenToInputWarning(modal) {
       modal.querySelectorAll('.yotpo-new-input-container, textarea').forEach(element => {
-        element.addEventListener('focus', () = > {
+        element.addEventListener('focus', () => {
           setTimeout(() => {
             const id = 'warning'+ index;
             element.setAttribute('aria-describedby', id);
