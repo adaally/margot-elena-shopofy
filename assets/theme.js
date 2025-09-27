@@ -8995,7 +8995,7 @@ theme.recentlyViewed = {
             const newHeader = document.createElement("h1");
             newHeader.className = header.className;
             newHeader.innerHTML = header.innerHTML;
-            header.parentNode.replaceChild(newHeader, header);
+            header.replaceWith(newHeader, header);
           }
 
           const stars = modal.querySelectorAll("svg.yotpo-star-rating-icon");
