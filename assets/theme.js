@@ -9207,7 +9207,8 @@ theme.recentlyViewed = {
     observerRebuyCart.observe(document.body, {
       childList: true, subtree: true
     });
-  }
+  })
+}
 
   fixAccessibilityToCartThumnail();
 
