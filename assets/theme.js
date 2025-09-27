@@ -8985,17 +8985,21 @@ theme.recentlyViewed = {
   
   document.addEventListener('click', function (e) {
     if (e.target.matches('#yotpo-main-widget-btn')) {
-      console.log(e)
       // Delay to wait for modal render
       setTimeout(() => {
         const modal = document.querySelector('#yotpo-modal');
         if (modal) {
+          modal.removeAttribute('aria-describedby');
+          modal.removeAttribute('aria-labelledby');
           const header = modal.querySelector("h2.yotpo-modal-header");
           if(header) {
             const newHeader = document.createElement("h1");
             newHeader.className = header.className;
             newHeader.innerHTML = header.innerHTML;
+            newHeader.id = 'titleModalChanged';
             header.parentNode.replaceChild(newHeader, header);
+
+            modal.setAttribute('aria-labelledby', newHeader.id);
           }
 
           const stars = modal.querySelectorAll("svg.yotpo-star-rating-icon");
@@ -9012,6 +9016,13 @@ theme.recentlyViewed = {
                 if(formCompletedContainer) {
                   formCompletedContainer.setAttribute("role", "alert");
                 }
+
+                modal.querySelectorAll('.yotpo-new-input-validation').forEach((element, index) => {
+                  element.id = 'warning'+ index;
+                  element.parentNode.querySelector('input, textarea').forEach(formItem => {
+                    formId.setAttribute('aria-describedby', element.id);
+                  });
+                });
               }, 300);
             });
           }
