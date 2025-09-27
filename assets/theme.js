@@ -8987,11 +8987,27 @@ theme.recentlyViewed = {
     const nameInputId = '#name';
     const emailInputId = '#email';
 
+    function listenToInputWarning(modal) {
+      modal.querySelectorAll('.yotpo-new-input-container, textarea').forEach(element => {
+        element.addEventListener('focus', () = > {
+          setTimeout(() => {
+            const id = 'warning'+ index;
+            element.setAttribute('aria-describedby', id);
+            element.parentNode.querySelectorAll('.yotpo-new-input-validation').forEach(formItem => {
+              formItem.id = id;
+            });
+          }, 300);
+        });
+                  
+      });
+    }
+
     if (e.target.matches('#yotpo-main-widget-btn')) {
       // Delay to wait for modal render
       setTimeout(() => {
         const modal = document.querySelector('#yotpo-modal');
         if (modal) {
+          listenToInputWarning(modal);
           modal.removeAttribute('aria-describedby');
           modal.removeAttribute('aria-labelledby');
           const header = modal.querySelector("h2.yotpo-modal-header");
@@ -9012,12 +9028,19 @@ theme.recentlyViewed = {
           if(name && email) {
             name.setAttribute('autocomplete', 'name');
             email.setAttribute('autocomplete', 'email');
+
+
+            const emailDescription = email.parentNode.querySelector('.yotpo-new-input-message');
+            if(emailDescription) {
+              emailDescription.id = 'descriptionEmail';
+              email.setAttribute('aria-describedby', emailDescription.id);
+            }
           }
 
           const fileInput = modal.querySelector('.yotpo-file-upload .yotpo-upload-label');
           const fileInputDescription = modal.querySelector('.yotpo-file-upload .yotpo-new-input-message');
           if(fileInput && fileInputDescription) {
-            fileInputDescription.id = 'descriptionUploadMedia'
+            fileInputDescription.id = 'descriptionUploadMedia';
             fileInput.setAttribute('aria-label', 'Upload media');
             fileInput.setAttribute('aria-describedby', fileInputDescription.id);
           }
