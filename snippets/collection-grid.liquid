@@ -57,7 +57,7 @@ Snippet Arguments
     <div class="collection-filter__item collection-filter__item--sort">
         <div class="collection-filter__sort-container">
         {%- assign sort_by = sort_by | default: default_sort_by -%}
-        <label for="SortBy" class="hidden-label">{{ 'collections.sorting.title' | t }}</label>
+        <label for="SortBy" class="hidden-label" aria-describedby="pageRefreshText">{{ 'collections.sorting.title' | t }}</label>
         <select name="SortBy" id="SortBy" data-default-sortby="{{ default_sort_by }}">
           <option value="title-ascending"{% if sort_by == default_sort_by %} selected="selected"{% endif %}>{{ 'collections.sorting.title' | t }}</option>
           {%- for option in sort_options -%}
@@ -66,6 +66,7 @@ Snippet Arguments
         </select>
         </div>
     </div>
+    <div class="hidden-label" id='pageRefreshText'>This page will refresh if you make a selection.</div>
   </div>
 
   <div role="list" class="grid grid--uniform{% if mobile_flush_grid %} small--grid--flush{% endif %}"{% unless enable_collection_count %} data-scroll-to{% endunless %}>
