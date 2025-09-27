@@ -9060,26 +9060,23 @@ theme.recentlyViewed = {
             item.removeAttribute("aria-label");
           });
 
-          const radios = modal.querySelectorAll('.yotpo-star-rating-icons-wrapper input');
+          // const radios = modal.querySelectorAll('.yotpo-star-rating-icons-wrapper input');
 
-          function updateTabIndex() {
-            radios.forEach(radio => {
-              radio.setAttribute('name', 'stars')
-              if (radio.checked) {
-                radio.setAttribute('tabindex', '0');
-              } else {
-                radio.setAttribute('tabindex', '-1');
-              }
-            });
-          }
+          // function updateTabIndex() {
+          //   radios.forEach(radio => {
+          //     radio.setAttribute('name', 'stars')
+          //     if (radio.checked) {
+          //       radio.setAttribute('tabindex', '0');
+          //     } else {
+          //       radio.setAttribute('tabindex', '-1');
+          //     }
+          //   });
+          // }
 
-          // run once on load
-          updateTabIndex();
-
-          // update whenever a radio changes
-          radios.forEach(radio => {
-            radio.addEventListener('change', updateTabIndex);
-          });
+          // updateTabIndex();
+          // radios.forEach(radio => {
+          //   radio.addEventListener('change', updateTabIndex);
+          // });
 
           const submitBtn = modal.querySelector(".yotpo-new-review-submit");
           if(submitBtn) {
@@ -9815,20 +9812,6 @@ function fixChatList(container) {
   fixChatbotAccessibility();
 
   function fixHiddenTextProductLearnMore() {
-    // document.querySelectorAll('#CollectionSidebar .collection-sidebar__group').forEach(element => {
-    //   const button = element.querySelector('.collapsible-trigger')
-    //   const fieldset = element.querySelector('fieldset')
-    //   fieldset.style.display = 'none'
-    //   if(button) {
-    //     button.addEventListener('click', () => {
-    //       if(fieldset) {
-    //           fieldset.style.display = button.classList.contains('is-open') ? 'block' : 'none'
-    //         }
-          
-    //     })
-    //   }
-    // });
-
     const targetNode = document.querySelector('.product-single__meta');
     if(!targetNode) return;
 
