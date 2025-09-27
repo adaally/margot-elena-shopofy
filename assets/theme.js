@@ -9064,6 +9064,7 @@ theme.recentlyViewed = {
 
           function updateTabIndex() {
             radios.forEach(radio => {
+              radio.setAttribute('name', 'stars')
               if (radio.checked) {
                 radio.setAttribute('tabindex', '0');
               } else {
