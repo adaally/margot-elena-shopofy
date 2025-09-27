@@ -9069,10 +9069,11 @@ theme.recentlyViewed = {
                   formCompletedContainer.setAttribute("role", "alert");
                 }
 
-                modal.querySelectorAll('.yotpo-new-input-validation').forEach((element, index) => {
-                  element.id = 'warning'+ index;
+                modal.querySelectorAll('.yotpo-new-input-validation').forEach((element) => {
                   element.parentNode.querySelectorAll('input, textarea').forEach(formItem => {
-                    formItem.setAttribute('aria-describedby', element.id);
+                    const id = element.id + 'warning';
+                    formItem.setAttribute('aria-describedby', id);
+                    element.id = id;
                   });
                 });
               }, 300);
