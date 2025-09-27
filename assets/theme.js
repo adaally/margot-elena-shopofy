@@ -9141,6 +9141,7 @@ theme.recentlyViewed = {
 
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
+        console.log(containerWeLove, 'found')
         if(!containerWeLove) return;
 
         cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
