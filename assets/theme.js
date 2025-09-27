@@ -9743,7 +9743,7 @@ function fixChatList(container) {
         if (mutation.type === 'childList') {
           const el = document.querySelector('shopify-payment-terms');
           if (el && el.shadowRoot) {
-            el.shadowRoot.querySelector('#prequalAmountContainer div, #prequalAmountContainer button').forEach(element => {
+            el.shadowRoot.querySelectorAll('#prequalAmountContainer div, #prequalAmountContainer button').forEach(element => {
               element.setAttribute('aria-hidden', 'true')
               element.setAttribute('tabindex', '-1')
             });
