@@ -9020,7 +9020,7 @@ theme.recentlyViewed = {
                 modal.querySelectorAll('.yotpo-new-input-validation').forEach((element, index) => {
                   element.id = 'warning'+ index;
                   element.parentNode.querySelectorAll('input, textarea').forEach(formItem => {
-                    formId.setAttribute('aria-describedby', element.id);
+                    formItem.setAttribute('aria-describedby', element.id);
                   });
                 });
               }, 300);
