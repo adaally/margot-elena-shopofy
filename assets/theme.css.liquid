@@ -3084,6 +3084,7 @@ html:not(.no-js):not(.tab-outline) :focus{
 .button-play-main {
   position: absolute;
   z-index: 6;
+  bottom: 0;
 }
 
 .visually-invisible{
@@ -8538,16 +8539,23 @@ input[type=image]{
 }
 
 .slideshow__pause{
-  clip:auto;
-  background-color:var(--colorBtnPrimary);
-  color:var(--colorBtnPrimaryText);
-  height:auto;
-  margin:0;
-  padding:10px;
-  transition:none;
-  width:auto;
-  z-index:1;
-  border-radius: 50%:
+  clip: auto;
+  background-color: var(--colorBtnPrimary);
+  color: var(--colorBtnPrimaryText);
+  height: auto;
+  margin: 0;
+  transition: none;
+  width: 35px;
+  z-index: 1;
+  border-radius: 50%;
+  bottom: 0;
+  height: 35px;
+  padding-bottom: 4px;
+}
+
+..slideshow__pause icon {
+  height: 15px;
+  width: 15px;
 }
 
 .video-is-playing .slideshow__pause:focus{
