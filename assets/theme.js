@@ -9723,21 +9723,22 @@ function fixChatList(container) {
   fixChatbotAccessibility();
 
   function fixHiddenTextProductLearnMore() {
-    document.querySelectorAll('#CollectionSidebar .collection-sidebar__group').forEach(element => {
-      const button = element.querySelector('.collapsible-trigger')
-      const fieldset = element.querySelector('fieldset')
-      // fieldset.style.display = 'none'
-      if(button) {
-        button.addEventListener('click', () => {
-          if(fieldset) {
-              // fieldset.style.display = button.classList.contains('is-open') ? 'block' : 'none'
-            }
+    // document.querySelectorAll('#CollectionSidebar .collection-sidebar__group').forEach(element => {
+    //   const button = element.querySelector('.collapsible-trigger')
+    //   const fieldset = element.querySelector('fieldset')
+    //   fieldset.style.display = 'none'
+    //   if(button) {
+    //     button.addEventListener('click', () => {
+    //       if(fieldset) {
+    //           fieldset.style.display = button.classList.contains('is-open') ? 'block' : 'none'
+    //         }
           
-        })
-      }
-    });
+    //     })
+    //   }
+    // });
 
     const targetNode = document.querySelector('.product-single__meta');
+    if(!targetNode) return;
 
     const observer = new MutationObserver(mutations => {
       for (const mutation of mutations) {
