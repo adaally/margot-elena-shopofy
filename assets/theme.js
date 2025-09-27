@@ -6600,6 +6600,7 @@ theme.recentlyViewed = {
   
       openCollapsible: function(el) {
         if (el.classList.contains(classes.filterSidebar)) {
+          console.log('PRUEBA')
           el.style.height = 'auto';
         }
   
@@ -6659,7 +6660,7 @@ theme.recentlyViewed = {
         // Also update top position of sticky sidebar
         var stickySidebar = document.querySelector('.grid__item--sidebar');
         if (stickySidebar) {
-          stickySidebar.style.top = headerHeight + 100 + 'px';
+          stickySidebar.style.top = headerHeight + 10 + 'px';
         }
       },
   
