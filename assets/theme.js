@@ -8992,8 +8992,8 @@ theme.recentlyViewed = {
         element.addEventListener('focus', () => {
           setTimeout(() => {
             const id = element.id + 'warning';
-            element.setAttribute('aria-describedby', id);
             element.parentNode.querySelectorAll('.yotpo-new-input-validation').forEach(formItem => {
+              element.setAttribute('aria-describedby', id);
               formItem.id = id;
             });
           }, 300);
