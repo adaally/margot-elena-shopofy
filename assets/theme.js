@@ -9019,7 +9019,7 @@ theme.recentlyViewed = {
 
                 modal.querySelectorAll('.yotpo-new-input-validation').forEach((element, index) => {
                   element.id = 'warning'+ index;
-                  element.parentNode.querySelector('input, textarea').forEach(formItem => {
+                  element.parentNode.querySelectorAll('input, textarea').forEach(formItem => {
                     formId.setAttribute('aria-describedby', element.id);
                   });
                 });
