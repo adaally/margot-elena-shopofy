@@ -9144,7 +9144,7 @@ theme.recentlyViewed = {
         if(!containerWeLove) return;
 
         setTimeout(() => {
-          console.log(containerWeLove, 'found')
+          console.log(cart.querySelector('.rebuy-widget-content'), 'found')
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
             const newElement = document.createElement("span");
             newElement.innerHTML = link.innerHTML;
