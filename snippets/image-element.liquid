@@ -106,13 +106,13 @@
       {% assign img_width = widths | split: ',' | last %}
     {% endif %}
     <img alt="{{ alt }}" aria-hidden="{{ ariaHidden }}" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
-      | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" role="{{ role }}" sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}" widths="{{ widths }}">
+      | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" {% if role != blank %} role="{{ role }}" {% endif %}  sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}" widths="{{ widths }}">
   {% else %}
     {% if img_width == blank %}
       {% assign img_width = img.width | times: 2 | round %}
     {% endif %}
     <img alt="{{ alt }}" aria-hidden="{{ ariaHidden }}" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-5ed16408" data-src="{{ img
-      | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" role="{{ role }}" sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}">
+      | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" {% if role != blank %} role="{{ role }}" {% endif %}  sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}">
   {% endif %}
 {% elsif type == 'photoswipe' %}
   {% assign widthsArray = widths | split: ',' %}
