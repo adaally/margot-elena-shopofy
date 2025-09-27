@@ -9747,7 +9747,7 @@ function fixChatList(container) {
             console.log('Element is now available:', el.shadowRoot);
             // 👉 do your logic here
             setTimeout(() => {
-                console.log(el.shadowRoot.querySelector('.prequalAmountContainer'))
+                console.log(el.shadowRoot.querySelector('#shopify-installments'))
             }, 4000);
             
             // el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer button').forEach(element => {
