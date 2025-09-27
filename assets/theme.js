@@ -9060,6 +9060,26 @@ theme.recentlyViewed = {
             item.removeAttribute("aria-label");
           });
 
+          const radios = modal.querySelectorAll('.yotpo-star-rating-icons-wrapper input');
+
+          function updateTabIndex() {
+            radios.forEach(radio => {
+              if (radio.checked) {
+                radio.setAttribute('tabindex', '0');
+              } else {
+                radio.setAttribute('tabindex', '-1');
+              }
+            });
+          }
+
+          // run once on load
+          updateTabIndex();
+
+          // update whenever a radio changes
+          radios.forEach(radio => {
+            radio.addEventListener('change', updateTabIndex);
+          });
+
           const submitBtn = modal.querySelector(".yotpo-new-review-submit");
           if(submitBtn) {
             submitBtn.addEventListener('click', () => {
