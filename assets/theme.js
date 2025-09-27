@@ -6659,7 +6659,7 @@ theme.recentlyViewed = {
         // Also update top position of sticky sidebar
         var stickySidebar = document.querySelector('.grid__item--sidebar');
         if (stickySidebar) {
-          stickySidebar.style.top = headerHeight + 10 + 'px';
+          stickySidebar.style.top = headerHeight + 100 + 'px';
         }
       },
   
