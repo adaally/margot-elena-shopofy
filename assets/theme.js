@@ -9119,11 +9119,7 @@ theme.recentlyViewed = {
   changePtoH2ToReviews();
 
   function fixAccessibilityToCartThumnail() {
-    const timeout = setTimeout(() => {
-      clearInterval(interval);
-    }, 5000);
-
-    const interval = setInterval(() => {
+    const observerRebuyCart = new MutationObserver(() => {
       const cart = document.querySelector("#rebuy-cart");
       if(!cart) return;
 
@@ -9204,13 +9200,13 @@ theme.recentlyViewed = {
 
       cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
         element.setAttribute("alt", "");
-      });;
-      }, 4000);
-
-      clearTimeout(timeout);
-      clearInterval(interval);
-    }, 200);
-    
+      });
+      
+      observerRebuyCart.disconnect();
+    });
+    observerRebuyCart.observe(document.body, {
+      childList: true, subtree: true
+    });
   }
 
   fixAccessibilityToCartThumnail();
