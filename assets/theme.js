@@ -9139,18 +9139,22 @@ theme.recentlyViewed = {
         progressBar.removeAttribute("tabindex");
       }
 
-      cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
-        const newElement = document.createElement("span");
-        newElement.innerHTML = link.innerHTML;
-        link.replaceWith(newElement);
-      });
-      
-        cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
+      const observerContentWeLove = new MutationObserver(() => {
+        const containerWeLove = cart.querySelector('.rebuy-widget-content');
+        if(!containerWeLove) return;
+
+        cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
           const newElement = document.createElement("span");
           newElement.innerHTML = link.innerHTML;
           link.replaceWith(newElement);
         });
 
+        cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
+          const newElement = document.createElement("span");
+          newElement.innerHTML = link.innerHTML;
+          link.replaceWith(newElement);
+        });
+        
         cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
           if(primaryTitle) {
             const newTitle = document.createElement("h2");
@@ -9168,41 +9172,48 @@ theme.recentlyViewed = {
           element.replaceWith(titleReplacement);
         });
 
-      cart.querySelectorAll(".rebuy-product-info").forEach(element => {
-        const titleLink = element.querySelector("a");
-        const replaceLinkElement = document.createElement("span");
-        replaceLinkElement.innerText = titleLink.innerText;
-        replaceLinkElement.className = titleLink.className;
-        titleLink.replaceWith(replaceLinkElement);
+        cart.querySelectorAll(".rebuy-product-info").forEach(element => {
+          const titleLink = element.querySelector("a");
+          const replaceLinkElement = document.createElement("span");
+          replaceLinkElement.innerText = titleLink.innerText;
+          replaceLinkElement.className = titleLink.className;
+          titleLink.replaceWith(replaceLinkElement);
 
-        const newContainerLink = document.createElement("a");
-        newContainerLink.className = title.className;
-        newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
-        newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
-        newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
-        newContainerLink.classList.add(element.className);
-        newContainerLink.innerHTML = element.innerHTML;
-        element.replaceWith(newContainerLink);
-      });
+          const newContainerLink = document.createElement("a");
+          newContainerLink.className = title.className;
+          newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
+          newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
+          newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
+          newContainerLink.classList.add(element.className);
+          newContainerLink.innerHTML = element.innerHTML;
+          element.replaceWith(newContainerLink);
+        });
         
-      cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
-        element.removeAttribute("aria-level");
-        element.removeAttribute("role");
+        cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
+          element.removeAttribute("aria-level");
+          element.removeAttribute("role");
+        });
+
+        const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
+        if(emptyCartTitle) {
+          const newTitle = document.createElement("h2");
+          newTitle.innerText = emptyCartTitle.innerText;
+          newTitle.className = emptyCartTitle.className;
+          newTitle.classList.add("h4");
+          emptyCartTitle.replaceWith(newTitle);
+        }
+
+        cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
+          element.setAttribute("alt", "");
+        });
+
+        observerContentWeLove.disconnect();
+      }):
+
+      observerContentWeLove.observe(cart, {
+        childList: true, subtree: true
       });
 
-      const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
-      if(emptyCartTitle) {
-        const newTitle = document.createElement("h2");
-        newTitle.innerText = emptyCartTitle.innerText;
-        newTitle.className = emptyCartTitle.className;
-        newTitle.classList.add("h4");
-        emptyCartTitle.replaceWith(newTitle);
-      }
-
-      cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
-        element.setAttribute("alt", "");
-      });
-      
       observerRebuyCart.disconnect();
     });
     observerRebuyCart.observe(document.body, {
