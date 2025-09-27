@@ -9163,7 +9163,7 @@ theme.recentlyViewed = {
           }
         })
 
-        cart.querySelectorAll(.rebuy-product-title).forEach(element => {
+        cart.querySelectorAll('.rebuy-product-title').forEach(element => {
           const titleReplacement = document.createElement("div");
           titleReplacement.innerHTML = titleLink.innerHTML;
           titleReplacement.style.letterSpacing = '4.2px'; 
