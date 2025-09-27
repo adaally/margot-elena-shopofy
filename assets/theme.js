@@ -8991,7 +8991,7 @@ theme.recentlyViewed = {
       modal.querySelectorAll('.yotpo-new-input-container, textarea').forEach(element => {
         element.addEventListener('focus', () => {
           setTimeout(() => {
-            const id = 'warning'+ index;
+            const id = element.id + 'warning';
             element.setAttribute('aria-describedby', id);
             element.parentNode.querySelectorAll('.yotpo-new-input-validation').forEach(formItem => {
               formItem.id = id;
