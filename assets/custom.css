@@ -53,3 +53,9 @@
 .megamenu a:has(img) .h5 {
     margin-bottom: -10px;
 }
+
+#yotpo-modal input, #yotpo-modal textarea {
+    outline: 2px solid #2360C5 !important;
+    border-radius: 4px;
+    
+}
