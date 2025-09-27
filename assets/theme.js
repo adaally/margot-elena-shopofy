@@ -9013,8 +9013,9 @@ theme.recentlyViewed = {
           const oldH6 = modal.querySelector('.form-footer h6');
           if(oldH6) {
             const newHeader = document.createElement("div");
-            newHeader.innerText = header.innerText;
-            oldH6.parentNode.appendChild(newHeader);
+            newHeader.innerText = oldH6.innerText;
+            newHeader.style.fontSize = '12px';
+            oldH6.parentNode.prepend(newHeader);
             oldH6.remove();
           }
 
