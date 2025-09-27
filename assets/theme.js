@@ -9165,10 +9165,10 @@ theme.recentlyViewed = {
 
         cart.querySelectorAll('.rebuy-product-title').forEach(element => {
           const titleReplacement = document.createElement("div");
-          titleReplacement.innerHTML = titleLink.innerHTML;
+          titleReplacement.innerHTML = element.innerHTML;
           titleReplacement.style.letterSpacing = '4.2px'; 
-          titleReplacement.className = titleLink.className;
-          titleLink.replaceWith(titleReplacement);
+          titleReplacement.className = element.className;
+          element.replaceWith(titleReplacement);
         });
 
       cart.querySelectorAll(".rebuy-product-info").forEach(element => {
