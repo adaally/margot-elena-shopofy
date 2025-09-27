@@ -2022,13 +2022,10 @@ theme.recentlyViewed = {
       }
   
       el.setAttribute('aria-expanded', !isOpen);
-      const fieldset = el.querySelector('fieldset');
       if (isOpen) {
         el.classList.remove(classes.open);
-        fieldset.style.display = 'none';
       } else {
         el.classList.add(classes.open);
-        fieldset.style.display = 'block';
       }
   
       setTransitionHeight(container, height, isOpen, isAutoHeight);
@@ -2045,7 +2042,7 @@ theme.recentlyViewed = {
         var totalHeight = isOpen
                         ? parentCollapsibleEl.offsetHeight - childHeight
                         : height + parentCollapsibleEl.offsetHeight;
-  
+        console.log(totalHeight)
         setTransitionHeight(parentCollapsibleEl, totalHeight, false, false);
       }
   
