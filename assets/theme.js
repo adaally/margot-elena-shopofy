@@ -9144,7 +9144,7 @@ theme.recentlyViewed = {
         newElement.innerHTML = link.innerHTML;
         link.replaceWith(newElement);
       });
-      setTimeout(() => {
+      
         cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
           const newElement = document.createElement("span");
           newElement.innerHTML = link.innerHTML;
