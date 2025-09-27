@@ -8985,6 +8985,7 @@ theme.recentlyViewed = {
   
   document.addEventListener('click', function (e) {
     if (e.target.matches('#yotpo-main-widget-btn')) {
+      console.log(e)
       // Delay to wait for modal render
       setTimeout(() => {
         const modal = document.querySelector('#yotpo-modal');
