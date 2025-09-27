@@ -9721,7 +9721,7 @@ function fixChatList(container) {
 
   fixChatbotAccessibility();
 
-  function fix() {
+  function fixHiddenTextProductLearnMore() {
     document.querySelectorAll('#CollectionSidebar .collection-sidebar__group').forEach(element => {
       const button = element.querySelector('.collapsible-trigger')
       const fieldset = element.querySelector('fieldset')
@@ -9736,7 +9736,7 @@ function fixChatList(container) {
       }
     });
 
-    const targetNode = document.body; // or a more specific container
+    const targetNode = document.querySelector('.product-single__meta');
 
     const observer = new MutationObserver(mutations => {
       for (const mutation of mutations) {
@@ -9760,7 +9760,7 @@ function fixChatList(container) {
     });
   }
 
-  fix()
+  fixHiddenTextProductLearnMore();
 
   function headerFocusTrap() {
       //Focus trap search
