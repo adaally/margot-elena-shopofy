@@ -1948,7 +1948,9 @@ theme.recentlyViewed = {
         trigger.setAttribute('aria-expanded', state);
         trigger.removeAttribute("title");
         trigger.off('click' + namespace);
-        trigger.on('click' + namespace, toggle);
+        trigger.on('click' + namespace, () => {
+          toggle
+        });
       });
     }
   
@@ -6600,7 +6602,6 @@ theme.recentlyViewed = {
   
       openCollapsible: function(el) {
         if (el.classList.contains(classes.filterSidebar)) {
-          console.log('PRUEBA')
           el.style.height = 'auto';
         }
   
