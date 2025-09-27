@@ -54,7 +54,7 @@
     margin-bottom: -10px;
 }
 
-#yotpo-modal input, #yotpo-modal textarea {
+#yotpo-modal input:focus-visible, #yotpo-modal textarea:focus-visible, textarea:focus-visible .yotpo-upload-label {
     outline: 2px solid #2360C5 !important;
     border-radius: 4px;
     
