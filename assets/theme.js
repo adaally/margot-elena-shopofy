@@ -9748,7 +9748,7 @@ function fixChatList(container) {
             // 👉 do your logic here
             setTimeout(() => {
                 console.log(el.shadowRoot.querySelector('.prequalAmountContainer'))
-            }, 1000);
+            }, 4000);
             
             // el.shadowRoot.querySelectorAll('.prequalAmountContainer div, .prequalAmountContainer button').forEach(element => {
             //   element.setAttribute('aria-hidden', 'true')
