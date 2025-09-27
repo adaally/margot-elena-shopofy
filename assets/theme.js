@@ -9141,10 +9141,10 @@ theme.recentlyViewed = {
 
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
-        console.log(containerWeLove, 'found')
         if(!containerWeLove) return;
 
         setTimeout(() => {
+          console.log(containerWeLove, 'found')
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
             const newElement = document.createElement("span");
             newElement.innerHTML = link.innerHTML;
