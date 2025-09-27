@@ -1993,6 +1993,7 @@ theme.recentlyViewed = {
       var isAutoHeight = container.classList.contains(classes.autoHeight);
       var parentCollapsibleEl = container.parentNode.closest(selectors.module);
       var childHeight = height;
+      console.log(height)
   
       if (isTab) {
         if(isOpen) {
@@ -2042,7 +2043,7 @@ theme.recentlyViewed = {
         var totalHeight = isOpen
                         ? parentCollapsibleEl.offsetHeight - childHeight
                         : height + parentCollapsibleEl.offsetHeight;
-        console.log(totalHeight)
+        
         setTransitionHeight(parentCollapsibleEl, totalHeight, false, false);
       }
   
