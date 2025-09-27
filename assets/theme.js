@@ -1948,11 +1948,7 @@ theme.recentlyViewed = {
         trigger.setAttribute('aria-expanded', state);
         trigger.removeAttribute("title");
         trigger.off('click' + namespace);
-        trigger.on('click' + namespace, (evt) => {
-          setTimeout(() => {
-            toggle(evt);
-          }, 50)
-        });
+        trigger.on('click' + namespace, toggle);
       });
     }
   
@@ -2026,10 +2022,13 @@ theme.recentlyViewed = {
       }
   
       el.setAttribute('aria-expanded', !isOpen);
+      const fieldset = el.querySelector('fieldset');
       if (isOpen) {
         el.classList.remove(classes.open);
+        fieldset.style.display = 'none';
       } else {
         el.classList.add(classes.open);
+        fieldset.style.display = 'block';
       }
   
       setTransitionHeight(container, height, isOpen, isAutoHeight);
