@@ -9002,7 +9002,7 @@ theme.recentlyViewed = {
             modal.setAttribute('aria-labelledby', newHeader.id);
           }
 
-          const fileInput = modal.querySelector('.yotpo-file-upload input[type="file"]');
+          const fileInput = modal.querySelector('.yotpo-file-upload .yotpo-upload-label');
           const fileInputDescription = modal.querySelector('.yotpo-file-upload .yotpo-new-input-message');
           if(fileInput && fileInputDescription) {
             fileInputDescription.id = 'descriptionUploadMedia'
@@ -9012,9 +9012,9 @@ theme.recentlyViewed = {
 
           const oldH6 = modal.querySelector('.form-footer h6');
           if(oldH6) {
-            const newHeader = document.createElement("div");
-            newHeader.innerText = header.innerText;
-            oldH6.replaceWith(newHeader);
+            // const newHeader = document.createElement("div");
+            // newHeader.innerText = header.innerText;
+            // oldH6.replaceWith(newHeader);
           }
 
           const stars = modal.querySelectorAll("svg.yotpo-star-rating-icon");
