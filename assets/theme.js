@@ -9163,6 +9163,14 @@ theme.recentlyViewed = {
           }
         })
 
+        cart.querySelectorAll(.rebuy-product-title).forEach(element => {
+          const titleReplacement = document.createElement("div");
+          titleReplacement.innerHTML = titleLink.innerHTML;
+          titleReplacement.style.letterSpacing = '4.2px'; 
+          titleReplacement.className = titleLink.className;
+          titleLink.replaceWith(titleReplacement);
+        });
+
       cart.querySelectorAll(".rebuy-product-info").forEach(element => {
         const titleLink = element.querySelector("a");
         const replaceLinkElement = document.createElement("span");
