@@ -9272,7 +9272,7 @@ function fixAriaLabelThumbnails() {
             const first = numbers[0];
             btn.setAttribute(
               "aria-label",
-              `${first} out of 5 stars: ${totalReviewsText} ${titleProduct}`
+              `${first} out of 5 stars, ${totalReviewsText}, ${titleProduct}`
             );
             btn.classList.add("aria-label-changed");
           }
