@@ -5,7 +5,7 @@
      - img (Required - Image object)
      - classes (Optional - String)
      - alt (Optional - String)
-     - notEmptyAlt (Optional - boolean)
+     - emptyAlt (Optional - boolean)
      - loading (Optional - String)
      - img_height (Optional - String)
      - img_width (Optional - String)
@@ -85,7 +85,7 @@
     assign sizes = sizes
   endif
 
-  if alt == blank and notEmptyAlt
+  if alt == blank and !emptyAlt
     assign alt = img.alt | default: ''
   endif
 
