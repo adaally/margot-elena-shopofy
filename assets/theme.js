@@ -9354,7 +9354,7 @@ function fixAriaLabelThumbnails() {
               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
                 const numberVotesUpId = reviewId+'-voteUp';
                 const numberVotesDownId = reviewId+'-voteDown';
-                next.querySelector('.yotpo-review-votes-icons-container').forEach((vote, index) => {
+                next.querySelectorAll('.yotpo-review-votes-icons-container').forEach((vote, index) => {
                   const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
                   const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
 
