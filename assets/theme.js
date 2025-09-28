@@ -9260,7 +9260,7 @@ function fixAriaLabelThumbnails() {
 
           if (!labelBefore) return;
 
-          const titleProduct = btn.closest('.grid__item') ? btn.closest('.grid__item').querySelector('.grid-product__title').innerText : '';
+          const titleProduct = btn.closest('.grid__item') ? btn.closest('.grid__item').querySelector('.grid-product__title') && btn.closest('.grid__item').querySelector('.grid-product__title').innerText : '';
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           if (numbers) {
