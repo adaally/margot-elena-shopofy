@@ -45,6 +45,7 @@
         "sections--15818762846363__c9eec85a-a754-4f94-973d-0889d36d03e5-16791680506a6f6892-2",
         "5ebf1fc0-93dc-4396-a053-68a0f348a831"
       ],
+      "disabled": true,
       "custom_css": [
         "input,select,textarea {background-color: #fff;}"
       ],
