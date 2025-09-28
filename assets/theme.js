@@ -9284,6 +9284,7 @@ function fixAriaLabelThumbnails() {
             newBtn.setAttribute('href', '#yotpo-app');
           } else {
             newBtn.removeAttribute('href');
+            newBtn.setAttribute('tabindex', '0')
             newBtn.addEventListener('click', () => {
               newBtn.closest('.grid__item').querySelector('a').click();
             });
