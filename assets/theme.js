@@ -9279,13 +9279,13 @@ function fixAriaLabelThumbnails() {
           const newBtn = document.querySelector('a');
           copyAttributes(btn, newBtn);
           newBtn.innerHTML = btn.innerHTML;
+          newBtn.setAttribute('tabindex', '0');
 
           if(titleProduct.length == 0) {
             newBtn.setAttribute('href', '#yotpo-app');
           } else {
             newBtn.removeAttribute('href');
             newBtn.removeAttribute('type');
-            newBtn.setAttribute('tabindex', '0');
             newBtn.addEventListener('click', () => {
               newBtn.closest('.grid__item').querySelector('a').click();
             });
