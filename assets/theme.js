@@ -9868,7 +9868,28 @@ function fixChatList(container) {
     if (window.location.href.includes("/profile")) {
       const observer = new MutationObserver(() => {
         const profileContainer = document.querySelector('.frcp-app');
-        console.log(profileContainer)
+        const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
+
+        const observer = new MutationObserver(mutations => {
+          mutations.forEach(mutation => {
+            if (mutation.type === "attributes" && mutation.attributeName === "active") {
+              const newValue = el.getAttribute("active");
+              console.log(newValue)
+              if (newValue === "true") {
+                // 👉 your logic when active becomes true
+              } else if (newValue === "false") {
+                // 👉 your logic when active becomes false
+              }
+            }
+          });
+        });
+
+        observer.observe(firstNavProfile, {
+          attributes: true,
+          attributeFilter: ["active"],
+          attributeOldValue: true
+        });
+
         if(profileContainer) {
           const title = document.createElement('h1');
           title.innerText = 'Profile';
