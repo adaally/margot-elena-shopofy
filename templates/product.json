@@ -496,7 +496,7 @@
         "template--15910535037083__e01048c8-732f-47a1-bc74-d307e0f69ecc-liquid-1": {
           "type": "liquid",
           "settings": {
-            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"646b774d6135be20250e1382\">\n</div>\n<style>.custom-content .yotpo.yotpo-lightbox-wrapper .yotpo-display-wrapper {\n  width: 100% !important;\n}\n.custom-content .yotpo.yotpo-pictures-widget.yotpo-size-1 {\n  width: 100% !important;\n}\n.yotpo-display-wrapper {\n  width: 100% !important;\n}.index-section {margin: 40px 0;}</style>",
+            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"646b774d6135be20250e1382\">\n</div>\n<style>.custom-content .yotpo.yotpo-lightbox-wrapper .yotpo-display-wrapper {\n  width: 100% !important;\n}\n.custom-content .yotpo.yotpo-pictures-widget.yotpo-size-1 {\n  width: 100% !important;\n}\n.yotpo-display-wrapper {\n  width: 100% !important;\n}.index-section {margin: 40px 0 75px 0;}</style>",
             "width": "100%",
             "alignment": "center"
           }
