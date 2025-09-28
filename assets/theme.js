@@ -9279,7 +9279,7 @@ function fixAriaLabelThumbnails() {
           if(titleProduct.length == 0) {
             newBtn.setAttribute('href', '#yotpo-app');
           } else {
-            newBtn.setAttribute('href');
+            newBtn.removeAttribute('href');
             newBtn.addEventListener('click', () => {
               btn.closest('.grid__item').querySelector('a').click();
             });
