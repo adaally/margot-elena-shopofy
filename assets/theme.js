@@ -9246,7 +9246,7 @@ theme.recentlyViewed = {
 fixAccessibilityToCartThumnail();
 
 function fixAriaLabelThumbnails() {
-  const targetNode = document.body; // or a more specific container if you know it
+  const targetNode = document.body;
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
@@ -9352,6 +9352,24 @@ function fixAriaLabelThumbnails() {
               const user = el.querySelector('.yotpo-reviewer-name');
               user.id = reviewId;
               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
+                const numberVotesUpId = reviewId+'-voteUp';
+                const numberVotesDownId = reviewId+'-voteDown';
+                next.querySelector('.yotpo-review-votes-icons-container').forEach((vote, index) => {
+                  const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
+                  const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
+
+                  if(voteUpIcon && voteUpValue) {
+                    if(index === 0) {
+                      voteUpValue.id = numberVotesUpId;
+                      voteUpIcon.setAttribute('aria-describedby', numberVotesUpId);
+                    } else {
+                      voteUpValue.id = numberVotesDownId;
+                      voteUpIcon.setAttribute('aria-describedby', numberVotesDownId);
+                    }
+                  }
+                });
+
+
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('wrapper');
                 wrapper.setAttribute('role', 'group');
