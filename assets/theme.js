@@ -1998,7 +1998,7 @@ theme.recentlyViewed = {
           fieldset.style.display = 'none';
         }
       }
-       console.log(el) 
+      
       var height = container.querySelector(selectors.moduleInner).offsetHeight;
       var isAutoHeight = container.classList.contains(classes.autoHeight);
       var parentCollapsibleEl = container.parentNode.closest(selectors.module);
