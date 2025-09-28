@@ -9358,6 +9358,8 @@ function fixAriaLabelThumbnails() {
                 const numberVotesUpId = reviewId+'-voteUp';
                 const numberVotesDownId = reviewId+'-voteDown';
                 next.querySelectorAll('.yotpo-review-votes-icons-container').forEach((vote, index) => {
+                  vote.removeAttribute('aria-labelledby');
+                  vote.removeAttribute('role');
                   const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
                   const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
                   const isVoteUp = index === 0;
@@ -9368,6 +9370,16 @@ function fixAriaLabelThumbnails() {
                     voteUpIcon.setAttribute('aria-describedby', currentId);
                     voteUpIcon.setAttribute('aria-label', newAriaLabel);
                   }
+                });
+
+                const iconsBtns = next.querySelectorAll('.yotpo-review-votes-icons');
+
+                iconsBtns.forEach(btn => {
+                  b.setAttribute('aria-pressed', 'false');
+                  btn.addEventListener('click', () => {
+                    iconsBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+                    btn.setAttribute('aria-pressed', 'true');
+                  });
                 });
 
 
