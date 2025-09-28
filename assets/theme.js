@@ -9276,7 +9276,7 @@ function fixAriaLabelThumbnails() {
           copyAttributes(btn, newBtn);
           newBtn.innerHTML = btn.innerHTML;
 
-          if(titleProduct.length == 0) {
+          if(titleProduct && titleProduct.length == 0) {
             newBtn.setAttribute('href', '#yotpo-app');
           } else {
             newBtn.removeAttribute('href');
