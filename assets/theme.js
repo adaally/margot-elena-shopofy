@@ -9261,7 +9261,7 @@ function fixAriaLabelThumbnails() {
 
           if (!labelBefore) return;
 
-          console.log(btn.closest('.grid__item'))
+          console.log(btn.closest('.grid__item').querySelector('.grid-product__title'))
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           if (numbers) {
