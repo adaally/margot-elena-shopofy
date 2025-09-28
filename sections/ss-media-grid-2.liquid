@@ -704,7 +704,7 @@ For inquiries or permissions, contact daniel@section.store
           <{% if block.settings.button == blank and block.settings.collection != blank or block.settings.url != blank %}a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}"{% else %}div{% endif %} class="media-grid-item-{{ section.id }} media-grid-item-{{ block.id }}">
             <a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}">
             <div class="media-grid-image-{{ section.id }}">
-              <span href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}">
+              <span>
               {% if block.settings.collection != blank and block.settings.collection.featured_image != blank and block.settings.image == blank %}
                 <img src="{{ block.settings.collection.featured_image | image_url }}" alt="{{ block.settings.collection.featured_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
               {% elsif block.settings.image != blank %}
@@ -729,7 +729,7 @@ For inquiries or permissions, contact daniel@section.store
               {% endif %}
 
               {% if block.settings.button != blank %}
-                <span href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}" class="media-grid-button-{{ section.id }} media-grid-button-{{ block.id }}">
+                <span class="media-grid-button-{{ section.id }} media-grid-button-{{ block.id }}">
                   {{ block.settings.button }}
                   {% if button_style == "non_outline_arrow" or button_style == "outline_arrow" %}
                     <svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
