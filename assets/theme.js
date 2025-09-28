@@ -9282,7 +9282,7 @@ function fixAriaLabelThumbnails() {
             newBtn.removeAttribute('href');
             newBtn.addEventListener('click', () => {
               // btn.closest('.grid__item').querySelector('a').click();
-              console.log(btn.closest('.grid__item'))
+              console.log(newBtn.closest('.grid__item'))
             });
           }
           
