@@ -9873,8 +9873,8 @@ function fixChatList(container) {
         if(profileContainer) {
 
         const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
-
-        const observer = new MutationObserver(mutations => {
+          console.log(firstNavProfile)
+        const observer2 = new MutationObserver(mutations => {
           mutations.forEach(mutation => {
             if (mutation.type === "attributes" && mutation.attributeName === "active") {
               const newValue = el.getAttribute("active");
@@ -9888,7 +9888,7 @@ function fixChatList(container) {
           });
         });
 
-        observer.observe(firstNavProfile, {
+        observer2.observe(firstNavProfile, {
           attributes: true,
           attributeFilter: ["active"],
           attributeOldValue: true
