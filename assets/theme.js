@@ -9868,6 +9868,10 @@ function fixChatList(container) {
     if (window.location.href.includes("/profile")) {
       const observer = new MutationObserver(() => {
         const profileContainer = document.querySelector('.frcp-app');
+
+
+        if(profileContainer) {
+
         const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
 
         const observer = new MutationObserver(mutations => {
@@ -9890,7 +9894,7 @@ function fixChatList(container) {
           attributeOldValue: true
         });
 
-        if(profileContainer) {
+
           const title = document.createElement('h1');
           title.innerText = 'Profile';
           title.style.fontFamily = 'Lato';
