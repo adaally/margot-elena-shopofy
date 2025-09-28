@@ -9877,7 +9877,7 @@ function fixChatList(container) {
         const observer2 = new MutationObserver(mutations => {
           mutations.forEach(mutation => {
             if (mutation.type === "attributes" && mutation.attributeName === "active") {
-              const newValue = el.getAttribute("active");
+              const newValue = firstNavProfile.getAttribute("active");
               console.log(newValue)
               if (newValue === "true") {
                 // 👉 your logic when active becomes true
