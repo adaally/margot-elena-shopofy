@@ -9515,6 +9515,7 @@ function fixChatbotAccessibility() {
     if (!chatBox || !chatBox.shadowRoot) return;
     chatBox.setAttribute("role", "dialog");
     chatBox.removeAttribute('title');
+    chatBox.setAttribute('aria-label', 'Store chat');
     const container = chatBox.shadowRoot.querySelector(".chat-app");
     if (!container) return;
 
