@@ -9260,7 +9260,11 @@ function fixAriaLabelThumbnails() {
 
           if (!labelBefore) return;
 
-          const titleProduct = btn.closest('.grid__item') ? btn.closest('.grid__item').querySelector('.grid-product__title') && btn.closest('.grid__item').querySelector('.grid-product__title').innerText : '';
+          let titleProduct =  '';
+
+          if(btn.closest('.grid__item') && btn.closest('.grid__item').querySelector('.grid-product__title')) {
+            titleProduct = btn.closest('.grid__item').querySelector('.grid-product__title').innerText;
+          }
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           if (numbers) {
@@ -9276,7 +9280,7 @@ function fixAriaLabelThumbnails() {
           copyAttributes(btn, newBtn);
           newBtn.innerHTML = btn.innerHTML;
 
-          if(titleProduct && titleProduct.length == 0) {
+          if(titleProduct.length == 0) {
             newBtn.setAttribute('href', '#yotpo-app');
           } else {
             newBtn.removeAttribute('href');
