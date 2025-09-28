@@ -9375,7 +9375,7 @@ function fixAriaLabelThumbnails() {
                 const iconsBtns = next.querySelectorAll('.yotpo-review-votes-icons');
 
                 iconsBtns.forEach(btn => {
-                  b.setAttribute('aria-pressed', 'false');
+                  btn.setAttribute('aria-pressed', 'false');
                   btn.addEventListener('click', () => {
                     iconsBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
                     btn.setAttribute('aria-pressed', 'true');
