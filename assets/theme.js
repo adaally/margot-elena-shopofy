@@ -9863,6 +9863,22 @@ function fixChatList(container) {
 
   fixChatbotAccessibility();
 
+  function addTitleToCustomerProfilePage() {
+
+    const profileContainer = document.querySelector('.frcp-app');
+    if(profileContainer) {
+      const title = document.createElement('h1');
+      title.innerText = 'Profile';
+      title.style.fontFamily = 'Lato';
+      title.style.textTransform = 'initial';
+      title.style.margin = '20px 0 0 0';
+      title.style.textAlign = 'center';
+      profileContainer.prepend(title);
+    }
+  }
+
+  addTitleToCustomerProfilePage();
+
   function fixHiddenTextProductLearnMore() {
     const targetNode = document.querySelector('.product-single__meta');
     if(!targetNode) return;
