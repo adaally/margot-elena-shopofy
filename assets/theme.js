@@ -9249,7 +9249,6 @@ function fixAriaLabelThumbnails() {
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
-    const isProductPage = !!document.querySelector('.product-page');
     setTimeout(() => {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
       
@@ -9261,14 +9260,14 @@ function fixAriaLabelThumbnails() {
 
           if (!labelBefore) return;
 
-          console.log(btn.closest('.grid__item').querySelector('.grid-product__title'))
+          const titleProduct = btn.closest('.grid__item') ? btn.closest('.grid__item').querySelector('.grid-product__title').innerText : '';
 
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           if (numbers) {
             const first = numbers[0];
             btn.setAttribute(
               "aria-label",
-              `${first} out of 5 stars: ${totalReviewsText} ${isProductPage ? '':' '}`
+              `${first} out of 5 stars: ${totalReviewsText} ${titleProduct}`
             );
             btn.classList.add("aria-label-changed");
           }
