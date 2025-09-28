@@ -9872,36 +9872,34 @@ function fixChatList(container) {
 
         if(profileContainer) {
 
-        const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
-          console.log(firstNavProfile)
-        const observer2 = new MutationObserver(mutations => {
-          mutations.forEach(mutation => {
-            if (mutation.type === "attributes" && mutation.attributeName === "active") {
-              const newValue = firstNavProfile.getAttribute("active");
-              console.log(newValue)
-              if (newValue === "true") {
-                // 👉 your logic when active becomes true
-              } else if (newValue === "false") {
-                // 👉 your logic when active becomes false
+          const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
+          const observer2 = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+              if (mutation.type === "attributes" && mutation.attributeName === "active") {
+                const newValue = firstNavProfile.getAttribute("active");
+                if (newValue === "true") {
+                  const title = document.createElement('h1');
+                  title.innerText = 'Profile';
+                  title.style.fontFamily = 'Lato';
+                  title.style.textTransform = 'initial';
+                  title.style.margin = '20px 0 0 0';
+                  title.style.textAlign = 'center';
+                  title.id = 'profile-id-title';
+                  profileContainer.prepend(title);
+                } else {
+                  const title = document.querySelector('#profile-id-title');
+                  title.remove();
+                }
               }
-            }
+            });
           });
-        });
 
-        observer2.observe(firstNavProfile, {
-          attributes: true,
-          attributeFilter: ["active"],
-          attributeOldValue: true
-        });
-
-
-          const title = document.createElement('h1');
-          title.innerText = 'Profile';
-          title.style.fontFamily = 'Lato';
-          title.style.textTransform = 'initial';
-          title.style.margin = '20px 0 0 0';
-          title.style.textAlign = 'center';
-          profileContainer.prepend(title);
+          observer2.observe(firstNavProfile, {
+            attributes: true,
+            attributeFilter: ["active"],
+            attributeOldValue: true
+          });
+          
           observer.disconnect();
         }
       });
