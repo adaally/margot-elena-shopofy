@@ -9899,6 +9899,8 @@ function fixChatList(container) {
     }
   }
 
+  moveEmailSignUpFooterToMain();
+
   function copyAttributes(source, target) {
     if (!source || !target) return;
 
