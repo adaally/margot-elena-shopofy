@@ -9361,7 +9361,7 @@ function fixAriaLabelThumbnails() {
                   const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
                   const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
                   const isVoteUp = index === 0;
-                  const newAriaLabel = `${usernameText}'s review was ${isVoteUp ? '':'not'} helpful`;
+                  const newAriaLabel = `${usernameText}'s review was${isVoteUp ? '':' not'} helpful`;
                   const currentId = isVoteUp ? numberVotesUpId : numberVotesDownId;
                   if(voteUpIcon && voteUpValue) {
                     voteUpValue.id = currentId;
