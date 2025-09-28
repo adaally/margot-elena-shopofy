@@ -63,3 +63,7 @@
 #yotpo-modal button:focus-visible {
     outline-offset: 3px;
 }
+
+.rebuy-cart__flyout-subtotal-compare-amount {
+    color: #757575;
+}
