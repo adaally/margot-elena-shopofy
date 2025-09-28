@@ -9281,8 +9281,7 @@ function fixAriaLabelThumbnails() {
           } else {
             newBtn.removeAttribute('href');
             newBtn.addEventListener('click', () => {
-              // btn.closest('.grid__item').querySelector('a').click();
-              console.log(newBtn.closest('.grid__item'))
+              newBtn.closest('.grid__item').querySelector('a').click();
             });
           }
           
