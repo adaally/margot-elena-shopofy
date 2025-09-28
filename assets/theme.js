@@ -1988,17 +1988,17 @@ theme.recentlyViewed = {
         isTransitioning = false;
         return;
       }
-      const moduleInner = container.querySelector(selectors.moduleInner + ' fieldset');
+      const fieldset = container.querySelector(selectors.moduleInner + ' fieldset');
 
-      if(moduleInner){
-        const style = window.getComputedStyle(moduleInner);
+      if(fieldset){
+        const style = window.getComputedStyle(fieldset);
         if (style.display === 'none') {
-          moduleInner.style.display = 'block';
+          fieldset.style.display = 'block';
         } else {
-          moduleInner.style.display = 'none';
+          fieldset.style.display = 'none';
         }
       }
-        
+       console.log(el) 
       var height = container.querySelector(selectors.moduleInner).offsetHeight;
       var isAutoHeight = container.classList.contains(classes.autoHeight);
       var parentCollapsibleEl = container.parentNode.closest(selectors.module);
