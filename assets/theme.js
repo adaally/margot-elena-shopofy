@@ -9865,8 +9865,7 @@ function fixChatList(container) {
 
   function addTitleToCustomerProfilePage() {
 
-      console.log('exito', window.location.href)
-    if (window.location.pathname.includes("/profile")) {
+    if (window.location.href.includes("/profile")) {
       const observer = new MutationObserver(() => {
         const profileContainer = document.querySelector('.frcp-app');
         console.log(profileContainer)
