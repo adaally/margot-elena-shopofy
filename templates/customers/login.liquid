@@ -3,7 +3,7 @@
     <h1 class="section-header__title">{{ 'customer.login.title' | t }}</h1>
   </header>
 
-  <div class="note note--success hide" id="ResetSuccess">
+  <div class="note note--success hide" id="ResetSuccess" role="alert">
     {{ 'customer.recover_password.success' | t }}
   </div>
 
@@ -12,13 +12,13 @@
 
       {{ form.errors | default_errors }}
 
-      <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
-      <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" autocorrect="off" autocapitalize="off" autofocus>
+      <label for="CustomerEmail">{{ 'customer.login.email' | t }}*</label>
+      <input type="email" autocomplete="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" autocorrect="off" autocapitalize="off" autofocus>
 
       {%- if form.password_needed -%}
         <div class="grid">
           <div class="grid__item one-half">
-            <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+            <label for="CustomerPassword">{{ 'customer.login.password' | t }}*</label>
           </div>
           <div class="grid__item one-half text-right">
             <small class="label-info">
@@ -28,7 +28,7 @@
             </small>
           </div>
         </div>
-        <input type="password" value="" name="customer[password]" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}">
+        <input type="password" value="" name="customer[password]" autocomplete="current-password" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}">
       {%- endif -%}
 
       <p>
@@ -54,8 +54,8 @@
           <span class="hide reset-password-success"></span>
         {%- endif -%}
 
-        <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
-        <input type="email" value="" name="email" id="RecoverEmail" class="input-full" autocorrect="off" autocapitalize="off">
+        <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}*</label>
+        <input type="email" value="" name="email" autocomplete="email" id="RecoverEmail" class="input-full" autocorrect="off" autocapitalize="off">
 
         <p>
           <button type="submit" class="btn">
