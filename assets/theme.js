@@ -8558,6 +8558,11 @@ theme.recentlyViewed = {
           const innerLink = block.querySelector('a');
           const href = innerLink?.getAttribute('href');
 
+          const textStar = block.querySelector('.rebuy-product-review .rebuy-star-rating-value');
+          if(textStar) {
+            textStar.innerText += ' ' + sourceTitle.innerText;
+          }
+
           if (href) {
             block.querySelectorAll('a').forEach(a => {
               const span = document.createElement('span');
@@ -9124,7 +9129,6 @@ theme.recentlyViewed = {
   function fixAccessibilityToCartThumnail() {
     const observerRebuyCart = new MutationObserver(() => {
       const cart = document.querySelector("#rebuy-cart");
-      console.log(cart, 'cart loaded')
       if(!cart) return;
 
       const title = cart.querySelector("#SmartCart_title");
@@ -9147,7 +9151,6 @@ theme.recentlyViewed = {
         if(!containerWeLove) return;
 
         setTimeout(() => {
-          console.log(cart.querySelector('.rebuy-widget-content'), 'found')
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
             const newElement = document.createElement("span");
             newElement.innerHTML = link.innerHTML;
@@ -9225,8 +9228,6 @@ theme.recentlyViewed = {
           });
         }, 3000);
 
-
-
         observerContentWeLove.disconnect();
       });
 
@@ -9242,7 +9243,9 @@ theme.recentlyViewed = {
   
 }
 
-  fixAccessibilityToCartThumnail();
+function fixAriaLabel
+
+fixAccessibilityToCartThumnail();
 
 function fixAriaLabelThumbnails() {
   const targetNode = document.body; // or a more specific container if you know it
