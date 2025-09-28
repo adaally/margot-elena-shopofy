@@ -9865,15 +9865,26 @@ function fixChatList(container) {
 
   function addTitleToCustomerProfilePage() {
 
-    const profileContainer = document.querySelector('.frcp-app');
-    if(profileContainer) {
-      const title = document.createElement('h1');
-      title.innerText = 'Profile';
-      title.style.fontFamily = 'Lato';
-      title.style.textTransform = 'initial';
-      title.style.margin = '20px 0 0 0';
-      title.style.textAlign = 'center';
-      profileContainer.prepend(title);
+    if (window.location.pathname.includes("/profile")) {
+      const observer = new MutationObserver(() => {
+        const profileContainer = document.querySelector('.frcp-app');
+        if(profileContainer) {
+          const title = document.createElement('h1');
+          title.innerText = 'Profile';
+          title.style.fontFamily = 'Lato';
+          title.style.textTransform = 'initial';
+          title.style.margin = '20px 0 0 0';
+          title.style.textAlign = 'center';
+          profileContainer.prepend(title);
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
     }
   }
 
