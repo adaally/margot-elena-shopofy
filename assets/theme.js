@@ -9351,21 +9351,22 @@ function fixAriaLabelThumbnails() {
               const reviewId = el.getAttribute('data-id');
               const user = el.querySelector('.yotpo-reviewer-name');
               user.id = reviewId;
+              const usernameText = user.innerText;
               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
+
+                //Fix votes' container
                 const numberVotesUpId = reviewId+'-voteUp';
                 const numberVotesDownId = reviewId+'-voteDown';
                 next.querySelectorAll('.yotpo-review-votes-icons-container').forEach((vote, index) => {
                   const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
                   const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
-
+                  const isVoteUp = index === 0;
+                  const newAriaLabel = `${usernameText}'s review was ${isVoteUp ? '':'not'} helpful`;
+                  const currentId = isVoteUp ? numberVotesUpId : numberVotesDownId;
                   if(voteUpIcon && voteUpValue) {
-                    if(index === 0) {
-                      voteUpValue.id = numberVotesUpId;
-                      voteUpIcon.setAttribute('aria-describedby', numberVotesUpId);
-                    } else {
-                      voteUpValue.id = numberVotesDownId;
-                      voteUpIcon.setAttribute('aria-describedby', numberVotesDownId);
-                    }
+                    voteUpValue.id = currentId;
+                    voteUpIcon.setAttribute('aria-describedby', currentId);
+                    voteUpIcon.setAttribute('aria-label', newAriaLabel);
                   }
                 });
 
