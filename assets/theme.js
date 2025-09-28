@@ -9249,10 +9249,10 @@ function fixAriaLabelThumbnails() {
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
-    // const isCollection = 
+    const isProductPage = !!document.querySelector('.product-page');
     setTimeout(() => {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
-
+      
       if (btns.length > 0) {
         btns.forEach((btn, index) => {
           const labelBefore = btn.getAttribute("aria-label");
@@ -9261,12 +9261,14 @@ function fixAriaLabelThumbnails() {
 
           if (!labelBefore) return;
 
+          btn.closest('.grid__item')
+
           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
           if (numbers) {
             const first = numbers[0];
             btn.setAttribute(
               "aria-label",
-              `${first} out of 5 stars: ${totalReviewsText}`
+              `${first} out of 5 stars: ${totalReviewsText} ${isProductPage ? '':' '}`
             );
             btn.classList.add("aria-label-changed");
           }
