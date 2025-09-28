@@ -9274,6 +9274,7 @@ function fixAriaLabelThumbnails() {
           const newBtn = document.querySelector('a');
           copyAttributes(btn, newBtn);
           newBtn.innerHTML = btn.innerHTML;
+          newBtn.setAttribute('href', '#yotpo-app');
           btn.replaceWith(newBtn);
         });
 
