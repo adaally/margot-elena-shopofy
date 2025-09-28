@@ -9276,9 +9276,14 @@ function fixAriaLabelThumbnails() {
           copyAttributes(btn, newBtn);
           newBtn.innerHTML = btn.innerHTML;
 
-          // if(titleProduct.length == 0) {
-          //   newBtn.setAttribute('href', '#yotpo-app');
-          // }
+          if(titleProduct.length == 0) {
+            newBtn.setAttribute('href', '#yotpo-app');
+          } else {
+            newBtn.setAttribute('href');
+            newBtn.addEventListener('click', () => {
+              btn.closest('.grid__item').querySelector('a').click();
+            });
+          }
           
           btn.replaceWith(newBtn);
         });
