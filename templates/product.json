@@ -30,7 +30,7 @@
         "675526be-997c-4a43-bfd7-9784555990b0": {
           "type": "custom",
           "settings": {
-            "code": "<div tabindex=\"0\" role=\"link\" class=\"yotpo bottomLine\"\n    data-appkey=\"d3bgs2lII4noj0dHz0EcyecV5uC2sPl5K5yRukGR\"\n    data-domain=\"{{shop.permanent_domain | escape }}\"\n    data-product-id=\"{{ product.id }}\"\n    data-product-models=\"{{ product.id }}\"\n    data-name=\"{{ product.title | escape }}\"\n    data-url=\"{{ shop.url }}{{ product.url }}\"\n    data-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\n    data-description=\"{{ product.description | escape }}\"\n    data-bread-crumbs=\"{% for tag in product.tags %}{{ tag | escape }};{% endfor %}\">\n</div>",
+            "code": "<div class=\"yotpo bottomLine\"\n    data-appkey=\"d3bgs2lII4noj0dHz0EcyecV5uC2sPl5K5yRukGR\"\n    data-domain=\"{{shop.permanent_domain | escape }}\"\n    data-product-id=\"{{ product.id }}\"\n    data-product-models=\"{{ product.id }}\"\n    data-name=\"{{ product.title | escape }}\"\n    data-url=\"{{ shop.url }}{{ product.url }}\"\n    data-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\n    data-description=\"{{ product.description | escape }}\"\n    data-bread-crumbs=\"{% for tag in product.tags %}{{ tag | escape }};{% endfor %}\">\n</div>",
             "ecls": "revies--pro"
           }
         },
