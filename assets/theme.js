@@ -9243,8 +9243,6 @@ theme.recentlyViewed = {
   
 }
 
-function fixAriaLabel
-
 fixAccessibilityToCartThumnail();
 
 function fixAriaLabelThumbnails() {
