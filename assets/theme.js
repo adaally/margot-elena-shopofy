@@ -9249,6 +9249,7 @@ function fixAriaLabelThumbnails() {
   const config = { childList: true, subtree: true };
 
   const observer = new MutationObserver((mutations, obs) => {
+    // const isCollection = 
     setTimeout(() => {
       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
 
@@ -9269,9 +9270,13 @@ function fixAriaLabelThumbnails() {
             );
             btn.classList.add("aria-label-changed");
           }
+
+          const newBtn = document.querySelector('a');
+          copyAttributes(btn, newBtn);
+          newBtn.innerHTML = btn.innerHTML;
+          btn.replaceWith(newBtn);
         });
 
-        // If you only need to run once after buttons exist:
         obs.disconnect();
       }
     }, 300);
@@ -9825,14 +9830,6 @@ function fixChatList(container) {
     observer.observe(btnSubmit, { attributes: true });
   }
 
-  function copyAttributes(source, target) {
-    if (!source || !target) return;
-
-    for (let attr of source.attributes) {
-      target.setAttribute(attr.name, attr.value);
-    }
-  }
-
   function makeVisuallyHidden(el) {
     if (!el) return;
     el.style.clip = "rect(0 0 0 0)";
@@ -9875,6 +9872,16 @@ function fixChatList(container) {
   }
 
   fixHiddenTextProductLearnMore();
+
+
+
+  function copyAttributes(source, target) {
+    if (!source || !target) return;
+
+    for (let attr of source.attributes) {
+      target.setAttribute(attr.name, attr.value);
+    }
+  }
 
   function headerFocusTrap() {
       //Focus trap search
