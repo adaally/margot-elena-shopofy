@@ -9890,7 +9890,14 @@ function fixChatList(container) {
 
   fixHiddenTextProductLearnMore();
 
-
+  function moveEmailSignUpFooterToMain() {
+    const emailContainer = document.querySelector('.newsletter-container');
+    const main = document.querySelector('#MainContent');
+    if(emailContainer) {
+      
+      main.appendChild(emailContainer.parentNode);
+    }
+  }
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
