@@ -794,47 +794,6 @@
         "narrow_column": true,
         "divider": false
       }
-    },
-    "newsletter_jDByUg": {
-      "type": "newsletter",
-      "blocks": {
-        "title_ACeJbH": {
-          "type": "title",
-          "settings": {
-            "title": "FROM M.E. TO YOU",
-            "heading_size": "h2"
-          }
-        },
-        "text_EtzwEG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>10% off your first order of $50+<br/>Be the first to know about new arrivals, exclusives and more!</p>"
-          }
-        },
-        "form_aNhtih": {
-          "type": "form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "title_ACeJbH",
-        "text_EtzwEG",
-        "form_aNhtih"
-      ],
-      "custom_css": [
-        "input,select,textarea {background-color: #fff;}"
-      ],
-      "name": "t:sections.newsletter.presets.email_signup.name",
-      "settings": {
-        "align_text": "center",
-        "image_width": "33",
-        "image_mask": "none",
-        "image_position": "right",
-        "color_background": "#fbebe5",
-        "color_text": "#1c1d1d",
-        "top_padding": true,
-        "bottom_padding": true
-      }
     }
   },
   "order": [
@@ -853,7 +812,6 @@
     "99816b04-76c2-4786-ae3a-b6b518e357d6",
     "rich_text_49qW6E",
     "2d0e7db1-9082-449e-9800-b82cf35bd4e6",
-    "rich_text_f9bipi",
-    "newsletter_jDByUg"
+    "rich_text_f9bipi"
   ]
 }
