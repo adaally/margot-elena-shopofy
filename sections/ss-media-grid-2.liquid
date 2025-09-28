@@ -702,8 +702,9 @@ For inquiries or permissions, contact daniel@section.store
       <div class="media-grid-items-{{ section.id }}">
         {% for block in section.blocks %}
           <{% if block.settings.button == blank and block.settings.collection != blank or block.settings.url != blank %}a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}"{% else %}div{% endif %} class="media-grid-item-{{ section.id }} media-grid-item-{{ block.id }}">
+            <a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}">
             <div class="media-grid-image-{{ section.id }}">
-              <a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}">
+              <span href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}">
               {% if block.settings.collection != blank and block.settings.collection.featured_image != blank and block.settings.image == blank %}
                 <img src="{{ block.settings.collection.featured_image | image_url }}" alt="{{ block.settings.collection.featured_image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
               {% elsif block.settings.image != blank %}
@@ -711,7 +712,7 @@ For inquiries or permissions, contact daniel@section.store
               {% else %}
                 {{ 'collection-6' | placeholder_svg_tag }}
               {% endif %}
-              </a>
+              </span>
             </div>
             <div class="media-grid-content-{{ section.id }}">
               
@@ -728,7 +729,7 @@ For inquiries or permissions, contact daniel@section.store
               {% endif %}
 
               {% if block.settings.button != blank %}
-                <a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}" class="media-grid-button-{{ section.id }} media-grid-button-{{ block.id }}">
+                <span href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}" class="media-grid-button-{{ section.id }} media-grid-button-{{ block.id }}">
                   {{ block.settings.button }}
                   {% if button_style == "non_outline_arrow" or button_style == "outline_arrow" %}
                     <svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -737,10 +738,11 @@ For inquiries or permissions, contact daniel@section.store
                       <path d="M169.5 104L16.5 102.5V90H171L97.5 10.5V7L107.5 4.5C131.167 29.6667 180.2 81.5 187 87.5C193.8 93.5 191.5 99 189.5 101L105.5 184L94 181.5L169.5 104Z" fill="black"></path>
                     </svg>
                   {% endif %}
-                </a>
+                </span>
               {% endif %}
           
             </div>
+            </a>
           </{% if block.settings.button == blank and block.settings.collection != blank or block.settings.url != blank %}a{% else %}div{% endif %}>
         {% endfor %}
       </div>
