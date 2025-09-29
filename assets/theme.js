@@ -3416,6 +3416,8 @@ theme.recentlyViewed = {
   
       initChildNav: function() {
         this.childNavLinks[this.args.initialIndex].classList.add('is-active');
+        this.childNavLinks[this.args.initialIndex].setAttribute('aria-pressed', 'true');
+        
   
         // Setup events
         this.childNavLinks.forEach((link, i) => {
