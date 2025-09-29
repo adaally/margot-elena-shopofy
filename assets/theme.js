@@ -5433,7 +5433,6 @@ theme.recentlyViewed = {
       },
   
       initGallery: function(items, index) {
-        console.log(items, 'focus trap')
         var pswpElement = document.querySelectorAll('.pswp')[0];
   
         var options = {
@@ -5461,6 +5460,11 @@ theme.recentlyViewed = {
         this.gallery.init();
   
         this.preventiOS15Scrolling();
+
+        const container = document.querySelector('.pswp__container');
+        if(container){
+          trapFocus(container);
+        }
       },
   
       afterChange: function() {
@@ -10046,32 +10050,6 @@ function fixChatList(container) {
     let focusableElements = [];
     let firstEl, lastEl;
     
-    function trapFocus(container) {
-      focusableElements = container.querySelectorAll(
-        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
-      );
-      firstEl = focusableElements[0];
-      lastEl = focusableElements[focusableElements.length - 1];
-    
-      container.addEventListener('keydown', handleTrap);
-    }
-    
-    function handleTrap(e) {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstEl) {
-            e.preventDefault();
-            lastEl.focus();
-          }
-        } else {
-          if (document.activeElement === lastEl) {
-            e.preventDefault();
-            firstEl.focus();
-          }
-        }
-      }
-    }
-    
     function openSearch() {
       searchForm.classList.add('is-active');
       trapFocus(searchForm);
@@ -10103,6 +10081,34 @@ function fixChatList(container) {
       closeButtonMain.addEventListener('click', closeSearchMain);
     }
   }
+
+
+    
+    function trapFocus(container) {
+      focusableElements = container.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      firstEl = focusableElements[0];
+      lastEl = focusableElements[focusableElements.length - 1];
+    
+      container.addEventListener('keydown', handleTrap);
+    }
+    
+    function handleTrap(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
+      }
+    }
 
   headerFocusTrap();
 
