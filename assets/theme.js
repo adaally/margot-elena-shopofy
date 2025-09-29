@@ -9374,13 +9374,33 @@ function fixAriaLabelThumbnails() {
 
                 const iconsBtns = next.querySelectorAll('.yotpo-review-votes-icons');
 
-                iconsBtns.forEach(btn => {
-                  btn.setAttribute('aria-pressed', 'false');
-                  btn.addEventListener('click', () => {
-                    iconsBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
-                    btn.setAttribute('aria-pressed', 'true');
-                  });
+                iconsBtns.forEach(button => {
+                  const path = button.querySelector('path');
+
+                  function updatePressedState() {
+                    const fill = path.getAttribute('fill').toLowerCase();
+                    if (fill === '#2c2c2c') {
+                      button.setAttribute('aria-pressed', 'true');
+                    } else {
+                      button.setAttribute('aria-pressed', 'false');
+                    }
+                  }
+
+                  // Run once initially
+                  updatePressedState();
+
+                  // If fill might change dynamically, watch it
+                  const observer = new MutationObserver(updatePressedState);
+                  observer.observe(path, { attributes: true, attributeFilter: ['fill'] });
                 });
+
+                // iconsBtns.forEach(btn => {
+                //   btn.setAttribute('aria-pressed', 'false');
+                //   btn.addEventListener('click', () => {
+                //     iconsBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+                //     btn.setAttribute('aria-pressed', 'true');
+                //   });
+                // });
 
 
                 const wrapper = document.createElement('div');
