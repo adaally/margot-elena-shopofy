@@ -699,9 +699,9 @@ For inquiries or permissions, contact daniel@section.store
         <div class="media-grid-heading-{{ section.id }}">{{ heading }}</div>
       {% endif %}
       
-      <div class="media-grid-items-{{ section.id }}">
+      <div class="media-grid-items-{{ section.id }}" role='list'>
         {% for block in section.blocks %}
-          <{% if block.settings.button == blank and block.settings.collection != blank or block.settings.url != blank %}a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}"{% else %}div{% endif %} class="media-grid-item-{{ section.id }} media-grid-item-{{ block.id }}">
+          <{% if block.settings.button == blank and block.settings.collection != blank or block.settings.url != blank %}a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}"{% else %}div{% endif %} role='listitem' class="media-grid-item-{{ section.id }} media-grid-item-{{ block.id }}">
             <a href="{% if block.settings.collection != blank %}{{ block.settings.collection.url }}{% else %}{{ block.settings.url }}{% endif %}">
             <div class="media-grid-image-{{ section.id }}">
               <span>
