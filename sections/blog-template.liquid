@@ -25,6 +25,7 @@
             <option value="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
           {%- endfor -%}
         </select>
+        <div class="hidden-label" id='pageRefreshText'>This page will refresh if you make a selection.</div>
       {%- endif -%}
     </header>
 
