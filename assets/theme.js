@@ -5461,6 +5461,7 @@ theme.recentlyViewed = {
   
         this.preventiOS15Scrolling();
         let focusableElements = [];
+        let firstEl, lastEl;
         const containerPswp = document.querySelector('.pswp__container');
         console.log(containerPswp)
         if(containerPswp) {
