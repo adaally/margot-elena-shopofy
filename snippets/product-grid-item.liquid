@@ -97,7 +97,9 @@ Arguments
                 sizes: sizes,
                 sizeVariable: sizeVariable,
                 fallback: fallback,
-                widths: '360, 540, 720, 900, 1080'
+                widths: '360, 540, 720, 900, 1080',
+                ariaHidden: true,
+                alt: 'prueba'
               -%}
             {%- else -%}
               {%- capture placeholder -%}product-{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
@@ -120,7 +122,9 @@ Arguments
                 sizes: sizes,
                 sizeVariable: sizeVariable,
                 fallback: fallback,
-                widths: '360, 540, 720, 900, 1080'
+                widths: '360, 540, 720, 900, 1080',
+                ariaHidden: true,
+                alt: 'prueba'
               -%}
             {%- else -%}
               {%- capture placeholder -%}product-{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
@@ -143,7 +147,9 @@ Arguments
               sizes: sizes,
               sizeVariable: sizeVariable,
               fallback: fallback,
-              widths: '360, 540, 720, 1000'
+              widths: '360, 540, 720, 1000',
+              ariaHidden: true,
+                alt: 'prueba'
             -%}
           </div>
         {%- endif -%}
