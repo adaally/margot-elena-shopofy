@@ -8963,18 +8963,15 @@ theme.recentlyViewed = {
       }
     });
   }
-
+  
   function toggleDropdown() {
     document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
-      document.addEventListener('keydown', function (e) {
-        if (e.code === 'Enter' || e.key === 'Enter') {
-          if(detailsEl.open) {
-            detailsEl.removeAttribute('open');
-            detailsEl.setAttribute('aria-expanded', 'false');
-          } else {
-            detailsEl.setAttribute('open','');
-            detailsEl.setAttribute('aria-expanded', 'true');
-          }
+      detailsEl.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          e.preventDefault(); // stop default behavior
+          const isOpen = detailsEl.hasAttribute('open');
+          detailsEl.toggleAttribute('open', !isOpen);
+          detailsEl.setAttribute('aria-expanded', String(!isOpen));
         }
       });
     });
