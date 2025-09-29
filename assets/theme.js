@@ -9380,9 +9380,9 @@ function fixAriaLabelThumbnails() {
                   function updatePressedState() {
                     const fill = path.getAttribute('fill').toLowerCase();
                     if (fill === '#2c2c2c') {
-                      button.setAttribute('aria-pressed', 'true');
-                    } else {
                       button.setAttribute('aria-pressed', 'false');
+                    } else {
+                      button.setAttribute('aria-pressed', 'true');
                     }
                   }
 
