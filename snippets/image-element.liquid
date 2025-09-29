@@ -106,7 +106,7 @@
     {% if img_width == blank %}
       {% assign img_width = widths | split: ',' | last %}
     {% endif %}
-    <img alt="{{ alt }}" aria-hidden="{{ ariaHidden }}" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
+    <img alt="123" aria-hidden="{{ ariaHidden }}" class="{{ classes }} {{ classes }} lazyload hs-lazyload hs-id-f8ee28a1" data-src="{{ img
       | image_url: width: img_width, format: format }}" height="{{ img_height }}" itemprop="{{ itemprop }}" loading="{{ loading }}" preload="{{ preload }}" {% if role != blank %} role="{{ role }}" {% endif %}  sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="{{ style }}" width="{{ img_tag_width }}" widths="{{ widths }}">
   {% else %}
     {% if img_width == blank %}
@@ -123,7 +123,7 @@
     {% endfor %}
   {%- endcapture -%}
   {% assign img_width = widthsArray | last %}
-  <img alt="{{ alt }}" class="{{ classes }} lazyload hs-lazyload hs-id-b74f9b33" data-index="{{ loopIndex }}" data-photoswipe-height="{{ media_height }}" data-photoswipe-src="{{ img | image_url: width: product_zoom_size, format: format }}" data-photoswipe-width="{{ media_width }}" data-src="{{ img | image_url: width: img_width }}" height="" loading="{{ loading }}" sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="{{ img_widths }}" width="">
+  <img alt="123" class="{{ classes }} lazyload hs-lazyload hs-id-b74f9b33" data-index="{{ loopIndex }}" data-photoswipe-height="{{ media_height }}" data-photoswipe-src="{{ img | image_url: width: product_zoom_size, format: format }}" data-photoswipe-width="{{ media_width }}" data-src="{{ img | image_url: width: img_width }}" height="" loading="{{ loading }}" sizes="{{ sizes }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="{{ img_widths }}" width="">
 {% else %}
   {% if host == 'theme' %}
     {% assign img_src = asset | asset_url %}
@@ -144,7 +144,7 @@
        height="{{ img_height }}"
        class="{{ classes }}"
        loading="{{ loading }}"
-       alt="{{ alt }}"
+       alt="123"
        {% if img_widths != blank %}srcset="{{ img_widths }}"{% endif %}
        {% if data-name and data-value %}data-{{ data-name }}="{{ data-value }}"{% endif %}
        sizes="{{ sizes }}"
