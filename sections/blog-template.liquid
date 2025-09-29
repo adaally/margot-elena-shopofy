@@ -44,12 +44,12 @@
 <script>
   const select = document.querySelector('#BlogTagFilter');
 
-select.addEventListener('keydown', e => {
-  if ((e.key === "ArrowDown" || e.key === "ArrowUp") && !select.matches(':focus-visible[aria-expanded="true"]')) {
-    // Prevent changing value when closed
-    e.preventDefault();
-  }
-});
+  select.addEventListener('keydown', e => {
+    if ((e.key === "ArrowDown" || e.key === "ArrowUp") && !select.matches(':focus-visible[aria-expanded="true"]')) {
+      // Prevent changing value when closed
+      e.preventDefault();
+    }
+  });
 </script>
 
 {%- endpaginate -%}
