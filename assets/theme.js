@@ -5461,10 +5461,12 @@ theme.recentlyViewed = {
   
         this.preventiOS15Scrolling();
 
-        const container = document.querySelector('.pswp__container');
-        if(container){
-          trapFocus(container);
+        const containerPswp = document.querySelector('.pswp__container');
+        console.log(containerPswp)
+        if(containerPswp) {
+          trapFocus(containerPswp);
         }
+        
       },
   
       afterChange: function() {
