@@ -5460,7 +5460,7 @@ theme.recentlyViewed = {
         this.gallery.init();
   
         this.preventiOS15Scrolling();
-        const focusableElements = [];
+        let focusableElements = [];
         const containerPswp = document.querySelector('.pswp__container');
         console.log(containerPswp)
         if(containerPswp) {
