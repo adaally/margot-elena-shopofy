@@ -3341,13 +3341,11 @@ theme.recentlyViewed = {
   
         // Match index with child nav
         if (this.args.childNav) {
+          this.args.childNav.querySelectorAll(productSelectors.links).forEach((element, forIndex) => {
+            element.setAttribute('aria-pressed', forIndex === index ? 'true':'false');
+          });
           this.childNavGoTo(index);
         }
-
-        this.args.childNav.querySelectorAll(productSelectors.links).forEach((element, forIndex) => {
-          element.setAttribute('aria-pressed', forIndex === index ? 'true':'false');
-        });
-  
         // Optional onChange callback
         if (this.args.callbacks && this.args.callbacks.onChange) {
           if (typeof this.args.callbacks.onChange === 'function') {
