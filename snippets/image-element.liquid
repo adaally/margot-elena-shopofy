@@ -85,7 +85,7 @@
     assign sizes = sizes
   endif
 
-  if alt == blank and emptyAlt == false
+  if alt == blank
     assign alt = img.alt | default: ''
   endif
 
