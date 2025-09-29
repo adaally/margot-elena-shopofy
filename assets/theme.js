@@ -8963,15 +8963,28 @@ theme.recentlyViewed = {
       }
     });
   }
-  
+
   function toggleDropdown() {
-    document.querySelectorAll('details.site-nav__details').forEach(detailsEl => {
+    const allDetails = document.querySelectorAll('details.site-nav__details');
+
+    allDetails.forEach(detailsEl => {
       detailsEl.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
-          e.preventDefault(); // stop default behavior
+          e.preventDefault();
+
           const isOpen = detailsEl.hasAttribute('open');
-          detailsEl.toggleAttribute('open', !isOpen);
-          detailsEl.setAttribute('aria-expanded', String(!isOpen));
+
+          // close all dropdowns first
+          allDetails.forEach(el => {
+            el.removeAttribute('open');
+            el.setAttribute('aria-expanded', 'false');
+          });
+
+          // then open only the current one if it was closed
+          if (!isOpen) {
+            detailsEl.setAttribute('open', '');
+            detailsEl.setAttribute('aria-expanded', 'true');
+          }
         }
       });
     });
