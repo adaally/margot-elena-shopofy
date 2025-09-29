@@ -10051,6 +10051,32 @@ function fixChatList(container) {
     
     let focusableElements = [];
     let firstEl, lastEl;
+
+    function trapFocus(container) {
+      const focusableElements = container.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      firstEl = focusableElements[0];
+      lastEl = focusableElements[focusableElements.length - 1];
+    
+      container.addEventListener('keydown', handleTrap);
+    }
+    
+    function handleTrap(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
+      }
+    }
     
     function openSearch() {
       searchForm.classList.add('is-active');
@@ -10087,7 +10113,7 @@ function fixChatList(container) {
 
     
     function trapFocus(container) {
-      focusableElements = container.querySelectorAll(
+      const focusableElements = container.querySelectorAll(
         'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
       );
       firstEl = focusableElements[0];
