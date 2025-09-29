@@ -3343,6 +3343,10 @@ theme.recentlyViewed = {
         if (this.args.childNav) {
           this.childNavGoTo(index);
         }
+
+        this.args.childNav.querySelectorAll(productSelectors.links).forEach((element, forIndex) => {
+          element.setAttribute('aria-pressed', forIndex === index ? 'true':'false');
+        });
   
         // Optional onChange callback
         if (this.args.callbacks && this.args.callbacks.onChange) {
