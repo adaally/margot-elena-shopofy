@@ -5464,6 +5464,7 @@ theme.recentlyViewed = {
   
       afterChange: function() {
         var index = this.gallery.getCurrentIndex();
+        console.log('click modal')
         this.container.dispatchEvent(new CustomEvent('photoswipe:afterChange', {
           detail: {
             index: index
