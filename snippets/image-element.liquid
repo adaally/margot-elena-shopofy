@@ -17,6 +17,7 @@
      - role (Optional - String)
      - aria-hidden (Optional - Boolean)
      - style (Optional - String)
+     - ariaHidden (Optional - String)
   - Builds out image tags for hosted files
     - Parameters:
       - asset (Required - String url)
@@ -41,7 +42,6 @@
       - classes (Optional - String)
       - alt (Optional - String)
       - widths (Optional - String)
-      - ariaHidden (Optional - String)
 
   https://shopify.dev/api/liquid/filters#image_tag
   https://shopify.dev/api/liquid/filters#image_url
@@ -85,7 +85,7 @@
     assign sizes = sizes
   endif
 
-  if alt == blank
+  if alt == blank and emptyAlt == false
     assign alt = img.alt | default: ''
   endif
 
