@@ -5460,12 +5460,38 @@ theme.recentlyViewed = {
         this.gallery.init();
   
         this.preventiOS15Scrolling();
-
+        const focusableElements = [];
         const containerPswp = document.querySelector('.pswp__container');
         console.log(containerPswp)
         if(containerPswp) {
           trapFocus(containerPswp);
         }
+
+        function trapFocus(container) {
+          focusableElements = container.querySelectorAll(
+            'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+          );
+          console.log(focusableElements)
+          firstEl = focusableElements[0];
+          lastEl = focusableElements[focusableElements.length - 1];
+        
+          container.addEventListener('keydown', handleTrap);
+        }
+        
+        function handleTrap(e) {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstEl) {
+                e.preventDefault();
+                lastEl.focus();
+              }
+            } else {
+              if (document.activeElement === lastEl) {
+                e.preventDefault();
+                firstEl.focus();
+              }
+            }
+          }
         
       },
   
@@ -5515,33 +5541,8 @@ theme.recentlyViewed = {
 
 
     
-    function trapFocus(container) {
-      const focusableElements = container.querySelectorAll(
-        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
-      );
-      console.log(focusableElements)
-      firstEl = focusableElements[0];
-      lastEl = focusableElements[focusableElements.length - 1];
-    
-      container.addEventListener('keydown', handleTrap);
-          function handleTrap(e) {
-      if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElement === firstEl) {
-            e.preventDefault();
-            lastEl.focus();
-          }
-        } else {
-          if (document.activeElement === lastEl) {
-            e.preventDefault();
-            firstEl.focus();
-          }
-        }
-      }
-    }
-    }
-    
 
+    }
   
   
   /*============================================================================
