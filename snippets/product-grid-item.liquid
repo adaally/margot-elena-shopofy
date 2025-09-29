@@ -80,7 +80,7 @@ Arguments
 
       assign preview_image = product.featured_media.preview_image
     -%}
-    <a href="{{ product.url | within: collection }}" aria-label="{{ product.title }}">
+    <a href="{{ product.url | within: collection }}">
     <div class="grid__item-image-wrapper">
      
              <div class="grid-product__image-mask">
@@ -146,7 +146,7 @@ Arguments
               sizeVariable: sizeVariable,
               fallback: fallback,
               widths: '360, 540, 720, 1000',
-              ariaHidden: true
+              ariaHidden: true,
             -%}
           </div>
         {%- endif -%}
