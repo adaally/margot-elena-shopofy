@@ -5492,7 +5492,7 @@ theme.recentlyViewed = {
               }
             }
           }
-        
+        }
       },
   
       afterChange: function() {
