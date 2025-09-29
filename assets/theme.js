@@ -5433,6 +5433,7 @@ theme.recentlyViewed = {
       },
   
       initGallery: function(items, index) {
+        console.log(items, 'focus trap')
         var pswpElement = document.querySelectorAll('.pswp')[0];
   
         var options = {
@@ -5464,7 +5465,6 @@ theme.recentlyViewed = {
   
       afterChange: function() {
         var index = this.gallery.getCurrentIndex();
-        console.log('click modal')
         this.container.dispatchEvent(new CustomEvent('photoswipe:afterChange', {
           detail: {
             index: index
