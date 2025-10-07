@@ -11,65 +11,6 @@
   "type": "header",
   "name": "t:sections.header-group.name",
   "sections": {
-    "ss_announcement_bar_slideshow_CK9bhx": {
-      "type": "ss-announcement-bar-slideshow",
-      "blocks": {
-        "item_qbVdx7": {
-          "type": "item",
-          "settings": {
-            "text": "<p><strong>TEST</strong></p><p>Test</p>"
-          }
-        },
-        "item_eFqmVx": {
-          "type": "item",
-          "settings": {
-            "text": "<p><strong>FREE SHIPPING ON ORDERS $85+</strong> </p><p><a href=\"/collections/mecc-best-sellers\" title=\"BEST SELLERS\">Shop Now</a></p>"
-          }
-        },
-        "item_JU4R9U": {
-          "type": "item",
-          "settings": {
-            "text": "<p><strong>M.E. FALL SUB BOX FULL REVEAL</strong></p><p><strong> </strong><a href=\"https://margotelena.com/pages/subscription-box-fall-reveal-2025\" title=\"Fall Sub Box Full Reveal 2025\">Explore Now</a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_qbVdx7",
-        "item_eFqmVx",
-        "item_JU4R9U"
-      ],
-      "custom_css": [
-        ".announcement-text-sections--18983258292379__ss_announcement_bar_slideshow_CK9bhx strong {font-weight: 525; letter-spacing: 0.2em;}"
-      ],
-      "name": "SS - Announcement bar (slideshow)",
-      "settings": {
-        "insert_css_class_target": "",
-        "text_custom": true,
-        "text_font": "lato_n4",
-        "text_size": 12,
-        "text_size_mobile": 11,
-        "text_height": 130,
-        "text_align": "center",
-        "text_align_mobile": "center",
-        "text_color": "#000000",
-        "progress_default_color": "#afafaf",
-        "progress_color": "#121212",
-        "play_icon_color": "#000000",
-        "play_border_color": "#000000",
-        "background_color": "#ffeae1",
-        "background_gradient": "",
-        "border_color": "#121212",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 12,
-        "padding_bottom": 10,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 0,
-        "full_width": false,
-        "content_width": 1200,
-        "border_thickness": 0
-      }
-    },
     "announcement": {
       "type": "announcement",
       "blocks": {
@@ -146,11 +87,67 @@
         "show_currency_selector": true,
         "show_currency_flags": true
       }
+    },
+    "ss_announcement_bar_slideshow_cp9pkG": {
+      "type": "ss-announcement-bar-slideshow",
+      "blocks": {
+        "item_q7EGm8": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Welcome to our store Test</p>"
+          }
+        },
+        "item_jLUk6B": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Welcome to our store</p>"
+          }
+        },
+        "item_eVhXy8": {
+          "type": "item",
+          "settings": {
+            "text": "<p>Welcome to our store</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_q7EGm8",
+        "item_jLUk6B",
+        "item_eVhXy8"
+      ],
+      "name": "SS - Announcement bar (slideshow)",
+      "settings": {
+        "insert_css_class_target": ".header, .pageheader",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 13,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_align": "center",
+        "text_align_mobile": "center",
+        "text_color": "#121212",
+        "progress_default_color": "#AFAFAF",
+        "progress_color": "#121212",
+        "play_icon_color": "#121212",
+        "play_border_color": "#121212",
+        "background_color": "#F3F3F3",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": false,
+        "content_width": 1200,
+        "border_thickness": 0
+      }
     }
   },
   "order": [
-    "ss_announcement_bar_slideshow_CK9bhx",
     "announcement",
-    "header"
+    "header",
+    "ss_announcement_bar_slideshow_cp9pkG"
   ]
 }
