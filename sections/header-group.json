@@ -11,53 +11,13 @@
   "type": "header",
   "name": "t:sections.header-group.name",
   "sections": {
-    "announcement": {
-      "type": "announcement",
-      "blocks": {
-        "c0fb3303-c3c7-4564-9afe-e8fffd674bae": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "FREE Greeting Card 3-Pack With orders $90+ | Shop Now",
-            "link_text": "",
-            "link": "shopify://collections/mecc-best-sellers"
-          }
-        },
-        "7d630a89-c2cf-42f5-b13e-21ba37ba037c": {
-          "type": "announcement",
-          "disabled": true,
-          "settings": {
-            "text": "Free Shipping on Orders $85+",
-            "link_text": "Shop Now",
-            "link": "shopify://collections/top-gifts"
-          }
-        },
-        "announcement-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "M.E. Fall Sub Box Full Reveal",
-            "link_text": "Explore Now",
-            "link": "https://margotelena.com/pages/subscription-box-fall-reveal-2025"
-          }
-        }
-      },
-      "block_order": [
-        "c0fb3303-c3c7-4564-9afe-e8fffd674bae",
-        "7d630a89-c2cf-42f5-b13e-21ba37ba037c",
-        "announcement-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "announcement_compact": true
-      }
-    },
     "ss_announcement_bar_slideshow_CK9bhx": {
       "type": "ss-announcement-bar-slideshow",
       "blocks": {
         "item_qbVdx7": {
           "type": "item",
           "settings": {
-            "text": "<p><strong>30% OFF TRAVEL-SIZE HANDCREME </strong><a href=\"/collections/travel-size-handcreme\" title=\"Travel Size Handcreme\">Shop Now</a></p>"
+            "text": "<p>Test &lt;br&gt; Test</p>"
           }
         },
         "item_eFqmVx": {
@@ -110,6 +70,46 @@
         "border_thickness": 0
       }
     },
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "c0fb3303-c3c7-4564-9afe-e8fffd674bae": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "FREE Greeting Card 3-Pack With orders $90+ | Shop Now",
+            "link_text": "",
+            "link": "shopify://collections/mecc-best-sellers"
+          }
+        },
+        "7d630a89-c2cf-42f5-b13e-21ba37ba037c": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Free Shipping on Orders $85+",
+            "link_text": "Shop Now",
+            "link": "shopify://collections/top-gifts"
+          }
+        },
+        "announcement-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "M.E. Fall Sub Box Full Reveal",
+            "link_text": "Explore Now",
+            "link": "https://margotelena.com/pages/subscription-box-fall-reveal-2025"
+          }
+        }
+      },
+      "block_order": [
+        "c0fb3303-c3c7-4564-9afe-e8fffd674bae",
+        "7d630a89-c2cf-42f5-b13e-21ba37ba037c",
+        "announcement-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "announcement_compact": true
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
@@ -149,8 +149,8 @@
     }
   },
   "order": [
-    "announcement",
     "ss_announcement_bar_slideshow_CK9bhx",
+    "announcement",
     "header"
   ]
 }
