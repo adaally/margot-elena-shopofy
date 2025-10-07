@@ -80,7 +80,7 @@
       ],
       "name": "SS - Announcement bar (slideshow)",
       "settings": {
-        "insert_css_class_target": ".header, .pageheader",
+        "insert_css_class_target": "",
         "text_custom": false,
         "text_font": "josefin_sans_n4",
         "text_size": 13,
