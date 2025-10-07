@@ -78,6 +78,9 @@
         "item_eFqmVx",
         "item_JU4R9U"
       ],
+      "custom_css": [
+        ".announcement-text-template--19470512488603__ss_announcement_bar_slideshow_46WqMn strong {font-weight: 525; letter-spacing: 0.2em;}"
+      ],
       "name": "SS - Announcement bar (slideshow)",
       "settings": {
         "insert_css_class_target": "",
@@ -99,7 +102,7 @@
         "margin_top": 0,
         "margin_bottom": 0,
         "padding_top": 12,
-        "padding_bottom": 12,
+        "padding_bottom": 10,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 0,
         "full_width": false,
