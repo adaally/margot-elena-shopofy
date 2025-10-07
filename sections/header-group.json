@@ -44,7 +44,7 @@
       "name": "SS - Announcement bar (slideshow)",
       "settings": {
         "insert_css_class_target": "",
-        "text_custom": false,
+        "text_custom": true,
         "text_font": "lato_n4",
         "text_size": 12,
         "text_size_mobile": 11,
