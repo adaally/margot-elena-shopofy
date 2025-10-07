@@ -78,9 +78,7 @@
         "item_eFqmVx",
         "item_JU4R9U"
       ],
-      "custom_css": [
-        ".announcement-text-sections--18983258292379__ss_announcement_bar_slideshow_CK9bhx strong {font-weight: 525; letter-spacing: 0.2em;}"
-      ],
+      "custom_css": [],
       "name": "SS - Announcement bar (slideshow)",
       "settings": {
         "insert_css_class_target": "",
