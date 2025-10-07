@@ -57,19 +57,19 @@
         "item_qbVdx7": {
           "type": "item",
           "settings": {
-            "text": "<p><strong>30% OFF TRAVEL-SIZE HANDCREME </strong><a href=\"/collections/travel-size-handcreme\" title=\"Travel Size Handcreme\">Shop Now</a></p>"
+            "text": "<p><strong>30% OFF TRAVEL-SIZE HANDCREME </strong></p><p><a href=\"/collections/travel-size-handcreme\" title=\"Travel Size Handcreme\">Shop Now</a></p>"
           }
         },
         "item_eFqmVx": {
           "type": "item",
           "settings": {
-            "text": "<p><strong>FREE SHIPPING ON ORDERS $85+ </strong><a href=\"/collections/mecc-best-sellers\" title=\"BEST SELLERS\">Shop Now</a></p>"
+            "text": "<p><strong>FREE SHIPPING ON ORDERS $85+ </strong></p><p><a href=\"/collections/mecc-best-sellers\" title=\"BEST SELLERS\">Shop Now</a></p>"
           }
         },
         "item_JU4R9U": {
           "type": "item",
           "settings": {
-            "text": "<p><strong>M.E. FALL SUB BOX FULL REVEAL </strong><a href=\"https://margotelena.com/pages/subscription-box-fall-reveal-2025\" title=\"Fall Sub Box Full Reveal 2025\">Explore Now</a></p>"
+            "text": "<p><strong>M.E. FALL SUB BOX FULL REVEAL</strong></p><p><strong> </strong><a href=\"https://margotelena.com/pages/subscription-box-fall-reveal-2025\" title=\"Fall Sub Box Full Reveal 2025\">Explore Now</a></p>"
           }
         }
       },
@@ -78,7 +78,9 @@
         "item_eFqmVx",
         "item_JU4R9U"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".announcement-text-sections--18983258292379__ss_announcement_bar_slideshow_CK9bhx strong {font-weight: 525; letter-spacing: 0.2em;}"
+      ],
       "name": "SS - Announcement bar (slideshow)",
       "settings": {
         "insert_css_class_target": "",
