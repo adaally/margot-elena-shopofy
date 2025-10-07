@@ -17,7 +17,7 @@
         "item_qbVdx7": {
           "type": "item",
           "settings": {
-            "text": "<p>Test &lt;br&gt; Test</p>"
+            "text": "<p><strong>Test </strong></p><p>Test</p>"
           }
         },
         "item_eFqmVx": {
