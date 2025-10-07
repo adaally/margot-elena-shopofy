@@ -746,6 +746,9 @@
       "block_order": [
         "heading_g6Vwe6"
       ],
+      "custom_css": [
+        "div {padding-bottom: 0;}"
+      ],
       "name": "t:sections.rich-text.presets.rich_text.name",
       "settings": {
         "align_text": "center",
@@ -768,6 +771,7 @@
       "block_order": [
         "template--15856103915675__2d0e7db1-9082-449e-9800-b82cf35bd4e6-1686590336c6afaeb0-1"
       ],
+      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
