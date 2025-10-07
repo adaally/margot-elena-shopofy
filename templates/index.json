@@ -771,7 +771,6 @@
       "block_order": [
         "template--15856103915675__2d0e7db1-9082-449e-9800-b82cf35bd4e6-1686590336c6afaeb0-1"
       ],
-      "disabled": true,
       "settings": {
         "full_width": false,
         "space_around": true,
@@ -798,28 +797,6 @@
         "narrow_column": true,
         "divider": false
       }
-    },
-    "advanced_content_PPmPDH": {
-      "type": "advanced-content",
-      "blocks": {
-        "liquid_MMzRaQ": {
-          "type": "liquid",
-          "settings": {
-            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"646b774d6135be20250e1382\">\n</div>\n<style>.custom-content .yotpo.yotpo-lightbox-wrapper .yotpo-display-wrapper {\n  width: 100% !important;\n}\n.custom-content .yotpo.yotpo-pictures-widget.yotpo-size-1 {\n  width: 100% !important;\n}\n.yotpo-display-wrapper {\n  width: 100% !important;\n}</style>",
-            "width": "100%",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "liquid_MMzRaQ"
-      ],
-      "name": "t:sections.advanced-content.presets.custom_content.name",
-      "settings": {
-        "full_width": false,
-        "space_around": false,
-        "lazyload_images": true
-      }
     }
   },
   "order": [
@@ -838,7 +815,6 @@
     "99816b04-76c2-4786-ae3a-b6b518e357d6",
     "rich_text_49qW6E",
     "2d0e7db1-9082-449e-9800-b82cf35bd4e6",
-    "rich_text_f9bipi",
-    "advanced_content_PPmPDH"
+    "rich_text_f9bipi"
   ]
 }
