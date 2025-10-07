@@ -1,1 +1,211 @@
-{"sections":{"main":{"type":"main-product","blocks":{"d3f1da0d-3547-40ed-957b-21381b835c21":{"type":"custom","settings":{"code":"<div class=\"yotpo bottomLine\"\n    data-appkey=\"d3bgs2lII4noj0dHz0EcyecV5uC2sPl5K5yRukGR\"\n    data-domain=\"{{shop.permanent_domain | escape }}\"\n    data-product-id=\"{{ product.id }}\"\n    data-product-models=\"{{ product.id }}\"\n    data-name=\"{{ product.title | escape }}\"\n    data-url=\"{{ shop.url }}{{ product.url }}\"\n    data-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\n    data-description=\"{{ product.description | escape }}\"\n    data-bread-crumbs=\"{% for tag in product.tags %}{{ tag | escape }};{% endfor %}\">\n<\/div>","ecls":"revies--pro"}},"9c75f67e-41ed-4dfb-92c7-1307cf09a1ad":{"type":"price","settings":{}},"78eb2018-9f14-4a9a-843c-7e7c12b9d93f":{"type":"sales_point","settings":{"icon":"tag","text":"Discount Applied In-Cart"}},"variant_picker":{"type":"variant_picker","settings":{"variant_labels":true,"picker_type":"button","product_dynamic_variants_enable":true,"color_swatches":false}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"surface_pickup_enable":true,"show_gift_card_recipient":false}},"0e5a1e67-c8d8-4850-b380-49709a47300a":{"type":"sales_point","settings":{"icon":"ribbon","text":"30 Day Return Policy"}},"56e92a78-9b0f-42ee-b55c-b9aa34309a34":{"type":"sales_point","settings":{"icon":"globe","text":"Free Shipping on Orders $85+"}},"aa507d93-fd4f-4bf1-bb7c-d3deb7a3d221":{"type":"sales_point","settings":{"icon":"lock","text":"Safe & Secure Checkout Encryption"}},"description":{"type":"description","settings":{"is_tab":false}},"share":{"type":"share","settings":{}}},"block_order":["d3f1da0d-3547-40ed-957b-21381b835c21","9c75f67e-41ed-4dfb-92c7-1307cf09a1ad","78eb2018-9f14-4a9a-843c-7e7c12b9d93f","variant_picker","buy_buttons","0e5a1e67-c8d8-4850-b380-49709a47300a","56e92a78-9b0f-42ee-b55c-b9aa34309a34","aa507d93-fd4f-4bf1-bb7c-d3deb7a3d221","description","share"],"settings":{"sku_enable":false,"image_position":"left","image_size":"medium","product_zoom_enable":true,"thumbnail_position":"beside","thumbnail_height":"flexible","thumbnail_arrows":false,"mobile_layout":"partial","enable_video_looping":true,"product_video_style":"muted"}},"17029419084f8b7734":{"type":"apps","blocks":{"0983a47d-84f6-4b92-915c-2127a7c41d18":{"type":"shopify:\/\/apps\/yotpo-product-reviews-ugc\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}}},"block_order":["0983a47d-84f6-4b92-915c-2127a7c41d18"],"settings":{"full_width":false,"space_around":true}},"1702942034122ab6c9":{"type":"apps","blocks":{"d2680c40-52e9-48d1-a2d8-b276086ae80f":{"type":"shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc","settings":{"enabled":true,"id":"108884","product_id_enabled":true,"collection_id_enabled":false}}},"block_order":["d2680c40-52e9-48d1-a2d8-b276086ae80f"],"settings":{"full_width":false,"space_around":true}},"sub":{"type":"product-full-width","disabled":true,"settings":{"max_width":true}},"recently-viewed":{"type":"recently-viewed","disabled":true,"settings":{"recent_count":5}},"e388e709-1fe2-4ea3-b677-a2ce9913a909":{"type":"advanced-content","blocks":{"template--16194881650843__e388e709-1fe2-4ea3-b677-a2ce9913a909-liquid-1":{"type":"liquid","settings":{"code":"<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"646b774d6135be20250e1382\">\n<\/div>\n<style>.custom-content .yotpo.yotpo-lightbox-wrapper .yotpo-display-wrapper {\n  width: 100% !important;\n}\n.custom-content .yotpo.yotpo-pictures-widget.yotpo-size-1 {\n  width: 100% !important;\n}\n.yotpo-display-wrapper {\n  width: 100% !important;\n}<\/style>","width":"100%","alignment":"center"}}},"block_order":["template--16194881650843__e388e709-1fe2-4ea3-b677-a2ce9913a909-liquid-1"],"settings":{"full_width":false,"space_around":true,"lazyload_images":true}}},"order":["main","17029419084f8b7734","1702942034122ab6c9","sub","recently-viewed","e388e709-1fe2-4ea3-b677-a2ce9913a909"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "d3f1da0d-3547-40ed-957b-21381b835c21": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"yotpo bottomLine\"\n    data-appkey=\"d3bgs2lII4noj0dHz0EcyecV5uC2sPl5K5yRukGR\"\n    data-domain=\"{{shop.permanent_domain | escape }}\"\n    data-product-id=\"{{ product.id }}\"\n    data-product-models=\"{{ product.id }}\"\n    data-name=\"{{ product.title | escape }}\"\n    data-url=\"{{ shop.url }}{{ product.url }}\"\n    data-image-url=\"{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}\"\n    data-description=\"{{ product.description | escape }}\"\n    data-bread-crumbs=\"{% for tag in product.tags %}{{ tag | escape }};{% endfor %}\">\n</div>",
+            "ecls": "revies--pro"
+          }
+        },
+        "9c75f67e-41ed-4dfb-92c7-1307cf09a1ad": {
+          "type": "price",
+          "settings": {}
+        },
+        "78eb2018-9f14-4a9a-843c-7e7c12b9d93f": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "tag",
+            "text": "Discount Applied In-Cart"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "0e5a1e67-c8d8-4850-b380-49709a47300a": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "ribbon",
+            "text": "30 Day Return Policy"
+          }
+        },
+        "56e92a78-9b0f-42ee-b55c-b9aa34309a34": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Free Shipping on Orders $85+"
+          }
+        },
+        "aa507d93-fd4f-4bf1-bb7c-d3deb7a3d221": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "lock",
+            "text": "Safe & Secure Checkout Encryption"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "d3f1da0d-3547-40ed-957b-21381b835c21",
+        "9c75f67e-41ed-4dfb-92c7-1307cf09a1ad",
+        "78eb2018-9f14-4a9a-843c-7e7c12b9d93f",
+        "variant_picker",
+        "buy_buttons",
+        "0e5a1e67-c8d8-4850-b380-49709a47300a",
+        "56e92a78-9b0f-42ee-b55c-b9aa34309a34",
+        "aa507d93-fd4f-4bf1-bb7c-d3deb7a3d221",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "17029419084f8b7734": {
+      "type": "apps",
+      "blocks": {
+        "0983a47d-84f6-4b92-915c-2127a7c41d18": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "0983a47d-84f6-4b92-915c-2127a7c41d18"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1702942034122ab6c9": {
+      "type": "apps",
+      "blocks": {
+        "d2680c40-52e9-48d1-a2d8-b276086ae80f": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "108884",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "d2680c40-52e9-48d1-a2d8-b276086ae80f"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "rich_text_Xjg84y": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qxPhbz": {
+          "type": "heading",
+          "settings": {
+            "title": "As Seen On Social"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qxPhbz"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "e388e709-1fe2-4ea3-b677-a2ce9913a909": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--16194881650843__e388e709-1fe2-4ea3-b677-a2ce9913a909-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div\n\tclass=\"yotpo yotpo-pictures-widget\"\n\tdata-gallery-id=\"646b774d6135be20250e1382\">\n</div>\n<style>.custom-content .yotpo.yotpo-lightbox-wrapper .yotpo-display-wrapper {\n  width: 100% !important;\n}\n.custom-content .yotpo.yotpo-pictures-widget.yotpo-size-1 {\n  width: 100% !important;\n}\n.yotpo-display-wrapper {\n  width: 100% !important;\n}</style>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--16194881650843__e388e709-1fe2-4ea3-b677-a2ce9913a909-liquid-1"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "17029419084f8b7734",
+    "1702942034122ab6c9",
+    "sub",
+    "recently-viewed",
+    "rich_text_Xjg84y",
+    "e388e709-1fe2-4ea3-b677-a2ce9913a909"
+  ]
+}
