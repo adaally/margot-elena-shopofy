@@ -746,9 +746,7 @@
       "block_order": [
         "heading_g6Vwe6"
       ],
-      "custom_css": [
-        "div {padding-bottom: 0;}"
-      ],
+      "custom_css": [],
       "name": "t:sections.rich-text.presets.rich_text.name",
       "settings": {
         "align_text": "center",
