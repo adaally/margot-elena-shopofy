@@ -79,7 +79,7 @@
           "settings": {
             "text": "FREE Greeting Card 3-Pack With orders $90+ | Shop Now",
             "link_text": "",
-            "link": "shopify://collections/mecc-best-sellers"
+            "link": ""
           }
         },
         "7d630a89-c2cf-42f5-b13e-21ba37ba037c": {
@@ -105,7 +105,6 @@
         "7d630a89-c2cf-42f5-b13e-21ba37ba037c",
         "announcement-0"
       ],
-      "disabled": true,
       "settings": {
         "announcement_compact": true
       }
