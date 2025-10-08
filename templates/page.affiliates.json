@@ -22,7 +22,7 @@
           "settings": {
             "top_subheading": "",
             "title": "Affiliates",
-            "title_size": 80,
+            "title_size": 60,
             "subheading": "",
             "link": "http://www.shareasale.com/join/margotelena",
             "link_text": "",
@@ -34,7 +34,7 @@
             "image": "shopify://shop_images/ME_Affiliates.jpg",
             "image_mobile": "shopify://shop_images/ME_Affiliates_Mobile.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 46
+            "overlay_opacity": 60
           }
         }
       },
