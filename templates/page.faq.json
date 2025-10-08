@@ -34,7 +34,7 @@
             "image": "shopify://shop_images/FAQ_01_6a280d7d-ae42-40db-92e2-8591c40d94f9.jpg",
             "image_mobile": "shopify://shop_images/FAQ_01_Mobile.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 46
+            "overlay_opacity": 50
           }
         }
       },
