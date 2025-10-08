@@ -34,7 +34,7 @@
             "image": "shopify://shop_images/Careers_01.jpg",
             "image_mobile": "shopify://shop_images/Get_In_Touch_01_Mobile.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 46
+            "overlay_opacity": 50
           }
         }
       },
