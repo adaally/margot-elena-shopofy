@@ -4232,8 +4232,6 @@ theme.recentlyViewed = {
       if (!bar) {
         return;
       }
-
-      bar.removeAttribute('tabindex');
   
       unload();
   
@@ -4261,6 +4259,7 @@ theme.recentlyViewed = {
     function initSlider() {
       flickity = new theme.Slideshow(bar, args);
 
+      bar.removeAttribute('tabindex');
       function updateSlideAccessibility() {
         var slides = bar.querySelectorAll('.announcement-slider__slide');
 
