@@ -4229,7 +4229,7 @@ theme.recentlyViewed = {
 
     function updateSlideAccessibility() {
       var slides = bar.querySelectorAll('.announcement-slider__slide');
-      console.log(slides)
+
       slides.forEach(function(slide) {
         if (slide.classList.contains('is-selected')) {
           slide.setAttribute('aria-hidden', 'false');
@@ -4239,6 +4239,12 @@ theme.recentlyViewed = {
           slide.setAttribute('tabindex', '-1');
         }
       });
+    }
+
+    var observer = new MutationObserver(updateSlideAccessibility);
+    var slidesContainer = bar.querySelector('.flickity-slider'); 
+    if (slidesContainer) {
+      observer.observe(slidesContainer, { attributes: true, subtree: true, attributeFilter: ['class'] });
     }
   
     function init() {
