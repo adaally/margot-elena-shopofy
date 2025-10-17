@@ -4228,7 +4228,6 @@ theme.recentlyViewed = {
     var flickity;
   
     function init() {
-      console.log('AnnouncementSlide')
       bar = document.getElementById('AnnouncementSlider');
       if (!bar) {
         return;
@@ -4263,6 +4262,8 @@ theme.recentlyViewed = {
   
     // Go to slide if selected in the editor
     function onBlockSelect(id) {
+
+      console.log('AnnouncementSlide')
       var slide = bar.querySelector('#AnnouncementSlide-' + id);
       var index = parseInt(slide.dataset.index);
   
