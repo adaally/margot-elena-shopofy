@@ -56,6 +56,10 @@
             {%- endif -%}
           {%- endfor -%}
         </div>
+        <button class="btn--play-pause">
+            <svg class="icon--play" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <svg class="icon--pause" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4" width="2" height="16"></rect><rect x="15" y="4" width="2" height="16"></rect></svg>
+        </button>
       </div>
     </div>
   </div>
@@ -63,6 +67,32 @@
 {% endif %}
 
 <style>
+  .btn--play-pause {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    justify-content: center;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn--play-pause .icon--pause {
+  display: inline-block;
+  }
+  .btn--play-pause .icon--play {
+    display: none;
+  }
+
+  .btn--play-pause.is-paused .icon--pause {
+    display: none;
+  }
+  .btn--play-pause.is-paused .icon--play {
+    display: inline-block;
+  }
+
   .arrow {
     width: 0;
     height: 0;
