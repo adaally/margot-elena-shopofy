@@ -4268,10 +4268,12 @@ theme.recentlyViewed = {
            
             if (typeof flickity.play === 'function') flickity.play();
             toggleBtn.classList.remove('is-paused');
+            toggleBtn.setAttribute('aria-label', 'Play announcement slider');
           } else {
            
             if (typeof flickity.pause === 'function') flickity.pause();
             toggleBtn.classList.add('is-paused');
+            toggleBtn.setAttribute('aria-label', 'Pause announcement slider');
           }
         });
       }
