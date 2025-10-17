@@ -4232,7 +4232,7 @@ theme.recentlyViewed = {
       slides.forEach(function(slide) {
         if (slide.classList.contains('is-selected')) {
           slide.setAttribute('aria-hidden', 'false');
-          slide.setAttribute('tabindex', '0');
+          slide.removeAttribute('tabindex');
         } else {
           slide.setAttribute('aria-hidden', 'true');
           slide.setAttribute('tabindex', '-1');
@@ -10189,13 +10189,5 @@ function fixChatList(container) {
       el.setAttribute('aria-hidden', 'true');
     });
   }
-
-  function updateVisibilityAnnouncement() {
-    const announcementWrapper = document.querySelector('#AnnouncementSlider');
-    if(announcementWrapper) {
-      
-    }
-  }
-
 })();
 
