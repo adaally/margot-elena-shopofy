@@ -10193,7 +10193,7 @@ function fixChatList(container) {
   function updateVisibilityAnnouncement() {
     const announcementWrapper = document.querySelector('#AnnouncementSlider');
     if(announcementWrapper) {
-      announcementWrapper.
+      
     }
   }
 
