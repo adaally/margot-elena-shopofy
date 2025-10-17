@@ -4232,6 +4232,8 @@ theme.recentlyViewed = {
       if (!bar) {
         return;
       }
+
+      bar.removeAttribute('tabindex');
   
       unload();
   
@@ -4259,8 +4261,6 @@ theme.recentlyViewed = {
     function initSlider() {
       flickity = new theme.Slideshow(bar, args);
 
-
-
       function updateSlideAccessibility() {
         var slides = bar.querySelectorAll('.announcement-slider__slide');
 
@@ -4280,9 +4280,6 @@ theme.recentlyViewed = {
       }
 
       updateSlideAccessibility();
-
-
-
 
       var toggleBtn = document.querySelector('.btn--play-pause');
       if (toggleBtn) {
