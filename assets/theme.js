@@ -4228,7 +4228,8 @@ theme.recentlyViewed = {
     var flickity;
 
     function updateSlideAccessibility() {
-      var slides = bar.querySelectorAll('.announcement-slider__slide'); 
+      var slides = bar.querySelectorAll('.announcement-slider__slide');
+      console.log(slides)
       slides.forEach(function(slide) {
         if (slide.classList.contains('is-selected')) {
           slide.setAttribute('aria-hidden', 'false');
