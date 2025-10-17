@@ -4258,6 +4258,23 @@ theme.recentlyViewed = {
   
     function initSlider() {
       flickity = new theme.Slideshow(bar, args);
+
+      var toggleBtn = document.querySelector('.btn--play-pause');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+          if (!flickity) return;
+
+          if (toggleBtn.classList.contains('is-paused')) {
+           
+            if (typeof flickity.play === 'function') flickity.play();
+            toggleBtn.classList.remove('is-paused');
+          } else {
+           
+            if (typeof flickity.pause === 'function') flickity.pause();
+            toggleBtn.classList.add('is-paused');
+          }
+        });
+      }
     }
   
     // Go to slide if selected in the editor
