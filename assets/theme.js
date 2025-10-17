@@ -4267,8 +4267,8 @@ theme.recentlyViewed = {
         slides.forEach(function(slide) {
           slide.querySelectorAll('a').forEach(element => {
             const isActive = slide.classList.contains('is-selected');
-            slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
-            slide.setAttribute('tabindex', isActive ? '0' : '-1');
+            element.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            element.setAttribute('tabindex', isActive ? '0' : '-1');
           });
         });
       }
