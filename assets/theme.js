@@ -4277,9 +4277,7 @@ theme.recentlyViewed = {
 
       if (flickity && typeof flickity.on === 'function') {
         flickity.on('select', function() {
-          setTimeout(() => {
-            updateSlideAccessibility();
-          }, 200)
+          console.log('clicked')
         });
       }
 
