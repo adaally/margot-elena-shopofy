@@ -4228,6 +4228,7 @@ theme.recentlyViewed = {
     var flickity;
   
     function init() {
+      console.log('AnnouncementSlide')
       bar = document.getElementById('AnnouncementSlider');
       if (!bar) {
         return;
