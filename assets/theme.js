@@ -4226,26 +4226,6 @@ theme.recentlyViewed = {
     };
     var bar;
     var flickity;
-
-    function updateSlideAccessibility() {
-      var slides = bar.querySelectorAll('.announcement-slider__slide');
-
-      slides.forEach(function(slide) {
-        if (slide.classList.contains('is-selected')) {
-          slide.setAttribute('aria-hidden', 'false');
-          slide.removeAttribute('tabindex');
-        } else {
-          slide.setAttribute('aria-hidden', 'true');
-          slide.setAttribute('tabindex', '-1');
-        }
-      });
-    }
-
-    var observer = new MutationObserver(updateSlideAccessibility);
-    var slidesContainer = bar.querySelector('.flickity-slider'); 
-    if (slidesContainer) {
-      observer.observe(slidesContainer, { attributes: true, subtree: true, attributeFilter: ['class'] });
-    }
   
     function init() {
       bar = document.getElementById('AnnouncementSlider');
@@ -4278,12 +4258,33 @@ theme.recentlyViewed = {
   
     function initSlider() {
       flickity = new theme.Slideshow(bar, args);
-      var rawFlickity = flickity.flickity || flickity._flkty;
-      updateSlideAccessibility();
-      
-      if (rawFlickity && typeof rawFlickity.on === 'function') {
-        rawFlickity.on('select', updateSlideAccessibility);
+
+
+
+      function updateSlideAccessibility() {
+        var slides = bar.querySelectorAll('.announcement-slider__slide');
+
+        slides.forEach(function(slide) {
+          if (slide.classList.contains('is-selected')) {
+            slide.setAttribute('aria-hidden', 'false');
+            slide.removeAttribute('tabindex');
+          } else {
+            slide.setAttribute('aria-hidden', 'true');
+            slide.setAttribute('tabindex', '-1');
+          }
+        });
       }
+
+      var observer = new MutationObserver(updateSlideAccessibility);
+      var slidesContainer = bar.querySelector('.flickity-slider'); 
+      if (slidesContainer) {
+        observer.observe(slidesContainer, { attributes: true, subtree: true, attributeFilter: ['class'] });
+      }
+
+      updateSlideAccessibility();
+
+
+
 
       var toggleBtn = document.querySelector('.btn--play-pause');
       if (toggleBtn) {
