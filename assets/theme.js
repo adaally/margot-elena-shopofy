@@ -4226,6 +4226,19 @@ theme.recentlyViewed = {
     };
     var bar;
     var flickity;
+
+    function updateSlideAccessibility() {
+      var slides = bar.querySelectorAll('.announcement-slider__slide'); 
+      slides.forEach(function(slide) {
+        if (slide.classList.contains('is-selected')) {
+          slide.setAttribute('aria-hidden', 'false');
+          slide.setAttribute('tabindex', '0');
+        } else {
+          slide.setAttribute('aria-hidden', 'true');
+          slide.setAttribute('tabindex', '-1');
+        }
+      });
+    }
   
     function init() {
       bar = document.getElementById('AnnouncementSlider');
@@ -4258,6 +4271,14 @@ theme.recentlyViewed = {
   
     function initSlider() {
       flickity = new theme.Slideshow(bar, args);
+
+      updateSlideAccessibility();
+
+      if (flickity && typeof flickity.on === 'function') {
+        flickity.on('select', function() {
+          updateSlideAccessibility();
+        });
+      }
 
       var toggleBtn = document.querySelector('.btn--play-pause');
       if (toggleBtn) {
@@ -10167,6 +10188,13 @@ function fixChatList(container) {
     document.querySelectorAll('hr').forEach(el => {
       el.setAttribute('aria-hidden', 'true');
     });
+  }
+
+  function updateVisibilityAnnouncement() {
+    const announcementWrapper = document.querySelector('#AnnouncementSlider');
+    if(announcementWrapper) {
+      announcementWrapper.
+    }
   }
 
 })();
