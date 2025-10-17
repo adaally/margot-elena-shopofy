@@ -4272,13 +4272,11 @@ theme.recentlyViewed = {
   
     function initSlider() {
       flickity = new theme.Slideshow(bar, args);
-
+      var rawFlickity = flickity.flickity || flickity._flkty;
       updateSlideAccessibility();
-
-      if (flickity && typeof flickity.on === 'function') {
-        flickity.on('select', function() {
-          console.log('clicked')
-        });
+      
+      if (rawFlickity && typeof rawFlickity.on === 'function') {
+        rawFlickity.on('select', updateSlideAccessibility);
       }
 
       var toggleBtn = document.querySelector('.btn--play-pause');
