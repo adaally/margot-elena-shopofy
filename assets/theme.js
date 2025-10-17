@@ -4265,13 +4265,11 @@ theme.recentlyViewed = {
         var slides = bar.querySelectorAll('.announcement-slider__slide');
 
         slides.forEach(function(slide) {
-          if (slide.classList.contains('is-selected')) {
-            slide.setAttribute('aria-hidden', 'false');
-            slide.removeAttribute('tabindex');
-          } else {
-            slide.setAttribute('aria-hidden', 'true');
-            slide.setAttribute('tabindex', '-1');
-          }
+          slide.querySelectorAll('a').forEach(element => {
+            const isActive = slide.classList.contains('is-selected');
+            slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            slide.setAttribute('tabindex', isActive ? '0' : '-1');
+          });
         });
       }
 
