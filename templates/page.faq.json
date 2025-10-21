@@ -21,7 +21,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "FAQs",
+            "title": "<h1 style=\"font-size: inherit;\">FAQs</h1>",
             "title_size": 60,
             "subheading": "",
             "link": "",
