@@ -21,7 +21,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "Affiliates",
+            "title": "<h1 style=\"font-size: inherit;\">Affiliates</h1>",
             "title_size": 60,
             "subheading": "",
             "link": "http://www.shareasale.com/join/margotelena",
