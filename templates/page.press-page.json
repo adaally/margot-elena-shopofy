@@ -21,7 +21,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "<h1>EDITORS' FAVES</h1>",
+            "title": "<h1 style=\"font-size: inherit;\">EDITORS' FAVES</h1>",
             "title_size": 60,
             "subheading": "",
             "link": "",
