@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "SHE HAS ARRIVED!",
-            "title": "<h2>The Fall 2025\nSubscription Box</h2>",
+            "title": "<h2 style=\"font-size: inherit;\">The Fall 2025\nSubscription Box</h2>",
             "title_size": 40,
             "subheading": "Seasonal Luxuries for Crisp, Colorful Fall",
             "link": "https://margotelena.com/pages/subscription-box-fall-reveal-2025",
@@ -36,7 +36,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "12 Magical Days",
-            "title": "<h2>The 2025 Advent \nCalendar Is Here</h2>",
+            "title": "<h2 style=\"font-size: inherit;\">The 2025 Advent \nCalendar Is Here</h2>",
             "title_size": 40,
             "subheading": "Last Year’s Sold Out in 1 Day!",
             "link": "https://margotelena.com/products/margot-elena-advent-calendar-holiday-2025",
@@ -57,7 +57,7 @@
           "disabled": true,
           "settings": {
             "top_subheading": "Treat your feet!",
-            "title": "<h2>15% Off The Cottage \nGreenhouse Footcare</h2>",
+            "title": "<h2 style=\"font-size: inherit;\">15% Off The Cottage \nGreenhouse Footcare</h2>",
             "title_size": 40,
             "subheading": "Restore Your Soles to Pedi-Perfection",
             "link": "https://margotelena.com/collections/foot-care",
@@ -541,7 +541,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "Beauty Filled Subscription Boxes",
-            "title": "<h2>Perfect to give,<br> even better to keep.</h2>",
+            "title": "<h2 style=\"font-size: inherit;\">Perfect to give,<br> even better to keep.</h2>",
             "title_size": 45,
             "subheading": "$200 of beauty luxuries for just $66.94",
             "link": "shopify://products/seasonal-discovery-box",
