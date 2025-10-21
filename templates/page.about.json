@@ -21,7 +21,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "Our Story",
+            "title": "<h1 style=\"font-size: inherit;\">Our Story</h1>",
             "title_size": 60,
             "subheading": "",
             "link": "",
@@ -375,6 +375,7 @@
         "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.</p>",
         "button_label": "",
         "button_link": "",
+        "button_aria-label": "",
         "layout": "left",
         "height": 550,
         "framed": false,
