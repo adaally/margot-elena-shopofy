@@ -10006,7 +10006,7 @@ function fixChatList(container) {
   }
 }
 
-  fixChatbotAccessibility();
+  // fixChatbotAccessibility();
 
   function addTitleToCustomerProfilePage() {
 
