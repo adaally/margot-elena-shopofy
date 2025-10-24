@@ -9558,48 +9558,48 @@ function addAlertToErrors() {
 }
     addAlertToErrors();
 
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const container = document.getElementById("pc--optOutFormContainer");
-  //   if (!container) return;
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("pc--optOutFormContainer");
+    if (!container) return;
 
-  //   const observer = new MutationObserver(() => {
-  //     // 1) Add aria-required to the email input
-  //     const emailInput = container.querySelector("input[type='email']");
-  //     if (emailInput && !emailInput.hasAttribute("aria-required")) {
-  //       emailInput.setAttribute("aria-required", "true");
-  //     }
+    const observer = new MutationObserver(() => {
+      // 1) Add aria-required to the email input
+      const emailInput = container.querySelector("input[type='email']");
+      if (emailInput && !emailInput.hasAttribute("aria-required")) {
+        emailInput.setAttribute("aria-required", "true");
+      }
 
-  //     // 2) Fix the success message element
-  //     const successMessage = container.querySelector(
-  //       ".pc--opt-out-form-message--success"
-  //     );
-  //     if (successMessage) {
-  //       successMessage.removeAttribute("tabindex");
-  //       successMessage.removeAttribute("autofocus");
-  //       successMessage.setAttribute("role", "alert");
-  //     }
+      // 2) Fix the success message element
+      const successMessage = container.querySelector(
+        ".pc--opt-out-form-message--success"
+      );
+      if (successMessage) {
+        successMessage.removeAttribute("tabindex");
+        successMessage.removeAttribute("autofocus");
+        successMessage.setAttribute("role", "alert");
+      }
 
-  //     const captchaTextareas = container.querySelectorAll(
-  //       "textarea[id^='g-recaptcha-response'], textarea[id^='h-captcha-response']"
-  //     );
+      const captchaTextareas = container.querySelectorAll(
+        "textarea[id^='g-recaptcha-response'], textarea[id^='h-captcha-response']"
+      );
 
-  //     captchaTextareas.forEach((textarea) => {
-  //       if (!document.querySelector(`label[for="${textarea.id}"]`)) {
-  //         const label = document.createElement("label");
-  //         label.setAttribute("for", textarea.id);
-  //         label.className = "visually-hidden";
-  //         label.textContent =
-  //           textarea.id.indexOf("g-recaptcha") !== -1
-  //             ? "Google reCAPTCHA response"
-  //             : "hCaptcha response";
+      captchaTextareas.forEach((textarea) => {
+        if (!document.querySelector(`label[for="${textarea.id}"]`)) {
+          const label = document.createElement("label");
+          label.setAttribute("for", textarea.id);
+          label.className = "visually-hidden";
+          label.textContent =
+            textarea.id.indexOf("g-recaptcha") !== -1
+              ? "Google reCAPTCHA response"
+              : "hCaptcha response";
 
-  //         textarea.insertAdjacentElement("beforebegin", label);
-  //       }
-  //     });
-  //   });
+          textarea.insertAdjacentElement("beforebegin", label);
+        }
+      });
+    });
 
-  //   observer.observe(container, { childList: true, subtree: true });
-  // });
+    observer.observe(container, { childList: true, subtree: true });
+  });
 
 function fixChatbotAccessibility() {
 
@@ -10085,7 +10085,7 @@ function fixChatList(container) {
     });
   }
 
-  fixHiddenTextProductLearnMore();
+  // fixHiddenTextProductLearnMore();
 
   function moveEmailSignUpFooterToMain() {
     const emailContainer = document.querySelector('.newsletter-container');
@@ -10096,7 +10096,7 @@ function fixChatList(container) {
     }
   }
 
-  moveEmailSignUpFooterToMain();
+  // moveEmailSignUpFooterToMain();
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
