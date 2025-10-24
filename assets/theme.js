@@ -9423,7 +9423,7 @@ function fixAriaLabelThumbnails() {
     }, 200);
   }
 
-  fixOwlDots();
+  // fixOwlDots();
 
   function fixYoptoReviewSection() {
     
@@ -9539,7 +9539,7 @@ function fixAriaLabelThumbnails() {
     observer.observe(document.body, { childList: true, subtree: true });
   }
 
-  // fixYoptoReviewSection();
+  fixYoptoReviewSection();
 
 
 function addAlertToErrors() {
