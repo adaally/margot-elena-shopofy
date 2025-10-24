@@ -9487,14 +9487,6 @@ function fixAriaLabelThumbnails() {
                   observer.observe(path, { attributes: true, attributeFilter: ['fill'] });
                 });
 
-                // iconsBtns.forEach(btn => {
-                //   btn.setAttribute('aria-pressed', 'false');
-                //   btn.addEventListener('click', () => {
-                //     iconsBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
-                //     btn.setAttribute('aria-pressed', 'true');
-                //   });
-                // });
-
 
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('wrapper');
@@ -9547,7 +9539,7 @@ function fixAriaLabelThumbnails() {
     observer.observe(document.body, { childList: true, subtree: true });
   }
 
-  fixYoptoReviewSection();
+  // fixYoptoReviewSection();
 
 
 function addAlertToErrors() {
@@ -10085,7 +10077,7 @@ function fixChatList(container) {
     });
   }
 
-  // fixHiddenTextProductLearnMore();
+  fixHiddenTextProductLearnMore();
 
   function moveEmailSignUpFooterToMain() {
     const emailContainer = document.querySelector('.newsletter-container');
@@ -10096,7 +10088,7 @@ function fixChatList(container) {
     }
   }
 
-  // moveEmailSignUpFooterToMain();
+  moveEmailSignUpFooterToMain();
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
