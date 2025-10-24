@@ -9370,7 +9370,7 @@ function fixAriaLabelThumbnails() {
             btn.classList.add("aria-label-changed");
           }
 
-          const newBtn = document.querySelector('a');
+          const newBtn = document.createElement('a');
           copyAttributes(btn, newBtn);
           newBtn.innerHTML = btn.innerHTML;
           newBtn.setAttribute('tabindex', '0');
@@ -9395,7 +9395,7 @@ function fixAriaLabelThumbnails() {
 
   observer.observe(targetNode, config);
 }
-  // fixAriaLabelThumbnails()
+  fixAriaLabelThumbnails()
 
   function fixOwlDots() {
     const timeout = setTimeout(() => {
