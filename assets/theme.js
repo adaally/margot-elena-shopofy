@@ -9395,7 +9395,7 @@ function fixAriaLabelThumbnails() {
 
   observer.observe(targetNode, config);
 }
-  fixAriaLabelThumbnails()
+  // fixAriaLabelThumbnails()
 
   function fixOwlDots() {
     const timeout = setTimeout(() => {
@@ -9423,7 +9423,7 @@ function fixAriaLabelThumbnails() {
     }, 200);
   }
 
-  // fixOwlDots();
+  fixOwlDots();
 
   function fixYoptoReviewSection() {
     
