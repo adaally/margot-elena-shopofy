@@ -529,8 +529,8 @@
             "slide_text_color": "#ffffff",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/ME_WebBanners_MOthersDayRefresh_SubBox_V2.jpg",
-            "image_mobile": "shopify://shop_images/SubBoxBanner2.jpg",
+            "image": "shopify://shop_images/ME_Home_Page_Sub_Box_Banner_Fall_2025.jpg",
+            "image_mobile": "shopify://shop_images/ME_Home_Page_Sub_Box_Banner_Fall_2025_Mobile.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 2
           }
