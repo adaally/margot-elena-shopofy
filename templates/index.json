@@ -15,46 +15,25 @@
         "image_yTNJwV": {
           "type": "image",
           "settings": {
-            "top_subheading": "SHE HAS ARRIVED!",
-            "title": "<h2 style=\"font-size: inherit;\">The Fall 2025\nSubscription Box</h2>",
+            "top_subheading": "New Additions",
+            "title": "<h2 style=\"font-size: inherit;\">TokyoMilk Finest \nPerfumed Soap</h2>",
             "title_size": 40,
-            "subheading": "Seasonal Luxuries for Crisp, Colorful Fall",
-            "link": "https://margotelena.com/pages/subscription-box-fall-reveal-2025",
-            "link_text": "Explore now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#000000",
-            "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/ME_WebBanners_Fall25_FullReveal3.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanners_Fall25_FullReveal4.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        },
-        "image_N7Lerk": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "12 Magical Days",
-            "title": "<h2 style=\"font-size: inherit;\">The 2025 Advent \nCalendar Is Here</h2>",
-            "title_size": 40,
-            "subheading": "Last Year’s Sold Out in 1 Day!",
-            "link": "https://margotelena.com/products/margot-elena-advent-calendar-holiday-2025",
-            "link_text": "Explore now",
+            "subheading": "'Tis the Season to Suds Up & Spread Joy",
+            "link": "shopify://collections/new",
+            "link_text": "Shop now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#000000",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_WebBanners_25SubBox_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanners_25SubBox_4.jpg",
+            "image": "shopify://shop_images/Nov25_ME_WebBanners_TKMsoaps_3.jpg",
+            "image_mobile": "shopify://shop_images/Nov25_ME_WebBanners_TKMsoaps_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
         },
         "image_gpQKBi": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "Treat your feet!",
             "title": "<h2 style=\"font-size: inherit;\">15% Off The Cottage \nGreenhouse Footcare</h2>",
@@ -72,12 +51,33 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
+        },
+        "image_N7Lerk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "12 Magical Days",
+            "title": "<h2 style=\"font-size: inherit;\">The 2025 Advent \nCalendar Is Here</h2>",
+            "title_size": 40,
+            "subheading": "Last Year’s Sold Out in 1 Day!",
+            "link": "https://margotelena.com/products/margot-elena-advent-calendar-holiday-2025",
+            "link_text": "Explore now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#000000",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/ME_WebBanners_25SubBox_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanners_25SubBox_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
         "image_yTNJwV",
-        "image_N7Lerk",
-        "image_gpQKBi"
+        "image_gpQKBi",
+        "image_N7Lerk"
       ],
       "custom_css": [],
       "settings": {
