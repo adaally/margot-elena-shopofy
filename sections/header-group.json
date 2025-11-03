@@ -17,14 +17,13 @@
         "c0fb3303-c3c7-4564-9afe-e8fffd674bae": {
           "type": "announcement",
           "settings": {
-            "text": "FREE Greeting Card 3-Pack With orders $90+ | Shop Now",
-            "link_text": "",
-            "link": "shopify://collections/stationery-cards"
+            "text": "Introducing Snowdrop",
+            "link_text": "Explore Now",
+            "link": "https://margotelena.com/collections/snowdrop"
           }
         },
         "7d630a89-c2cf-42f5-b13e-21ba37ba037c": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "Free Shipping on Orders $85+",
             "link_text": "Shop Now",
@@ -34,9 +33,9 @@
         "announcement-0": {
           "type": "announcement",
           "settings": {
-            "text": "M.E. Fall Sub Box Full Reveal",
-            "link_text": "Explore Now",
-            "link": "https://margotelena.com/pages/subscription-box-fall-reveal-2025"
+            "text": "M.E. Winter Sub Box",
+            "link_text": "Reserve Yours",
+            "link": "shopify://products/seasonal-discovery-box"
           }
         }
       },
