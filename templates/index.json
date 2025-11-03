@@ -35,19 +35,19 @@
         "image_gpQKBi": {
           "type": "image",
           "settings": {
-            "top_subheading": "Treat your feet!",
-            "title": "<h2 style=\"font-size: inherit;\">15% Off The Cottage \nGreenhouse Footcare</h2>",
+            "top_subheading": "Lollia’s newest beauty",
+            "title": "<h2 style=\"font-size: inherit;\">Introducing Snowdrop</h2>",
             "title_size": 40,
-            "subheading": "Restore Your Soles to Pedi-Perfection",
-            "link": "https://margotelena.com/collections/foot-care",
+            "subheading": "An undeniably enchanting collection",
+            "link": "https://margotelena.com/collections/snowdrop",
             "link_text": "Shop now",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/ME_WebBanners_TCGfootcare3.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanners_TCGfootcare4.jpg",
+            "slide_text_color": "#000000",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Q4_RetailRefresh_HomepageBanner_3.jpg",
+            "image_mobile": "shopify://shop_images/Q4_RetailRefresh_HomepageBanner_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
