@@ -219,7 +219,7 @@
             "price": "76.94",
             "currency": "$",
             "time": "Per Box",
-            "elements": "<ul><li>Delivered every season</li><li>Cancel anytime—no long-term contract</li><li>Save 19% per box compared to one-time purchase</li><li>Shipping Included</li></ul>",
+            "elements": "<p>Delivered each season, charged quarterly</p><p>Cancel anytime—no long-term contract</p><p>Save 19% per box compared to a One-Time purchase</p><p>Shipping Included</p>",
             "button_text": "Buy Seasonal Subscription",
             "button_url": "add-to-cart-3-months",
             "Text": "",
@@ -235,7 +235,7 @@
             "price": "66.94",
             "currency": "$",
             "time": "Per Box",
-            "elements": "<ul><li>Four seasons of luxury, prepaid for ease</li><li>Save 30% when you subscribe annually</li><li>$800+ in luxuries for only $267.76/year</li><li>Shipping Included</li></ul>",
+            "elements": "<p>Delivered each season for a full year of luxury, prepaid for ease</p><p>Save 30% when you subscribe annually</p><p>$800+ in luxuries for only $267.76/year</p><p>Shipping Included</p>",
             "button_text": "Buy Annual Subscription",
             "button_url": "add-to-cart-12-months",
             "Text": "",
@@ -455,7 +455,7 @@
         "h3 {margin-left: 0px;}"
       ],
       "settings": {
-        "title": "",
+        "title": "How it works",
         "align_text": "center",
         "divider": false
       }
@@ -471,8 +471,8 @@
         "image2_mask": "square",
         "custom_id": "default-id",
         "subtitle": "",
-        "title": "“",
-        "text": "<p>I've never met a Margot Elena product that I did not<strong> absolutely adore</strong>. So when I discovered they had a subscription box, I signed up right away. <strong>I have zero regrets</strong>.</p><p>- Kim</p>",
+        "title": "The Subscription You'll Want to Keep",
+        "text": "<p><strong>\"</strong>I've never met a Margot Elena product that I did not<strong> absolutely adore</strong>. So when I discovered they had a subscription box, I signed up right away. <strong>I have zero regrets</strong>.<strong>\"</strong></p><p>- Kim</p>",
         "button_label": "Join Now",
         "button_link": "",
         "button_style": "primary",
@@ -524,7 +524,7 @@
         "heading_CybJ3X": {
           "type": "heading",
           "settings": {
-            "title": "placeholder"
+            "title": "Award-Winning Beauty You’ll Love"
           }
         },
         "template--15856104669339__81c07d74-f398-45f0-80fd-5673685783c1-1686070908502dfbeb-1": {
