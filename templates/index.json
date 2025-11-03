@@ -387,40 +387,19 @@
     "promo_grid_9cjAkc": {
       "type": "promo-grid",
       "blocks": {
-        "advanced_HjrnzV": {
-          "type": "advanced",
-          "settings": {
-            "subheading": "",
-            "heading": "tokyomilk",
-            "textarea": "dynamic new duos",
-            "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/tokyomilk",
-            "cta_text2": "",
-            "cta_link2": "",
-            "image": "shopify://shop_images/ME_TKM_NA_Promo_Grid_252e5ef8-fa64-48c0-b2ee-7e3c36c0a0ab.jpg",
-            "video_url": "",
-            "width": "50",
-            "height": 800,
-            "text_size": 85,
-            "text_align": "vertical-bottom horizontal-center",
-            "color_accent": "rgba(0,0,0,0)",
-            "boxed": true,
-            "framed": false
-          }
-        },
         "advanced_kRtTHP": {
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "library of flowers",
-            "textarea": "mix & match magic",
+            "heading": "SNOWDROP",
+            "textarea": "new! lollia",
             "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/library-of-flowers",
+            "cta_link1": "https://margotelena.com/collections/snowdrop",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/ME_LOF_NA_Promo_Grid.jpg",
+            "image": "shopify://shop_images/Q4_RetailRefresh_MetaFeilds_TrioGridImage_Snowdrop.jpg",
             "video_url": "",
-            "width": "50",
+            "width": "33",
             "height": 800,
             "text_size": 85,
             "text_align": "vertical-bottom horizontal-center",
@@ -433,15 +412,15 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "THE COTTAGE GREENHOUSE",
-            "textarea": "two fresh new collections",
+            "heading": "LOLLIA",
+            "textarea": "modern romantic luxury",
             "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/the-cottage-greenhouse",
+            "cta_link1": "shopify://collections/lollia",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/ME_TCG_NA_Promo_Grid.jpg",
+            "image": "shopify://shop_images/Q4_RetailRefresh_MetaFeilds_TrioGridImage_Lollia.jpg",
             "video_url": "",
-            "width": "50",
+            "width": "33",
             "height": 800,
             "text_size": 85,
             "text_align": "vertical-bottom horizontal-center",
@@ -450,19 +429,19 @@
             "framed": false
           }
         },
-        "advanced_kWUV4i": {
+        "advanced_HjrnzV": {
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "M.E. ESSENTIAL LUXURIES",
-            "textarea": "the start of a perfect evening",
+            "heading": "tokyomilk",
+            "textarea": "objects to desire",
             "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/me-essential-luxuries",
+            "cta_link1": "shopify://collections/tokyomilk",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/ME_Essential_Luxuries_NA_Promo_Grid_b0429ed1-34a7-43a9-9bdf-01d830d27ac3.jpg",
+            "image": "shopify://shop_images/Q4_RetailRefresh_MetaFeilds_TrioGridImage_TKM.jpg",
             "video_url": "",
-            "width": "50",
+            "width": "33",
             "height": 800,
             "text_size": 85,
             "text_align": "vertical-bottom horizontal-center",
@@ -473,10 +452,9 @@
         }
       },
       "block_order": [
-        "advanced_HjrnzV",
         "advanced_kRtTHP",
         "advanced_AYDW7g",
-        "advanced_kWUV4i"
+        "advanced_HjrnzV"
       ],
       "custom_css": [
         ".type-advanced .promo-grid__content:not(.promo-grid__content--boxed):not( .promo-grid__content--sale ),.type-simple .promo-grid__content:not(.promo-grid__content--boxed):not( .promo-grid__content--sale ) {color: #000;}",
