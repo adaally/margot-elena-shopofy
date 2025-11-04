@@ -272,6 +272,74 @@
         "divider": false
       }
     },
+    "text_and_image_K8kfaA": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Zodiac_Web_Images_Virgo.jpg",
+        "image_mask": "landscape",
+        "image2_mask": "none",
+        "custom_id": "virgo-section",
+        "subtitle": "AUGUST 23 - SEPTEMBER 22",
+        "title": "VIRGO",
+        "text": "<p>Virgos have high standards and can tend to be perfectionists. Their attention to detail is unmatched, and their analytical qualities shine.</p><p><strong>Fragrance Notes:</strong> <br/><em>Lavender </em>- calming and soothing, helping Virgo unwind<br/><em>Green Tea </em>- crisp and refreshing, stimulating Virgo’s intellectual side<br/><em>Mint </em>- cool and revitalizing, which appeals to Virgo’s active lifestyle<br/><em>Lemon </em>- bright and invigorating, boosting Virgo’s productivity</p>",
+        "button_label": "Shop Virgo Scents",
+        "button_link": "shopify://collections/zodiac-scents-virgo",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "66",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false,
+        "lazyload_images": true
+      }
+    },
+    "featured_collection_ARaeip": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "zodiac-scents-virgo",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "text_and_image_DPhMYY": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Zodiac_Web_Images_Libra.jpg",
+        "image_mask": "landscape",
+        "image2_mask": "none",
+        "custom_id": "libra-section",
+        "subtitle": "SEPTEMBER 23 - OCTOBER 22",
+        "title": "LIBRA",
+        "text": "<p>Peace-loving and fair-minded Libras appreciate beauty & balance. They are social, diplomatic, and seek harmony.<br/><br/><strong>Fragrance Notes: </strong><br/><em>Sandalwood</em> - warm and grounding, ideal for balance-seeking Libra <br/><em>Neroli -</em> Uplifting and joyful, which ignites Libra’s social spirit <br/><em>Rose</em> - romantic, indulging Libra’s appreciation for beauty <br/><em>Bergamot & Vanilla</em> - comforting and sensual, these scents are Libra’s confidence boosters</p>",
+        "button_label": "Shop LIBRA Scents",
+        "button_link": "shopify://collections/zodiac-scents-libra",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false,
+        "lazyload_images": true
+      }
+    },
+    "featured_collection_icbxF7": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "zodiac-scents-libra",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
     "text_and_image_tkxNbi": {
       "type": "text-and-image",
       "settings": {
@@ -319,6 +387,10 @@
     "featured_collection_DyApzE",
     "text_and_image_EeXwCJ",
     "featured_collection_pgWRgj",
+    "text_and_image_K8kfaA",
+    "featured_collection_ARaeip",
+    "text_and_image_DPhMYY",
+    "featured_collection_icbxF7",
     "text_and_image_tkxNbi",
     "featured_collection_yr8Xtf"
   ]
