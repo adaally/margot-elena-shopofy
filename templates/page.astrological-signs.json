@@ -74,6 +74,14 @@
             "image_alt": "",
             "link": "#libra-section"
           }
+        },
+        "logo_image_7wBcy3": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Zodiac_Web_Images_Category3_1.jpg",
+            "image_alt": "",
+            "link": "#scorpio-section"
+          }
         }
       },
       "block_order": [
@@ -81,7 +89,8 @@
         "logo_image_3dhnDg",
         "logo_image_GtDx6E",
         "logo_image_hmtwxf",
-        "logo_image_CwC9dq"
+        "logo_image_CwC9dq",
+        "logo_image_7wBcy3"
       ],
       "custom_css": [],
       "settings": {
@@ -262,6 +271,40 @@
         "view_all": false,
         "divider": false
       }
+    },
+    "text_and_image_tkxNbi": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/Zodiac_Web_Images_Scorpio.jpg",
+        "image_mask": "landscape",
+        "image2_mask": "none",
+        "custom_id": "scorpio-section",
+        "subtitle": "OCTOBER 23 - NOVEMBER 22",
+        "title": "SCORPIO",
+        "text": "<p>Scorpios are passionate and determined. They are insightful and crave loyalty, devotion & trust.<br/><br/><strong>Fragrance Notes: </strong><br/><em>Patchouli</em> - earthy and grounding, a perfect counterpoint to Scorpio’s intensity <br/><em>Amber -</em> warm and sensual, mirroring Scorpio’s passionate side <br/><em>Ginger</em> - zesty and energizing, stimulating Scorpio’s curious spirit <br/><em>Sandalwood</em> - warm and grounding, soothing Scorpio’s intense emotions</p>",
+        "button_label": "Shop SCORPIO Scents",
+        "button_link": "shopify://collections/zodiac-scents-scorpio",
+        "button_style": "primary",
+        "align_text": "center",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": false,
+        "lazyload_images": true
+      }
+    },
+    "featured_collection_yr8Xtf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "zodiac-scents-scorpio",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
     }
   },
   "order": [
@@ -275,6 +318,8 @@
     "text_and_image_tHaazX",
     "featured_collection_DyApzE",
     "text_and_image_EeXwCJ",
-    "featured_collection_pgWRgj"
+    "featured_collection_pgWRgj",
+    "text_and_image_tkxNbi",
+    "featured_collection_yr8Xtf"
   ]
 }
