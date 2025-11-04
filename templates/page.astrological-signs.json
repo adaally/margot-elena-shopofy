@@ -66,13 +66,22 @@
             "image_alt": "",
             "link": "#virgo-section"
           }
+        },
+        "logo_image_CwC9dq": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify://shop_images/Zodiac_Web_Images_Category2_1.jpg",
+            "image_alt": "",
+            "link": "#libra-section"
+          }
         }
       },
       "block_order": [
         "logo_image_kDi9Ya",
         "logo_image_3dhnDg",
         "logo_image_GtDx6E",
-        "logo_image_hmtwxf"
+        "logo_image_hmtwxf",
+        "logo_image_CwC9dq"
       ],
       "custom_css": [],
       "settings": {
