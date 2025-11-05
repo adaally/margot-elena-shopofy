@@ -94,6 +94,28 @@
         "lazyload_images": true
       }
     },
+    "text_and_image_QcLLLb": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/ME_Press_Oprah_Daily_f748aab0-a3f4-4d42-a9da-e129fab0439d.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "custom_id": "default-id",
+        "subtitle": "",
+        "title": "LOLLIA SNOWDROP BUBBLE BATH  SELECTED AS ONE OF OPRAH’S FAVORITE THINGS 2025",
+        "text": "<p>“Longtime favorite Lollia has done it again: The bubbles are as lovely as ever, the fragrance of snowdrops also gorgeous—but this year’s bottle might be the real showstopper. Chances are, the lucky recipient will keep it long after the last bath.” - <a href=\"https://www.oprahdaily.com/beauty/g26976206/best-bubble-bath/\" target=\"_blank\" title=\"13 Best Bubble Baths for a Relaxing At-Home Spa Experience\"><em>Read Full Article</em></a></p><p>Featuring: <br/><a href=\"https://margotelena.com/collections/snowdrop/products/snowdrop-bubble-bath\" title=\"Lollia - Snowdrop Bubble Bath\">Lollia - Snowdrop Bubble Bath</a></p>",
+        "button_label": "SHOP NOW",
+        "button_link": "https://margotelena.com/collections/snowdrop/products/snowdrop-bubble-bath",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
     "text_and_image_MtUzgc": {
       "type": "text-and-image",
       "settings": {
@@ -674,6 +696,7 @@
     "main",
     "e53da031-ad11-46b6-ac5b-2adfc7e2d4cb",
     "158a3f40-50fb-45ef-8ec5-51750dd40282",
+    "text_and_image_QcLLLb",
     "text_and_image_ktYChb",
     "text_and_image_MtUzgc",
     "3ee1c961-6216-4526-9f46-eeed6207285b",
