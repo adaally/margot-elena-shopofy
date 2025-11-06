@@ -198,7 +198,8 @@
           "type": "item",
           "settings": {
             "budges": "",
-            "heading": "One-Time Box",
+            "heading": "ONE-TIME BOX",
+            "sub_title": "Single Box - One-Time Charge",
             "price_sale": "",
             "price": "94.99",
             "currency": "$",
@@ -214,7 +215,8 @@
           "type": "item",
           "settings": {
             "budges": "",
-            "heading": "Seasonal Subscription",
+            "heading": "SEASONAL SUBSCRIPTION",
+            "sub_title": "Four Boxes Per Year - Paid Quarterly",
             "price_sale": "94.99",
             "price": "76.94",
             "currency": "$",
@@ -230,7 +232,8 @@
           "type": "item",
           "settings": {
             "budges": "NEW! BEST VALUE",
-            "heading": "Annual Subscription",
+            "heading": "ANNUAL SUBSCRIPTION",
+            "sub_title": "Four Boxes Per Year - Prepaid",
             "price_sale": "76.94",
             "price": "66.94",
             "currency": "$",
