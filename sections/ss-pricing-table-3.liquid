@@ -95,6 +95,12 @@
     assign title_height = section.settings.title_height
     assign title_align = section.settings.title_align
     assign title_mt = section.settings.title_mt
+
+    assign subtitle_size = section.settings.subtitle_size
+    assign subtitle_size_mobile = section.settings.subtitle_size_mobile
+    assign subtitle_color = section.settings.subtitle_color
+    assign subtitle_align = section.settings.subtitle_align
+    assign subtitle_mt = section.settings.subtitle_mt
   
     assign price_size = section.settings.price_size
     assign price_size_mobile = section.settings.price_size_mobile
@@ -257,6 +263,17 @@
       font-weight: 700;
       position: relative;
     }
+
+    .pricing-table-subtitle-{{ section.id }} {
+    margin: 0;
+    margin-top: {{ subtitle_mt | times: 0.75 | round: 0 }}px;
+    font-size: {{ subtitle_size_mobile }}px;
+    color: {{ subtitle_color }};
+    line-height: {{ title_height }}%;
+    text-transform: none;
+    text-align: {{ subtitle_align }};
+    font-weight: 400;
+  }
   
     .pricing-table-item-{{ section.id }}.active-item-{{ section.id }} .pricing-table-title-{{ section.id }} {
       color: {{ title_active_color }}; 
@@ -526,6 +543,11 @@
         margin-top: {{ title_mt }}px;
         font-size: {{ title_size }}px;
       }
+
+      .pricing-table-subtitle-{{ section.id }} {
+      margin-top: {{ subtitle_mt }}px;
+      font-size: {{ subtitle_size }}px;
+    }
   
       .pricing-table-price-{{ section.id }} {
         margin-top: {{ price_mt }}px;
@@ -831,6 +853,11 @@
               {% if block.settings.heading != blank %}
                 <h3 style="text-transform: none; font-family: var(--typeBasePrimary), var(--typeBaseFallbac);" class="pricing-table-title-{{ section.id }}">{{ block.settings.heading }}</h3>
               {% endif %}
+
+              {% if block.settings.sub_title != blank %}
+                <p class="pricing-table-subtitle-{{ section.id }}">{{ block.settings.sub_title }}</p>
+              {% endif %}
+
               <p class="pricing-table-price-{{ section.id }}">{% if block.settings.price_sale != blank %}<span class="pricing-table-price-sale-{{ section.id }}">{% if block.settings.currency != blank %}{{ block.settings.currency }}{% endif %}{{ block.settings.price_sale }}</span>{% endif %}{% if block.settings.currency != blank %}{{ block.settings.currency }}{% endif %}{{ block.settings.price }}{% if block.settings.time != blank %}<span>{{ block.settings.time }}</span>{% endif %}</p>
               {% if elements_position == "before" %}
                 <div class="pricing-table-list-{{ section.id }}"> 
@@ -1472,6 +1499,48 @@
           "label": "Card Title Margin Top",
           "default": 10
         },
+        {
+        "type": "header",
+        "content": "Card Subtitle Settings"
+      },
+      {
+        "type": "range",
+        "id": "subtitle_size",
+        "min": 0, "max": 48, "step": 1, "unit": "px",
+        "label": "Card Subtitle Size",
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "subtitle_size_mobile",
+        "min": 0, "max": 48, "step": 1, "unit": "px",
+        "label": "Card Subtitle Size - Mobile",
+        "default": 12
+      },
+      {
+        "type": "range",
+        "id": "subtitle_mt",
+        "min": 0, "max": 40, "step": 1, "unit": "px",
+        "label": "Card Subtitle Margin Top",
+        "default": 6
+      },
+      {
+        "type": "select",
+        "id": "subtitle_align",
+        "label": "Card Subtitle Text Align",
+        "default": "center",
+        "options": [
+          { "label": "Left", "value": "left" },
+          { "label": "Center", "value": "center" },
+          { "label": "Right", "value": "right" }
+        ]
+      },
+      {
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "Card Subtitle Color",
+        "default": "#D22F2F"
+      },
         {
           "type": "header",
           "content": "Card Price Settings"
