@@ -9,30 +9,34 @@
  */
 {
   "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "custom_css": [
+        "div {padding: 10px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": false,
+        "parallax_direction": "top"
+      }
+    },
     "59090d6a-44f4-4989-9cf7-c5627808f5b4": {
       "type": "background-image-text",
       "settings": {
-        "subtitle": "-As Oprah says on OprahDaily.com",
+        "subtitle": "As Oprah says on OprahDaily.com",
         "title": "Oprah's Favorite Things",
-        "text": "<p>\"I chose a Lollia bubble bath—my absolute favorite—two decades ago, and I still have the original bottle by my tub. This year's White Amber & Mirabelle offering is just as luxurious—and comes in bath salts, too.\" </p>",
+        "text": "<p>\"Longtime favorite Lollia has done it again: The bubbles are as lovely as ever, the fragrance of snowdrops also gorgeous—but this year’s bottle might be the real showstopper. Chances are, the lucky recipient will keep it long after the last bath.”</p>",
         "button_label": "",
         "button_link": "",
-        "image": "shopify://shop_images/OFTpage_Elegance_NotWinter_V2_1_a738fba8-8c6d-4ce4-bfe5-a8d70600e2a8.jpg",
+        "button_aria-label": "",
+        "image": "{{ collection.metafields.collection.collection_desktop_image.value }}",
         "layout": "left",
         "height": 650,
         "framed": false,
         "parallax": false,
         "parallax_direction": "top",
         "lazyload_images": true
-      }
-    },
-    "collection-header": {
-      "type": "collection-header",
-      "settings": {
-        "enable": true,
-        "collection_image_enable": false,
-        "parallax": false,
-        "parallax_direction": "top"
       }
     },
     "9eb6318c-0e69-4f05-af3b-9020cae216a1": {
@@ -284,8 +288,8 @@
     }
   },
   "order": [
-    "59090d6a-44f4-4989-9cf7-c5627808f5b4",
     "collection-header",
+    "59090d6a-44f4-4989-9cf7-c5627808f5b4",
     "9eb6318c-0e69-4f05-af3b-9020cae216a1",
     "56bbabf0-50de-443f-8a75-7db4102694ca",
     "promo-grid",
