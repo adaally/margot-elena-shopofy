@@ -1,1 +1,51 @@
-{"sections":{"collabs":{"type":"apps","blocks":{"0ac0f0b1-9522-48fd-9564-230edd73127b":{"type":"shopify://apps/collabs/blocks/application-page/54758706-9f25-4fa9-a553-64720a4c998b","settings":{"heading":"✨ Hello, beautiful!","button_text":"Apply now","button_background_color":"#de2283","button_label_color":"#FFFFFF"}}},"block_order":["0ac0f0b1-9522-48fd-9564-230edd73127b"],"settings":{}},"main":{"type":"main-page","settings":{}}},"order":["main","collabs"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "div {padding: 0px;}"
+      ],
+      "settings": {}
+    },
+    "collabs": {
+      "type": "apps",
+      "blocks": {
+        "0ac0f0b1-9522-48fd-9564-230edd73127b": {
+          "type": "shopify://apps/collabs/blocks/application-page/54758706-9f25-4fa9-a553-64720a4c998b",
+          "settings": {
+            "heading": "✨ Hello, beautiful!",
+            "show_square_logo": true,
+            "show_partnership_info": true,
+            "button_text": "Apply now",
+            "number_of_images": "4",
+            "logo_position": "above",
+            "corner_style": "square",
+            "button_background_color": "#de2283",
+            "button_label_color": "#ffffff",
+            "link_color": "#2c6ecb"
+          }
+        }
+      },
+      "block_order": [
+        "0ac0f0b1-9522-48fd-9564-230edd73127b"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collabs"
+  ]
+}
