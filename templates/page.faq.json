@@ -266,7 +266,7 @@
           "type": "question",
           "settings": {
             "title": "What discount codes work with the Subscription Box?",
-            "text": "<p>Not all discount codes apply to the Subscription Box. When available, codes apply only to the initial purchase of a <strong>Seasonal Subscription Box</strong> at checkout. They do not apply to renewals, the <strong>Prepaid Annual Subscription</strong>, or <strong>one-time</strong> box purchases.</p>"
+            "text": "<p>Not all discount codes apply to the Subscription Box. When available, eligible codes apply only to the <strong>initial purchase</strong> at checkout. Not all codes are valid for every subscription plan, and discounts do not apply to renewals.</p>"
           }
         },
         "question_nt3aUm": {
