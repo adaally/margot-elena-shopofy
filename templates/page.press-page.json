@@ -72,28 +72,6 @@
         "divider": false
       }
     },
-    "text_and_image_ktYChb": {
-      "type": "text-and-image",
-      "settings": {
-        "image": "shopify://shop_images/wired_mag.svg",
-        "image_mask": "none",
-        "image2_mask": "none",
-        "custom_id": "default-id",
-        "subtitle": "",
-        "title": "\"Most Giftable Beauty Box”",
-        "text": "<p>“Every single brand, despite being different, has incredible art, a deep sense of individual aesthetic, and thoughtful details from the packaging to the product itself.” - <a href=\"https://www.wired.com/gallery/best-beauty-subscription-boxes/#67d32c0e4669f008f0f7e8c1\" target=\"_blank\" title=\"Most Giftable Beauty Box - WIRED Magazine Best Beauty Subscription Boxes\"><em>Read Full Article</em></a></p><p>Featuring: <br/><a href=\"https://margotelena.com/pages/subscription-box-spring-reveal-2025\" title=\"Subscription Box Full Reveal Spring 2025\">Margot Elena - Subscription Box Spring 2025</a></p>",
-        "button_label": "SHOP NOW",
-        "button_link": "https://margotelena.com/products/seasonal-discovery-box",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "33",
-        "layout": "left",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true,
-        "lazyload_images": true
-      }
-    },
     "text_and_image_QcLLLb": {
       "type": "text-and-image",
       "settings": {
@@ -106,6 +84,28 @@
         "text": "<p>“Longtime favorite Lollia has done it again: The bubbles are as lovely as ever, the fragrance of snowdrops also gorgeous—but this year’s bottle might be the real showstopper. Chances are, the lucky recipient will keep it long after the last bath.” - <a href=\"https://www.oprahdaily.com/beauty/g26976206/best-bubble-bath/\" target=\"_blank\" title=\"13 Best Bubble Baths for a Relaxing At-Home Spa Experience\"><em>Read Full Article</em></a></p><p>Featuring: <br/><a href=\"https://margotelena.com/collections/snowdrop/products/snowdrop-bubble-bath\" title=\"Lollia - Snowdrop Bubble Bath\">Lollia - Snowdrop Bubble Bath</a></p>",
         "button_label": "SHOP NOW",
         "button_link": "https://margotelena.com/collections/snowdrop/products/snowdrop-bubble-bath",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "33",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text_and_image_ktYChb": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/wired_mag.svg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "custom_id": "default-id",
+        "subtitle": "",
+        "title": "\"Most Giftable Beauty Box”",
+        "text": "<p>“Every single brand, despite being different, has incredible art, a deep sense of individual aesthetic, and thoughtful details from the packaging to the product itself.” - <a href=\"https://www.wired.com/gallery/best-beauty-subscription-boxes/#67d32c0e4669f008f0f7e8c1\" target=\"_blank\" title=\"Most Giftable Beauty Box - WIRED Magazine Best Beauty Subscription Boxes\"><em>Read Full Article</em></a></p><p>Featuring: <br/><a href=\"https://margotelena.com/pages/subscription-box-spring-reveal-2025\" title=\"Subscription Box Full Reveal Spring 2025\">Margot Elena - Subscription Box Spring 2025</a></p>",
+        "button_label": "SHOP NOW",
+        "button_link": "https://margotelena.com/products/seasonal-discovery-box",
         "button_style": "primary",
         "align_text": "left",
         "image_width": "33",
@@ -380,6 +380,33 @@
         "lazyload_images": true
       }
     },
+    "hotspots_KtTDQj": {
+      "type": "hotspots",
+      "blocks": {
+        "product_NAE3hh": {
+          "type": "product",
+          "settings": {
+            "featured_product": "snowdrop-bubble-bath",
+            "vertical": 31,
+            "horizontal": 53
+          }
+        }
+      },
+      "block_order": [
+        "product_NAE3hh"
+      ],
+      "settings": {
+        "title": "We made the list!",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "image": "shopify://shop_images/ME_Editors_Faves_Snowdrop_BB_OFT_2025.jpg",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "bag",
+        "hotspot_color": "#201919",
+        "lazyload_images": true
+      }
+    },
     "5f92ca3b-6d17-4a51-a941-7b6e447f9ca8": {
       "type": "hotspots",
       "blocks": {
@@ -396,7 +423,7 @@
         "template--15853117833371__5f92ca3b-6d17-4a51-a941-7b6e447f9ca8-1683742551ba1ff7d7-0"
       ],
       "settings": {
-        "title": "We made the list!",
+        "title": "2023",
         "heading_size": "h2",
         "heading_position": "left",
         "image": "shopify://shop_images/Editors_Faves_02_Elegance_OFT_02_67ac4f6a-18a3-412a-8589-a0ffcfdca0b1.jpg",
@@ -710,6 +737,7 @@
     "90c63e9c-2193-420f-a850-a692ef9ac2f0",
     "b7a05fba-dba7-4438-85a2-f3f462efc500",
     "f7bc65b1-3305-43de-8eb4-ef1052f8fc06",
+    "hotspots_KtTDQj",
     "5f92ca3b-6d17-4a51-a941-7b6e447f9ca8",
     "55d452da-9d85-4962-b3cb-76108a20899c",
     "5da3b60c-c6ab-47d4-a28b-409e26e04d42",
