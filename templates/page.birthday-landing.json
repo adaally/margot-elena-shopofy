@@ -1,1 +1,151 @@
-{"sections":{"2a56a64c-fa8c-46cc-a04b-f74e6186bac2":{"type":"background-image-text","settings":{"subtitle":"","title":"","text":"","button_label":"","button_link":"","image":"shopify://shop_images/ME_Birthday_Landing_Page_03.jpg","layout":"left","height":550,"framed":false,"parallax":false,"parallax_direction":"top","lazyload_images":true}},"d78b2ceb-f20b-4290-9141-d644aec1b569":{"type":"rich-text","blocks":{"template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-heading-1":{"type":"heading","settings":{"title":"Let’s celebrate you!"}},"template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-text-1":{"type":"text","settings":{"enlarge_text":true,"text":"<p>Share your birthday and we'll send you a surprise each year. </p>"}}},"block_order":["template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-heading-1","template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-text-1"],"settings":{"align_text":"center","narrow_column":true,"divider":false}},"1698256029e1be9d6d":{"type":"apps","blocks":{"fff93dc8-444d-443a-8cbb-ef3c16ae32d4":{"type":"shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507","settings":{"formId":"XkEsND"}}},"block_order":["fff93dc8-444d-443a-8cbb-ef3c16ae32d4"],"settings":{"full_width":false,"space_around":true}},"609606f8-171a-4052-88e2-9383e01a68a3":{"type":"rich-text","blocks":{"template--16034554380443__609606f8-171a-4052-88e2-9383e01a68a3-text-1":{"type":"text","settings":{"enlarge_text":false,"text":"<p><a href=\"https://margotelena.com/pages/giveaway-terms-and-conditions\" title=\"Giveaway Terms & Conditions\">Giveaway Terms & Conditions</a></p>"}}},"block_order":["template--16034554380443__609606f8-171a-4052-88e2-9383e01a68a3-text-1"],"disabled":true,"settings":{"align_text":"center","narrow_column":true,"divider":false}},"main":{"type":"main-page","disabled":true,"settings":{}},"featured-collection":{"type":"featured-collection","settings":{"title":"Best Sellers","home_featured_products":"mecc-best-sellers","per_row":4,"rows":1,"mobile_scrollable":false,"view_all":false,"divider":false}},"19baffb2-eebb-40ba-99c6-296d37270529":{"type":"rich-text","blocks":{"template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-0":{"type":"heading","settings":{"title":"Rich text"}},"template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-1":{"type":"text","settings":{"enlarge_text":true,"text":"<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"}}},"block_order":["template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-0","template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-1"],"disabled":true,"settings":{"align_text":"center","narrow_column":true,"divider":false}}},"order":["2a56a64c-fa8c-46cc-a04b-f74e6186bac2","d78b2ceb-f20b-4290-9141-d644aec1b569","1698256029e1be9d6d","609606f8-171a-4052-88e2-9383e01a68a3","main","featured-collection","19baffb2-eebb-40ba-99c6-296d37270529"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "2a56a64c-fa8c-46cc-a04b-f74e6186bac2": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_aria-label": "",
+        "image": "shopify://shop_images/ME_Birthday_Landing_Page_03.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "d78b2ceb-f20b-4290-9141-d644aec1b569": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Let’s celebrate you!"
+          }
+        },
+        "template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Share your birthday and we'll send you a surprise each year. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-heading-1",
+        "template--16034554380443__d78b2ceb-f20b-4290-9141-d644aec1b569-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1698256029e1be9d6d": {
+      "type": "apps",
+      "blocks": {
+        "fff93dc8-444d-443a-8cbb-ef3c16ae32d4": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "XkEsND"
+          }
+        }
+      },
+      "block_order": [
+        "fff93dc8-444d-443a-8cbb-ef3c16ae32d4"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "609606f8-171a-4052-88e2-9383e01a68a3": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16034554380443__609606f8-171a-4052-88e2-9383e01a68a3-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": false,
+            "text": "<p><a href=\"https://margotelena.com/pages/giveaway-terms-and-conditions\" title=\"Giveaway Terms & Conditions\">Giveaway Terms & Conditions</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16034554380443__609606f8-171a-4052-88e2-9383e01a68a3-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Best Sellers",
+        "home_featured_products": "mecc-best-sellers",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": false,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "19baffb2-eebb-40ba-99c6-296d37270529": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text"
+          }
+        },
+        "template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-0",
+        "template--15818762420379__19baffb2-eebb-40ba-99c6-296d37270529-1679937308acb9922a-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "2a56a64c-fa8c-46cc-a04b-f74e6186bac2",
+    "d78b2ceb-f20b-4290-9141-d644aec1b569",
+    "1698256029e1be9d6d",
+    "609606f8-171a-4052-88e2-9383e01a68a3",
+    "main",
+    "featured-collection",
+    "19baffb2-eebb-40ba-99c6-296d37270529"
+  ]
+}
