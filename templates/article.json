@@ -24,7 +24,7 @@
     "blog-posts": {
       "type": "blog-posts",
       "settings": {
-        "title": "Placeholder",
+        "title": "More to Explore",
         "blog": "margot-elena",
         "post_limit": 6,
         "blog_show_tags": false,
