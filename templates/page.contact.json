@@ -65,7 +65,7 @@
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p><strong>Customer Service</strong></p><p>Phone:<a href=\"tel:1-888-896-6398\" title=\"phone\">1-888-896-6398 </a></p><p>email: <a href=\"mailto:infodesk@margotelena.com\" title=\"email customer service\">infodesk@margotelena.com</a></p><p>Monday to Thursday 8:30 a.m. - 5 p.m. MST<br/>Friday 8:30 a.m. - 12:30 p.m.</p><p><strong>Address</strong></p><p>MARGOT ELENA COMPANIES & COLLECTIONS<br/>6890 S. Emporia St.<br/>Centennial, CO 80112 </p><p><strong>Press Inquiries</strong>:<a href=\"mailto:pr@margotelena.com\" title=\"press inquiries\">pr@margotelena.com</a></p>"
+            "text": "<p><strong>Customer Service</strong></p><p>Phone:<a href=\"tel:1-888-896-6398\" title=\"phone\">1-888-896-6398 </a></p><p>email: <a href=\"mailto:infodesk@margotelena.com\" title=\"email customer service\">infodesk@margotelena.com</a></p><p>Monday to Thursday 8:30 a.m. - 5 p.m. MST<br/>Friday 8:30 a.m. - 12:30 p.m.</p><p><strong>Address<br/></strong>MARGOT ELENA COMPANIES & COLLECTIONS<br/>6890 S. Emporia St.<br/>Centennial, CO 80112 </p><p><strong>Press Inquiries</strong>:<a href=\"mailto:pr@margotelena.com\" title=\"press inquiries\">pr@margotelena.com</a></p>"
           }
         }
       },
