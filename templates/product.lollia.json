@@ -38,13 +38,6 @@
           "type": "price",
           "settings": {}
         },
-        "df36a2e7-412a-4cb0-9f39-822ad9167599": {
-          "type": "sales_point",
-          "settings": {
-            "icon": "ribbon",
-            "text": "30 Day Return Policy"
-          }
-        },
         "separator": {
           "type": "separator",
           "disabled": true,
@@ -72,6 +65,13 @@
             "show_dynamic_checkout": true,
             "surface_pickup_enable": true,
             "show_gift_card_recipient": false
+          }
+        },
+        "df36a2e7-412a-4cb0-9f39-822ad9167599": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "ribbon",
+            "text": "30 Day Return Policy"
           }
         },
         "sales_point": {
@@ -145,11 +145,11 @@
         "7859e12e-d68e-4c33-bc03-3902f2f23bfe",
         "375b67f3-d9e4-4949-bd2e-a0e2657242a6",
         "price",
-        "df36a2e7-412a-4cb0-9f39-822ad9167599",
         "separator",
         "variant_picker",
         "c367f766-ee68-4718-a614-9fd33ef6d495",
         "buy_buttons",
+        "df36a2e7-412a-4cb0-9f39-822ad9167599",
         "sales_point",
         "6f24e687-501b-441e-a3e6-99aec311385c",
         "2d81fcd4-790f-4bcc-8be7-2196ecb927ef",
