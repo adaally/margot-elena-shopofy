@@ -579,8 +579,8 @@
                   {%- when 'sales_point' -%}
                     {%- unless block.settings.text == blank -%}
                       <div class="product-block product-block--sales-point" {{ block.shopify_attributes }}>
-                        <ul class="sales-points">
-                          <li class="sales-point">
+                        <div class="sales-points">
+                          <div class="sales-point">
                             <span class="icon-and-text">
                               {% case block.settings.icon %}
                                 {% when 'checkmark' %} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-circle-checkmark" viewBox="0 0 64 64"><path d="M52.68 24.48A22 22 0 1 1 47 15.93"/><path d="m21 32 8.5 8.5L57 13"/></svg>
@@ -598,8 +598,8 @@
                               {% endcase %}
                               <span>{{ block.settings.text }}</span>
                             </span>
-                          </li>
-                        </ul>
+                          </div>
+                        </div>
                       </div>
                     {%- endunless -%}
                   {%- when 'inventory_status' -%}
