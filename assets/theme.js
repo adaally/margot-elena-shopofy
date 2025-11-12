@@ -8407,7 +8407,7 @@ theme.recentlyViewed = {
     closeDropdownWithEscape();
     toggleDropdown();
     addAriaHiddenToBrAndHr();
-    // addListSemanticsToProductInfo();
+    addListSemanticsToProductInfo();
     addAccessibilityToYopto();
     document.dispatchEvent(new CustomEvent('page:loaded'));
     setTimeout(() => {
@@ -8965,6 +8965,7 @@ theme.recentlyViewed = {
   }
 
   function addListSemanticsToProductInfo(modalContainer) {
+    if(window.location.hostname.includes('admin.shopify.com')) return;
     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
     const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
     if (!blocks.length) return;
