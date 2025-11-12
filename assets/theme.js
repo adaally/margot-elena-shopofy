@@ -8973,12 +8973,10 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
   const groups = [];
   let i = 0;
 
-  // Build groups by checking adjacency in the original array using nextElementSibling
   while (i < blocks.length) {
     const group = [blocks[i]];
     while (
       i + 1 < blocks.length &&
-      // check DOM adjacency between this block and the next block in the array
       blocks[i].nextElementSibling === blocks[i + 1]
     ) {
       group.push(blocks[i + 1]);
@@ -8989,21 +8987,17 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
     i++;
   }
 
-  // Create wrapper for each group (skip if already wrapped)
   groups.forEach(group => {
     const first = group[0];
 
-    // if first is already inside a list created before, skip
     if (first.closest('[role="list"]')) return;
 
     const list = document.createElement('div');
     list.setAttribute('role', 'list');
-    list.className = 'sales-points-list'; // optional class for styling
+    list.className = 'sales-points-list';
 
-    // Insert wrapper before the first element in the group
     first.parentNode.insertBefore(list, first);
 
-    // Move each grouped element inside wrapper and mark as listitem
     group.forEach(el => {
       el.setAttribute('role', 'listitem');
       list.appendChild(el);
@@ -9016,30 +9010,6 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
     console.log('run admin', window.location.hostname)
     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
     listSalesPoints(modalClassActive);
-    // const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
-    // if (!blocks.length) return;
-  
-    // const iconSpans = document.querySelectorAll(modalClassActive+'.icon-and-text');
-    // if (!iconSpans.length) return;
-  
-    // const container = document.createElement('div');
-    // container.className = 'all-sales-points';
-    // container.setAttribute("role", "list");
-    // container.setAttribute("aria-label", "Customer benefits");
-    // container.style.marginBottom = "15px";
-  
-    // iconSpans.forEach(span => {
-    //   const wrapper = document.createElement('div');
-    //   wrapper.setAttribute("role", "listitem");
-    //   wrapper.className = 'sales-point';
-    //   wrapper.appendChild(span);
-    //   container.appendChild(wrapper);
-    // });
-  
-    // const firstBlock = blocks[0];
-    // firstBlock.parentNode.insertBefore(container, firstBlock);
-  
-    // blocks.forEach(block => block.remove());
 
     // product info TABs
     const tabBlocks = document.querySelectorAll(modalClassActive+'.product-block--tab');
