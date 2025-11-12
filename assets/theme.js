@@ -8964,34 +8964,70 @@ theme.recentlyViewed = {
     }
   }
 
+  function listSalesPoints(container) {
+      const blocks = Array.from(document.querySelectorAll(container+ ' .product-block--sales-point'));
+
+  if (!blocks.length) return;
+
+  let currentGroup = [];
+
+  const finalizeGroup = () => {
+    if (currentGroup.length > 1) {
+      const list = document.createElement('div');
+      list.setAttribute('role', 'list');
+
+      currentGroup.forEach(block => {
+        block.setAttribute('role', 'listitem');
+        list.appendChild(block);
+      });
+
+      currentGroup[0].parentNode.insertBefore(list, currentGroup[0]);
+    }
+    currentGroup = [];
+  };
+
+  for (let i = 0; i < blocks.length; i++) {
+    const current = blocks[i];
+    const prev = blocks[i - 1];
+
+    if (prev && prev.nextElementSibling === current) {
+      currentGroup.push(current);
+      if (currentGroup.length === 1) currentGroup.unshift(prev);
+    } else {
+      finalizeGroup();
+    }
+  }
+  }
+
   function addListSemanticsToProductInfo(modalContainer) {
     if(window.location.hostname.includes('myshopify')) return;
     console.log('run admin', window.location.hostname)
     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
-    const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
-    if (!blocks.length) return;
+    listSalesPoints(modalClassActive);
+    // const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
+    // if (!blocks.length) return;
   
-    const iconSpans = document.querySelectorAll(modalClassActive+'.icon-and-text');
-    if (!iconSpans.length) return;
+    // const iconSpans = document.querySelectorAll(modalClassActive+'.icon-and-text');
+    // if (!iconSpans.length) return;
   
-    const container = document.createElement('div');
-    container.className = 'all-sales-points';
-    container.setAttribute("role", "list");
-    container.setAttribute("aria-label", "Customer benefits");
-    container.style.marginBottom = "15px";
+    // const container = document.createElement('div');
+    // container.className = 'all-sales-points';
+    // container.setAttribute("role", "list");
+    // container.setAttribute("aria-label", "Customer benefits");
+    // container.style.marginBottom = "15px";
   
-    iconSpans.forEach(span => {
-      const wrapper = document.createElement('div');
-      wrapper.setAttribute("role", "listitem");
-      wrapper.className = 'sales-point';
-      wrapper.appendChild(span);
-      container.appendChild(wrapper);
-    });
+    // iconSpans.forEach(span => {
+    //   const wrapper = document.createElement('div');
+    //   wrapper.setAttribute("role", "listitem");
+    //   wrapper.className = 'sales-point';
+    //   wrapper.appendChild(span);
+    //   container.appendChild(wrapper);
+    // });
   
-    const firstBlock = blocks[0];
-    firstBlock.parentNode.insertBefore(container, firstBlock);
+    // const firstBlock = blocks[0];
+    // firstBlock.parentNode.insertBefore(container, firstBlock);
   
-    blocks.forEach(block => block.remove());
+    // blocks.forEach(block => block.remove());
 
     // product info TABs
     const tabBlocks = document.querySelectorAll(modalClassActive+'.product-block--tab');
