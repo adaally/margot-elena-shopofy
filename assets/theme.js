@@ -10108,7 +10108,9 @@ function fixChatList(container) {
     }
   }
 
-  moveEmailSignUpFooterToMain();
+  setTimeout(() => {
+    moveEmailSignUpFooterToMain();
+  }, 1000);
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
