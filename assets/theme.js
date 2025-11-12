@@ -10108,7 +10108,7 @@ function fixChatList(container) {
     }
   }
 
-  moveEmailSignUpFooterToMain();
+  // moveEmailSignUpFooterToMain();
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
@@ -10201,5 +10201,27 @@ function fixChatList(container) {
       el.setAttribute('aria-hidden', 'true');
     });
   }
+
+  function areElementsNextToEachOther(el1, el2) {
+    if (!el1 || !el2) return false;
+    const rect1 = el1.getBoundingClientRect();
+    const rect2 = el2.getBoundingClientRect();
+    const sameRow = Math.abs(rect1.top - rect2.top) < 5;
+    const closeHorizontally = rect2.left - rect1.right < 50;
+
+    return sameRow && closeHorizontally && rect1.right <= rect2.left;
+  }
+
+  function checkAndRun() {
+    const el1 = document.querySelector('.element-one');
+    const el2 = document.querySelector('.element-two');
+
+    if (!areElementsNextToEachOther(el1, el2)) {
+    }
+  }
+
+  // Run initially and on resize (since layout changes with viewport)
+  window.addEventListener('DOMContentLoaded', checkAndRun);
+  window.addEventListener('resize', checkAndRun);
 })();
 
