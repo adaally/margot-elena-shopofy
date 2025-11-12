@@ -8966,7 +8966,7 @@ theme.recentlyViewed = {
 
   function addListSemanticsToProductInfo(modalContainer) {
     if(window.location.hostname.includes('admin.shopify.com')) return;
-    console.log('run admin')
+    console.log('run admin', window.location.hostname)
     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
     const blocks = document.querySelectorAll(modalClassActive+'.product-block.product-block--sales-point');
     if (!blocks.length) return;
