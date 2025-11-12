@@ -8407,7 +8407,7 @@ theme.recentlyViewed = {
     closeDropdownWithEscape();
     toggleDropdown();
     addAriaHiddenToBrAndHr();
-    addListSemanticsToProductInfo();
+    // addListSemanticsToProductInfo();
     addAccessibilityToYopto();
     document.dispatchEvent(new CustomEvent('page:loaded'));
     setTimeout(() => {
