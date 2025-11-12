@@ -8966,7 +8966,7 @@ theme.recentlyViewed = {
 
   function listSalesPoints(container) {
       const blocks = Array.from(document.querySelectorAll(container+ ' .product-block--sales-point'));
-
+    console.log(blocks, 'blocks')
   if (!blocks.length) return;
 
   let currentGroup = [];
