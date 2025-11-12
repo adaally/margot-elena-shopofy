@@ -72,6 +72,6 @@
     margin-bottom: 0;
 }
 
-.index-section:has(.newsletter-container) {
+.index-section:has(.newsletter-section) {
   margin-bottom: 0 !important;
 }
