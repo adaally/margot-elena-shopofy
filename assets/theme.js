@@ -10215,10 +10215,11 @@ function fixChatList(container) {
   }
 
   function checkAndRun() {
-    const el1 = document.querySelector('.element-one');
-    const el2 = document.querySelector('.element-two');
+    const el1 = document.querySelector('.shopify-section footer.site-footer');
+    const el2 = document.querySelector('.shopify-section .index-section');
 
     if (!areElementsNextToEachOther(el1, el2)) {
+      
     }
   }
 
