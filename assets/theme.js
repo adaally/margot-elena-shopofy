@@ -8965,38 +8965,50 @@ theme.recentlyViewed = {
   }
 
   function listSalesPoints(container) {
-      const blocks = Array.from(document.querySelectorAll(container+ ' .product-block--sales-point'));
-    console.log(blocks, 'blocks')
+
+
+const blocks = Array.from(document.querySelectorAll(container+ ' .product-block--sales-point'));
   if (!blocks.length) return;
 
-  let currentGroup = [];
+  const groups = [];
+  let i = 0;
 
-  const finalizeGroup = () => {
-    if (currentGroup.length > 1) {
-      const list = document.createElement('div');
-      list.setAttribute('role', 'list');
-
-      currentGroup.forEach(block => {
-        block.setAttribute('role', 'listitem');
-        list.appendChild(block);
-      });
-
-      currentGroup[0].parentNode.insertBefore(list, currentGroup[0]);
+  // Build groups by checking adjacency in the original array using nextElementSibling
+  while (i < blocks.length) {
+    const group = [blocks[i]];
+    while (
+      i + 1 < blocks.length &&
+      // check DOM adjacency between this block and the next block in the array
+      blocks[i].nextElementSibling === blocks[i + 1]
+    ) {
+      group.push(blocks[i + 1]);
+      i++;
     }
-    currentGroup = [];
-  };
 
-  for (let i = 0; i < blocks.length; i++) {
-    const current = blocks[i];
-    const prev = blocks[i - 1];
-
-    if (prev && prev.nextElementSibling === current) {
-      currentGroup.push(current);
-      if (currentGroup.length === 1) currentGroup.unshift(prev);
-    } else {
-      finalizeGroup();
-    }
+    if (group.length > 1) groups.push(group);
+    i++;
   }
+
+  // Create wrapper for each group (skip if already wrapped)
+  groups.forEach(group => {
+    const first = group[0];
+
+    // if first is already inside a list created before, skip
+    if (first.closest('[role="list"]')) return;
+
+    const list = document.createElement('div');
+    list.setAttribute('role', 'list');
+    list.className = 'sales-points-list'; // optional class for styling
+
+    // Insert wrapper before the first element in the group
+    first.parentNode.insertBefore(list, first);
+
+    // Move each grouped element inside wrapper and mark as listitem
+    group.forEach(el => {
+      el.setAttribute('role', 'listitem');
+      list.appendChild(el);
+    });
+  });
   }
 
   function addListSemanticsToProductInfo(modalContainer) {
