@@ -11,9 +11,9 @@
   <div class="announcement-bar">
     <div class="page-width">
       <div class="slideshow-wrapper" style="display: flex;">
-        {%- if announcement_block_count > 1 -%}
+        {% comment %} {%- if announcement_block_count > 1 -%}
           <span class="arrow" id="toggleCollapseBtn" role="button" tabindex="0" aria-label="Hide announcement slider"></span>
-        {%- endif  -%}
+        {%- endif  -%} {% endcomment %}
         <div
           id="AnnouncementSlider"
           class="announcement-slider show" style="width: 100%;"
@@ -126,7 +126,7 @@
     display: flex;
   }
 </style>
-<script>
+{% comment %} <script>
   document.addEventListener("DOMContentLoaded", () => {
     const btn = document.querySelector("#toggleCollapseBtn");
     const container = document.querySelector("#AnnouncementSlider");
@@ -139,4 +139,4 @@
       btn.setAttribute("aria-label", toggleText + " announcement slider");
     });
   });
-</script>
+</script> {% endcomment %}
