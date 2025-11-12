@@ -10108,7 +10108,7 @@ function fixChatList(container) {
     }
   }
 
-  moveEmailSignUpFooterToMain();
+  // moveEmailSignUpFooterToMain();
 
   function copyAttributes(source, target) {
     if (!source || !target) return;
