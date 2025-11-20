@@ -73,12 +73,34 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
+        },
+        "image_dMYV9N": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Black Friday Sale",
+            "title": "20% Off Sitewide\n+ Mystery Bags",
+            "title_size": 40,
+            "subheading": "Ends 11/29",
+            "link": "shopify://collections/mecc-best-sellers",
+            "link_text": "Shop now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#000000",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/ME_WebBanners_BlackFriday_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanners_BlackFriday_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
         "image_gpQKBi",
         "image_yTNJwV",
-        "image_N7Lerk"
+        "image_N7Lerk",
+        "image_dMYV9N"
       ],
       "custom_css": [],
       "settings": {
