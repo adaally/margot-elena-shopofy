@@ -100,16 +100,16 @@
         "lazyload_images": true
       }
     },
-    "81d031f3-81c0-466f-a10e-c58b7341bd2a": {
+    "text_and_image_hDDBgx": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/Margot_Elena.jpg",
+        "image": "shopify://shop_images/ME_Our_Story_2025.jpg",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
-        "subtitle": "",
-        "title": "Making Beauty, More Beautiful",
-        "text": "<p>Margot Elena has spent 30 years lovingly developing products and brand worlds to provide a delightful escape. From intricate packaging to luxurious formulas and exquisite fragrances, each element is carefully crafted.</p><p></p>",
+        "subtitle": "welcome to the world of",
+        "title": "Margot Elena",
+        "text": "<p>What we do here at Margot Elena Companies & Collections is about more than just bath & beauty, it's about creating a moment for our customers — whether it's the chance to savor a rare moment of relaxation, receiving a gift that's just the right thing at just the right moment, or a moment to simply celebrate you.</p><h4>it's all in the DETAILS</h4><p>As an industry leader for decades now, we've sought to elevate the bath & beauty experience by designing products that not only stand out — in fragrance, formulation, and packaging —but that also have that extra element of connection. This spirit has inspired collections like Lollia's Dream or Relax and TokyoMilk's Dead Sexy. About more than mere beauty, they seek to inspire, enhance their environment, and nurture body and soul through formulation and fragrance.</p><h4>forever dreaming and INSPIRING BEAUTY</h4><p>We're honored to have the unique relationship we do with our customers in creating luxuries that have become a meaningful part of their lives —from tried-and-true bestsellers to exciting new releases. Our team is always looking for new opportunities to bring something truly special to life with products that look beautiful & work beautifully. We are thrilled to have you join us on this journey and look forward to the beauty that lies ahead!</p><p></p>",
         "button_label": "",
         "button_link": "",
         "button_style": "primary",
@@ -613,7 +613,7 @@
     "main",
     "slideshow",
     "fca4b6ee-0d3e-4e7b-bfec-64042fae0e2c",
-    "81d031f3-81c0-466f-a10e-c58b7341bd2a",
+    "text_and_image_hDDBgx",
     "b21653cf-6dd7-489c-a0fd-894aaeb81d5b",
     "361b6d4c-2ee8-45bb-85ce-023fda48c2fd",
     "fafe999a-7bcc-450c-af49-04439f3cca10",
