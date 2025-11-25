@@ -8596,7 +8596,7 @@ theme.recentlyViewed = {
   listenToAddToWishlistBtn();
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
-
+    console.log(document.querySelector('.rebuy-widget.widget-type-product.is-visible'),'rebuy')
   new MutationObserver(() => {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
     if(!item || (item && item.getAttribute('ally-applied') === 'true')) return
