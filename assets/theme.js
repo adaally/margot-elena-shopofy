@@ -10207,5 +10207,15 @@ function fixChatList(container) {
       el.setAttribute('aria-hidden', 'true');
     });
   }
+
+  function removeBrAfterH2DefaultTextClass() {
+    document.querySelectorAll('h2.default-fext').forEach(element => {
+      const br = element.nextElementSibling;
+      console.log(br.tagName == 'br', br.tagName)
+      if(br.tagName == 'br') {
+        br.remove();
+      }
+    });
+  }
 })();
 
