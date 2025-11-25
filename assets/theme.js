@@ -8596,11 +8596,6 @@ theme.recentlyViewed = {
   listenToAddToWishlistBtn();
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
-  // const processed = new Set();
-  // const expectedCount = 2;
-  // const maxWaitTime = 20000; // 20 seconds
-
-  // const startTime = Date.now();
 
   new MutationObserver(() => {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
@@ -8688,28 +8683,6 @@ theme.recentlyViewed = {
     subtree: true,
     childList: true
   });
-
-  // const checkIfRendered = setInterval(() => {
-  //   const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
-
-  //   if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
-  //     clearInterval(checkIfRendered);
-  //     console.log('No items found within time limit — stopping.');
-  //     return;
-  //   }
-  //   items.forEach(item => {
-  //     if (processed.has(item)) return;
-
-  //     processed.add(item);
-
-
-  //   });
-
-  //   if (processed.size >= expectedCount) {
-  //     clearInterval(checkIfRendered);
-  //     console.log('✅ All expected items processed.');
-  //   }
-  // }, 200);
 }
 
   changeH3toH2InRebuyProductsBestSellersWhenReady();
