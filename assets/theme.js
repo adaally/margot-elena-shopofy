@@ -8667,6 +8667,9 @@ theme.recentlyViewed = {
             const aWrapper = document.createElement('a');
             aWrapper.href = href;
             div.className = block.className;
+            if (block.hasAttribute('style')) {
+              div.setAttribute('style', block.getAttribute('style'));
+            }
             div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
 
             while (block.firstChild) aWrapper.appendChild(block.firstChild);
