@@ -8668,16 +8668,16 @@ theme.recentlyViewed = {
             div.className = block.className;
             div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
 
-            while (block.firstChild) aWrapper.appendChild(block.firstChild);
-            block.replaceWith(div);
-            div.appendChild(aWrapper);
-            div.setAttribute("role", "listitem");
-            aWrapper.removeAttribute("aria-label");
+            // while (block.firstChild) aWrapper.appendChild(block.firstChild);
+            // block.replaceWith(div);
+            // div.appendChild(aWrapper);
+            // div.setAttribute("role", "listitem");
+            // aWrapper.removeAttribute("aria-label");
 
-            const btnToCart = aWrapper.querySelector(".rebuy-button");
-            if (btnToCart) {
-              btnToCart.addEventListener("click", e => e.preventDefault());
-            }
+            // const btnToCart = aWrapper.querySelector(".rebuy-button");
+            // if (btnToCart) {
+            //   btnToCart.addEventListener("click", e => e.preventDefault());
+            // }
 
             // const actionsContainer = div.querySelector(".rebuy-product-actions");
             // if (actionsContainer) aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
