@@ -513,6 +513,28 @@
         "lazyload_images": true
       }
     },
+    "text_and_image_mFtzQV": {
+      "type": "text-and-image",
+      "settings": {
+        "image": "shopify://shop_images/ME_Retail_FestiveFinds_5050.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "custom_id": "default-id",
+        "subtitle": "Festive Finds",
+        "title": "Shop Top Gifts for the Holiday",
+        "text": "<p>Beautifully chosen delights for everyone on your list</p>",
+        "button_label": "Shop Now",
+        "button_link": "https://margotelena.com/pages/festive-finds",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
     "text_and_image_yUWt6j": {
       "type": "text-and-image",
       "settings": {
@@ -526,9 +548,9 @@
         "button_label": "Explore Now",
         "button_link": "shopify://pages/scent-profiles",
         "button_style": "primary",
-        "align_text": "left",
+        "align_text": "right",
         "image_width": "50",
-        "layout": "right",
+        "layout": "left",
         "divider": false,
         "top_padding": true,
         "bottom_padding": true,
@@ -807,6 +829,7 @@
     "promo-grid",
     "promo_grid_9cjAkc",
     "6cfe9bba-d291-4063-806d-7728c5a49d9e",
+    "text_and_image_mFtzQV",
     "text_and_image_yUWt6j",
     "cd5af595-7ad8-4cd7-9d8b-48dff3c846b5",
     "c2ad6e45-db2b-48ff-9fcc-5633edb6c0ad",
