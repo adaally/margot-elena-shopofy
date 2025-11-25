@@ -8606,6 +8606,7 @@ theme.recentlyViewed = {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
     if(item && !item.getAttribute('ally-applied', 'true')) return
     console.log(item)
+    item.setAttribute('ally-applied', 'true');
   }).observe(document.body, {
     subtree: true,
     childList: true
@@ -8619,8 +8620,6 @@ theme.recentlyViewed = {
       console.log('No items found within time limit — stopping.');
       return;
     }
-    console.log(items)
-
     items.forEach(item => {
       if (processed.has(item)) return;
 
