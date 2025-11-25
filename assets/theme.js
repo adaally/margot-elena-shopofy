@@ -10212,8 +10212,8 @@ function fixChatList(container) {
     console.log(document.querySelectorAll('h2.default-text'))
     document.querySelectorAll('h2.default-text').forEach(element => {
       const br = element.nextElementSibling;
-      console.log(br.tagName == 'br', br.tagName)
-      if(br.tagName == 'br') {
+      console.log(br.tagName == 'BR', br.tagName)
+      if(br.tagName == 'BR') {
         br.remove();
       }
     });
