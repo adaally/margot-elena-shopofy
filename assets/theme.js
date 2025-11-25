@@ -10209,7 +10209,8 @@ function fixChatList(container) {
   }
 
   function removeBrAfterH2DefaultTextClass() {
-    document.querySelectorAll('h2.default-fext').forEach(element => {
+    console.log(document.querySelectorAll('h2.default-text'))
+    document.querySelectorAll('h2.default-text').forEach(element => {
       const br = element.nextElementSibling;
       console.log(br.tagName == 'br', br.tagName)
       if(br.tagName == 'br') {
@@ -10220,6 +10221,6 @@ function fixChatList(container) {
 
   setTimeout(() => {
     removeBrAfterH2DefaultTextClass();
-  }, 1000);
+  }, 2000);
 })();
 
