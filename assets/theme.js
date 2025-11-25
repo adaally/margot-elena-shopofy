@@ -8597,7 +8597,7 @@ theme.recentlyViewed = {
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
   const processed = new Set();
-  const expectedCount = 1;
+  const expectedCount = 2;
   const maxWaitTime = 20000; // 20 seconds
 
   const startTime = Date.now();
@@ -8610,6 +8610,7 @@ theme.recentlyViewed = {
       console.log('No items found within time limit — stopping.');
       return;
     }
+    console.log(items)
 
     items.forEach(item => {
       if (processed.has(item)) return;
