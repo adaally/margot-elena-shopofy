@@ -8610,7 +8610,7 @@ theme.recentlyViewed = {
       console.log('No items found within time limit — stopping.');
       return;
     }
-
+    console.log(items)
     items.forEach(item => {
       if (processed.has(item)) return;
 
