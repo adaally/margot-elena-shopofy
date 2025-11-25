@@ -8604,9 +8604,9 @@ theme.recentlyViewed = {
 
   new MutationObserver(() => {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
-    if(!item && (item && item.getAttribute('ally-applied') === 'true')) return
-    console.log(item)
+    if(!item || (item && item.getAttribute('ally-applied') === 'true')) return
     item.setAttribute('ally-applied', 'true');
+    console.log(item)
   }).observe(document.body, {
     subtree: true,
     childList: true
