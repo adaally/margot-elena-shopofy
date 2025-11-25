@@ -8602,6 +8602,15 @@ theme.recentlyViewed = {
 
   const startTime = Date.now();
 
+  new MutationObserver(() => {
+    const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
+    if(item && !item.getAttribute('ally-applied', 'true')) return
+    console.log(item)
+  }).observe(document.body, {
+    subtree: true,
+    childList: true
+  });
+
   const checkIfRendered = setInterval(() => {
     const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
