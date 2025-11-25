@@ -10218,6 +10218,8 @@ function fixChatList(container) {
     });
   }
 
-  removeBrAfterH2DefaultTextClass();
+  setTimeout(() => {
+    removeBrAfterH2DefaultTextClass();
+  }, 1000);
 })();
 
