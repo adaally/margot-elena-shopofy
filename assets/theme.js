@@ -8596,36 +8596,18 @@ theme.recentlyViewed = {
   listenToAddToWishlistBtn();
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
-  const processed = new Set();
-  const expectedCount = 2;
-  const maxWaitTime = 20000; // 20 seconds
+  // const processed = new Set();
+  // const expectedCount = 2;
+  // const maxWaitTime = 20000; // 20 seconds
 
-  const startTime = Date.now();
+  // const startTime = Date.now();
 
   new MutationObserver(() => {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
     if(!item || (item && item.getAttribute('ally-applied') === 'true')) return
     item.setAttribute('ally-applied', 'true');
     console.log(item)
-  }).observe(document.body, {
-    subtree: true,
-    childList: true
-  });
-
-  const checkIfRendered = setInterval(() => {
-    const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
-
-    if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
-      clearInterval(checkIfRendered);
-      console.log('No items found within time limit — stopping.');
-      return;
-    }
-    items.forEach(item => {
-      if (processed.has(item)) return;
-
-      processed.add(item);
-
-      const superTitle = item.querySelector(".super-title");
+          const superTitle = item.querySelector(".super-title");
       const primaryTitle = item.querySelector(".primary-title");
       let newListText = '';
 
@@ -8703,13 +8685,32 @@ theme.recentlyViewed = {
           }
         });
       }
-    });
+  }).observe(document.body, {
+    subtree: true,
+    childList: true
+  });
 
-    if (processed.size >= expectedCount) {
-      clearInterval(checkIfRendered);
-      console.log('✅ All expected items processed.');
-    }
-  }, 200);
+  // const checkIfRendered = setInterval(() => {
+  //   const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
+
+  //   if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
+  //     clearInterval(checkIfRendered);
+  //     console.log('No items found within time limit — stopping.');
+  //     return;
+  //   }
+  //   items.forEach(item => {
+  //     if (processed.has(item)) return;
+
+  //     processed.add(item);
+
+
+  //   });
+
+  //   if (processed.size >= expectedCount) {
+  //     clearInterval(checkIfRendered);
+  //     console.log('✅ All expected items processed.');
+  //   }
+  // }, 200);
 }
 
   changeH3toH2InRebuyProductsBestSellersWhenReady();
