@@ -8646,7 +8646,8 @@ theme.recentlyViewed = {
             textStar.innerText += ' ' + sourceTitle.innerText;
           }
 
-          if (href) {
+          setTimeout(() => {
+                      if (href) {
             block.querySelectorAll('a').forEach(a => {
               const span = document.createElement('span');
               span.className = a.className;
@@ -8692,6 +8693,7 @@ theme.recentlyViewed = {
               });
             }
           }
+          }, 5000);
         });
       }
     });
