@@ -8637,62 +8637,62 @@ theme.recentlyViewed = {
         containerProductList.removeAttribute("tabindex");
 
         const isFourColumns = containerProductList.classList.contains('large-columns-4');
-        containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
-          const innerLink = block.querySelector('a');
-          const href = innerLink?.getAttribute('href');
+        // containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
+        //   const innerLink = block.querySelector('a');
+        //   const href = innerLink?.getAttribute('href');
 
-          const textStar = block.querySelector('.rebuy-product-review .rebuy-star-rating-value');
-          if(textStar) {
-            textStar.innerText += ' ' + sourceTitle.innerText;
-          }
+        //   const textStar = block.querySelector('.rebuy-product-review .rebuy-star-rating-value');
+        //   if(textStar) {
+        //     textStar.innerText += ' ' + sourceTitle.innerText;
+        //   }
 
-          if (href) {
-            block.querySelectorAll('a').forEach(a => {
-              const span = document.createElement('span');
-              span.className = a.className;
-              while (a.firstChild) span.appendChild(a.firstChild);
-              a.replaceWith(span);
-            });
+        //   if (href) {
+        //     block.querySelectorAll('a').forEach(a => {
+        //       const span = document.createElement('span');
+        //       span.className = a.className;
+        //       while (a.firstChild) span.appendChild(a.firstChild);
+        //       a.replaceWith(span);
+        //     });
 
-            block.querySelectorAll('h5').forEach(item => {
-              const newProductTitle = document.createElement('div');
-              newProductTitle.className = item.className;
-              newProductTitle.classList.add('h5');
-              newProductTitle.innerHTML = item.innerHTML
-              item.replaceWith(newProductTitle);
-            });
+        //     block.querySelectorAll('h5').forEach(item => {
+        //       const newProductTitle = document.createElement('div');
+        //       newProductTitle.className = item.className;
+        //       newProductTitle.classList.add('h5');
+        //       newProductTitle.innerHTML = item.innerHTML
+        //       item.replaceWith(newProductTitle);
+        //     });
 
-            const div = document.createElement('div');
-            const aWrapper = document.createElement('a');
-            aWrapper.href = href;
-            div.className = block.className;
-            div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
+        //     const div = document.createElement('div');
+        //     const aWrapper = document.createElement('a');
+        //     aWrapper.href = href;
+        //     div.className = block.className;
+        //     div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
 
-            while (block.firstChild) aWrapper.appendChild(block.firstChild);
-            block.replaceWith(div);
-            div.appendChild(aWrapper);
-            div.setAttribute("role", "listitem");
-            aWrapper.removeAttribute("aria-label");
+        //     while (block.firstChild) aWrapper.appendChild(block.firstChild);
+        //     block.replaceWith(div);
+        //     div.appendChild(aWrapper);
+        //     div.setAttribute("role", "listitem");
+        //     aWrapper.removeAttribute("aria-label");
 
-            const btnToCart = aWrapper.querySelector(".rebuy-button");
-            if (btnToCart) {
-              btnToCart.addEventListener("click", e => e.preventDefault());
-            }
+        //     const btnToCart = aWrapper.querySelector(".rebuy-button");
+        //     if (btnToCart) {
+        //       btnToCart.addEventListener("click", e => e.preventDefault());
+        //     }
 
-            const actionsContainer = div.querySelector(".rebuy-product-actions");
-            if (actionsContainer) aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
+        //     const actionsContainer = div.querySelector(".rebuy-product-actions");
+        //     if (actionsContainer) aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
 
-            const image = aWrapper.querySelector(".rebuy-product-image img");
-            if (image) image.setAttribute("aria-hidden", "true");
+        //     const image = aWrapper.querySelector(".rebuy-product-image img");
+        //     if (image) image.setAttribute("aria-hidden", "true");
 
-            const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
-            if (rebuyMoney) {
-              rebuyMoney.querySelectorAll("span").forEach(detail => {
-                detail.removeAttribute("tabindex");
-              });
-            }
-          }
-        });
+        //     const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
+        //     if (rebuyMoney) {
+        //       rebuyMoney.querySelectorAll("span").forEach(detail => {
+        //         detail.removeAttribute("tabindex");
+        //       });
+        //     }
+        //   }
+        // });
       }
     });
 
