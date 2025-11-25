@@ -8658,10 +8658,6 @@ theme.recentlyViewed = {
             div.appendChild(aWrapper);
             div.setAttribute("role", "listitem");
             aWrapper.removeAttribute("aria-label");
-            setTimeout(() => {
-              div.removeAttribute('aria-label')
-              div.setAttribute('here','1')
-            }, 5000);
 
             const btnToCart = aWrapper.querySelector(".rebuy-button");
             if (btnToCart) {
