@@ -8637,6 +8637,10 @@ theme.recentlyViewed = {
         containerProductList.removeAttribute("tabindex");
 
         const isFourColumns = containerProductList.classList.contains('large-columns-4');
+
+        //Return if it's a slider
+        if(item.querySelector('.flickity-enabled')) return;
+
         containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
           const innerLink = block.querySelector('a');
           const href = innerLink?.getAttribute('href');
@@ -8646,8 +8650,7 @@ theme.recentlyViewed = {
             textStar.innerText += ' ' + sourceTitle.innerText;
           }
 
-          setTimeout(() => {
-                      if (href) {
+          if (href) {
             block.querySelectorAll('a').forEach(a => {
               const span = document.createElement('span');
               span.className = a.className;
@@ -8667,15 +8670,12 @@ theme.recentlyViewed = {
             const aWrapper = document.createElement('a');
             aWrapper.href = href;
             div.className = block.className;
-            if (block.hasAttribute('style')) {
-              div.setAttribute('style', block.getAttribute('style'));
-            }
             div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
 
             while (block.firstChild) aWrapper.appendChild(block.firstChild);
+            block.replaceWith(div);
             div.appendChild(aWrapper);
             div.setAttribute("role", "listitem");
-            block.replaceWith(div);
             aWrapper.removeAttribute("aria-label");
 
             const btnToCart = aWrapper.querySelector(".rebuy-button");
@@ -8696,7 +8696,6 @@ theme.recentlyViewed = {
               });
             }
           }
-          }, 5000);
         });
       }
     });
