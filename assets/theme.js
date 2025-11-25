@@ -10217,5 +10217,7 @@ function fixChatList(container) {
       }
     });
   }
+
+  removeBrAfterH2DefaultTextClass();
 })();
 
