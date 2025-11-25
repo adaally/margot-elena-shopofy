@@ -8597,7 +8597,7 @@ theme.recentlyViewed = {
 
   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
   const processed = new Set();
-  const expectedCount = 2;
+  const expectedCount = 1;
   const maxWaitTime = 20000; // 20 seconds
 
   const startTime = Date.now();
@@ -8703,7 +8703,7 @@ theme.recentlyViewed = {
   }, 200);
 }
 
-  // changeH3toH2InRebuyProductsBestSellersWhenReady();
+  changeH3toH2InRebuyProductsBestSellersWhenReady();
 
   function fixAccessibilityCareers() {
     const interval = setInterval(() => {
