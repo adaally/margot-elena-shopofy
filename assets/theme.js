@@ -8448,1760 +8448,1760 @@ theme.recentlyViewed = {
 
   // addListSemanticsToProductTabs();
 
-//   function listenToAddToWishlistBtn() {
-//     const interval = setInterval(() => {
-//       const btn = document.querySelector(".frcp-wishlist-wrapper .frcp-wishlist-btn");
+  function listenToAddToWishlistBtn() {
+    const interval = setInterval(() => {
+      const btn = document.querySelector(".frcp-wishlist-wrapper .frcp-wishlist-btn");
   
-//       if (!btn) {
-//         return;
-//       }
+      if (!btn) {
+        return;
+      }
 
-//       btn.removeAttribute("title");
+      btn.removeAttribute("title");
 
-//       const productLogoTitle = document.querySelector(".product-single__vendor a");
-//       productLogoTitle.removeAttribute("title");
+      const productLogoTitle = document.querySelector(".product-single__vendor a");
+      productLogoTitle.removeAttribute("title");
   
-//       clearInterval(interval);
-//       clearTimeout(timeout);
+      clearInterval(interval);
+      clearTimeout(timeout);
   
-//       btn.addEventListener('click', () => {
-//         setTimeout(() => {
-//           const modalContainer = document.querySelector(".frcp-login.frcp-popup");
-//           if (modalContainer) {
-//             const labels = modalContainer.querySelectorAll('label');
-//             labels.forEach(item => {
-//               item.style.color = '#000';
-//               item.textContent += '*';
-//             });
-//             const inputs = modalContainer.querySelectorAll('input');
-//             inputs.forEach(item => item.style.borderColor = '#000');
-//             const actionsBtns = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
-//             actionsBtns.forEach(item => {
-//               item.style.color = '#000';
-//               item.style.borderColor = '#000'
-//             });
+      btn.addEventListener('click', () => {
+        setTimeout(() => {
+          const modalContainer = document.querySelector(".frcp-login.frcp-popup");
+          if (modalContainer) {
+            const labels = modalContainer.querySelectorAll('label');
+            labels.forEach(item => {
+              item.style.color = '#000';
+              item.textContent += '*';
+            });
+            const inputs = modalContainer.querySelectorAll('input');
+            inputs.forEach(item => item.style.borderColor = '#000');
+            const actionsBtns = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
+            actionsBtns.forEach(item => {
+              item.style.color = '#000';
+              item.style.borderColor = '#000'
+            });
 
             
-//             const openerBtn = btn; // 👈 Save the opener to restore focus later
+            const openerBtn = btn; // 👈 Save the opener to restore focus later
   
-//             modalContainer.setAttribute("role", "alertdialog");
+            modalContainer.setAttribute("role", "alertdialog");
   
-//             // Replace title with h1
-//             const title = modalContainer.querySelector(".frcp-popup__title");
-//             const newTitle = document.createElement("h1");
-//             newTitle.className = title.className;
-//             newTitle.innerHTML = title.innerHTML;
-//             newTitle.style.marginBottom = '0';
-//             newTitle.style.textTransform = 'none';
-//             title.parentNode.replaceChild(newTitle, title);
+            // Replace title with h1
+            const title = modalContainer.querySelector(".frcp-popup__title");
+            const newTitle = document.createElement("h1");
+            newTitle.className = title.className;
+            newTitle.innerHTML = title.innerHTML;
+            newTitle.style.marginBottom = '0';
+            newTitle.style.textTransform = 'none';
+            title.parentNode.replaceChild(newTitle, title);
   
-//             // Setup accessibility roles
-//             const closeBtn = modalContainer.querySelector(".frcp-popup__close");
-//             closeBtn.setAttribute("tabindex", "0");
-//             closeBtn.setAttribute("role", "button");
-//             closeBtn.setAttribute("aria-label", "Close");
+            // Setup accessibility roles
+            const closeBtn = modalContainer.querySelector(".frcp-popup__close");
+            closeBtn.setAttribute("tabindex", "0");
+            closeBtn.setAttribute("role", "button");
+            closeBtn.setAttribute("aria-label", "Close");
   
-//             const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
-//             registerBtn.setAttribute("tabindex", "0");
-//             registerBtn.setAttribute("role", "button");
+            const registerBtn = modalContainer.querySelector(".frcp-form__switch .frcp-popup__btn");
+            registerBtn.setAttribute("tabindex", "0");
+            registerBtn.setAttribute("role", "button");
   
-//             // Trap focus
-//             let releaseFocus = trapFocusWishlist(modalContainer);
+            // Trap focus
+            let releaseFocus = trapFocusWishlist(modalContainer);
   
-//             // Close on close button
-//             closeBtn.addEventListener('click', () => {
-//               releaseFocus();
-//               openerBtn.focus();
-//               document.removeEventListener('keydown', escListener);
-//             });
+            // Close on close button
+            closeBtn.addEventListener('click', () => {
+              releaseFocus();
+              openerBtn.focus();
+              document.removeEventListener('keydown', escListener);
+            });
   
-//             // ESC key support
-//             function escListener(e) {
-//               if (e.key === 'Escape') {
-//                 releaseFocus();
-//                 openerBtn.focus();
-//                 modalContainer.style.display = 'none'; // optional
-//                 document.removeEventListener('keydown', escListener);
-//               }
-//             }
-//             document.addEventListener('keydown', escListener);
+            // ESC key support
+            function escListener(e) {
+              if (e.key === 'Escape') {
+                releaseFocus();
+                openerBtn.focus();
+                modalContainer.style.display = 'none'; // optional
+                document.removeEventListener('keydown', escListener);
+              }
+            }
+            document.addEventListener('keydown', escListener);
   
-//             // Switch to register form
-//             registerBtn.addEventListener('click', () => {
-//               const loginBtns = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
-//               loginBtns[1].setAttribute("tabindex", "0");
-//               loginBtns[1].setAttribute("role", "button");
+            // Switch to register form
+            registerBtn.addEventListener('click', () => {
+              const loginBtns = modalContainer.querySelectorAll(".frcp-form__switch .frcp-popup__btn");
+              loginBtns[1].setAttribute("tabindex", "0");
+              loginBtns[1].setAttribute("role", "button");
   
-//               releaseFocus();
-//               releaseFocus = trapFocusWishlist(modalContainer);
+              releaseFocus();
+              releaseFocus = trapFocusWishlist(modalContainer);
   
-//               loginBtns[1].addEventListener('click', () => {
-//                 releaseFocus();
-//                 trapFocusWishlist(modalContainer);
-//               });
-//             });
-//           }
-//         }, 300);
-//       });
-//     }, 300);
+              loginBtns[1].addEventListener('click', () => {
+                releaseFocus();
+                trapFocusWishlist(modalContainer);
+              });
+            });
+          }
+        }, 300);
+      });
+    }, 300);
   
-//     const timeout = setTimeout(() => {
-//       clearInterval(interval);
-//       console.log("wishlistbtn stop")
-//     }, 5000);
-//   }
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+      console.log("wishlistbtn stop")
+    }, 5000);
+  }
 
-//   function trapFocusWishlist(container) {
-//     const focusableSelectors = [
-//       'a[href]',
-//       'button:not([disabled])',
-//       'textarea:not([disabled])',
-//       'input:not([disabled]):not([type="hidden"])',
-//       'select:not([disabled])',
-//       '[tabindex]:not([tabindex="-1"])'
-//     ];
+  function trapFocusWishlist(container) {
+    const focusableSelectors = [
+      'a[href]',
+      'button:not([disabled])',
+      'textarea:not([disabled])',
+      'input:not([disabled]):not([type="hidden"])',
+      'select:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])'
+    ];
   
-//     const focusableElements = Array.from(container.querySelectorAll(focusableSelectors.join(',')))
-//       .filter(el => el.offsetParent !== null); // removes hidden elements
+    const focusableElements = Array.from(container.querySelectorAll(focusableSelectors.join(',')))
+      .filter(el => el.offsetParent !== null); // removes hidden elements
   
-//     if (focusableElements.length === 0) return;
-//     const firstEl = focusableElements[0];
-//     const lastEl = focusableElements[focusableElements.length - 1];
+    if (focusableElements.length === 0) return;
+    const firstEl = focusableElements[0];
+    const lastEl = focusableElements[focusableElements.length - 1];
   
-//     function handleKeyDown(e) {
-//       if (e.key === 'Tab') {
-//         if (e.shiftKey) {
-//           // Shift + Tab
-//           if (document.activeElement === firstEl) {
-//             e.preventDefault();
-//             lastEl.focus();
-//           }
-//         } else {
-//           // Tab
-//           if (document.activeElement === lastEl) {
-//             e.preventDefault();
-//             firstEl.focus();
-//           }
-//         }
-//       }
-//     }
+    function handleKeyDown(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          // Shift + Tab
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          // Tab
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
+      }
+    }
   
-//     container.addEventListener('keydown', handleKeyDown);
+    container.addEventListener('keydown', handleKeyDown);
   
-//     firstEl.focus();
+    firstEl.focus();
   
-//     return () => container.removeEventListener('keydown', handleKeyDown);
-//   }
+    return () => container.removeEventListener('keydown', handleKeyDown);
+  }
 
-//   listenToAddToWishlistBtn();
+  listenToAddToWishlistBtn();
 
-//   function changeH3toH2InRebuyProductsBestSellersWhenReady() {
-//   const processed = new Set();
-//   const expectedCount = 2;
-//   const maxWaitTime = 20000; // 20 seconds
+  function changeH3toH2InRebuyProductsBestSellersWhenReady() {
+  const processed = new Set();
+  const expectedCount = 2;
+  const maxWaitTime = 20000; // 20 seconds
 
-//   const startTime = Date.now();
+  const startTime = Date.now();
 
-//   const checkIfRendered = setInterval(() => {
-//     const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
+  const checkIfRendered = setInterval(() => {
+    const items = document.querySelectorAll('.rebuy-widget.widget-type-product.is-visible');
 
-//     if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
-//       clearInterval(checkIfRendered);
-//       console.log('No items found within time limit — stopping.');
-//       return;
-//     }
+    if (items.length === 0 && Date.now() - startTime > maxWaitTime) {
+      clearInterval(checkIfRendered);
+      console.log('No items found within time limit — stopping.');
+      return;
+    }
 
-//     items.forEach(item => {
-//       if (processed.has(item)) return;
+    items.forEach(item => {
+      if (processed.has(item)) return;
 
-//       processed.add(item);
+      processed.add(item);
 
-//       const superTitle = item.querySelector(".super-title");
-//       const primaryTitle = item.querySelector(".primary-title");
-//       let newListText = '';
+      const superTitle = item.querySelector(".super-title");
+      const primaryTitle = item.querySelector(".primary-title");
+      let newListText = '';
 
-//       const sourceTitle = superTitle || primaryTitle;
-//       if (sourceTitle) {
-//         const h2 = document.createElement('h2');
-//         [...sourceTitle.attributes].forEach(attr => h2.setAttribute(attr.name, attr.value));
-//         h2.innerHTML = sourceTitle.innerHTML;
-//         h2.classList.add("h3");
-//         h2.style.marginBottom = '0';
-//         sourceTitle.parentNode.replaceChild(h2, sourceTitle);
-//         newListText = sourceTitle.innerText;
-//       }
+      const sourceTitle = superTitle || primaryTitle;
+      if (sourceTitle) {
+        const h2 = document.createElement('h2');
+        [...sourceTitle.attributes].forEach(attr => h2.setAttribute(attr.name, attr.value));
+        h2.innerHTML = sourceTitle.innerHTML;
+        h2.classList.add("h3");
+        h2.style.marginBottom = '0';
+        sourceTitle.parentNode.replaceChild(h2, sourceTitle);
+        newListText = sourceTitle.innerText;
+      }
 
-//       const containerProductList = item.querySelector('.rebuy-product-grid');
-//       if (containerProductList) {
-//         containerProductList.setAttribute("aria-label", newListText);
-//         containerProductList.removeAttribute("tabindex");
+      const containerProductList = item.querySelector('.rebuy-product-grid');
+      if (containerProductList) {
+        containerProductList.setAttribute("aria-label", newListText);
+        containerProductList.removeAttribute("tabindex");
 
-//         const isFourColumns = containerProductList.classList.contains('large-columns-4');
-//         containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
-//           const innerLink = block.querySelector('a');
-//           const href = innerLink?.getAttribute('href');
+        const isFourColumns = containerProductList.classList.contains('large-columns-4');
+        containerProductList.querySelectorAll(".rebuy-product-block").forEach(block => {
+          const innerLink = block.querySelector('a');
+          const href = innerLink?.getAttribute('href');
 
-//           const textStar = block.querySelector('.rebuy-product-review .rebuy-star-rating-value');
-//           if(textStar) {
-//             textStar.innerText += ' ' + sourceTitle.innerText;
-//           }
+          const textStar = block.querySelector('.rebuy-product-review .rebuy-star-rating-value');
+          if(textStar) {
+            textStar.innerText += ' ' + sourceTitle.innerText;
+          }
 
-//           if (href) {
-//             block.querySelectorAll('a').forEach(a => {
-//               const span = document.createElement('span');
-//               span.className = a.className;
-//               while (a.firstChild) span.appendChild(a.firstChild);
-//               a.replaceWith(span);
-//             });
+          if (href) {
+            block.querySelectorAll('a').forEach(a => {
+              const span = document.createElement('span');
+              span.className = a.className;
+              while (a.firstChild) span.appendChild(a.firstChild);
+              a.replaceWith(span);
+            });
 
-//             block.querySelectorAll('h5').forEach(item => {
-//               const newProductTitle = document.createElement('div');
-//               newProductTitle.className = item.className;
-//               newProductTitle.classList.add('h5');
-//               newProductTitle.innerHTML = item.innerHTML
-//               item.replaceWith(newProductTitle);
-//             });
+            block.querySelectorAll('h5').forEach(item => {
+              const newProductTitle = document.createElement('div');
+              newProductTitle.className = item.className;
+              newProductTitle.classList.add('h5');
+              newProductTitle.innerHTML = item.innerHTML
+              item.replaceWith(newProductTitle);
+            });
 
-//             const div = document.createElement('div');
-//             const aWrapper = document.createElement('a');
-//             aWrapper.href = href;
-//             div.className = block.className;
-//             div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
+            const div = document.createElement('div');
+            const aWrapper = document.createElement('a');
+            aWrapper.href = href;
+            div.className = block.className;
+            div.classList.add(isFourColumns ? 'flex-column' : 'grid-row');
 
-//             while (block.firstChild) aWrapper.appendChild(block.firstChild);
-//             block.replaceWith(div);
-//             div.appendChild(aWrapper);
-//             div.setAttribute("role", "listitem");
-//             aWrapper.removeAttribute("aria-label");
+            while (block.firstChild) aWrapper.appendChild(block.firstChild);
+            block.replaceWith(div);
+            div.appendChild(aWrapper);
+            div.setAttribute("role", "listitem");
+            aWrapper.removeAttribute("aria-label");
 
-//             const btnToCart = aWrapper.querySelector(".rebuy-button");
-//             if (btnToCart) {
-//               btnToCart.addEventListener("click", e => e.preventDefault());
-//             }
+            const btnToCart = aWrapper.querySelector(".rebuy-button");
+            if (btnToCart) {
+              btnToCart.addEventListener("click", e => e.preventDefault());
+            }
 
-//             const actionsContainer = div.querySelector(".rebuy-product-actions");
-//             if (actionsContainer) aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
+            const actionsContainer = div.querySelector(".rebuy-product-actions");
+            if (actionsContainer) aWrapper.parentElement.insertBefore(actionsContainer, aWrapper.nextSibling);
 
-//             const image = aWrapper.querySelector(".rebuy-product-image img");
-//             if (image) image.setAttribute("aria-hidden", "true");
+            const image = aWrapper.querySelector(".rebuy-product-image img");
+            if (image) image.setAttribute("aria-hidden", "true");
 
-//             const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
-//             if (rebuyMoney) {
-//               rebuyMoney.querySelectorAll("span").forEach(detail => {
-//                 detail.removeAttribute("tabindex");
-//               });
-//             }
-//           }
-//         });
-//       }
-//     });
+            const rebuyMoney = aWrapper.querySelector(".rebuy-product-price .rebuy-money");
+            if (rebuyMoney) {
+              rebuyMoney.querySelectorAll("span").forEach(detail => {
+                detail.removeAttribute("tabindex");
+              });
+            }
+          }
+        });
+      }
+    });
 
-//     if (processed.size >= expectedCount) {
-//       clearInterval(checkIfRendered);
-//       console.log('✅ All expected items processed.');
-//     }
-//   }, 200);
-// }
+    if (processed.size >= expectedCount) {
+      clearInterval(checkIfRendered);
+      console.log('✅ All expected items processed.');
+    }
+  }, 200);
+}
 
-//   changeH3toH2InRebuyProductsBestSellersWhenReady();
+  changeH3toH2InRebuyProductsBestSellersWhenReady();
 
-//   function fixAccessibilityCareers() {
-//     const interval = setInterval(() => {
-//       const item = document.querySelector(".rte.cc-careers-script-container div.cc-filter-dropdown");
+  function fixAccessibilityCareers() {
+    const interval = setInterval(() => {
+      const item = document.querySelector(".rte.cc-careers-script-container div.cc-filter-dropdown");
 
-//       if(item) {
-//         clearInterval(interval);
-//         clearTimeout(timeout);
-//         item.setAttribute("role", "combobox");
-//         item.removeAttribute("aria-hidden");
-//       }
-//     }, 300);
+      if(item) {
+        clearInterval(interval);
+        clearTimeout(timeout);
+        item.setAttribute("role", "combobox");
+        item.removeAttribute("aria-hidden");
+      }
+    }, 300);
 
-//     const timeout = setTimeout(() => {
-//       console.log("Stopped checking (timeout)");
-//     }, 5000);
-//   }
+    const timeout = setTimeout(() => {
+      console.log("Stopped checking (timeout)");
+    }, 5000);
+  }
 
-//     fixAccessibilityCareers();
+    fixAccessibilityCareers();
 
-//   function changeAddToWishlist() {
-//     const items = document.querySelectorAll(".grid-product__content");
-//     items.forEach(item => {
-//       const title = item.querySelector(".grid-product__title");
-//       const wishBtn = item.querySelector(".frcp-wishlist-btn");
-//       if(title && wishBtn) {
-//         wishBtn.setAttribute("aria-label", "Add " + title.innerText + " to wishlist");
-//         wishBtn.removeAttribute("title");
-//       }
-//     });
+  function changeAddToWishlist() {
+    const items = document.querySelectorAll(".grid-product__content");
+    items.forEach(item => {
+      const title = item.querySelector(".grid-product__title");
+      const wishBtn = item.querySelector(".frcp-wishlist-btn");
+      if(title && wishBtn) {
+        wishBtn.setAttribute("aria-label", "Add " + title.innerText + " to wishlist");
+        wishBtn.removeAttribute("title");
+      }
+    });
     
-//   }
+  }
 
-//   setTimeout(() => {
-//     changeAddToWishlist();
-//     listenToAddWishBtnsAriaPressed();
-//   }, 4000);
+  setTimeout(() => {
+    changeAddToWishlist();
+    listenToAddWishBtnsAriaPressed();
+  }, 4000);
 
-//   function listenToAddWishBtnsAriaPressed() {
-//     document.querySelectorAll('[data-frcp-in-wishlist]').forEach(button => {
-//       const inWishlist = button.getAttribute('data-frcp-in-wishlist') === 'true';
-//       button.setAttribute('aria-pressed', inWishlist.toString());
-//     });
+  function listenToAddWishBtnsAriaPressed() {
+    document.querySelectorAll('[data-frcp-in-wishlist]').forEach(button => {
+      const inWishlist = button.getAttribute('data-frcp-in-wishlist') === 'true';
+      button.setAttribute('aria-pressed', inWishlist.toString());
+    });
 
-//     document.addEventListener('click', function (e) {
-//         const button = e.target.closest('[data-frcp-in-wishlist]');
-//         if (!button) return;
+    document.addEventListener('click', function (e) {
+        const button = e.target.closest('[data-frcp-in-wishlist]');
+        if (!button) return;
       
-//         const currentValue = button.getAttribute('data-frcp-in-wishlist') === 'true';
-//         const newValue = !currentValue;
+        const currentValue = button.getAttribute('data-frcp-in-wishlist') === 'true';
+        const newValue = !currentValue;
       
-//         // Update aria-pressed
-//         button.setAttribute('aria-pressed', newValue.toString());
-//     });
-//   }
+        // Update aria-pressed
+        button.setAttribute('aria-pressed', newValue.toString());
+    });
+  }
 
-//   function addAriaLabelToImpactPage(){
-//     const items = document.querySelectorAll('.feature-row .appear-delay-2 a');
-//     items.forEach(item => item.setAttribute("aria-label","Learn more about Dress for Success"));
-//     const imgLinks = document.querySelectorAll('.feature-row .feature-row__first-image a');
+  function addAriaLabelToImpactPage(){
+    const items = document.querySelectorAll('.feature-row .appear-delay-2 a');
+    items.forEach(item => item.setAttribute("aria-label","Learn more about Dress for Success"));
+    const imgLinks = document.querySelectorAll('.feature-row .feature-row__first-image a');
 
-//     imgLinks.forEach(a => {
-//       const div = document.createElement('div');
-//       // Move all children from <a> to <div>
-//       while (a.firstChild) {
-//         div.appendChild(a.firstChild);
-//       }
-//       a.parentNode.replaceChild(div, a);
-//     });
-//   }
+    imgLinks.forEach(a => {
+      const div = document.createElement('div');
+      // Move all children from <a> to <div>
+      while (a.firstChild) {
+        div.appendChild(a.firstChild);
+      }
+      a.parentNode.replaceChild(div, a);
+    });
+  }
 
-//   addAriaLabelToImpactPage();
+  addAriaLabelToImpactPage();
 
-//   function listenToButtonMoreYoptoImages() {
-//       const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
-//       if(yoptoButtonMore) {
-//         yoptoButtonMore.addEventListener('click', addAccessibilityToYopto);
-//       }
-//   }
+  function listenToButtonMoreYoptoImages() {
+      const yoptoButtonMore = document.querySelector(".yotpo-load-more-button");
+      if(yoptoButtonMore) {
+        yoptoButtonMore.addEventListener('click', addAccessibilityToYopto);
+      }
+  }
 
-//   function addFieldSetToRechangeSubscriptionOnProduct() {
-//     const timeout = setTimeout(() => {
-//       clearInterval(interval);
-//     },10000);
+  function addFieldSetToRechangeSubscriptionOnProduct() {
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    },10000);
 
-//     const interval = setInterval(() => {
-//       const rcTemplate = document.querySelector(".rc-template");
-//       if(rcTemplate) {
-//         const container = rcTemplate.querySelector(".rc-template__legacy-radio");
-//         const fieldSetContainer = document.createElement("fieldset");
-//         const legend = document.createElement("legend");
-//         legend.classList.add("visually-hidden");
-//         legend.innerText = 'Product purchasing options';
-//         fieldSetContainer.appendChild(legend);
-//         fieldSetContainer.className = container.className;
-//         [...container.attributes].forEach(attr => {
-//           fieldSetContainer.setAttribute(attr.name, attr.value);
-//         });
-//         fieldSetContainer.classList.add("fieldset-no-style");
-//         container.querySelectorAll(".rc-radio").forEach(item => fieldSetContainer.appendChild(item));
-//         container.replaceWith(fieldSetContainer);
-//         clearInterval(interval);
-//         clearTimeout(timeout);
-//       }
-//     });
-//   }
+    const interval = setInterval(() => {
+      const rcTemplate = document.querySelector(".rc-template");
+      if(rcTemplate) {
+        const container = rcTemplate.querySelector(".rc-template__legacy-radio");
+        const fieldSetContainer = document.createElement("fieldset");
+        const legend = document.createElement("legend");
+        legend.classList.add("visually-hidden");
+        legend.innerText = 'Product purchasing options';
+        fieldSetContainer.appendChild(legend);
+        fieldSetContainer.className = container.className;
+        [...container.attributes].forEach(attr => {
+          fieldSetContainer.setAttribute(attr.name, attr.value);
+        });
+        fieldSetContainer.classList.add("fieldset-no-style");
+        container.querySelectorAll(".rc-radio").forEach(item => fieldSetContainer.appendChild(item));
+        container.replaceWith(fieldSetContainer);
+        clearInterval(interval);
+        clearTimeout(timeout);
+      }
+    });
+  }
 
-//   addFieldSetToRechangeSubscriptionOnProduct();
+  addFieldSetToRechangeSubscriptionOnProduct();
 
-//   function addLabelTextToYoptoSearch() {
-//     const timeout = setTimeout(() => {
-//       clearInterval(interval);
-//     },6000);
+  function addLabelTextToYoptoSearch() {
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    },6000);
 
-//     const interval = setInterval(() => {
-//       const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
-//       if(labelSearch) {
-//         const input = labelSearch.querySelector("input");
-//         if(input) {
-//           const labelText = input.getAttribute("placeholder");
-//           const newElementHidden = document.createElement("div");
-//           newElementHidden.classList.add("visually-hidden");
-//           newElementHidden.innerText = labelText;
-//           labelSearch.appendChild(newElementHidden);
-//         }
+    const interval = setInterval(() => {
+      const labelSearch = document.querySelector(".yotpo-filters-container .yotpo-search-label");
+      if(labelSearch) {
+        const input = labelSearch.querySelector("input");
+        if(input) {
+          const labelText = input.getAttribute("placeholder");
+          const newElementHidden = document.createElement("div");
+          newElementHidden.classList.add("visually-hidden");
+          newElementHidden.innerText = labelText;
+          labelSearch.appendChild(newElementHidden);
+        }
         
-//         const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
-//         if(sortLabel) {
-//           const newElement = document.createElement("input");
-//           const id = sortLabel.getAttribute("for");
-//           newElement.style.display = "none";
-//           newElement.setAttribute("tabindex", "-1");
-//           newElement.setAttribute("aria-hidden", "true");
-//           newElement.setAttribute("id", id);
-//           sortLabel.appendChild(newElement);
-//         }
+        const sortLabel = document.querySelector(".yotpo-sorting-filter-container");
+        if(sortLabel) {
+          const newElement = document.createElement("input");
+          const id = sortLabel.getAttribute("for");
+          newElement.style.display = "none";
+          newElement.setAttribute("tabindex", "-1");
+          newElement.setAttribute("aria-hidden", "true");
+          newElement.setAttribute("id", id);
+          sortLabel.appendChild(newElement);
+        }
 
-//         clearInterval(interval);
-//         clearTimeout(timeout);
-//       }
-//     });
-//   }
+        clearInterval(interval);
+        clearTimeout(timeout);
+      }
+    });
+  }
 
-//   addLabelTextToYoptoSearch();
+  addLabelTextToYoptoSearch();
 
-//   function addAccessibilityToYopto() {
-//     const observer = new MutationObserver(() => {
-//       const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
-//       imgs.forEach(item => item.setAttribute("alt",""))
-//       const galleryButtons = document.querySelectorAll('.y-image-wrapper');
-//       const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
-//       const yoptoModalList = document.querySelector(".y-slider-container");
-//       const toggleTextContainers = document.querySelectorAll(".toggle-text");
-//       const descriptionsModals = document.querySelectorAll(".yopto-main");
-//       const emptyDivModal = document.querySelector(".yotpo-modal-mask");
-//       const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container .sr-only");
+  function addAccessibilityToYopto() {
+    const observer = new MutationObserver(() => {
+      const imgs = document.querySelectorAll(".yotpo-pictures-gallery-images-wrapper img");  
+      imgs.forEach(item => item.setAttribute("alt",""))
+      const galleryButtons = document.querySelectorAll('.y-image-wrapper');
+      const usernameNodes = document.querySelectorAll('.yotpo-instagram-username');
+      const yoptoModalList = document.querySelector(".y-slider-container");
+      const toggleTextContainers = document.querySelectorAll(".toggle-text");
+      const descriptionsModals = document.querySelectorAll(".yopto-main");
+      const emptyDivModal = document.querySelector(".yotpo-modal-mask");
+      const srOnlyList = document.querySelectorAll(".yotpo-lightbox-container .sr-only");
 
-//       if(srOnlyList) {
-//         srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
-//       }
+      if(srOnlyList) {
+        srOnlyList.forEach(item => item.setAttribute("aria-hidden", "true"));
+      }
 
-//       if(emptyDivModal) {
-//         emptyDivModal.setAttribute("aria-hidden", "true");
-//       }
+      if(emptyDivModal) {
+        emptyDivModal.setAttribute("aria-hidden", "true");
+      }
 
-//       if(toggleTextContainers) {
-//         toggleTextContainers.forEach(item => {
-//           item.style.display = "none";
-//           item.setAttribute("tabindex", "-1");
-//         });
-//       }
+      if(toggleTextContainers) {
+        toggleTextContainers.forEach(item => {
+          item.style.display = "none";
+          item.setAttribute("tabindex", "-1");
+        });
+      }
 
-//       if(descriptionsModals) {
-//         descriptionsModals.forEach(item => item.style.maxHeight = "none");
-//       }
+      if(descriptionsModals) {
+        descriptionsModals.forEach(item => item.style.maxHeight = "none");
+      }
 
-//       const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
-//       if(headerIcons) {
-//           headerIcons.forEach((item) => {
-//             item.setAttribute("aria-hidden", "true");
-//           });
-//       }
+      const headerIcons = document.querySelectorAll(".yotpo-icon-profile.yotpo-header-element.pull-left");
+      if(headerIcons) {
+          headerIcons.forEach((item) => {
+            item.setAttribute("aria-hidden", "true");
+          });
+      }
 
-//         usernameNodes.forEach(item => {
-//           item.setAttribute("role", "heading");
-//           item.setAttribute("aria-level", "1");
-//         });
+        usernameNodes.forEach(item => {
+          item.setAttribute("role", "heading");
+          item.setAttribute("aria-level", "1");
+        });
 
-//       if(yoptoModalList) {
-//             yoptoModalList.setAttribute("aria-hidden","true");
-//       }
+      if(yoptoModalList) {
+            yoptoModalList.setAttribute("aria-hidden","true");
+      }
           
-//       if (galleryButtons.length && usernameNodes.length && galleryButtons.length === usernameNodes.length) {
-//         const nameCounts = {};
+      if (galleryButtons.length && usernameNodes.length && galleryButtons.length === usernameNodes.length) {
+        const nameCounts = {};
 
-//         usernameNodes.forEach((node, i) => {
-//           const name = node.textContent.trim();
+        usernameNodes.forEach((node, i) => {
+          const name = node.textContent.trim();
 
-//           // Initialize or increment count
-//           nameCounts[name] = (nameCounts[name] || 0) + 1;
+          // Initialize or increment count
+          nameCounts[name] = (nameCounts[name] || 0) + 1;
 
-//           const label = `${name} ${nameCounts[name]}`;
-//           galleryButtons[i].setAttribute('aria-label', label);
-//         });
+          const label = `${name} ${nameCounts[name]}`;
+          galleryButtons[i].setAttribute('aria-label', label);
+        });
 
-//         // Once done, disconnect the observer
-//         observer.disconnect();
-//       }
-//   });
-//     observer.observe(document.body, { childList: true, subtree: true });
-//   }
+        // Once done, disconnect the observer
+        observer.disconnect();
+      }
+  });
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 
-//   function runWhenYotpoIsReady(callback) {
-//     const timeout = setTimeout(() => {
-//       clearInterval(checkYotpo);
-//     }, 6000);
+  function runWhenYotpoIsReady(callback) {
+    const timeout = setTimeout(() => {
+      clearInterval(checkYotpo);
+    }, 6000);
 
-//     const checkYotpo = setInterval(() => {
-//       const yoptoContainer = document.querySelector(".yotpo-main-layout");
-//       if (yoptoContainer) {
-//         clearInterval(checkYotpo);
-//         clearTimeout(timeout)
-//         callback();
-//       }
-//     }, 100);
-//   }
+    const checkYotpo = setInterval(() => {
+      const yoptoContainer = document.querySelector(".yotpo-main-layout");
+      if (yoptoContainer) {
+        clearInterval(checkYotpo);
+        clearTimeout(timeout)
+        callback();
+      }
+    }, 100);
+  }
 
-//   runWhenYotpoIsReady(() => {
-//     changeReviewTitleTag();
-//   });
+  runWhenYotpoIsReady(() => {
+    changeReviewTitleTag();
+  });
 
-//   function changeReviewTitleTag() {
-//     const titleContainer = document.querySelector(".yotpo-head");
-//     const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
-//     if(reviewTitle) {
-//       const h2 = document.createElement("h2");
-//       h2.textContent = reviewTitle.innerText;
-//       titleContainer.innerHTML = '';
-//       h2.className = reviewTitle.className;
-//       titleContainer.appendChild(h2);
-//     }
-//     setTimeout(() => {
-//       removeTitleFromUsernamesReviews();
-//     },2000);
-//   }
+  function changeReviewTitleTag() {
+    const titleContainer = document.querySelector(".yotpo-head");
+    const reviewTitle = document.querySelector(".yotpo-head .yotpo-headline");
+    if(reviewTitle) {
+      const h2 = document.createElement("h2");
+      h2.textContent = reviewTitle.innerText;
+      titleContainer.innerHTML = '';
+      h2.className = reviewTitle.className;
+      titleContainer.appendChild(h2);
+    }
+    setTimeout(() => {
+      removeTitleFromUsernamesReviews();
+    },2000);
+  }
 
-//   function removeTitleFromUsernamesReviews() {
-//     const usernames = document.querySelectorAll(".yotpo-reviewer-name");
-//     usernames.forEach(item => {
-//       item.removeAttribute("title");
-//     });
-//   }
+  function removeTitleFromUsernamesReviews() {
+    const usernames = document.querySelectorAll(".yotpo-reviewer-name");
+    usernames.forEach(item => {
+      item.removeAttribute("title");
+    });
+  }
 
-//   function removeAriaHiddenFromBuyConsentModalQuickView() {
-//     const item = document.querySelector("#shopify-buyer-consent-modal");
-//     if(item) {
-//       item.removeAttribute("aria-hidden");
-//     }
-//   }
+  function removeAriaHiddenFromBuyConsentModalQuickView() {
+    const item = document.querySelector("#shopify-buyer-consent-modal");
+    if(item) {
+      item.removeAttribute("aria-hidden");
+    }
+  }
 
-//   function listSalesPoints(container) {
+  function listSalesPoints(container) {
 
 
-// const blocks = Array.from(document.querySelectorAll(container+ ' .product-block--sales-point'));
-//   if (!blocks.length) return;
+const blocks = Array.from(document.querySelectorAll(container+ ' .product-block--sales-point'));
+  if (!blocks.length) return;
 
-//   const groups = [];
-//   let i = 0;
+  const groups = [];
+  let i = 0;
 
-//   while (i < blocks.length) {
-//     const group = [blocks[i]];
-//     while (
-//       i + 1 < blocks.length &&
-//       blocks[i].nextElementSibling === blocks[i + 1]
-//     ) {
-//       group.push(blocks[i + 1]);
-//       i++;
-//     }
+  while (i < blocks.length) {
+    const group = [blocks[i]];
+    while (
+      i + 1 < blocks.length &&
+      blocks[i].nextElementSibling === blocks[i + 1]
+    ) {
+      group.push(blocks[i + 1]);
+      i++;
+    }
 
-//     if (group.length > 1) groups.push(group);
-//     i++;
-//   }
+    if (group.length > 1) groups.push(group);
+    i++;
+  }
 
-//   groups.forEach(group => {
-//     const first = group[0];
+  groups.forEach(group => {
+    const first = group[0];
 
-//     if (first.closest('[role="list"]')) return;
+    if (first.closest('[role="list"]')) return;
 
-//     const list = document.createElement('div');
-//     list.setAttribute('role', 'list');
-//     list.className = 'sales-points-list';
+    const list = document.createElement('div');
+    list.setAttribute('role', 'list');
+    list.className = 'sales-points-list';
 
-//     first.parentNode.insertBefore(list, first);
+    first.parentNode.insertBefore(list, first);
 
-//     group.forEach(el => {
-//       el.setAttribute('role', 'listitem');
-//       list.appendChild(el);
-//     });
-//   });
-//   }
+    group.forEach(el => {
+      el.setAttribute('role', 'listitem');
+      list.appendChild(el);
+    });
+  });
+  }
 
-//   function addListSemanticsToProductInfo(modalContainer) {
-//     if(window.location.hostname.includes('myshopify')) return;
-//     console.log('run admin', window.location.hostname)
-//     let modalClassActive = modalContainer ? '.modal--is-active ' : '';
-//     listSalesPoints(modalClassActive);
+  function addListSemanticsToProductInfo(modalContainer) {
+    if(window.location.hostname.includes('myshopify')) return;
+    console.log('run admin', window.location.hostname)
+    let modalClassActive = modalContainer ? '.modal--is-active ' : '';
+    listSalesPoints(modalClassActive);
 
-//     // product info TABs
-//     const tabBlocks = document.querySelectorAll(modalClassActive+'.product-block--tab');
-//     if (!tabBlocks.length) return;
+    // product info TABs
+    const tabBlocks = document.querySelectorAll(modalClassActive+'.product-block--tab');
+    if (!tabBlocks.length) return;
   
-//     // Create wrapper
-//     const listWrapper = document.createElement('div');
-//     listWrapper.setAttribute('role', 'list');
-//     listWrapper.setAttribute('aria-label', 'Product Information');
-//     listWrapper.className = 'product-tab-list';
+    // Create wrapper
+    const listWrapper = document.createElement('div');
+    listWrapper.setAttribute('role', 'list');
+    listWrapper.setAttribute('aria-label', 'Product Information');
+    listWrapper.className = 'product-tab-list';
     
-//       const firstTab = tabBlocks[0];
-//     firstTab.parentNode.insertBefore(listWrapper, firstTab);
-//     firstTab.parentNode.insertBefore(listWrapper, firstTab);
+      const firstTab = tabBlocks[0];
+    firstTab.parentNode.insertBefore(listWrapper, firstTab);
+    firstTab.parentNode.insertBefore(listWrapper, firstTab);
     
-//       // Move all .product-block--tab elements into the wrapper
-//     tabBlocks.forEach(tab => {
-//       tab.setAttribute('role', 'listitem');
-//       listWrapper.appendChild(tab);
-//     });
-//   }
+      // Move all .product-block--tab elements into the wrapper
+    tabBlocks.forEach(tab => {
+      tab.setAttribute('role', 'listitem');
+      listWrapper.appendChild(tab);
+    });
+  }
 
-//   function listenToAllQuickviewBtns() {
-//     const buttons = document.querySelectorAll(".quick-product__btn");
-//     buttons.forEach(item => {
-//       item.addEventListener('click', () => {
-//         setTimeout(() => {
-//           addRoleModalDialogToQuickview();
-//         },100);
-//         setTimeout(() => {
-//           addListSemanticsToProductInfo(true);
-//           removeAriaHiddenFromBuyConsentModalQuickView();
-//         },2000);
-//       });
-//     });
-//   }
+  function listenToAllQuickviewBtns() {
+    const buttons = document.querySelectorAll(".quick-product__btn");
+    buttons.forEach(item => {
+      item.addEventListener('click', () => {
+        setTimeout(() => {
+          addRoleModalDialogToQuickview();
+        },100);
+        setTimeout(() => {
+          addListSemanticsToProductInfo(true);
+          removeAriaHiddenFromBuyConsentModalQuickView();
+        },2000);
+      });
+    });
+  }
   
-//   function addRoleModalDialogToQuickview() {
-//     const dialogContainer = document.querySelector(".modal.modal--is-active");
-//     if(dialogContainer) {
-//       dialogContainer.setAttribute("role", "modaldialog");
-//     }
-//   }
+  function addRoleModalDialogToQuickview() {
+    const dialogContainer = document.querySelector(".modal.modal--is-active");
+    if(dialogContainer) {
+      dialogContainer.setAttribute("role", "modaldialog");
+    }
+  }
 
-//   listenToAllQuickviewBtns();
+  listenToAllQuickviewBtns();
 
-//   function closeDropdownWithEscape() {
-//     document.addEventListener('keydown', function (e) {
-//       if (e.code === 'Escape' || e.key === 'Escape') {
-//         document.querySelectorAll('details.site-nav__details[open]').forEach(detailsEl => {
-//           detailsEl.removeAttribute('open');
-//           detailsEl.setAttribute('aria-expanded', 'false');
-//         });
-//       }
-//     });
-//   }
+  function closeDropdownWithEscape() {
+    document.addEventListener('keydown', function (e) {
+      if (e.code === 'Escape' || e.key === 'Escape') {
+        document.querySelectorAll('details.site-nav__details[open]').forEach(detailsEl => {
+          detailsEl.removeAttribute('open');
+          detailsEl.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+  }
 
-//   function toggleDropdown() {
-//     const allDetails = document.querySelectorAll('details.site-nav__details');
+  function toggleDropdown() {
+    const allDetails = document.querySelectorAll('details.site-nav__details');
 
-//     allDetails.forEach(detailsEl => {
-//       detailsEl.addEventListener('keydown', e => {
-//         if (e.key === 'Enter') {
-//           e.preventDefault();
+    allDetails.forEach(detailsEl => {
+      detailsEl.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
 
-//           const isOpen = detailsEl.hasAttribute('open');
+          const isOpen = detailsEl.hasAttribute('open');
 
-//           // close all dropdowns first
-//           allDetails.forEach(el => {
-//             el.removeAttribute('open');
-//             el.setAttribute('aria-expanded', 'false');
-//           });
+          // close all dropdowns first
+          allDetails.forEach(el => {
+            el.removeAttribute('open');
+            el.setAttribute('aria-expanded', 'false');
+          });
 
-//           // then open only the current one if it was closed
-//           if (!isOpen) {
-//             detailsEl.setAttribute('open', '');
-//             detailsEl.setAttribute('aria-expanded', 'true');
-//           }
-//         }
-//       });
-//     });
-//   }
+          // then open only the current one if it was closed
+          if (!isOpen) {
+            detailsEl.setAttribute('open', '');
+            detailsEl.setAttribute('aria-expanded', 'true');
+          }
+        }
+      });
+    });
+  }
 
-//   function removeEmptyLinkFromBlogTags() {
-//     const tags = document.querySelectorAll(".grid__item__container.grid__item .article__date a");
-//     tags.forEach(item => {
-//       if(item.innerText.trim() === '') {
-//         item.remove();
-//       }
-//     });
-//   }
+  function removeEmptyLinkFromBlogTags() {
+    const tags = document.querySelectorAll(".grid__item__container.grid__item .article__date a");
+    tags.forEach(item => {
+      if(item.innerText.trim() === '') {
+        item.remove();
+      }
+    });
+  }
 
-//   removeEmptyLinkFromBlogTags();
+  removeEmptyLinkFromBlogTags();
   
-//   document.addEventListener('click', function (e) {
-//     const nameInputId = '#name';
-//     const emailInputId = '#email';
+  document.addEventListener('click', function (e) {
+    const nameInputId = '#name';
+    const emailInputId = '#email';
 
-//     function listenToInputWarning(modal) {
-//       modal.querySelectorAll('.yotpo-new-input-container, textarea').forEach(element => {
-//         element.addEventListener('focus', () => {
-//           setTimeout(() => {
-//             const id = element.id + 'warning';
-//             element.parentNode.querySelectorAll('.yotpo-new-input-validation').forEach(formItem => {
-//               element.setAttribute('aria-describedby', id);
-//               formItem.id = id;
-//             });
-//           }, 300);
-//         });
+    function listenToInputWarning(modal) {
+      modal.querySelectorAll('.yotpo-new-input-container, textarea').forEach(element => {
+        element.addEventListener('focus', () => {
+          setTimeout(() => {
+            const id = element.id + 'warning';
+            element.parentNode.querySelectorAll('.yotpo-new-input-validation').forEach(formItem => {
+              element.setAttribute('aria-describedby', id);
+              formItem.id = id;
+            });
+          }, 300);
+        });
                   
-//       });
-//     }
+      });
+    }
 
-//     if (e.target.matches('#yotpo-main-widget-btn')) {
-//       // Delay to wait for modal render
-//       setTimeout(() => {
-//         const modal = document.querySelector('#yotpo-modal');
-//         if (modal) {
-//           listenToInputWarning(modal);
-//           modal.removeAttribute('aria-describedby');
-//           modal.removeAttribute('aria-labelledby');
-//           const header = modal.querySelector("h2.yotpo-modal-header");
-//           if(header) {
-//             const newHeader = document.createElement("h1");
-//             newHeader.className = header.className;
-//             newHeader.innerHTML = header.innerHTML;
-//             newHeader.id = 'titleModalChanged';
-//             header.parentNode.replaceChild(newHeader, header);
+    if (e.target.matches('#yotpo-main-widget-btn')) {
+      // Delay to wait for modal render
+      setTimeout(() => {
+        const modal = document.querySelector('#yotpo-modal');
+        if (modal) {
+          listenToInputWarning(modal);
+          modal.removeAttribute('aria-describedby');
+          modal.removeAttribute('aria-labelledby');
+          const header = modal.querySelector("h2.yotpo-modal-header");
+          if(header) {
+            const newHeader = document.createElement("h1");
+            newHeader.className = header.className;
+            newHeader.innerHTML = header.innerHTML;
+            newHeader.id = 'titleModalChanged';
+            header.parentNode.replaceChild(newHeader, header);
 
-//             modal.setAttribute('aria-labelledby', newHeader.id);
-//           }
+            modal.setAttribute('aria-labelledby', newHeader.id);
+          }
 
-//           //Add autocomplete
-//           const name = modal.querySelector(nameInputId);
-//           const email = modal.querySelector(emailInputId);
+          //Add autocomplete
+          const name = modal.querySelector(nameInputId);
+          const email = modal.querySelector(emailInputId);
 
-//           if(name && email) {
-//             name.setAttribute('autocomplete', 'name');
-//             email.setAttribute('autocomplete', 'email');
+          if(name && email) {
+            name.setAttribute('autocomplete', 'name');
+            email.setAttribute('autocomplete', 'email');
 
 
-//             const emailDescription = email.parentNode.querySelector('.yotpo-new-input-message');
-//             if(emailDescription) {
-//               emailDescription.id = 'descriptionEmail';
-//               email.setAttribute('aria-describedby', emailDescription.id);
-//             }
-//           }
+            const emailDescription = email.parentNode.querySelector('.yotpo-new-input-message');
+            if(emailDescription) {
+              emailDescription.id = 'descriptionEmail';
+              email.setAttribute('aria-describedby', emailDescription.id);
+            }
+          }
 
-//           const fileInput = modal.querySelector('.yotpo-file-upload .yotpo-upload-label');
-//           const fileInputDescription = modal.querySelector('.yotpo-file-upload .yotpo-new-input-message');
-//           if(fileInput && fileInputDescription) {
-//             fileInputDescription.id = 'descriptionUploadMedia';
-//             fileInput.setAttribute('aria-label', 'Upload media');
-//             fileInput.setAttribute('aria-describedby', fileInputDescription.id);
-//           }
+          const fileInput = modal.querySelector('.yotpo-file-upload .yotpo-upload-label');
+          const fileInputDescription = modal.querySelector('.yotpo-file-upload .yotpo-new-input-message');
+          if(fileInput && fileInputDescription) {
+            fileInputDescription.id = 'descriptionUploadMedia';
+            fileInput.setAttribute('aria-label', 'Upload media');
+            fileInput.setAttribute('aria-describedby', fileInputDescription.id);
+          }
 
-//           const oldH6 = modal.querySelector('.form-footer h6');
-//           if(oldH6) {
-//             const newHeader = document.createElement("div");
-//             newHeader.innerText = oldH6.innerText;
-//             newHeader.style.fontSize = '12px';
-//             oldH6.parentNode.prepend(newHeader);
-//             oldH6.remove();
-//           }
+          const oldH6 = modal.querySelector('.form-footer h6');
+          if(oldH6) {
+            const newHeader = document.createElement("div");
+            newHeader.innerText = oldH6.innerText;
+            newHeader.style.fontSize = '12px';
+            oldH6.parentNode.prepend(newHeader);
+            oldH6.remove();
+          }
 
-//           const stars = modal.querySelectorAll("svg.yotpo-star-rating-icon");
-//           stars.forEach(item => {
-//             item.removeAttribute("tabindex");
-//             item.removeAttribute("aria-label");
-//           });
+          const stars = modal.querySelectorAll("svg.yotpo-star-rating-icon");
+          stars.forEach(item => {
+            item.removeAttribute("tabindex");
+            item.removeAttribute("aria-label");
+          });
 
-//           // const radios = modal.querySelectorAll('.yotpo-star-rating-icons-wrapper input');
+          // const radios = modal.querySelectorAll('.yotpo-star-rating-icons-wrapper input');
 
-//           // function updateTabIndex() {
-//           //   radios.forEach(radio => {
-//           //     radio.setAttribute('name', 'stars')
-//           //     if (radio.checked) {
-//           //       radio.setAttribute('tabindex', '0');
-//           //     } else {
-//           //       radio.setAttribute('tabindex', '-1');
-//           //     }
-//           //   });
-//           // }
+          // function updateTabIndex() {
+          //   radios.forEach(radio => {
+          //     radio.setAttribute('name', 'stars')
+          //     if (radio.checked) {
+          //       radio.setAttribute('tabindex', '0');
+          //     } else {
+          //       radio.setAttribute('tabindex', '-1');
+          //     }
+          //   });
+          // }
 
-//           // updateTabIndex();
-//           // radios.forEach(radio => {
-//           //   radio.addEventListener('change', updateTabIndex);
-//           // });
+          // updateTabIndex();
+          // radios.forEach(radio => {
+          //   radio.addEventListener('change', updateTabIndex);
+          // });
 
-//           const submitBtn = modal.querySelector(".yotpo-new-review-submit");
-//           if(submitBtn) {
-//             submitBtn.addEventListener('click', () => {
-//               setTimeout(() => {
-//                 const formCompletedContainer = modal.querySelector('.yotpo-form-complete');
-//                 if(formCompletedContainer) {
-//                   formCompletedContainer.setAttribute("role", "alert");
-//                 }
+          const submitBtn = modal.querySelector(".yotpo-new-review-submit");
+          if(submitBtn) {
+            submitBtn.addEventListener('click', () => {
+              setTimeout(() => {
+                const formCompletedContainer = modal.querySelector('.yotpo-form-complete');
+                if(formCompletedContainer) {
+                  formCompletedContainer.setAttribute("role", "alert");
+                }
 
-//                 modal.querySelectorAll('.yotpo-new-input-validation').forEach((element) => {
-//                   element.parentNode.querySelectorAll('input, textarea').forEach(formItem => {
-//                     const id = formItem.id + 'warning';
-//                     formItem.setAttribute('aria-describedby', id);
-//                     element.id = id;
-//                   });
-//                 });
-//               }, 300);
-//             });
-//           }
-//         }
-//       }, 300);
-//     }
-//   });
+                modal.querySelectorAll('.yotpo-new-input-validation').forEach((element) => {
+                  element.parentNode.querySelectorAll('input, textarea').forEach(formItem => {
+                    const id = formItem.id + 'warning';
+                    formItem.setAttribute('aria-describedby', id);
+                    element.id = id;
+                  });
+                });
+              }, 300);
+            });
+          }
+        }
+      }, 300);
+    }
+  });
 
-//   function changePtoH2ToReviews() {
-//     setTimeout(() => {
-//       const reviewTitleContainer = document.querySelector(".yotpo-head");
-//       if(reviewTitleContainer) {
-//         const newTitle = document.createElement("h2");
-//         const oldTitle = reviewTitleContainer.querySelector(".yotpo-headline");
-//         newTitle.textContent = oldTitle.innerText;
-//         oldTitle.classList.forEach(cls => newTitle.classList.add(cls));
-//         reviewTitleContainer.innerText = '';
-//         reviewTitleContainer.appendChild(newTitle);
-//       }
-//     }, 3000);
-//   }
+  function changePtoH2ToReviews() {
+    setTimeout(() => {
+      const reviewTitleContainer = document.querySelector(".yotpo-head");
+      if(reviewTitleContainer) {
+        const newTitle = document.createElement("h2");
+        const oldTitle = reviewTitleContainer.querySelector(".yotpo-headline");
+        newTitle.textContent = oldTitle.innerText;
+        oldTitle.classList.forEach(cls => newTitle.classList.add(cls));
+        reviewTitleContainer.innerText = '';
+        reviewTitleContainer.appendChild(newTitle);
+      }
+    }, 3000);
+  }
 
-//   changePtoH2ToReviews();
+  changePtoH2ToReviews();
 
-//   function fixAccessibilityToCartThumnail() {
-//     const observerRebuyCart = new MutationObserver(() => {
-//       const cart = document.querySelector("#rebuy-cart");
-//       if(!cart) return;
+  function fixAccessibilityToCartThumnail() {
+    const observerRebuyCart = new MutationObserver(() => {
+      const cart = document.querySelector("#rebuy-cart");
+      if(!cart) return;
 
-//       const title = cart.querySelector("#SmartCart_title");
-//       if(title) {
-//         const newTitle = document.createElement("h1");
-//         newTitle.innerText = title.innerText;
-//         newTitle.className = title.className;
-//         newTitle.id = title.id;
-//         title.replaceWith(newTitle);
-//       }
+      const title = cart.querySelector("#SmartCart_title");
+      if(title) {
+        const newTitle = document.createElement("h1");
+        newTitle.innerText = title.innerText;
+        newTitle.className = title.className;
+        newTitle.id = title.id;
+        title.replaceWith(newTitle);
+      }
 
-//       const progressBar = cart.querySelector(".rebuy-cart__flyout-shipping-bar-meter [role='progressbar']");
+      const progressBar = cart.querySelector(".rebuy-cart__flyout-shipping-bar-meter [role='progressbar']");
 
-//       if(progressBar) {
-//         progressBar.removeAttribute("tabindex");
-//       }
+      if(progressBar) {
+        progressBar.removeAttribute("tabindex");
+      }
 
-//       const observerContentWeLove = new MutationObserver(() => {
-//         const containerWeLove = cart.querySelector('.rebuy-widget-content');
-//         if(!containerWeLove) return;
+      const observerContentWeLove = new MutationObserver(() => {
+        const containerWeLove = cart.querySelector('.rebuy-widget-content');
+        if(!containerWeLove) return;
 
-//         setTimeout(() => {
-//           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
-//             const newElement = document.createElement("span");
-//             newElement.innerHTML = link.innerHTML;
-//             link.replaceWith(newElement);
-//           });
+        setTimeout(() => {
+          cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
+            const newElement = document.createElement("span");
+            newElement.innerHTML = link.innerHTML;
+            link.replaceWith(newElement);
+          });
 
-//           cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
-//             const newElement = document.createElement("span");
-//             newElement.innerHTML = link.innerHTML;
-//             link.replaceWith(newElement);
-//           });
+          cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
+            const newElement = document.createElement("span");
+            newElement.innerHTML = link.innerHTML;
+            link.replaceWith(newElement);
+          });
           
-//           cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
-//             if(primaryTitle) {
-//               const newTitle = document.createElement("h2");
-//               newTitle.innerText = primaryTitle.innerText;
-//               newTitle.className = primaryTitle.className;
-//               primaryTitle.replaceWith(newTitle);
-//             }
-//           })
+          cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
+            if(primaryTitle) {
+              const newTitle = document.createElement("h2");
+              newTitle.innerText = primaryTitle.innerText;
+              newTitle.className = primaryTitle.className;
+              primaryTitle.replaceWith(newTitle);
+            }
+          })
 
-//           cart.querySelectorAll('.rebuy-product-title').forEach(element => {
-//             const titleReplacement = document.createElement("div");
-//             titleReplacement.innerHTML = element.innerHTML;
-//             titleReplacement.style.letterSpacing = '4.2px'; 
-//             titleReplacement.className = element.className;
-//             element.replaceWith(titleReplacement);
-//           });
+          cart.querySelectorAll('.rebuy-product-title').forEach(element => {
+            const titleReplacement = document.createElement("div");
+            titleReplacement.innerHTML = element.innerHTML;
+            titleReplacement.style.letterSpacing = '4.2px'; 
+            titleReplacement.className = element.className;
+            element.replaceWith(titleReplacement);
+          });
 
-//           document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
-//             const element = item.querySelector('a');
-//             if(element) {
-//               const replaceLinkElement = document.createElement("span");
-//               replaceLinkElement.innerHTML = element.innerHTML;
-//               replaceLinkElement.className = element.className;
-//               replaceLinkElement.style.display = 'block';
-//               replaceLinkElement.style.height = '100px';
-//               element.replaceWith(replaceLinkElement);
-//             }
-//           });
+          document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
+            const element = item.querySelector('a');
+            if(element) {
+              const replaceLinkElement = document.createElement("span");
+              replaceLinkElement.innerHTML = element.innerHTML;
+              replaceLinkElement.className = element.className;
+              replaceLinkElement.style.display = 'block';
+              replaceLinkElement.style.height = '100px';
+              element.replaceWith(replaceLinkElement);
+            }
+          });
 
-//           cart.querySelectorAll(".rebuy-product-info").forEach(element => {
-//             const titleLink = element.querySelector("a");
-//             const replaceLinkElement = document.createElement("span");
-//             replaceLinkElement.innerText = titleLink.innerText;
-//             replaceLinkElement.className = titleLink.className;
-//             titleLink.replaceWith(replaceLinkElement);
+          cart.querySelectorAll(".rebuy-product-info").forEach(element => {
+            const titleLink = element.querySelector("a");
+            const replaceLinkElement = document.createElement("span");
+            replaceLinkElement.innerText = titleLink.innerText;
+            replaceLinkElement.className = titleLink.className;
+            titleLink.replaceWith(replaceLinkElement);
 
-//             const newContainerLink = document.createElement("a");
-//             newContainerLink.className = title.className;
-//             newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
-//             newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
-//             newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
-//             newContainerLink.classList.add(element.className);
-//             newContainerLink.innerHTML = element.innerHTML;
-//             element.replaceWith(newContainerLink);
-//           });
+            const newContainerLink = document.createElement("a");
+            newContainerLink.className = title.className;
+            newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
+            newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
+            newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
+            newContainerLink.classList.add(element.className);
+            newContainerLink.innerHTML = element.innerHTML;
+            element.replaceWith(newContainerLink);
+          });
           
-//           cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
-//             element.removeAttribute("aria-level");
-//             element.removeAttribute("role");
-//           });
+          cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
+            element.removeAttribute("aria-level");
+            element.removeAttribute("role");
+          });
 
-//           const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
-//           if(emptyCartTitle) {
-//             const newTitle = document.createElement("h2");
-//             newTitle.innerText = emptyCartTitle.innerText;
-//             newTitle.className = emptyCartTitle.className;
-//             newTitle.classList.add("h4");
-//             emptyCartTitle.replaceWith(newTitle);
-//           }
+          const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
+          if(emptyCartTitle) {
+            const newTitle = document.createElement("h2");
+            newTitle.innerText = emptyCartTitle.innerText;
+            newTitle.className = emptyCartTitle.className;
+            newTitle.classList.add("h4");
+            emptyCartTitle.replaceWith(newTitle);
+          }
 
-//           cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
-//             element.setAttribute("alt", "");
-//           });
-//         }, 3000);
+          cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
+            element.setAttribute("alt", "");
+          });
+        }, 3000);
 
-//         observerContentWeLove.disconnect();
-//       });
+        observerContentWeLove.disconnect();
+      });
 
-//       observerContentWeLove.observe(cart, {
-//         childList: true, subtree: true
-//       });
+      observerContentWeLove.observe(cart, {
+        childList: true, subtree: true
+      });
 
-//       observerRebuyCart.disconnect();
-//     });
-//     observerRebuyCart.observe(document.body, {
-//       childList: true, subtree: true
-//     });
+      observerRebuyCart.disconnect();
+    });
+    observerRebuyCart.observe(document.body, {
+      childList: true, subtree: true
+    });
   
-// }
+}
 
-// fixAccessibilityToCartThumnail();
+fixAccessibilityToCartThumnail();
 
-// function fixAriaLabelThumbnails() {
-//   const targetNode = document.body;
-//   const config = { childList: true, subtree: true };
+function fixAriaLabelThumbnails() {
+  const targetNode = document.body;
+  const config = { childList: true, subtree: true };
 
-//   const observer = new MutationObserver((mutations, obs) => {
-//     setTimeout(() => {
-//       const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
+  const observer = new MutationObserver((mutations, obs) => {
+    setTimeout(() => {
+      const btns = document.querySelectorAll(".yotpo-sr-bottom-line-summary");
       
-//       if (btns.length > 0) {
-//         btns.forEach((btn, index) => {
-//           const labelBefore = btn.getAttribute("aria-label");
-//           const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
-//           if(btn.classList.contains("aria-label-changed")) return;
+      if (btns.length > 0) {
+        btns.forEach((btn, index) => {
+          const labelBefore = btn.getAttribute("aria-label");
+          const totalReviewsText = btn.querySelector(".yotpo-sr-bottom-line-right-panel").innerText;
+          if(btn.classList.contains("aria-label-changed")) return;
 
-//           if (!labelBefore) return;
+          if (!labelBefore) return;
 
-//           let titleProduct =  '';
+          let titleProduct =  '';
 
-//           if(btn.closest('.grid__item') && btn.closest('.grid__item').querySelector('.grid-product__title')) {
-//             titleProduct = btn.closest('.grid__item').querySelector('.grid-product__title').innerText;
-//           }
+          if(btn.closest('.grid__item') && btn.closest('.grid__item').querySelector('.grid-product__title')) {
+            titleProduct = btn.closest('.grid__item').querySelector('.grid-product__title').innerText;
+          }
 
-//           const numbers = labelBefore.match(/\d+(\.\d+)?/g);
-//           if (numbers) {
-//             const first = numbers[0];
-//             btn.setAttribute(
-//               "aria-label",
-//               `${first} out of 5 stars, ${totalReviewsText}${titleProduct.length == 0 ? '':','} ${titleProduct}`
-//             );
-//             btn.classList.add("aria-label-changed");
-//           }
+          const numbers = labelBefore.match(/\d+(\.\d+)?/g);
+          if (numbers) {
+            const first = numbers[0];
+            btn.setAttribute(
+              "aria-label",
+              `${first} out of 5 stars, ${totalReviewsText}${titleProduct.length == 0 ? '':','} ${titleProduct}`
+            );
+            btn.classList.add("aria-label-changed");
+          }
 
-//           const newBtn = document.createElement('a');
-//           copyAttributes(btn, newBtn);
-//           newBtn.innerHTML = btn.innerHTML;
-//           newBtn.setAttribute('tabindex', '0');
+          const newBtn = document.createElement('a');
+          copyAttributes(btn, newBtn);
+          newBtn.innerHTML = btn.innerHTML;
+          newBtn.setAttribute('tabindex', '0');
 
-//           if(titleProduct.length == 0) {
-//             newBtn.setAttribute('href', '#yotpo-app');
-//           } else {
-//             newBtn.removeAttribute('href');
-//             newBtn.removeAttribute('type');
-//             newBtn.addEventListener('click', () => {
-//               newBtn.closest('.grid__item').querySelector('a').click();
-//             });
-//           }
+          if(titleProduct.length == 0) {
+            newBtn.setAttribute('href', '#yotpo-app');
+          } else {
+            newBtn.removeAttribute('href');
+            newBtn.removeAttribute('type');
+            newBtn.addEventListener('click', () => {
+              newBtn.closest('.grid__item').querySelector('a').click();
+            });
+          }
           
-//           btn.replaceWith(newBtn);
-//         });
+          btn.replaceWith(newBtn);
+        });
 
-//         obs.disconnect();
-//       }
-//     }, 300);
-//   });
+        obs.disconnect();
+      }
+    }, 300);
+  });
 
-//   observer.observe(targetNode, config);
-// }
-//   fixAriaLabelThumbnails()
+  observer.observe(targetNode, config);
+}
+  fixAriaLabelThumbnails()
 
-//   function fixOwlDots() {
-//     const timeout = setTimeout(() => {
-//       clearInterval(interval);
-//     }, 5000);
+  function fixOwlDots() {
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 5000);
 
-//     const interval = setInterval(() => {
-//       const owlDotsContainer = document.querySelector(".flickity-page-dots");
-//       if(!owlDotsContainer) return;
+    const interval = setInterval(() => {
+      const owlDotsContainer = document.querySelector(".flickity-page-dots");
+      if(!owlDotsContainer) return;
 
-//       const dots = owlDotsContainer.querySelectorAll(".dot");
-//       dots.forEach((dot, index) => {
-//         dot.setAttribute("aria-label", `Load image ${index + 1} of ${dots.length} in gallery view`);
-//         dot.setAttribute("tabindex", "0");
-//         dot.setAttribute("role", "button");
-//       });
+      const dots = owlDotsContainer.querySelectorAll(".dot");
+      dots.forEach((dot, index) => {
+        dot.setAttribute("aria-label", `Load image ${index + 1} of ${dots.length} in gallery view`);
+        dot.setAttribute("tabindex", "0");
+        dot.setAttribute("role", "button");
+      });
 
-//       document.querySelectorAll(".product-main-slide").forEach(item => {
-//         item.removeAttribute("tabindex");
-//       });
+      document.querySelectorAll(".product-main-slide").forEach(item => {
+        item.removeAttribute("tabindex");
+      });
 
       
-//       clearTimeout(timeout);
-//       clearInterval(interval);
-//     }, 200);
-//   }
+      clearTimeout(timeout);
+      clearInterval(interval);
+    }, 200);
+  }
 
-//   fixOwlDots();
+  fixOwlDots();
 
-//   function fixYoptoReviewSection() {
+  function fixYoptoReviewSection() {
     
-//     const observer = new MutationObserver(() => {
-//       const yoptoContainer = document.querySelector("#yotpo-reviews-container");
-//       if(yoptoContainer) {
+    const observer = new MutationObserver(() => {
+      const yoptoContainer = document.querySelector("#yotpo-reviews-container");
+      if(yoptoContainer) {
 
-//         const reviewListContainer = yoptoContainer.querySelector('.yotpo-reviews-list');
+        const reviewListContainer = yoptoContainer.querySelector('.yotpo-reviews-list');
 
-//         if(reviewListContainer) {
+        if(reviewListContainer) {
 
-//           const items = Array.from(reviewListContainer.children);
-//           for (let i = 0; i < items.length; i++) {
-//             const el = items[i];
+          const items = Array.from(reviewListContainer.children);
+          for (let i = 0; i < items.length; i++) {
+            const el = items[i];
 
-//             if (el.classList.contains('yotpo-review')) {
-//               const next = items[i + 1];
-//               const reviewId = el.getAttribute('data-id');
-//               const user = el.querySelector('.yotpo-reviewer-name');
-//               user.id = reviewId;
-//               const usernameText = user.innerText;
-//               if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
+            if (el.classList.contains('yotpo-review')) {
+              const next = items[i + 1];
+              const reviewId = el.getAttribute('data-id');
+              const user = el.querySelector('.yotpo-reviewer-name');
+              user.id = reviewId;
+              const usernameText = user.innerText;
+              if (next && next.classList.contains('yotpo-review-votes-wrapper')) {
 
-//                 //Fix votes' container
-//                 const numberVotesUpId = reviewId+'-voteUp';
-//                 const numberVotesDownId = reviewId+'-voteDown';
-//                 next.querySelectorAll('.yotpo-review-votes-icons-container').forEach((vote, index) => {
-//                   vote.removeAttribute('aria-labelledby');
-//                   vote.removeAttribute('role');
-//                   const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
-//                   const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
-//                   const isVoteUp = index === 0;
-//                   const newAriaLabel = `${usernameText}'s review was${isVoteUp ? '':' not'} helpful`;
-//                   const currentId = isVoteUp ? numberVotesUpId : numberVotesDownId;
-//                   if(voteUpIcon && voteUpValue) {
-//                     voteUpValue.id = currentId;
-//                     voteUpIcon.setAttribute('aria-describedby', currentId);
-//                     voteUpIcon.setAttribute('aria-label', newAriaLabel);
-//                   }
-//                 });
+                //Fix votes' container
+                const numberVotesUpId = reviewId+'-voteUp';
+                const numberVotesDownId = reviewId+'-voteDown';
+                next.querySelectorAll('.yotpo-review-votes-icons-container').forEach((vote, index) => {
+                  vote.removeAttribute('aria-labelledby');
+                  vote.removeAttribute('role');
+                  const voteUpIcon = vote.querySelector('.yotpo-review-votes-icons');
+                  const voteUpValue = vote.querySelector('.yotpo-review-votes-number');
+                  const isVoteUp = index === 0;
+                  const newAriaLabel = `${usernameText}'s review was${isVoteUp ? '':' not'} helpful`;
+                  const currentId = isVoteUp ? numberVotesUpId : numberVotesDownId;
+                  if(voteUpIcon && voteUpValue) {
+                    voteUpValue.id = currentId;
+                    voteUpIcon.setAttribute('aria-describedby', currentId);
+                    voteUpIcon.setAttribute('aria-label', newAriaLabel);
+                  }
+                });
 
-//                 const iconsBtns = next.querySelectorAll('.yotpo-review-votes-icons');
+                const iconsBtns = next.querySelectorAll('.yotpo-review-votes-icons');
 
-//                 iconsBtns.forEach(button => {
-//                   const path = button.querySelector('path');
+                iconsBtns.forEach(button => {
+                  const path = button.querySelector('path');
 
-//                   function updatePressedState() {
-//                     const fill = path.getAttribute('fill').toLowerCase();
-//                     if (fill === '#2c2c2c') {
-//                       button.setAttribute('aria-pressed', 'false');
-//                     } else {
-//                       button.setAttribute('aria-pressed', 'true');
-//                     }
-//                   }
+                  function updatePressedState() {
+                    const fill = path.getAttribute('fill').toLowerCase();
+                    if (fill === '#2c2c2c') {
+                      button.setAttribute('aria-pressed', 'false');
+                    } else {
+                      button.setAttribute('aria-pressed', 'true');
+                    }
+                  }
 
-//                   // Run once initially
-//                   updatePressedState();
+                  // Run once initially
+                  updatePressedState();
 
-//                   // If fill might change dynamically, watch it
-//                   const observer = new MutationObserver(updatePressedState);
-//                   observer.observe(path, { attributes: true, attributeFilter: ['fill'] });
-//                 });
+                  // If fill might change dynamically, watch it
+                  const observer = new MutationObserver(updatePressedState);
+                  observer.observe(path, { attributes: true, attributeFilter: ['fill'] });
+                });
 
 
-//                 const wrapper = document.createElement('div');
-//                 wrapper.classList.add('wrapper');
-//                 wrapper.setAttribute('role', 'group');
-//                 wrapper.setAttribute('aria-labelledby', reviewId);
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('wrapper');
+                wrapper.setAttribute('role', 'group');
+                wrapper.setAttribute('aria-labelledby', reviewId);
 
-//                 reviewListContainer.insertBefore(wrapper, el);
+                reviewListContainer.insertBefore(wrapper, el);
 
-//                 wrapper.appendChild(el);
-//                 wrapper.appendChild(next);
-//               }
-//             }
-//           }
-//         }
+                wrapper.appendChild(el);
+                wrapper.appendChild(next);
+              }
+            }
+          }
+        }
         
-//         yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination > a").forEach(element => {
-//           element.setAttribute("aria-hidden", "true");
-//         });
+        yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination > a").forEach(element => {
+          element.setAttribute("aria-hidden", "true");
+        });
 
-//         yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
-//           element.setAttribute("aria-label", `Page ${element.innerText}`);
-//         });
+        yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
+          element.setAttribute("aria-label", `Page ${element.innerText}`);
+        });
 
-//         const navPagination = yoptoContainer.querySelector(".yotpo-reviews-pagination-container");
-//         if(navPagination) {
-//           navPagination.removeAttribute("role");
-//           navPagination.setAttribute("aria-label", "Customer reviews pagination");
+        const navPagination = yoptoContainer.querySelector(".yotpo-reviews-pagination-container");
+        if(navPagination) {
+          navPagination.removeAttribute("role");
+          navPagination.setAttribute("aria-label", "Customer reviews pagination");
 
-//           const observerUl = new MutationObserver((mutationsList) => {
-//             for (const mutation of mutationsList) {
-//               if (mutation.type === 'attributes') {
-//                   yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
-//                     element.setAttribute("aria-label", `Page ${element.innerText}`);
-//                   });
-//               }
-//             }
-//           });
+          const observerUl = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+              if (mutation.type === 'attributes') {
+                  yoptoContainer.querySelectorAll(".yotpo-reviews-pagination-container .yotpo-horizontal-pagination ul a").forEach(element => {
+                    element.setAttribute("aria-label", `Page ${element.innerText}`);
+                  });
+              }
+            }
+          });
 
-//           observerUl.observe(navPagination, {
-//               attributes: true,
-//               subtree: true,
-//               attributeFilter: ['class']
-//           });
-//         }
+          observerUl.observe(navPagination, {
+              attributes: true,
+              subtree: true,
+              attributeFilter: ['class']
+          });
+        }
 
-//         observer.disconnect();
-//       }
-//     });
+        observer.disconnect();
+      }
+    });
 
-//     observer.observe(document.body, { childList: true, subtree: true });
-//   }
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
 
-//   fixYoptoReviewSection();
-
-
-// function addAlertToErrors() {
-//     const errorMessage = document.querySelector(".form-vertical .errors");
-//     if (errorMessage) {
-//         errorMessage.setAttribute("role", "alert");
-//       }
-// }
-//     addAlertToErrors();
-
-//   document.addEventListener("DOMContentLoaded", function () {
-//     const container = document.getElementById("pc--optOutFormContainer");
-//     if (!container) return;
-
-//     const observer = new MutationObserver(() => {
-//       // 1) Add aria-required to the email input
-//       const emailInput = container.querySelector("input[type='email']");
-//       if (emailInput && !emailInput.hasAttribute("aria-required")) {
-//         emailInput.setAttribute("aria-required", "true");
-//       }
-
-//       // 2) Fix the success message element
-//       const successMessage = container.querySelector(
-//         ".pc--opt-out-form-message--success"
-//       );
-//       if (successMessage) {
-//         successMessage.removeAttribute("tabindex");
-//         successMessage.removeAttribute("autofocus");
-//         successMessage.setAttribute("role", "alert");
-//       }
-
-//       const captchaTextareas = container.querySelectorAll(
-//         "textarea[id^='g-recaptcha-response'], textarea[id^='h-captcha-response']"
-//       );
-
-//       captchaTextareas.forEach((textarea) => {
-//         if (!document.querySelector(`label[for="${textarea.id}"]`)) {
-//           const label = document.createElement("label");
-//           label.setAttribute("for", textarea.id);
-//           label.className = "visually-hidden";
-//           label.textContent =
-//             textarea.id.indexOf("g-recaptcha") !== -1
-//               ? "Google reCAPTCHA response"
-//               : "hCaptcha response";
-
-//           textarea.insertAdjacentElement("beforebegin", label);
-//         }
-//       });
-//     });
-
-//     observer.observe(container, { childList: true, subtree: true });
-//   });
-
-// function fixChatbotAccessibility() {
-
-//   function getOpenChatBotBtn() {
-//     const chatBoxContainer = document.querySelector("#shopify-chat inbox-online-store-chat");
-//     if(!chatBoxContainer) {
-//       return undefined;
-//     } 
-
-//     return chatBoxContainer.shadowRoot.querySelector('.chat-app .chat-toggle');
-//   }
-
-//     function listenToChanges(container1, toggleBtn) {
-//       const container = container1.querySelector('div');
-//       let lastFirstChild = null;
-
-//       if(!container) return
-
-//       function handleFirstChildChange(newChild) {
-//         setTimeout(() => {
-//           fixChatList(container1)
-//         }, 100)
-//         fixInitialChatTemplate(container1);
-
-//         setTimeout(() => {
-//           enableFocusTrap(container, toggleBtn);
-//         }, 300)
-//       }
-
-//       const observer = new MutationObserver(mutations => {
-//         const currentFirstChild = container.firstElementChild;
-
-//         if (currentFirstChild !== lastFirstChild) {
-//           lastFirstChild = currentFirstChild;
-//           if (currentFirstChild) {
-//             handleFirstChildChange(currentFirstChild);
-//           }
-//         }
-//       });
-
-//       observer.observe(container, {
-//         childList: true,
-//         subtree: false
-//       });
-
-//       if (container.firstElementChild) {
-//         lastFirstChild = container.firstElementChild;
-//         handleFirstChildChange(lastFirstChild);
-//       }
-//   }
-
-//     // --- Focus trap helpers ---
-//   let trapHandler = null;
-//   let focusable = [];
-
-//   const observer = new MutationObserver(() => {
-//     const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
-//     if (!chatBox || !chatBox.shadowRoot) return;
-//     chatBox.setAttribute("role", "dialog");
-//     chatBox.removeAttribute('title');
-//     chatBox.setAttribute('aria-label', 'Store chat');
-//     const container = chatBox.shadowRoot.querySelector(".chat-app");
-//     if (!container) return;
-
-//     const toggleBtn = container.querySelector(":scope > button");
-//     if (toggleBtn) {
-//       toggleBtn.removeAttribute("aria-expanded");
-//       if(toggleBtn.classList.contains("chat-app--close-button")) {
-//         toggleBtn.setAttribute("aria-label", "Close chat window");
-//       }
-
-//     listenToChanges(container, toggleBtn);
-//     }
-
-//     const containerObserver = new MutationObserver((mutations) => {
-//       for (const mutation of mutations) {
-//         if (mutation.type === "attributes" && mutation.attributeName === "class") {
-
-//           setTimeout(() => {
-//             const toggleBtn = container.querySelector(":scope > button");
-//             if (toggleBtn) {
-//               toggleBtn.removeAttribute("aria-expanded");
-//               if(toggleBtn.classList.contains("chat-app--close-button")) {
-//                 toggleBtn.setAttribute("aria-label", "Close chat window");
-
-//                 listenToChanges(container, toggleBtn);
-//               } else {
-//                 disableFocusTrap();
-//                 const openBtn = getOpenChatBotBtn();
-//                 if(openBtn) {
-//                   addFocusIndicator(openBtn);
-//                   openBtn.focus();
-//                 }
-//               }
-//             }
-//           }, 500);
-//         }
-//       }
-//     });
-
-//     containerObserver.observe(container, {
-//       attributes: true,
-//       attributeFilter: ["class"],
-//     });
-
-//     document.addEventListener("keydown", (e) => {
-//       if (e.key === "Escape" && container.classList.contains("chat-app--is-open")) {
-//         const toggleBtn = container.querySelector(":scope > button");
-//         if (toggleBtn) {
-//           toggleBtn.click();
-//         }
-//       }
-//     });
-
-//     observer.disconnect();
-//   });
-
-//   observer.observe(document.body, { childList: true, subtree: true });
-
-//   function fixInitialChatTemplate(container) {
-//     const interstitialView = container.querySelector('.chat-ui.interstitial-view');
-//     if(interstitialView) {
-//       const title = interstitialView.querySelector("h2:not(.changed)");
-//         if(title) {
-//           const newTitle = document.createElement("h1");
-//           newTitle.innerText = title.innerText;
-//           copyAttributes(title, newTitle);
-//           newTitle.style.fontSize = '18px';
-//           newTitle.style.margin = '0';
-//           newTitle.style.color = '#fff';
-//           newTitle.classList.add('changed');
-//           title.replaceWith(newTitle);
-//         }
-//         const title2 = interstitialView.querySelector("h3:not(.changed)");
-//         if(title2) {
-//           const newTitle2 = document.createElement("h2");
-//           newTitle2.innerText = title2.innerText;
-//           copyAttributes(title2, newTitle2);
-//           newTitle2.style.fontSize = '1em';
-//           newTitle2.style.fontWeight = '600';
-//           newTitle2.style.margin = '8px auto 16px';
-//           newTitle2.style.textAlign = 'center';
-//           newTitle2.classList.add('instant-answers');
-//           newTitle2.classList.add('changed');
-//           title2.replaceWith(newTitle2);
-//         }                  
-//         // Adding list semantics to buttons
-//         const newContainerList = document.createElement('div');
-//         newContainerList.setAttribute('role', 'list')
-//         newContainerList.style.width = '100%';
-//         const buttons = interstitialView.querySelectorAll(".interstitial-view__instant-answers-list button");
-//         if(buttons.length > 0){
-//           buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
-//           buttons.forEach(element => {
-//             element.setAttribute('role', 'listitem');
-//             const listitem = document.createElement('div');
-//             listitem.setAttribute('role', 'listitem');
-//             listitem.appendChild(element);
-//             newContainerList.appendChild(listitem);
-//           });
-//         }
-//     }
-//   }
+  fixYoptoReviewSection();
 
 
-// function fixChatList(container) {
-//   const beforeStartModal = container.querySelector(".info-modal");
+function addAlertToErrors() {
+    const errorMessage = document.querySelector(".form-vertical .errors");
+    if (errorMessage) {
+        errorMessage.setAttribute("role", "alert");
+      }
+}
+    addAlertToErrors();
 
-//   if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
-//     const titleModal = container.querySelector("#chat-title");
-//     if(titleModal) {
-//       const newText = document.createElement("h1");
-//       newText.style.margin = '0';
-//       newText.style.fontSize = '18px';
-//       copyAttributes(titleModal, newText);
-//       newText.innerText = titleModal.innerText;
-//       titleModal.replaceWith(newText)
-//     }
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("pc--optOutFormContainer");
+    if (!container) return;
 
-//     const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
-//     if(beforeWeGetStartedText) {
-//       const newText = document.createElement("h2");
-//       newText.style.marginTop = '0';
-//       copyAttributes(beforeWeGetStartedText, newText);
-//       newText.innerText = beforeWeGetStartedText.innerText;
-//       beforeWeGetStartedText.replaceWith(newText)
-//     }
+    const observer = new MutationObserver(() => {
+      // 1) Add aria-required to the email input
+      const emailInput = container.querySelector("input[type='email']");
+      if (emailInput && !emailInput.hasAttribute("aria-required")) {
+        emailInput.setAttribute("aria-required", "true");
+      }
 
-//     //Current autocomplete input order
-//     const autocompleteInputs = ['given-name', 'family-name', 'email'];
-//     const INPUT_EMAIL_INDEX = 2;
-//     beforeStartModal.querySelectorAll("input").forEach((element, index) => {
-//       if(autocompleteInputs[index]) {
-//         element.setAttribute('autocomplete', autocompleteInputs[index]);
+      // 2) Fix the success message element
+      const successMessage = container.querySelector(
+        ".pc--opt-out-form-message--success"
+      );
+      if (successMessage) {
+        successMessage.removeAttribute("tabindex");
+        successMessage.removeAttribute("autofocus");
+        successMessage.setAttribute("role", "alert");
+      }
 
-//         if(index === INPUT_EMAIL_INDEX) {
-//           const placeholder = element.getAttribute('placeholder');
-//           element.setAttribute('placeholder', placeholder + '(example@example.com)');
-//         }
+      const captchaTextareas = container.querySelectorAll(
+        "textarea[id^='g-recaptcha-response'], textarea[id^='h-captcha-response']"
+      );
 
-//         const placeholder = element.getAttribute('placeholder');
-//         element.setAttribute('placeholder', placeholder + ' *');
-//       }
-//     });
+      captchaTextareas.forEach((textarea) => {
+        if (!document.querySelector(`label[for="${textarea.id}"]`)) {
+          const label = document.createElement("label");
+          label.setAttribute("for", textarea.id);
+          label.className = "visually-hidden";
+          label.textContent =
+            textarea.id.indexOf("g-recaptcha") !== -1
+              ? "Google reCAPTCHA response"
+              : "hCaptcha response";
 
-//     const btnSubmit = beforeStartModal.querySelector("form button");
-//     if (btnSubmit) {
-//       listenToButtonDisabled(container, btnSubmit);
-//     }
-//     beforeStartModal.classList.add('changed');
-//   }
+          textarea.insertAdjacentElement("beforebegin", label);
+        }
+      });
+    });
 
-//   let chatUiContainer = container.querySelector(".chat-ui.chat-view");
-//   if (chatUiContainer) {
-//       const title = chatUiContainer.querySelector('#chat-title');
-//       if(title) {
-//         const newText = document.createElement("h1");
-//         newText.style.margin = '0';
-//         newText.style.fontSize = '18px';
-//         copyAttributes(title, newText);
-//         newText.innerText = title.innerText;
-//         title.replaceWith(newText)
-//       }
+    observer.observe(container, { childList: true, subtree: true });
+  });
 
-//       const submitbtn = chatUiContainer.querySelector(".composer-bar__footer-button");
-//       if(submitbtn) {
-//         submitbtn.setAttribute('aria-label', 'Submit message');
-//         listenToButtonDisabled(container, submitbtn)
-//       }
+function fixChatbotAccessibility() {
 
-//       const chat = chatUiContainer.querySelector(".chat-messages__list");
-//       const uploadImgBtn = chatUiContainer.querySelector("[data-spec='image-upload']");
+  function getOpenChatBotBtn() {
+    const chatBoxContainer = document.querySelector("#shopify-chat inbox-online-store-chat");
+    if(!chatBoxContainer) {
+      return undefined;
+    } 
 
-//       if(uploadImgBtn) {
-//         uploadImgBtn.setAttribute('aria-label', 'Add file');
-//       }
+    return chatBoxContainer.shadowRoot.querySelector('.chat-app .chat-toggle');
+  }
 
-//       if(!chat) return;
+    function listenToChanges(container1, toggleBtn) {
+      const container = container1.querySelector('div');
+      let lastFirstChild = null;
 
-//       const newChatListContainer = document.createElement("div");
-//       newChatListContainer.setAttribute("role", "list");
-//       copyAttributes(chat, newChatListContainer);
-//       newChatListContainer.setAttribute('role', 'region');
-//       newChatListContainer.setAttribute('aria-label', 'Conversation');
+      if(!container) return
 
-//       const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
-//       const chatElements = chat.querySelectorAll(":scope > *");
+      function handleFirstChildChange(newChild) {
+        setTimeout(() => {
+          fixChatList(container1)
+        }, 100)
+        fixInitialChatTemplate(container1);
 
-//       chatElements.forEach((element, index) => {
-//         if(element.classList.contains('message-container')) {
-//           const newItem = document.createElement("div");
-//           newItem.setAttribute('role', 'listitem')
-//           copyAttributes(element, newItem);
-//           newItem.innerHTML = element.innerHTML;
+        setTimeout(() => {
+          enableFocusTrap(container, toggleBtn);
+        }, 300)
+      }
 
-//           if(!newItem.classList.contains('changed')) {
-//             const titleText = document.createElement("span");
-//             makeVisuallyHidden(titleText);
-//             titleText.innerText = h1Text;
-//             newItem.prepend(titleText);
+      const observer = new MutationObserver(mutations => {
+        const currentFirstChild = container.firstElementChild;
 
-//             const youText = document.createElement("span");
-//             makeVisuallyHidden(youText);
-//             youText.innerText = 'You:';
-//             newItem.classList.add('changed');
+        if (currentFirstChild !== lastFirstChild) {
+          lastFirstChild = currentFirstChild;
+          if (currentFirstChild) {
+            handleFirstChildChange(currentFirstChild);
+          }
+        }
+      });
 
-//             const bubble = newItem.querySelector(".message-bubble");
-//             bubble.prepend(youText)
+      observer.observe(container, {
+        childList: true,
+        subtree: false
+      });
 
-//             newChatListContainer.appendChild(newItem)
-//           }
+      if (container.firstElementChild) {
+        lastFirstChild = container.firstElementChild;
+        handleFirstChildChange(lastFirstChild);
+      }
+  }
 
-//         } else {
-//           const newElement = document.createElement('h2');
-//           copyAttributes(element, newElement);
-//           newElement.innerText = element.innerText;
-//           newElement.style.fontWeight = '400';
-//           element.replaceWith(newElement);
-//           newChatListContainer.appendChild(newElement)
-//         }
-//       });
+    // --- Focus trap helpers ---
+  let trapHandler = null;
+  let focusable = [];
 
-//       chat.replaceWith(newChatListContainer);
+  const observer = new MutationObserver(() => {
+    const chatBox = document.querySelector("#shopify-chat inbox-online-store-chat");
+    if (!chatBox || !chatBox.shadowRoot) return;
+    chatBox.setAttribute("role", "dialog");
+    chatBox.removeAttribute('title');
+    chatBox.setAttribute('aria-label', 'Store chat');
+    const container = chatBox.shadowRoot.querySelector(".chat-app");
+    if (!container) return;
 
-//       const newChatElements = newChatListContainer.querySelectorAll(".chat-messages__list > *");
-//       newChatElements[newChatElements.length - 1].setAttribute('tabindex', '-1');
-//       newChatElements[newChatElements.length - 1].style.outline = 'none';
-//       newChatElements[newChatElements.length - 1].focus();
-//     return;
-//   }
-// }
+    const toggleBtn = container.querySelector(":scope > button");
+    if (toggleBtn) {
+      toggleBtn.removeAttribute("aria-expanded");
+      if(toggleBtn.classList.contains("chat-app--close-button")) {
+        toggleBtn.setAttribute("aria-label", "Close chat window");
+      }
 
-//   function enableFocusTrap(container, toggleBtn) {
-//     focusable = getFocusableElements(container, toggleBtn);
-//     focusable.forEach(el => addFocusIndicator(el));
-//     const first = focusable[0];
-//     const last = focusable[focusable.length - 1];
+    listenToChanges(container, toggleBtn);
+    }
+
+    const containerObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.type === "attributes" && mutation.attributeName === "class") {
+
+          setTimeout(() => {
+            const toggleBtn = container.querySelector(":scope > button");
+            if (toggleBtn) {
+              toggleBtn.removeAttribute("aria-expanded");
+              if(toggleBtn.classList.contains("chat-app--close-button")) {
+                toggleBtn.setAttribute("aria-label", "Close chat window");
+
+                listenToChanges(container, toggleBtn);
+              } else {
+                disableFocusTrap();
+                const openBtn = getOpenChatBotBtn();
+                if(openBtn) {
+                  addFocusIndicator(openBtn);
+                  openBtn.focus();
+                }
+              }
+            }
+          }, 500);
+        }
+      }
+    });
+
+    containerObserver.observe(container, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && container.classList.contains("chat-app--is-open")) {
+        const toggleBtn = container.querySelector(":scope > button");
+        if (toggleBtn) {
+          toggleBtn.click();
+        }
+      }
+    });
+
+    observer.disconnect();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  function fixInitialChatTemplate(container) {
+    const interstitialView = container.querySelector('.chat-ui.interstitial-view');
+    if(interstitialView) {
+      const title = interstitialView.querySelector("h2:not(.changed)");
+        if(title) {
+          const newTitle = document.createElement("h1");
+          newTitle.innerText = title.innerText;
+          copyAttributes(title, newTitle);
+          newTitle.style.fontSize = '18px';
+          newTitle.style.margin = '0';
+          newTitle.style.color = '#fff';
+          newTitle.classList.add('changed');
+          title.replaceWith(newTitle);
+        }
+        const title2 = interstitialView.querySelector("h3:not(.changed)");
+        if(title2) {
+          const newTitle2 = document.createElement("h2");
+          newTitle2.innerText = title2.innerText;
+          copyAttributes(title2, newTitle2);
+          newTitle2.style.fontSize = '1em';
+          newTitle2.style.fontWeight = '600';
+          newTitle2.style.margin = '8px auto 16px';
+          newTitle2.style.textAlign = 'center';
+          newTitle2.classList.add('instant-answers');
+          newTitle2.classList.add('changed');
+          title2.replaceWith(newTitle2);
+        }                  
+        // Adding list semantics to buttons
+        const newContainerList = document.createElement('div');
+        newContainerList.setAttribute('role', 'list')
+        newContainerList.style.width = '100%';
+        const buttons = interstitialView.querySelectorAll(".interstitial-view__instant-answers-list button");
+        if(buttons.length > 0){
+          buttons[0].parentNode.insertBefore(newContainerList, buttons[0]);
+          buttons.forEach(element => {
+            element.setAttribute('role', 'listitem');
+            const listitem = document.createElement('div');
+            listitem.setAttribute('role', 'listitem');
+            listitem.appendChild(element);
+            newContainerList.appendChild(listitem);
+          });
+        }
+    }
+  }
+
+
+function fixChatList(container) {
+  const beforeStartModal = container.querySelector(".info-modal");
+
+  if(beforeStartModal && !beforeStartModal.classList.contains('changed')) {
+    const titleModal = container.querySelector("#chat-title");
+    if(titleModal) {
+      const newText = document.createElement("h1");
+      newText.style.margin = '0';
+      newText.style.fontSize = '18px';
+      copyAttributes(titleModal, newText);
+      newText.innerText = titleModal.innerText;
+      titleModal.replaceWith(newText)
+    }
+
+    const beforeWeGetStartedText = beforeStartModal.querySelector(".info-modal__header-text");
+    if(beforeWeGetStartedText) {
+      const newText = document.createElement("h2");
+      newText.style.marginTop = '0';
+      copyAttributes(beforeWeGetStartedText, newText);
+      newText.innerText = beforeWeGetStartedText.innerText;
+      beforeWeGetStartedText.replaceWith(newText)
+    }
+
+    //Current autocomplete input order
+    const autocompleteInputs = ['given-name', 'family-name', 'email'];
+    const INPUT_EMAIL_INDEX = 2;
+    beforeStartModal.querySelectorAll("input").forEach((element, index) => {
+      if(autocompleteInputs[index]) {
+        element.setAttribute('autocomplete', autocompleteInputs[index]);
+
+        if(index === INPUT_EMAIL_INDEX) {
+          const placeholder = element.getAttribute('placeholder');
+          element.setAttribute('placeholder', placeholder + '(example@example.com)');
+        }
+
+        const placeholder = element.getAttribute('placeholder');
+        element.setAttribute('placeholder', placeholder + ' *');
+      }
+    });
+
+    const btnSubmit = beforeStartModal.querySelector("form button");
+    if (btnSubmit) {
+      listenToButtonDisabled(container, btnSubmit);
+    }
+    beforeStartModal.classList.add('changed');
+  }
+
+  let chatUiContainer = container.querySelector(".chat-ui.chat-view");
+  if (chatUiContainer) {
+      const title = chatUiContainer.querySelector('#chat-title');
+      if(title) {
+        const newText = document.createElement("h1");
+        newText.style.margin = '0';
+        newText.style.fontSize = '18px';
+        copyAttributes(title, newText);
+        newText.innerText = title.innerText;
+        title.replaceWith(newText)
+      }
+
+      const submitbtn = chatUiContainer.querySelector(".composer-bar__footer-button");
+      if(submitbtn) {
+        submitbtn.setAttribute('aria-label', 'Submit message');
+        listenToButtonDisabled(container, submitbtn)
+      }
+
+      const chat = chatUiContainer.querySelector(".chat-messages__list");
+      const uploadImgBtn = chatUiContainer.querySelector("[data-spec='image-upload']");
+
+      if(uploadImgBtn) {
+        uploadImgBtn.setAttribute('aria-label', 'Add file');
+      }
+
+      if(!chat) return;
+
+      const newChatListContainer = document.createElement("div");
+      newChatListContainer.setAttribute("role", "list");
+      copyAttributes(chat, newChatListContainer);
+      newChatListContainer.setAttribute('role', 'region');
+      newChatListContainer.setAttribute('aria-label', 'Conversation');
+
+      const h1Text = container.querySelector('h1') ? container.querySelector('h1').innerText : '';
+      const chatElements = chat.querySelectorAll(":scope > *");
+
+      chatElements.forEach((element, index) => {
+        if(element.classList.contains('message-container')) {
+          const newItem = document.createElement("div");
+          newItem.setAttribute('role', 'listitem')
+          copyAttributes(element, newItem);
+          newItem.innerHTML = element.innerHTML;
+
+          if(!newItem.classList.contains('changed')) {
+            const titleText = document.createElement("span");
+            makeVisuallyHidden(titleText);
+            titleText.innerText = h1Text;
+            newItem.prepend(titleText);
+
+            const youText = document.createElement("span");
+            makeVisuallyHidden(youText);
+            youText.innerText = 'You:';
+            newItem.classList.add('changed');
+
+            const bubble = newItem.querySelector(".message-bubble");
+            bubble.prepend(youText)
+
+            newChatListContainer.appendChild(newItem)
+          }
+
+        } else {
+          const newElement = document.createElement('h2');
+          copyAttributes(element, newElement);
+          newElement.innerText = element.innerText;
+          newElement.style.fontWeight = '400';
+          element.replaceWith(newElement);
+          newChatListContainer.appendChild(newElement)
+        }
+      });
+
+      chat.replaceWith(newChatListContainer);
+
+      const newChatElements = newChatListContainer.querySelectorAll(".chat-messages__list > *");
+      newChatElements[newChatElements.length - 1].setAttribute('tabindex', '-1');
+      newChatElements[newChatElements.length - 1].style.outline = 'none';
+      newChatElements[newChatElements.length - 1].focus();
+    return;
+  }
+}
+
+  function enableFocusTrap(container, toggleBtn) {
+    focusable = getFocusableElements(container, toggleBtn);
+    focusable.forEach(el => addFocusIndicator(el));
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
     
-//     function handleTrap(e) {
-//       if (e.key === 'Tab') {
-//         const active = getDeepActiveElement();
+    function handleTrap(e) {
+      if (e.key === 'Tab') {
+        const active = getDeepActiveElement();
 
-//         if (e.shiftKey) {
-//           if (active === first) {
-//             e.preventDefault();
-//             last.focus();
-//           }
-//         } else {
-//           if (active === last) {
-//             e.preventDefault();
-//             first.focus();
-//           }
-//         }
-//       }
-//     }
+        if (e.shiftKey) {
+          if (active === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (active === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      }
+    }
 
-//     function getDeepActiveElement(doc = document) {
-//       let active = doc.activeElement;
-//       while (active && active.shadowRoot && active.shadowRoot.activeElement) {
-//         active = active.shadowRoot.activeElement;
-//       }
-//       return active;
-//     }
+    function getDeepActiveElement(doc = document) {
+      let active = doc.activeElement;
+      while (active && active.shadowRoot && active.shadowRoot.activeElement) {
+        active = active.shadowRoot.activeElement;
+      }
+      return active;
+    }
 
-//     document.addEventListener("keydown", handleTrap);
+    document.addEventListener("keydown", handleTrap);
 
     
-//     setTimeout(() => {
-//       (first || toggleBtn).focus();
-//     }, 50);
+    setTimeout(() => {
+      (first || toggleBtn).focus();
+    }, 50);
 
-//   }
+  }
 
-//   function getFocusableElements(container, toggleBtn) {
-//     const focusables = [
-//       ...container.querySelectorAll(
-//       'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
-//     ), toggleBtn ? toggleBtn : []
-//     ];
-//     focusables.forEach(element => {
-//       addFocusIndicator(element)
-//     });
-//     return focusables;
-//   }
+  function getFocusableElements(container, toggleBtn) {
+    const focusables = [
+      ...container.querySelectorAll(
+      'button:not([disabled]), [href], input:not([type="file"]), select, textarea, [tabindex]:not([tabindex="-1"])'
+    ), toggleBtn ? toggleBtn : []
+    ];
+    focusables.forEach(element => {
+      addFocusIndicator(element)
+    });
+    return focusables;
+  }
 
-//   function addFocusIndicator(el) {
-//     if(!el) return;
+  function addFocusIndicator(el) {
+    if(!el) return;
 
-//     el.addEventListener("focus", () => {
-//       if(el.tagName.toLowerCase() === 'a') {
-//         el.style.outline = '2px solid #000';
-//       }else {
-//         el.style.outline = "none";
-//       }
-//       el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black';
-//     });
-//     el.addEventListener("blur", () => {
-//       if(el.tagName.toLowerCase() === 'a') {
-//         el.style.outline = 'none';
-//       }
+    el.addEventListener("focus", () => {
+      if(el.tagName.toLowerCase() === 'a') {
+        el.style.outline = '2px solid #000';
+      }else {
+        el.style.outline = "none";
+      }
+      el.style.boxShadow = '0 0 0 2px white, 0 0 0 4px black';
+    });
+    el.addEventListener("blur", () => {
+      if(el.tagName.toLowerCase() === 'a') {
+        el.style.outline = 'none';
+      }
 
-//       el.style.boxShadow = 'none';
-//     });
-//   }
+      el.style.boxShadow = 'none';
+    });
+  }
 
-//   function disableFocusTrap() {
-//     if (trapHandler) {
-//       document.removeEventListener("keydown", trapHandler);
-//       trapHandler = null;
-//       console.log("Focus trap disabled");
-//     }
-//   }
+  function disableFocusTrap() {
+    if (trapHandler) {
+      document.removeEventListener("keydown", trapHandler);
+      trapHandler = null;
+      console.log("Focus trap disabled");
+    }
+  }
 
-//   function listenToButtonDisabled(container, btnSubmit) {
-//     const observer = new MutationObserver((mutations) => {
-//         for (const mutation of mutations) {
-//           if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
-//             if (!btnSubmit.disabled) {
-//               const background = btnSubmit.querySelector('.background');
-//               if(background) {
-//                 background.style.background = '#000';
-//               }
-//               getFocusableElements(container);
-//             } else {
-//               getFocusableElements(container);
-//             }
-//           }
-//         }
-//       });
+  function listenToButtonDisabled(container, btnSubmit) {
+    const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.type === "attributes" && mutation.attributeName === "disabled") {
+            if (!btnSubmit.disabled) {
+              const background = btnSubmit.querySelector('.background');
+              if(background) {
+                background.style.background = '#000';
+              }
+              getFocusableElements(container);
+            } else {
+              getFocusableElements(container);
+            }
+          }
+        }
+      });
 
-//     observer.observe(btnSubmit, { attributes: true });
-//   }
+    observer.observe(btnSubmit, { attributes: true });
+  }
 
-//   function makeVisuallyHidden(el) {
-//     if (!el) return;
-//     el.style.clip = "rect(0 0 0 0)";
-//     el.style.border = "0";
-//     el.style.height = "1px";
-//     el.style.margin = "-1px";
-//     el.style.overflow = "hidden";
-//     el.style.padding = "0";
-//     el.style.position = "absolute";
-//     el.style.width = "1px";
-//   }
-// }
+  function makeVisuallyHidden(el) {
+    if (!el) return;
+    el.style.clip = "rect(0 0 0 0)";
+    el.style.border = "0";
+    el.style.height = "1px";
+    el.style.margin = "-1px";
+    el.style.overflow = "hidden";
+    el.style.padding = "0";
+    el.style.position = "absolute";
+    el.style.width = "1px";
+  }
+}
 
-//   fixChatbotAccessibility();
+  fixChatbotAccessibility();
 
-//   function addTitleToCustomerProfilePage() {
+  function addTitleToCustomerProfilePage() {
 
-//     if (window.location.href.includes("/profile")) {
-//       const observer = new MutationObserver(() => {
-//         const profileContainer = document.querySelector('.frcp-app');
+    if (window.location.href.includes("/profile")) {
+      const observer = new MutationObserver(() => {
+        const profileContainer = document.querySelector('.frcp-app');
 
 
-//         if(profileContainer) {
+        if(profileContainer) {
 
-//           const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
-//           const observer2 = new MutationObserver(mutations => {
-//             mutations.forEach(mutation => {
-//               if (mutation.type === "attributes" && mutation.attributeName === "active") {
-//                 const newValue = firstNavProfile.getAttribute("active");
-//                 if (newValue === "true") {
-//                   const title = document.createElement('h1');
-//                   title.innerText = 'Profile';
-//                   title.style.fontFamily = 'Lato';
-//                   title.style.textTransform = 'initial';
-//                   title.style.margin = '20px 0 0 0';
-//                   title.style.textAlign = 'center';
-//                   title.id = 'profile-id-title';
-//                   profileContainer.prepend(title);
-//                 } else {
-//                   const title = document.querySelector('#profile-id-title');
-//                   title.remove();
-//                 }
-//               }
-//             });
-//           });
+          const firstNavProfile = profileContainer.querySelector('.frcp-nav-button');
+          const observer2 = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+              if (mutation.type === "attributes" && mutation.attributeName === "active") {
+                const newValue = firstNavProfile.getAttribute("active");
+                if (newValue === "true") {
+                  const title = document.createElement('h1');
+                  title.innerText = 'Profile';
+                  title.style.fontFamily = 'Lato';
+                  title.style.textTransform = 'initial';
+                  title.style.margin = '20px 0 0 0';
+                  title.style.textAlign = 'center';
+                  title.id = 'profile-id-title';
+                  profileContainer.prepend(title);
+                } else {
+                  const title = document.querySelector('#profile-id-title');
+                  title.remove();
+                }
+              }
+            });
+          });
 
-//           observer2.observe(firstNavProfile, {
-//             attributes: true,
-//             attributeFilter: ["active"],
-//             attributeOldValue: true
-//           });
+          observer2.observe(firstNavProfile, {
+            attributes: true,
+            attributeFilter: ["active"],
+            attributeOldValue: true
+          });
           
-//           observer.disconnect();
-//         }
-//       });
+          observer.disconnect();
+        }
+      });
 
-//       observer.observe(document.body, {
-//         childList: true,
-//         subtree: true
-//       });
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
 
-//     }
-//   }
+    }
+  }
 
-//   addTitleToCustomerProfilePage();
+  addTitleToCustomerProfilePage();
 
-//   function fixHiddenTextProductLearnMore() {
-//     const targetNode = document.querySelector('.product-single__meta');
-//     if(!targetNode) return;
+  function fixHiddenTextProductLearnMore() {
+    const targetNode = document.querySelector('.product-single__meta');
+    if(!targetNode) return;
 
-//     const observer = new MutationObserver(mutations => {
-//       for (const mutation of mutations) {
-//         if (mutation.type === 'childList') {
-//           const el = document.querySelector('shopify-payment-terms');
-//           if (el && el.shadowRoot) {
-//             el.shadowRoot.querySelectorAll('#prequalAmountContainer div, #prequalAmountContainer button').forEach(element => {
-//               element.setAttribute('aria-hidden', 'true')
-//               element.setAttribute('tabindex', '-1')
-//             });
+    const observer = new MutationObserver(mutations => {
+      for (const mutation of mutations) {
+        if (mutation.type === 'childList') {
+          const el = document.querySelector('shopify-payment-terms');
+          if (el && el.shadowRoot) {
+            el.shadowRoot.querySelectorAll('#prequalAmountContainer div, #prequalAmountContainer button').forEach(element => {
+              element.setAttribute('aria-hidden', 'true')
+              element.setAttribute('tabindex', '-1')
+            });
             
-//             observer.disconnect();
-//           }
-//         }
-//       }
-//     });
+            observer.disconnect();
+          }
+        }
+      }
+    });
 
-//     observer.observe(targetNode, {
-//       childList: true,
-//       subtree: true
-//     });
-//   }
+    observer.observe(targetNode, {
+      childList: true,
+      subtree: true
+    });
+  }
 
-//   fixHiddenTextProductLearnMore();
+  fixHiddenTextProductLearnMore();
 
-//   function moveEmailSignUpFooterToMain() {
-//     const emailContainer = document.querySelector('.newsletter-container');
-//     const main = document.querySelector('#MainContent');
-//     if(emailContainer) {
+  function moveEmailSignUpFooterToMain() {
+    const emailContainer = document.querySelector('.newsletter-container');
+    const main = document.querySelector('#MainContent');
+    if(emailContainer) {
       
-//       main.appendChild(emailContainer.parentNode);
-//     }
-//   }
+      main.appendChild(emailContainer.parentNode);
+    }
+  }
 
-//   setTimeout(() => {
-//     moveEmailSignUpFooterToMain();
-//   }, 1000);
+  setTimeout(() => {
+    moveEmailSignUpFooterToMain();
+  }, 1000);
 
-//   function copyAttributes(source, target) {
-//     if (!source || !target) return;
+  function copyAttributes(source, target) {
+    if (!source || !target) return;
 
-//     for (let attr of source.attributes) {
-//       target.setAttribute(attr.name, attr.value);
-//     }
-//   }
+    for (let attr of source.attributes) {
+      target.setAttribute(attr.name, attr.value);
+    }
+  }
 
-//   function headerFocusTrap() {
-//       //Focus trap search
-//     const openButton = document.querySelector('#search--button');
-//     const searchForm = document.querySelector('predictive-search form');
-//     const closeButton = searchForm.querySelector('.btn--close-search');
+  function headerFocusTrap() {
+      //Focus trap search
+    const openButton = document.querySelector('#search--button');
+    const searchForm = document.querySelector('predictive-search form');
+    const closeButton = searchForm.querySelector('.btn--close-search');
     
-//     const inputSearchMain = document.querySelector('#main--search predictive-search input');
-//     const searchFormMain = document.querySelector('#main--search predictive-search form');
+    const inputSearchMain = document.querySelector('#main--search predictive-search input');
+    const searchFormMain = document.querySelector('#main--search predictive-search form');
     
-//     const closeButtonMain = searchFormMain ? searchFormMain.querySelector('.btn--close-search') : undefined;
+    const closeButtonMain = searchFormMain ? searchFormMain.querySelector('.btn--close-search') : undefined;
     
-//     let focusableElements = [];
-//     let firstEl, lastEl;
+    let focusableElements = [];
+    let firstEl, lastEl;
 
-//     function trapFocus(container) {
-//       const focusableElements = container.querySelectorAll(
-//         'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
-//       );
-//       firstEl = focusableElements[0];
-//       lastEl = focusableElements[focusableElements.length - 1];
+    function trapFocus(container) {
+      const focusableElements = container.querySelectorAll(
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]'
+      );
+      firstEl = focusableElements[0];
+      lastEl = focusableElements[focusableElements.length - 1];
     
-//       container.addEventListener('keydown', handleTrap);
-//     }
+      container.addEventListener('keydown', handleTrap);
+    }
     
-//     function handleTrap(e) {
-//       if (e.key === 'Tab') {
-//         if (e.shiftKey) {
-//           if (document.activeElement === firstEl) {
-//             e.preventDefault();
-//             lastEl.focus();
-//           }
-//         } else {
-//           if (document.activeElement === lastEl) {
-//             e.preventDefault();
-//             firstEl.focus();
-//           }
-//         }
-//       }
-//     }
+    function handleTrap(e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
+      }
+    }
     
-//     function openSearch() {
-//       searchForm.classList.add('is-active');
-//       trapFocus(searchForm);
-//       firstEl.focus();
-//     }
+    function openSearch() {
+      searchForm.classList.add('is-active');
+      trapFocus(searchForm);
+      firstEl.focus();
+    }
     
-//     function closeSearch() {
-//       searchForm.classList.remove('is-active');
-//       searchForm.removeEventListener('keydown', handleTrap);
-//       openButton.focus();
-//     }
+    function closeSearch() {
+      searchForm.classList.remove('is-active');
+      searchForm.removeEventListener('keydown', handleTrap);
+      openButton.focus();
+    }
 
-//     function closeSearchMain() {
-//       searchFormMain.removeEventListener('keydown', handleTrap);
-//       inputSearchMain.focus();
-//     }
+    function closeSearchMain() {
+      searchFormMain.removeEventListener('keydown', handleTrap);
+      inputSearchMain.focus();
+    }
 
-//     function openSearchMain() {
-//       trapFocus(searchFormMain);
-//       firstEl.focus();
-//     }
+    function openSearchMain() {
+      trapFocus(searchFormMain);
+      firstEl.focus();
+    }
     
-//     // Open/Close bindings
-//     openButton.addEventListener('click', openSearch);
-//     closeButton.addEventListener('click', closeSearch);
+    // Open/Close bindings
+    openButton.addEventListener('click', openSearch);
+    closeButton.addEventListener('click', closeSearch);
     
-//     if(searchFormMain) {
-//       inputSearchMain.addEventListener('input', openSearchMain);
-//       closeButtonMain.addEventListener('click', closeSearchMain);
-//     }
-//   }
+    if(searchFormMain) {
+      inputSearchMain.addEventListener('input', openSearchMain);
+      closeButtonMain.addEventListener('click', closeSearchMain);
+    }
+  }
 
-//   headerFocusTrap();
+  headerFocusTrap();
 
-//   function addAriaHiddenToBrAndHr() {
-//     document.querySelectorAll('br').forEach(el => {
-//       el.setAttribute('aria-hidden', 'true');
-//     });
+  function addAriaHiddenToBrAndHr() {
+    document.querySelectorAll('br').forEach(el => {
+      el.setAttribute('aria-hidden', 'true');
+    });
     
-//     document.querySelectorAll('hr').forEach(el => {
-//       el.setAttribute('aria-hidden', 'true');
-//     });
-//   }
+    document.querySelectorAll('hr').forEach(el => {
+      el.setAttribute('aria-hidden', 'true');
+    });
+  }
 })();
 
