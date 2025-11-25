@@ -8600,6 +8600,7 @@ theme.recentlyViewed = {
   new MutationObserver(() => {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
     if(!item || (item && item.getAttribute('ally-applied') === 'true')) return
+    console.log(item,'in')
     item.setAttribute('ally-applied', 'true');
       const superTitle = item.querySelector(".super-title");
       const primaryTitle = item.querySelector(".primary-title");
