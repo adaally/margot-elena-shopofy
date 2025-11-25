@@ -8606,8 +8606,7 @@ theme.recentlyViewed = {
     const item = document.querySelector('.rebuy-widget.widget-type-product.is-visible');
     if(!item || (item && item.getAttribute('ally-applied') === 'true')) return
     item.setAttribute('ally-applied', 'true');
-    console.log(item)
-          const superTitle = item.querySelector(".super-title");
+      const superTitle = item.querySelector(".super-title");
       const primaryTitle = item.querySelector(".primary-title");
       let newListText = '';
 
