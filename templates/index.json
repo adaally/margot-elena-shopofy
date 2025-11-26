@@ -116,43 +116,43 @@
     "slideshow_q3pbar": {
       "type": "slideshow",
       "blocks": {
-        "image_MLzmDd": {
+        "image_nbJJEg": {
           "type": "image",
           "settings": {
-            "top_subheading": "Treat Yourself",
-            "title": "Take 15%\nOff Sitewide",
+            "top_subheading": "Flash Fave:",
+            "title": "30% Off M.E. \nAdvent Calendar",
             "title_size": 40,
-            "subheading": "Hurry! Ends 7/7",
-            "link": "shopify://collections/mecc-best-sellers",
+            "subheading": "Countdown to Holiday Magic",
+            "link": "https://margotelena.com/products/margot-elena-advent-calendar-holiday-2025",
+            "link_text": "SHOP NOW",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/ME_WebBanners_FlashFave_advent_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanners_FlashFave_advent_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "image_MLzmDd": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "12 Days of Gorgeous Gifting",
+            "title": "Enjoy 20% Off Lollia",
+            "title_size": 40,
+            "subheading": "Modern Romantic Luxury",
+            "link": "shopify://collections/lollia",
             "link_text": "SHOP NOW",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
             "color_accent": "#101010",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/250702_MEWebBanner_15offSitewide_3_1.jpg",
-            "image_mobile": "shopify://shop_images/250702_MEWebBanner_15offSitewide_4_1_2e416b0b-e3eb-4fdf-83a8-d28cfcceccf3.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        },
-        "image_nbJJEg": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "Fresh-squeezed fragrances",
-            "title": "15% off all \ncitrus scents",
-            "title_size": 40,
-            "subheading": "Bright and beautiful for Summer",
-            "link": "https://margotelena.com/collections/citrus-eau-de-parfum",
-            "link_text": "SHOP NOW",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/ME_WebBanners_Citrus_3_1.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanners_Citrus4.jpg",
+            "image": "shopify://shop_images/ME_Dec2025RetailBanners_12Days_LOL_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_12Days_LOL_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
@@ -201,8 +201,8 @@
         }
       },
       "block_order": [
-        "image_MLzmDd",
         "image_nbJJEg",
+        "image_MLzmDd",
         "image_diNytA",
         "image_XafYPG"
       ],
