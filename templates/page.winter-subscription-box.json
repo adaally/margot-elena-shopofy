@@ -236,7 +236,7 @@
       ],
       "custom_css": [
         "@media only screen and (max-width: 600px) {.image-wrap.text-spacing.loaded {padding-bottom: 100% !important; }}",
-        "p {font-weight: bold; color: #8c7085;}"
+        "p {font-weight: bold; color: #de3a7b;}"
       ],
       "settings": {
         "title": "WHAT'S INSIDE",
