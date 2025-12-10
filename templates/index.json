@@ -247,7 +247,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "now trending",
-        "home_featured_products": "now-trending",
+        "home_featured_products": "stocking-stuffers",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
