@@ -14,6 +14,7 @@
       "blocks": {
         "image_dMYV9N": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "Everyone Loves Little Luxuries",
             "title": "15% Off Perfect\nStocking Stuffers",
@@ -247,7 +248,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "now trending",
-        "home_featured_products": "stocking-stuffers",
+        "home_featured_products": "now-trending",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
