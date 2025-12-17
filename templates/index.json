@@ -56,27 +56,27 @@
         },
         "image_b9TwtH": {
           "type": "image",
+          "disabled": true,
           "settings": {
-            "top_subheading": "3…2…1… Happy New Year",
-            "title": "Flash Sale + 26% Off\n Sitewide",
+            "top_subheading": "Hands down, the best skin saver",
+            "title": "Flash Fave: 30% off \nLollia Handcreme",
             "title_size": 40,
-            "subheading": "Ring In 2026 Beautifully | Ends 1/2",
-            "link": "https://margotelena.com/collections/flash-sale",
-            "link_text": "Flash Sale",
-            "link_2": "https://margotelena.com/collections/mecc-best-sellers",
-            "link_text_2": "Sitewide Sale",
+            "subheading": "Don’t Delay, Today only!",
+            "link": "https://margotelena.com/collections/lollia-full-size-handcremes",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
             "slide_text_color": "#000000",
             "color_accent": "#000000",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_Dec2025RetailBanners_NYFlashSale_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_NYFlashSale_4.jpg",
+            "image": "shopify://shop_images/ME_Dec2025RetailBanners_FlashFaveLOLHC_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_FlashFaveLOLHC_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
         },
         "image_gpQKBi": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "WE Made the List!",
             "title": "<h2 style=\"font-size: inherit;\">Oprah's Favorite:\nSnowdrop Bubble Bath</h2>",
