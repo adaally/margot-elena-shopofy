@@ -147,6 +147,14 @@
             "vertical": 67,
             "horizontal": 55
           }
+        },
+        "product_PUiTTx": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "vertical": 74,
+            "horizontal": 32
+          }
         }
       },
       "block_order": [
@@ -154,7 +162,8 @@
         "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0",
         "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1",
         "product_EdPYew",
-        "product_pzxwC9"
+        "product_pzxwC9",
+        "product_PUiTTx"
       ],
       "settings": {
         "title": "Dead Sexy: The Alchemy of Allure",
