@@ -63,8 +63,7 @@
             "slide_text_color": "#ffffff",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "{{ collection.metafields.collection.collection_desktop_image.value }}",
-            "image_mobile": "{{ collection.metafields.collection.mobile_image.value }}",
+            "image": "shopify://shop_images/260105_Q1Refresh_DS_CollectionBanner__1.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
@@ -73,15 +72,14 @@
       "block_order": [
         "template--15840835862683__56bbabf0-50de-443f-8a75-7db4102694ca-16825324593c7d0ce8-0"
       ],
-      "disabled": true,
       "settings": {
-        "section_height": "650px",
+        "section_height": "natural",
         "mobile_height": "auto",
         "parallax": false,
         "style": "bars",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 5,
-        "lazyload_images": true
+        "lazyload_images": false
       }
     },
     "collection-header": {
