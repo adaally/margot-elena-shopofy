@@ -46,6 +46,25 @@
         "lazyload_images": true
       }
     },
+    "background_image_text_mpFJNE": {
+      "type": "background-image-text",
+      "name": "t:sections.background-image-text.presets.large_image_with_text_box.name",
+      "settings": {
+        "subtitle": "Winter 2026:",
+        "title": "New Arrivals",
+        "text": "<p>A divine new chapter unfolds in TokyoMilk’s beloved Dead Sexy collection, accompanied by a host of irresistible new curiosities waiting to be discovered.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_aria-label": "",
+        "image": "shopify://shop_images/251023-TKM-Dead_Sexy_Collection-New_Arrivals-Winter_2025-409-16-9-rectangle.jpg",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": false
+      }
+    },
     "17673811464bd2d170": {
       "type": "_blocks",
       "blocks": {
@@ -294,6 +313,7 @@
   },
   "order": [
     "9eb6318c-0e69-4f05-af3b-9020cae216a1",
+    "background_image_text_mpFJNE",
     "17673811464bd2d170",
     "collection-header",
     "promo-grid",
