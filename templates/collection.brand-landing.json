@@ -63,8 +63,8 @@
             "slide_text_color": "#ffffff",
             "color_accent": "rgba(0,0,0,0)",
             "text_align": "vertical-center horizontal-center",
-            "image": "{{ collection.metafields.collection.collection_desktop_alt_image.value }}",
-            "image_mobile": "{{ collection.metafields.collection.mobile_alt_image.value }}",
+            "image": "{{ collection.metafields.collection.collection_desktop_image.value }}",
+            "image_mobile": "{{ collection.metafields.collection.mobile_image.value }}",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
