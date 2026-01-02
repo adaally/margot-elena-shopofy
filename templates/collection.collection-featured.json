@@ -108,35 +108,63 @@
     "3efccab4-c602-4ff5-ae68-f146f7121ab2": {
       "type": "hotspots",
       "blocks": {
+        "product_tPhWRn": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "vertical": 72,
+            "horizontal": 80
+          }
+        },
         "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0": {
           "type": "product",
           "settings": {
             "featured_product": "",
-            "vertical": 25,
-            "horizontal": 25
+            "vertical": 24,
+            "horizontal": 30
           }
         },
         "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1": {
           "type": "product",
           "settings": {
             "featured_product": "",
-            "vertical": 75,
-            "horizontal": 65
+            "vertical": 30,
+            "horizontal": 76
+          }
+        },
+        "product_EdPYew": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "vertical": 69,
+            "horizontal": 10
+          }
+        },
+        "product_pzxwC9": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "vertical": 67,
+            "horizontal": 55
           }
         }
       },
       "block_order": [
+        "product_tPhWRn",
         "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0",
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1"
+        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1",
+        "product_EdPYew",
+        "product_pzxwC9"
       ],
       "settings": {
         "title": "Dead Sexy: The Alchemy of Allure",
         "heading_size": "h2",
-        "heading_position": "left",
+        "heading_position": "center",
+        "image": "shopify://shop_images/260105_Q1Refresh_DS_Collection_ShopableBlock_1.jpg",
         "indent_image": false,
         "image_position": "left",
         "hotspot_style": "bag",
-        "hotspot_color": "#000000",
+        "hotspot_color": "#ffffff",
         "lazyload_images": true
       }
     },
