@@ -330,12 +330,12 @@
           "settings": {
             "subheading": "",
             "heading": "LOLLIA",
-            "textarea": "for the chic mom",
+            "textarea": "MODERN ROMATNIC LUXURY",
             "cta_text1": "Shop Now",
             "cta_link1": "shopify://collections/lollia",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/MothersDayRefresh_PhotoGrid_LOL.jpg",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_LOL.jpg",
             "video_url": "",
             "width": "50",
             "height": 800,
@@ -350,13 +350,13 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "THE COTTAGE GREENHOUSE",
-            "textarea": "for the garden loving mom",
+            "heading": "TOKYOMILK DARK",
+            "textarea": "A SHADE DARKER",
             "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/the-cottage-greenhouse",
+            "cta_link1": "shopify://collections/tokyomilk-dark",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/MothersDayRefresh_PhotoGrid_TCG_1.jpg",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_TKMD.jpg",
             "video_url": "",
             "width": "50",
             "height": 800,
@@ -371,13 +371,13 @@
           "type": "advanced",
           "settings": {
             "subheading": "",
-            "heading": "library of flowers",
-            "textarea": "for the free spirited mom",
+            "heading": "ARCHIVE",
+            "textarea": "AN EXTRAORDINARY ESCAPE",
             "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/library-of-flowers",
+            "cta_link1": "shopify://collections/archive",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/MothersDayRefresh_PhotoGrid_LOF_V2.jpg",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_ARC.jpg",
             "video_url": "",
             "width": "50",
             "height": 800,
@@ -393,12 +393,12 @@
           "settings": {
             "subheading": "",
             "heading": "tokyomilk",
-            "textarea": "for the cool mom",
+            "textarea": "OBJECTS TO DESIRE",
             "cta_text1": "Shop Now",
-            "cta_link1": "shopify://collections/tokyomilk",
+            "cta_link1": "shopify://collections/tokyomilk-new-arrivals",
             "cta_text2": "",
             "cta_link2": "",
-            "image": "shopify://shop_images/MothersDayRefresh_PhotoGrid_TKM_V2.jpg",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_TKM.jpg",
             "video_url": "",
             "width": "50",
             "height": 800,
@@ -416,7 +416,6 @@
         "b52e12cf-04d5-400c-a24c-79ef9f48796c",
         "promo-1"
       ],
-      "disabled": true,
       "custom_css": [
         ".type-advanced .promo-grid__content:not(.promo-grid__content--boxed):not( .promo-grid__content--sale ),.type-simple .promo-grid__content:not(.promo-grid__content--boxed):not( .promo-grid__content--sale ) {color: #000;}",
         ".btn {background-color: transparent; border-color: #000; color: #000;}"
@@ -501,6 +500,7 @@
         "advanced_AYDW7g",
         "advanced_HjrnzV"
       ],
+      "disabled": true,
       "custom_css": [
         ".type-advanced .promo-grid__content:not(.promo-grid__content--boxed):not( .promo-grid__content--sale ),.type-simple .promo-grid__content:not(.promo-grid__content--boxed):not( .promo-grid__content--sale ) {color: #000;}",
         ".btn {background-color: transparent; border-color: #000; color: #000;}"
@@ -516,7 +516,7 @@
     "6cfe9bba-d291-4063-806d-7728c5a49d9e": {
       "type": "text-and-image",
       "settings": {
-        "image": "shopify://shop_images/OFT_ME_Retail_OFTHomepage_5050.jpg",
+        "image": "shopify://shop_images/260105_Q1Refresh_OFT_5050.jpg",
         "image_mask": "none",
         "image2_mask": "none",
         "custom_id": "default-id",
@@ -537,6 +537,7 @@
     },
     "text_and_image_mFtzQV": {
       "type": "text-and-image",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/ME_Retail_FestiveFinds_5050.jpg",
         "image_mask": "none",
@@ -572,7 +573,7 @@
         "button_style": "primary",
         "align_text": "right",
         "image_width": "50",
-        "layout": "left",
+        "layout": "right",
         "divider": false,
         "top_padding": true,
         "bottom_padding": true,
@@ -596,8 +597,8 @@
             "slide_text_color": "#ffffff",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/ME_Home_Page_Sub_Box_Banner_Fall_2025.jpg",
-            "image_mobile": "shopify://shop_images/ME_Home_Page_Sub_Box_Banner_Fall_2025_Mobile.jpg",
+            "image": "shopify://shop_images/260105_Q1Refresh_SPsubbox_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_NA_Sub_Box_Banner_Mobile.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 2
           }
