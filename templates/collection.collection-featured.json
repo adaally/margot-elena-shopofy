@@ -105,6 +105,134 @@
       ],
       "settings": {}
     },
+    "3efccab4-c602-4ff5-ae68-f146f7121ab2": {
+      "type": "hotspots",
+      "blocks": {
+        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "vertical": 25,
+            "horizontal": 25
+          }
+        },
+        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1": {
+          "type": "product",
+          "settings": {
+            "featured_product": "",
+            "vertical": 75,
+            "horizontal": 65
+          }
+        }
+      },
+      "block_order": [
+        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0",
+        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1"
+      ],
+      "settings": {
+        "title": "Shop the look",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "indent_image": false,
+        "image_position": "left",
+        "hotspot_style": "bag",
+        "hotspot_color": "#000000",
+        "lazyload_images": true
+      }
+    },
+    "promo_grid_cdWi9R": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner_Na3XCw": {
+          "type": "banner",
+          "settings": {
+            "heading": "New Discoveries Await",
+            "text": "Explore what’s new across our other beloved collections",
+            "link": "",
+            "label": "",
+            "color_tint": "#000000",
+            "color_tint_opacity": 8,
+            "framed": false
+          }
+        },
+        "advanced_w3AWV9": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Lollia",
+            "textarea": "MODERN ROMANTIC LUXURY",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/lollia",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_LOL.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 800,
+            "text_size": 85,
+            "text_align": "vertical-bottom horizontal-center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "advanced_pGnxBH": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Tokyomilk Dark",
+            "textarea": "A SHADE DARKER",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/tokyomilk-dark",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_TKMD.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 800,
+            "text_size": 85,
+            "text_align": "vertical-bottom horizontal-center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        },
+        "advanced_PyHXVq": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "Archive",
+            "textarea": "AN EXTRAORDINARY ESCAPE",
+            "cta_text1": "Shop Now",
+            "cta_link1": "shopify://collections/archive",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify://shop_images/260105_Q1Refresh_NAgrid_ARC.jpg",
+            "video_url": "",
+            "width": "33",
+            "height": 800,
+            "text_size": 85,
+            "text_align": "vertical-bottom horizontal-center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner_Na3XCw",
+        "advanced_w3AWV9",
+        "advanced_pGnxBH",
+        "advanced_PyHXVq"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": true,
+        "lazyload_images": true
+      }
+    },
     "main-collection": {
       "type": "main-collection",
       "blocks": {
@@ -140,42 +268,6 @@
         "filter_style": "sidebar",
         "enable_color_swatches": false,
         "enable_sort": true
-      }
-    },
-    "3efccab4-c602-4ff5-ae68-f146f7121ab2": {
-      "type": "hotspots",
-      "blocks": {
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0": {
-          "type": "product",
-          "settings": {
-            "featured_product": "",
-            "vertical": 25,
-            "horizontal": 25
-          }
-        },
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1": {
-          "type": "product",
-          "settings": {
-            "featured_product": "",
-            "vertical": 75,
-            "horizontal": 65
-          }
-        }
-      },
-      "block_order": [
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0",
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Shop the look",
-        "heading_size": "h2",
-        "heading_position": "left",
-        "indent_image": false,
-        "image_position": "left",
-        "hotspot_style": "bag",
-        "hotspot_color": "#000000",
-        "lazyload_images": true
       }
     },
     "text_and_image_KRtTDi": {
@@ -228,6 +320,7 @@
     "background_image_text_mpFJNE",
     "17673811464bd2d170",
     "3efccab4-c602-4ff5-ae68-f146f7121ab2",
+    "promo_grid_cdWi9R",
     "main-collection",
     "text_and_image_KRtTDi",
     "1731094281f5aa10e3"
