@@ -105,65 +105,65 @@
       ],
       "settings": {}
     },
-    "3efccab4-c602-4ff5-ae68-f146f7121ab2": {
+    "hotspots_nWF83k": {
       "type": "hotspots",
       "blocks": {
-        "product_tPhWRn": {
+        "product_gpeeTr": {
           "type": "product",
           "settings": {
-            "featured_product": "",
+            "featured_product": "dead-sexy-large-handcreme",
             "vertical": 72,
             "horizontal": 80
           }
         },
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0": {
+        "product_Wtnxc7": {
           "type": "product",
           "settings": {
-            "featured_product": "",
+            "featured_product": "dead-sexy-alchemy-kit",
             "vertical": 24,
             "horizontal": 30
           }
         },
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1": {
+        "product_KFPjhH": {
           "type": "product",
           "settings": {
-            "featured_product": "",
+            "featured_product": "dead-sexy-square-soap",
             "vertical": 30,
             "horizontal": 76
           }
         },
-        "product_EdPYew": {
+        "product_3VcpCJ": {
           "type": "product",
           "settings": {
-            "featured_product": "",
+            "featured_product": "dead-sexy-travel-spray",
             "vertical": 69,
             "horizontal": 10
           }
         },
-        "product_pzxwC9": {
+        "product_nCtd8p": {
           "type": "product",
           "settings": {
-            "featured_product": "",
+            "featured_product": "dead-sexy-dry-body-oil",
             "vertical": 67,
             "horizontal": 55
           }
         },
-        "product_PUiTTx": {
+        "product_TBrinF": {
           "type": "product",
           "settings": {
-            "featured_product": "",
+            "featured_product": "dead-sexy-body-butter",
             "vertical": 74,
             "horizontal": 32
           }
         }
       },
       "block_order": [
-        "product_tPhWRn",
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-0",
-        "template--15818762256539__3efccab4-c602-4ff5-ae68-f146f7121ab2-1679333201e37ada55-1",
-        "product_EdPYew",
-        "product_pzxwC9",
-        "product_PUiTTx"
+        "product_gpeeTr",
+        "product_Wtnxc7",
+        "product_KFPjhH",
+        "product_3VcpCJ",
+        "product_nCtd8p",
+        "product_TBrinF"
       ],
       "settings": {
         "title": "Dead Sexy: The Alchemy of Allure",
@@ -356,7 +356,7 @@
     "collection-header",
     "background_image_text_mpFJNE",
     "17673811464bd2d170",
-    "3efccab4-c602-4ff5-ae68-f146f7121ab2",
+    "hotspots_nWF83k",
     "promo_grid_cdWi9R",
     "main-collection",
     "text_and_image_KRtTDi",
