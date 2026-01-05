@@ -595,10 +595,10 @@
             "link_2": "shopify://products/seasonal-discovery-box",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
+            "color_accent": "#000000",
             "text_align": "vertical-center horizontal-right",
             "image": "shopify://shop_images/260105_Q1Refresh_SPsubbox_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_NA_Sub_Box_Banner_Mobile.jpg",
+            "image_mobile": "shopify://shop_images/260105_Q1Refresh_SPsubbox_V3_dc82e0a1-23de-4ff4-868a-0600800ce3a1.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 2
           }
