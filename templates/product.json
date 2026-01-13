@@ -204,56 +204,6 @@
         "space_around": true
       }
     },
-    "be286b7e-186f-4589-ae26-8cd9b839ddbc": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Explore Breathe No. 19",
-        "home_featured_products": "breathe",
-        "per_row": 4,
-        "rows": 1,
-        "mobile_scrollable": false,
-        "view_all": true,
-        "divider": false
-      }
-    },
-    "7c713958-2267-4344-a422-66c08929f185": {
-      "type": "slideshow",
-      "blocks": {
-        "template--15818762682523__7c713958-2267-4344-a422-66c08929f185-1680886650a79dc0cd-0": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "Banner or Video",
-            "title": "",
-            "title_size": 80,
-            "subheading": "",
-            "link": "",
-            "link_text": "",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "rgba(0,0,0,0)",
-            "text_align": "vertical-center horizontal-center",
-            "image": "shopify://shop_images/230405_ME_webbanner_relax.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "template--15818762682523__7c713958-2267-4344-a422-66c08929f185-1680886650a79dc0cd-0"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_height": "natural",
-        "mobile_height": "auto",
-        "parallax": false,
-        "style": "bars",
-        "autoplay": true,
-        "autoplay_speed": 5,
-        "lazyload_images": true
-      }
-    },
     "99669706-f35e-4738-9524-2af9d10d4fe3": {
       "type": "text-with-icons",
       "blocks": {
@@ -310,109 +260,11 @@
         "divider": false
       }
     },
-    "b13803d3-37dd-4781-ada1-35f527ed3ea9": {
-      "type": "text-columns",
-      "blocks": {
-        "template--15856104243355__b13803d3-37dd-4781-ada1-35f527ed3ea9-1685986234a5591090-0": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        },
-        "template--15856104243355__b13803d3-37dd-4781-ada1-35f527ed3ea9-1685986234a5591090-1": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        },
-        "template--15856104243355__b13803d3-37dd-4781-ada1-35f527ed3ea9-1685986234a5591090-2": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image_mask": "none",
-            "image_width": 650,
-            "title": "Example title",
-            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>",
-            "button_label": "Optional button",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--15856104243355__b13803d3-37dd-4781-ada1-35f527ed3ea9-1685986234a5591090-0",
-        "template--15856104243355__b13803d3-37dd-4781-ada1-35f527ed3ea9-1685986234a5591090-1",
-        "template--15856104243355__b13803d3-37dd-4781-ada1-35f527ed3ea9-1685986234a5591090-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "align_text": "center",
-        "divider": false
-      }
-    },
     "sub": {
       "type": "product-full-width",
       "disabled": true,
       "settings": {
         "max_width": true
-      }
-    },
-    "text-and-image": {
-      "type": "text-and-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/230405_ME_webbanner_relax3.jpg",
-        "image_mask": "portrait",
-        "image2_mask": "square",
-        "custom_id": "default-id",
-        "subtitle": "",
-        "title": "Lorem Ipsum",
-        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "50",
-        "layout": "right",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true,
-        "lazyload_images": true
-      }
-    },
-    "text-and-image2": {
-      "type": "text-and-image",
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/230403_ME_WebBanner_CYOpetitetreatMObile.jpg",
-        "image_mask": "portrait",
-        "image2_mask": "square",
-        "custom_id": "default-id",
-        "subtitle": "",
-        "title": "Lorem Ipsum",
-        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "image_width": "50",
-        "layout": "left",
-        "divider": false,
-        "top_padding": true,
-        "bottom_padding": true,
-        "lazyload_images": true
       }
     },
     "16996376397d4f0b36": {
@@ -434,19 +286,6 @@
       "settings": {
         "full_width": false,
         "space_around": true
-      }
-    },
-    "7efa4722-894e-4396-a8bd-01a7df616222": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Bestsellers",
-        "home_featured_products": "all",
-        "per_row": 4,
-        "rows": 1,
-        "mobile_scrollable": false,
-        "view_all": false,
-        "divider": false
       }
     },
     "product-recommendations": {
@@ -516,15 +355,9 @@
   "order": [
     "main",
     "1338e8510847647ee350",
-    "be286b7e-186f-4589-ae26-8cd9b839ddbc",
-    "7c713958-2267-4344-a422-66c08929f185",
     "99669706-f35e-4738-9524-2af9d10d4fe3",
-    "b13803d3-37dd-4781-ada1-35f527ed3ea9",
     "sub",
-    "text-and-image",
-    "text-and-image2",
     "16996376397d4f0b36",
-    "7efa4722-894e-4396-a8bd-01a7df616222",
     "product-recommendations",
     "recently-viewed",
     "collection-return",
