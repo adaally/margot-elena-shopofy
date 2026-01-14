@@ -26,10 +26,10 @@
             "slide_text_color": "#ffffff",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_12641e0f-1139-41db-9ee3-f71f7f2be92a.jpg",
+            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
             "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Mobile_0d321efa-1ec5-440f-8e97-b68805488935.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 20
+            "overlay_opacity": 0
           }
         },
         "image_yTNJwV": {
