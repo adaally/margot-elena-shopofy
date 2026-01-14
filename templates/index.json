@@ -124,7 +124,7 @@
         "image_N7Lerk"
       ],
       "custom_css": [
-        "@media screen and (max-width: 768px) {[data-index=\"1\"] div {color: #000000; }}"
+        "@media screen and (max-width: 768px) {[data-index=\"0\"] div {color: #000000; }}"
       ],
       "settings": {
         "section_height": "natural",
