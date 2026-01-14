@@ -27,13 +27,14 @@
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
             "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
-            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Mobile_0d321efa-1ec5-440f-8e97-b68805488935.jpg",
+            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark_Mobile.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 8
           }
         },
         "image_yTNJwV": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "An Unforgettable Introduction",
             "title": "Meet the New \nDead Sexy Luxuries",
@@ -56,19 +57,19 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "top_subheading": "Hands down, the best skin saver",
-            "title": "Flash Fave: 30% off \nLollia Handcreme",
+            "top_subheading": "Awaken desire…",
+            "title": "Free Little Luxe Parfum:\nDead Sexy or Wish",
             "title_size": 40,
-            "subheading": "Don’t Delay, Today only!",
+            "subheading": "With an $85 \"Wuthering Heights\" purchase.",
             "link": "https://margotelena.com/collections/lollia-full-size-handcremes",
             "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#000000",
-            "color_accent": "#000000",
+            "slide_text_color": "#ffffff",
+            "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_Dec2025RetailBanners_FlashFaveLOLHC_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_FlashFaveLOLHC_4.jpg",
+            "image": "shopify://shop_images/WH_x_ME_GWP_RetailSiteBanner_c844f230-f5c7-4c67-a92e-5a848f44dd59.jpg",
+            "image_mobile": "shopify://shop_images/WH_x_ME_GWP_RetailSiteBanner_2_4e6833c6-2eea-4ea8-ac6d-da260de25971.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
