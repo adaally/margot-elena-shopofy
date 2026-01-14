@@ -34,7 +34,6 @@
         },
         "image_yTNJwV": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "An Unforgettable Introduction",
             "title": "Meet the New \nDead Sexy Luxuries",
@@ -124,7 +123,9 @@
         "image_gpQKBi",
         "image_N7Lerk"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (max-width: 768px) {[data-index=\"1\"] div {color: #000000; }}"
+      ],
       "settings": {
         "section_height": "natural",
         "mobile_height": "auto",
