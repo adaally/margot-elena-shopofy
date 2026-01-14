@@ -12,29 +12,9 @@
     "c2fb0821-ff02-4e44-9e6e-17336a5f1d27": {
       "type": "slideshow",
       "blocks": {
-        "image_FbqybX": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "It’s National Bubble Bath Day!",
-            "title": "Enjoy 15% off \nAll Bubble Bath",
-            "title_size": 40,
-            "subheading": "Treat yourself to a luxurious escape",
-            "link": "shopify://collections/bubble-bath",
-            "link_text": "Shop now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#000000",
-            "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Jan26_ME_RetailBanners_NatBBDay_3.jpg",
-            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_NatBBDay_4.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        },
         "image_yTNJwV": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "An Unforgettable Introduction",
             "title": "Meet the New \nDead Sexy Luxuries",
@@ -53,25 +33,24 @@
             "overlay_opacity": 0
           }
         },
-        "image_N7Lerk": {
+        "image_FbqybX": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "top_subheading": "3…2…1… Happy New Year",
-            "title": "Flash Sale + 26% Off\n Sitewide",
+            "top_subheading": "An irresistible encounter",
+            "title": "”Wuthering Heights” \nx Margot Elena",
             "title_size": 40,
-            "subheading": "Ring In 2026 Beautifully | Ends 1/2",
-            "link": "https://margotelena.com/collections/flash-sale",
-            "link_text": "Flash Sale",
-            "link_2": "https://margotelena.com/collections/mecc-best-sellers",
-            "link_text_2": "Sitewide Sale",
-            "slide_text_color": "#000000",
+            "subheading": "Come Undone…",
+            "link": "shopify://collections/bubble-bath",
+            "link_text": "Shop now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
             "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_Dec2025RetailBanners_NYFlashSale_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_NYFlashSale_4.jpg",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_12641e0f-1139-41db-9ee3-f71f7f2be92a.jpg",
+            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Mobile_0d321efa-1ec5-440f-8e97-b68805488935.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 0
+            "overlay_opacity": 14
           }
         },
         "image_b9TwtH": {
@@ -115,14 +94,35 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
+        },
+        "image_N7Lerk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "3…2…1… Happy New Year",
+            "title": "Flash Sale + 26% Off\n Sitewide",
+            "title_size": 40,
+            "subheading": "Ring In 2026 Beautifully | Ends 1/2",
+            "link": "https://margotelena.com/collections/flash-sale",
+            "link_text": "Flash Sale",
+            "link_2": "https://margotelena.com/collections/mecc-best-sellers",
+            "link_text_2": "Sitewide Sale",
+            "slide_text_color": "#000000",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/ME_Dec2025RetailBanners_NYFlashSale_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_NYFlashSale_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
         }
       },
       "block_order": [
-        "image_FbqybX",
         "image_yTNJwV",
-        "image_N7Lerk",
+        "image_FbqybX",
         "image_b9TwtH",
-        "image_gpQKBi"
+        "image_gpQKBi",
+        "image_N7Lerk"
       ],
       "custom_css": [],
       "settings": {
