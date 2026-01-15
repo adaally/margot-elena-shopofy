@@ -14,12 +14,12 @@
     "announcement": {
       "type": "announcement",
       "blocks": {
-        "c0fb3303-c3c7-4564-9afe-e8fffd674bae": {
+        "announcement_gAib66": {
           "type": "announcement",
           "settings": {
-            "text": "Dead Sexy New Arrivals",
+            "text": "\"WUTHERING HEIGHTS\" X M.E.",
             "link_text": "Shop Now",
-            "link": "shopify://collections/new"
+            "link": "shopify://collections/wutheringheightsxmargotelena"
           }
         },
         "7d630a89-c2cf-42f5-b13e-21ba37ba037c": {
@@ -40,7 +40,7 @@
         }
       },
       "block_order": [
-        "c0fb3303-c3c7-4564-9afe-e8fffd674bae",
+        "announcement_gAib66",
         "7d630a89-c2cf-42f5-b13e-21ba37ba037c",
         "announcement-0"
       ],
