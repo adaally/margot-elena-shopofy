@@ -9290,6 +9290,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           cart.querySelectorAll('.rebuy-cart__flyout-item-product-title, .rebuy-product-title-link').forEach(link => {
             link.removeAttribute('aria-label');
             link.removeAttribute('role')
+            link.removeAttribute('aria-level')
           });
 
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
