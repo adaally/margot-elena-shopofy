@@ -9263,17 +9263,19 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         progressBar.removeAttribute("tabindex");
       }
 
-      new MutationObserver(() => {
-        const priceTag = cart.querySelector('.rebuy-money span[tabindex="0"]');
-        console.log(priceTag, 'HERE')
-        if(priceTag) {
-          priceTag.removeAttribute('tabindex');
-        }
-      }).observe(cart, {subtree: true, childList: true});
+
 
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
         if(!containerWeLove) return;
+
+        new MutationObserver(() => {
+          const priceTag = cart.querySelector('.rebuy-money span[tabindex="0"]');
+          console.log(priceTag, 'HERE')
+          if(priceTag) {
+            priceTag.removeAttribute('tabindex');
+          }
+        }).observe(containerWeLove, {subtree: true, childList: true});
 
         setTimeout(() => {
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
