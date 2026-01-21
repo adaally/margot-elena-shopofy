@@ -9367,6 +9367,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
 
           cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
             const alt = element.getAttribute('alt');
+            console.log(alt,'img')
             if(!alt) {
               const parent = element.closest('.rebuy-product-block');
               if(parent) {
