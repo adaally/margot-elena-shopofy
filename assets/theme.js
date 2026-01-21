@@ -9270,11 +9270,13 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         if(!containerWeLove) return;
         console.log(containerWeLove, 'containerWeLove')
         new MutationObserver(() => {
-          const priceTag = containerWeLove.querySelector('.rebuy-money span[tabindex="0"]');
-          console.log(priceTag, 'HERE')
-          if(priceTag) {
+          containerWeLove.querySelectorAll('.rebuy-money span[tabindex="0"]').forEach(priceTag => {
             priceTag.removeAttribute('tabindex');
-          }
+          });
+          // console.log(priceTag, 'HERE')
+          // if(priceTag) {
+          //   priceTag.removeAttribute('tabindex');
+          // }
         }).observe(containerWeLove, {subtree: true, childList: true});
 
         setTimeout(() => {
