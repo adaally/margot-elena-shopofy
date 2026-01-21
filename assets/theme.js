@@ -9264,6 +9264,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
       }
 
       const addedProductsContainer = cart.querySelector('.rebuy-cart__flyout-content');
+      console.log(addedProductsContainer, cart)
       if(addedProductsContainer) {
         addedProductsContainer.removeAttribute('tabindex')
       }
