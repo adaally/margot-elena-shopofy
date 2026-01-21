@@ -9268,7 +9268,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
         if(!containerWeLove) return;
-        console.log(containerWeLove, 'containerWeLove')
+
         const productsGrid = containerWeLove.querySelector('.rebuy-product-grid');
         if(productsGrid) {
           productsGrid.removeAttribute('tabindex');
@@ -9277,14 +9277,11 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           });
         }
         new MutationObserver(() => {
-          containerWeLove.querySelectorAll('.rebuy-money span[tabindex="0"]').forEach(priceTag => {
+          cart.querySelectorAll('.rebuy-money span[tabindex="0"]').forEach(priceTag => {
             priceTag.removeAttribute('tabindex');
           });
-          // console.log(priceTag, 'HERE')
-          // if(priceTag) {
-          //   priceTag.removeAttribute('tabindex');
-          // }
-        }).observe(containerWeLove, {subtree: true, childList: true});
+        }).observe(cart, {subtree: true, childList: true});
+
 
         setTimeout(() => {
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
