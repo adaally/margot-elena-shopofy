@@ -9263,6 +9263,13 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         progressBar.removeAttribute("tabindex");
       }
 
+      new MutationObserver(() => {
+        const priceTag = cart.querySelector('.rebuy-money [tabindex="0"]');
+        if(priceTag) {
+          priceTag.removeAttribute('tabindex');
+        }
+      }).observe(cart, {subtree: true, childList: true});
+
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
         if(!containerWeLove) return;
