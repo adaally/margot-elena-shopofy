@@ -9372,10 +9372,9 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
               const parent = element.closest('.rebuy-product-block');
               if(parent) {
                 const newAlt = parent.querySelector('.rebuy-product-title-link').innerText;
-                newAlt.setAttribute('alt', newAlt);
+                element.setAttribute('alt', newAlt);
               }
             }
-            element.setAttribute("alt", "");
           });
         }, 3000);
 
