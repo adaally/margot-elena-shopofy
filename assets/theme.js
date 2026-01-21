@@ -9268,7 +9268,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
         if(!containerWeLove) return;
-
+        console.log(containerWeLove, 'containerWeLove')
         new MutationObserver(() => {
           const priceTag = cart.querySelector('.rebuy-money span[tabindex="0"]');
           console.log(priceTag, 'HERE')
