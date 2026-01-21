@@ -9264,16 +9264,10 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
       }
 
       const addedProductsContainer = cart.querySelector('.rebuy-cart__flyout-items');
-      console.log(addedProductsContainer, cart)
       if(addedProductsContainer) {
         addedProductsContainer.removeAttribute('tabindex');
       }
-
-      cart.querySelectorAll('.rebuy-cart__flyout-item-product-title, .rebuy-product-title-link').forEach(link => {
-        link.removeAttribute('aria-label');
-        link.removeAttribute('role')
-      });
-
+      
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
         if(!containerWeLove) return;
