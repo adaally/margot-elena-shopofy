@@ -9274,11 +9274,11 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           //   link.replaceWith(newElement);
           // });
 
-          cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
-            const newElement = document.createElement("span");
-            newElement.innerHTML = link.innerHTML;
-            link.replaceWith(newElement);
-          });
+          // cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
+          //   const newElement = document.createElement("span");
+          //   newElement.innerHTML = link.innerHTML;
+          //   link.replaceWith(newElement);
+          // });
           
           // cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
           //   if(primaryTitle) {
@@ -9326,23 +9326,23 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           //   element.replaceWith(newContainerLink);
           // });
           
-          cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
-            element.removeAttribute("aria-level");
-            element.removeAttribute("role");
-          });
+          // cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
+          //   element.removeAttribute("aria-level");
+          //   element.removeAttribute("role");
+          // });
 
-          const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
-          if(emptyCartTitle) {
-            const newTitle = document.createElement("h2");
-            newTitle.innerText = emptyCartTitle.innerText;
-            newTitle.className = emptyCartTitle.className;
-            newTitle.classList.add("h4");
-            emptyCartTitle.replaceWith(newTitle);
-          }
+          // const emptyCartTitle = cart.querySelector(".rebuy-cart__flyout-empty-cart h4");
+          // if(emptyCartTitle) {
+          //   const newTitle = document.createElement("h2");
+          //   newTitle.innerText = emptyCartTitle.innerText;
+          //   newTitle.className = emptyCartTitle.className;
+          //   newTitle.classList.add("h4");
+          //   emptyCartTitle.replaceWith(newTitle);
+          // }
 
-          cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
-            element.setAttribute("alt", "");
-          });
+          // cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
+          //   element.setAttribute("alt", "");
+          // });
         }, 3000);
 
         observerContentWeLove.disconnect();
