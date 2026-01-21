@@ -9269,19 +9269,19 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
 
         setTimeout(() => {
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
-            // const newElement = document.createElement("span");
-            // newElement.innerHTML = link.innerHTML;
-            // link.replaceWith(newElement);
-            link.tabindex = '-1';
-            link.setAttribute('aria-hidden', 'true');
+            const newElement = document.createElement("span");
+            newElement.innerHTML = link.innerHTML;
+            link.replaceWith(newElement);
+            // link.tabindex = '-1';
+            // link.setAttribute('aria-hidden', 'true');
           });
 
           cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
-            // const newElement = document.createElement("span");
-            // newElement.innerHTML = link.innerHTML;
-            // link.replaceWith(newElement);
-            link.tabindex = '-1';
-            link.setAttribute('aria-hidden', 'true');
+            const newElement = document.createElement("span");
+            newElement.innerHTML = link.innerHTML;
+            link.replaceWith(newElement);
+            // link.tabindex = '-1';
+            // link.setAttribute('aria-hidden', 'true');
           });
           
           cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
