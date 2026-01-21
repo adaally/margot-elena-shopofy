@@ -9365,9 +9365,9 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             emptyCartTitle.replaceWith(newTitle);
           }
 
-          cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
-            element.setAttribute("alt", "");
-          });
+          // cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
+          //   element.setAttribute("alt", "");
+          // });
         }, 3000);
 
         observerContentWeLove.disconnect();
