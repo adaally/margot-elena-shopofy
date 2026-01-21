@@ -9272,6 +9272,9 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         const productsGrid = containerWeLove.querySelector('.rebuy-product-grid');
         if(productsGrid) {
           productsGrid.removeAttribute('tabindex');
+          productsGrid.querySelectorAll('.rebuy-product-block').forEach(element => {
+            element.removeAttribute('aria-label');
+          });
         }
         new MutationObserver(() => {
           containerWeLove.querySelectorAll('.rebuy-money span[tabindex="0"]').forEach(priceTag => {
