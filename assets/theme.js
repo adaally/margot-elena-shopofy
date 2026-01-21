@@ -9371,7 +9371,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             if(!alt) {
               const parent = element.closest('.rebuy-product-block');
               if(parent) {
-                const newAlt = parent.querySelector('.rebuy-product-title-link')?.getAttribute('aria-label');
+                const newAlt = parent.querySelector('.rebuy-product-title-link').innerText;
                 newAlt.setAttribute('alt', newAlt);
               }
             }
