@@ -9365,9 +9365,17 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             emptyCartTitle.replaceWith(newTitle);
           }
 
-          // cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
-          //   element.setAttribute("alt", "");
-          // });
+          cart.querySelectorAll(".rebuy-product-grid img").forEach(element => {
+            const alt = element.getAttribute('alt');
+            if(!alt) {
+              const parent = element.closest('.rebuy-product-block');
+              if(parent) {
+                const newAlt = parent.querySelector('.rebuy-product-title-link')?.getAttribute('aria-label');
+                newAlt.setAttribute('alt', newAlt);
+              }
+            }
+            element.setAttribute("alt", "");
+          });
         }, 3000);
 
         observerContentWeLove.disconnect();
