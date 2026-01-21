@@ -9268,6 +9268,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         if(!containerWeLove) return;
 
         setTimeout(() => {
+          console.log('APPLIED')
           // cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
           //   const newElement = document.createElement("span");
           //   newElement.innerHTML = link.innerHTML;
