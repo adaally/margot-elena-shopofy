@@ -9263,10 +9263,10 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         progressBar.removeAttribute("tabindex");
       }
 
-      const addedProductsContainer = cart.querySelector('.rebuy-cart__flyout-content');
+      const addedProductsContainer = cart.querySelector('.rebuy-cart__flyout-items');
       console.log(addedProductsContainer, cart)
       if(addedProductsContainer) {
-        addedProductsContainer.removeAttribute('tabindex')
+        addedProductsContainer.removeAttribute('tabindex');
       }
 
       const observerContentWeLove = new MutationObserver(() => {
