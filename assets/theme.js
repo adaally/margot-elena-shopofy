@@ -9267,7 +9267,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
       if(addedProductsContainer) {
         addedProductsContainer.removeAttribute('tabindex');
       }
-      
+
       const observerContentWeLove = new MutationObserver(() => {
         const containerWeLove = cart.querySelector('.rebuy-widget-content');
         if(!containerWeLove) return;
@@ -9293,18 +9293,12 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           });
 
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
-            // const newElement = document.createElement("span");
-            // newElement.innerHTML = link.innerHTML;
-            // link.replaceWith(newElement);
             link.setAttribute('href', link.getAttribute('href')+ '?')
             link.tabIndex = '-1';
             link.setAttribute('aria-hidden', 'true');
           });
 
           cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
-            // const newElement = document.createElement("span");
-            // newElement.innerHTML = link.innerHTML;
-            // link.replaceWith(newElement);
             link.setAttribute('href', link.getAttribute('href')+ '?')
             link.tabIndex = '-1';
             link.setAttribute('aria-hidden', 'true');
@@ -9321,11 +9315,6 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           })
 
           cart.querySelectorAll('.rebuy-product-title').forEach(element => {
-            // const titleReplacement = document.createElement("div");
-            // titleReplacement.innerHTML = element.innerHTML;
-            // titleReplacement.style.letterSpacing = '4.2px'; 
-            // titleReplacement.className = element.className;
-            // element.replaceWith(titleReplacement);
             element.setAttribute('role', 'presentation');
           });
 
@@ -9341,23 +9330,6 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             }
           });
 
-          cart.querySelectorAll(".rebuy-product-info").forEach(element => {
-            // const titleLink = element.querySelector("a");
-            // const replaceLinkElement = document.createElement("span");
-            // replaceLinkElement.innerText = titleLink.innerText;
-            // replaceLinkElement.className = titleLink.className;
-            // titleLink.replaceWith(replaceLinkElement);
-
-            // const newContainerLink = document.createElement("a");
-            // newContainerLink.className = title.className;
-            // newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
-            // newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
-            // newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
-            // newContainerLink.classList.add(element.className);
-            // newContainerLink.innerHTML = element.innerHTML;
-            // element.replaceWith(newContainerLink);
-          });
-          
           cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
             element.removeAttribute("aria-level");
             element.removeAttribute("role");
