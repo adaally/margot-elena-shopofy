@@ -9293,42 +9293,43 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             }
           })
 
-          // cart.querySelectorAll('.rebuy-product-title').forEach(element => {
-          //   const titleReplacement = document.createElement("div");
-          //   titleReplacement.innerHTML = element.innerHTML;
-          //   titleReplacement.style.letterSpacing = '4.2px'; 
-          //   titleReplacement.className = element.className;
-          //   element.replaceWith(titleReplacement);
-          // });
+          cart.querySelectorAll('.rebuy-product-title').forEach(element => {
+            // const titleReplacement = document.createElement("div");
+            // titleReplacement.innerHTML = element.innerHTML;
+            // titleReplacement.style.letterSpacing = '4.2px'; 
+            // titleReplacement.className = element.className;
+            // element.replaceWith(titleReplacement);
+            element.setAttribute('role', 'presentation');
+          });
 
-          // document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
-          //   const element = item.querySelector('a');
-          //   if(element) {
-          //     const replaceLinkElement = document.createElement("span");
-          //     replaceLinkElement.innerHTML = element.innerHTML;
-          //     replaceLinkElement.className = element.className;
-          //     replaceLinkElement.style.display = 'block';
-          //     replaceLinkElement.style.height = '100px';
-          //     element.replaceWith(replaceLinkElement);
-          //   }
-          // });
+          document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
+            const element = item.querySelector('a');
+            if(element) {
+              const replaceLinkElement = document.createElement("span");
+              replaceLinkElement.innerHTML = element.innerHTML;
+              replaceLinkElement.className = element.className;
+              replaceLinkElement.style.display = 'block';
+              replaceLinkElement.style.height = '100px';
+              element.replaceWith(replaceLinkElement);
+            }
+          });
 
-          // cart.querySelectorAll(".rebuy-product-info").forEach(element => {
-          //   const titleLink = element.querySelector("a");
-          //   const replaceLinkElement = document.createElement("span");
-          //   replaceLinkElement.innerText = titleLink.innerText;
-          //   replaceLinkElement.className = titleLink.className;
-          //   titleLink.replaceWith(replaceLinkElement);
+          cart.querySelectorAll(".rebuy-product-info").forEach(element => {
+            const titleLink = element.querySelector("a");
+            const replaceLinkElement = document.createElement("span");
+            replaceLinkElement.innerText = titleLink.innerText;
+            replaceLinkElement.className = titleLink.className;
+            titleLink.replaceWith(replaceLinkElement);
 
-          //   const newContainerLink = document.createElement("a");
-          //   newContainerLink.className = title.className;
-          //   newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
-          //   newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
-          //   newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
-          //   newContainerLink.classList.add(element.className);
-          //   newContainerLink.innerHTML = element.innerHTML;
-          //   element.replaceWith(newContainerLink);
-          // });
+            const newContainerLink = document.createElement("a");
+            newContainerLink.className = title.className;
+            newContainerLink.setAttribute("href", titleLink.getAttribute("href"))
+            newContainerLink.setAttribute("aria-label", titleLink.getAttribute("aria-label"))
+            newContainerLink.setAttribute("rel", titleLink.getAttribute("rel"))
+            newContainerLink.classList.add(element.className);
+            newContainerLink.innerHTML = element.innerHTML;
+            element.replaceWith(newContainerLink);
+          });
           
           cart.querySelectorAll(".rebuy-product-info a").forEach(element => {
             element.removeAttribute("aria-level");
