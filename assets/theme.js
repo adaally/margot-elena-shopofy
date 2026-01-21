@@ -9292,6 +9292,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             // const newElement = document.createElement("span");
             // newElement.innerHTML = link.innerHTML;
             // link.replaceWith(newElement);
+            link.setAttribute('href', link.getAttribute('href')+ '?')
             link.tabIndex = '-1';
             link.setAttribute('aria-hidden', 'true');
           });
@@ -9300,6 +9301,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             // const newElement = document.createElement("span");
             // newElement.innerHTML = link.innerHTML;
             // link.replaceWith(newElement);
+            link.setAttribute('href', link.getAttribute('href')+ '?')
             link.tabIndex = '-1';
             link.setAttribute('aria-hidden', 'true');
           });
