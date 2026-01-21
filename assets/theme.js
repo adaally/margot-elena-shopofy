@@ -9293,13 +9293,13 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             }
           })
 
-          cart.querySelectorAll('.rebuy-product-title').forEach(element => {
-            const titleReplacement = document.createElement("div");
-            titleReplacement.innerHTML = element.innerHTML;
-            titleReplacement.style.letterSpacing = '4.2px'; 
-            titleReplacement.className = element.className;
-            element.replaceWith(titleReplacement);
-          });
+          // cart.querySelectorAll('.rebuy-product-title').forEach(element => {
+          //   const titleReplacement = document.createElement("div");
+          //   titleReplacement.innerHTML = element.innerHTML;
+          //   titleReplacement.style.letterSpacing = '4.2px'; 
+          //   titleReplacement.className = element.className;
+          //   element.replaceWith(titleReplacement);
+          // });
 
           // document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
           //   const element = item.querySelector('a');
