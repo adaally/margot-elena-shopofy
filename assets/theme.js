@@ -9301,17 +9301,17 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             element.replaceWith(titleReplacement);
           });
 
-          document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
-            const element = item.querySelector('a');
-            if(element) {
-              const replaceLinkElement = document.createElement("span");
-              replaceLinkElement.innerHTML = element.innerHTML;
-              replaceLinkElement.className = element.className;
-              replaceLinkElement.style.display = 'block';
-              replaceLinkElement.style.height = '100px';
-              element.replaceWith(replaceLinkElement);
-            }
-          });
+          // document.querySelectorAll('#CartDrawer .cart__image').forEach(item => {
+          //   const element = item.querySelector('a');
+          //   if(element) {
+          //     const replaceLinkElement = document.createElement("span");
+          //     replaceLinkElement.innerHTML = element.innerHTML;
+          //     replaceLinkElement.className = element.className;
+          //     replaceLinkElement.style.display = 'block';
+          //     replaceLinkElement.style.height = '100px';
+          //     element.replaceWith(replaceLinkElement);
+          //   }
+          // });
 
           // cart.querySelectorAll(".rebuy-product-info").forEach(element => {
           //   const titleLink = element.querySelector("a");
