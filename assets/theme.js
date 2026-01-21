@@ -9264,7 +9264,8 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
       }
 
       new MutationObserver(() => {
-        const priceTag = cart.querySelector('.rebuy-money [tabindex="0"]');
+        const priceTag = cart.querySelector('.rebuy-money span[tabindex="0"]');
+        console.log(priceTag, 'HERE')
         if(priceTag) {
           priceTag.removeAttribute('tabindex');
         }
