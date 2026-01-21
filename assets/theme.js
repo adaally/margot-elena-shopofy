@@ -9295,6 +9295,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             link.setAttribute('href', link.getAttribute('href')+ '?')
             link.tabIndex = '-1';
             link.setAttribute('aria-hidden', 'true');
+            link.removeAttribute('aria-label');
           });
 
           cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
@@ -9304,6 +9305,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
             link.setAttribute('href', link.getAttribute('href')+ '?')
             link.tabIndex = '-1';
             link.setAttribute('aria-hidden', 'true');
+            link.removeAttribute('aria-label');
           });
           
           cart.querySelectorAll(".primary-title").forEach(primaryTitle => {
