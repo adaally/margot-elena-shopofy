@@ -9315,11 +9315,11 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
           });
 
           cart.querySelectorAll(".rebuy-product-info").forEach(element => {
-            const titleLink = element.querySelector("a");
-            const replaceLinkElement = document.createElement("span");
-            replaceLinkElement.innerText = titleLink.innerText;
-            replaceLinkElement.className = titleLink.className;
-            titleLink.replaceWith(replaceLinkElement);
+            // const titleLink = element.querySelector("a");
+            // const replaceLinkElement = document.createElement("span");
+            // replaceLinkElement.innerText = titleLink.innerText;
+            // replaceLinkElement.className = titleLink.className;
+            // titleLink.replaceWith(replaceLinkElement);
 
             // const newContainerLink = document.createElement("a");
             // newContainerLink.className = title.className;
