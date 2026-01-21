@@ -9293,6 +9293,11 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
 
 
         setTimeout(() => {
+          cart.querySelectorAll('.rebuy-cart__flyout-item-product-title, .rebuy-product-title-link').forEach(link => {
+            link.removeAttribute('aria-label');
+            link.removeAttribute('role')
+          });
+
           cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
             // const newElement = document.createElement("span");
             // newElement.innerHTML = link.innerHTML;
