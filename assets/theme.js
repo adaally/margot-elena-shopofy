@@ -9364,7 +9364,7 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
   
 }
 
-// fixAccessibilityToCartThumnail();
+fixAccessibilityToCartThumnail();
 
 function fixAriaLabelThumbnails() {
   const targetNode = document.body;
