@@ -9268,11 +9268,11 @@ const blocks = Array.from(document.querySelectorAll(container+ ' .product-block-
         if(!containerWeLove) return;
 
         setTimeout(() => {
-          cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
-            const newElement = document.createElement("span");
-            newElement.innerHTML = link.innerHTML;
-            link.replaceWith(newElement);
-          });
+          // cart.querySelectorAll(".rebuy-cart__flyout-item-media a").forEach(link => {
+          //   const newElement = document.createElement("span");
+          //   newElement.innerHTML = link.innerHTML;
+          //   link.replaceWith(newElement);
+          // });
 
           cart.querySelectorAll(".rebuy-product-media a").forEach(link => {
             const newElement = document.createElement("span");
