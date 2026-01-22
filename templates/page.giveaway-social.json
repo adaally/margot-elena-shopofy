@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "top_subheading": "",
-            "title": "30-YEAR \nANNIVERSARY \nCONTEST",
+            "title": "The Margot Elena \n“Wuthering Heights” \nGiveaway",
             "title_size": 47,
             "subheading": "Enter for a chance to win!",
             "link": "",
@@ -24,7 +24,7 @@
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#000000",
-            "color_accent": "rgba(0,0,0)",
+            "color_accent": "",
             "text_align": "vertical-center horizontal-right",
             "image": "shopify://shop_images/ME_WebBanner_Anniv_3.jpg",
             "image_mobile": "shopify://shop_images/ME_WebBanner_Anniv_4.jpg",
@@ -53,14 +53,14 @@
         "heading_46ibKa": {
           "type": "heading",
           "settings": {
-            "title": "30-YEAR ANNIVERSARY CONTEST"
+            "title": "HOW TO ENTER"
           }
         },
         "text_eKqgix": {
           "type": "text",
           "settings": {
             "enlarge_text": true,
-            "text": "<p>We’re celebrating 30 Years of Making Beauty More Beautiful.</p><p>Sign up below for a chance to win a $100, $200 or $300 MargotElena.com gift card!<br/><br/>Ends 11/15/25. 1st, 2nd and 3rd prize winners will be announced 11/20/25.</p>"
+            "text": "<p>To enter, participants must:</p><ol><li>Submit their Instagram handle via the online form.</li><li>Provide a valid email address to be added to the Margot Elena email list.</li><li>Follow @‌MargotElena, @fandango , @‌wutheringheightsmovie on Instagram.</li></ol><p>Limit one (1) entry per person. Multiple entries from the same individual/Instagram handle/email address will be disqualified.</p>"
           }
         }
       },
@@ -98,7 +98,7 @@
         "liquid_N9DzFf": {
           "type": "liquid",
           "settings": {
-            "code": "<div style=\"display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;\">\n  <a href=\"https://www.instagram.com/margotelena/\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Follow Us on Instagram\n  </a>\n\n  <a href=\"https://margotelena.com/pages/giveaway-terms-and-conditions\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Contest Terms & Conditions\n  </a>\n</div>",
+            "code": "<div style=\"display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:20px 0;\">\n  <a href=\"https://www.instagram.com/margotelena/\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Follow Us on Instagram\n  </a>\n\n  <a href=\"https://margotelena.com/pages/wutheringheightsgiveaway\" \n     target=\"_blank\" \n     style=\"flex:1 1 240px; max-width:280px; text-align:center; padding:15px 20px; border:2px solid #000; text-decoration:none; color:#000; font-family:'Didot', serif; font-size:16px; letter-spacing:2px; text-transform:uppercase; transition: all 0.3s ease;\">\n    Contest Terms & Conditions\n  </a>\n</div>",
             "width": "100%",
             "alignment": "center"
           }
