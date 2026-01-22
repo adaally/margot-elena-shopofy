@@ -12,49 +12,29 @@
     "c2fb0821-ff02-4e44-9e6e-17336a5f1d27": {
       "type": "slideshow",
       "blocks": {
-        "image_N7Lerk": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "Discover moisture-rich bliss!",
-            "title": "Our Treat: 15% Off \nAll Handcreme",
-            "title_size": 40,
-            "subheading": "Sublimely soft & scented skin awaits.",
-            "link": "shopify://collections/hand-creams",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_3.jpg",
-            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_4.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        },
-        "image_FbqybX": {
+        "image_yTNJwV": {
           "type": "image",
           "settings": {
-            "top_subheading": "An irresistible encounter",
-            "title": "”Wuthering Heights” \nx Margot Elena",
+            "top_subheading": "Limited-release collectible!",
+            "title": "\"WUTHERING HEIGHTS\" \nx Dead Sexy",
             "title_size": 40,
-            "subheading": "Come Undone…",
+            "subheading": "Dressed in red and ready for romance…",
             "link": "shopify://collections/wutheringheightsxmargotelena",
-            "link_text": "Shop now",
+            "link_text": "Explore Now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
-            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark_Mobile.jpg",
+            "image": "shopify://shop_images/WH_x_ME_DeadSexy_RetailBanner_3_1.jpg",
+            "image_mobile": "shopify://shop_images/WH_x_ME_DeadSexy_RetailBanner_4_1.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 8
+            "overlay_opacity": 0
           }
         },
         "image_YwcyPg": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "NEW ARRIVALS:",
             "title": "TokyoMilk Dark \nTravel Eau de Parfums",
@@ -73,23 +53,44 @@
             "overlay_opacity": 0
           }
         },
-        "image_yTNJwV": {
+        "image_FbqybX": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "top_subheading": "Limited-release collectible!",
-            "title": "\"WUTHERING HEIGHTS\" \nx Dead Sexy",
+            "top_subheading": "An irresistible encounter",
+            "title": "”Wuthering Heights” \nx Margot Elena",
             "title_size": 40,
-            "subheading": "Dressed in red and ready for romance…",
+            "subheading": "Come Undone…",
             "link": "shopify://collections/wutheringheightsxmargotelena",
-            "link_text": "Explore Now",
+            "link_text": "Shop now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
             "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/WH_x_ME_DeadSexy_RetailBanner_3_1.jpg",
-            "image_mobile": "shopify://shop_images/WH_x_ME_DeadSexy_RetailBanner_4_1.jpg",
+            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
+            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark_Mobile.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 8
+          }
+        },
+        "image_N7Lerk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Discover moisture-rich bliss!",
+            "title": "Our Treat: 15% Off \nAll Handcreme",
+            "title_size": 40,
+            "subheading": "Sublimely soft & scented skin awaits.",
+            "link": "shopify://collections/hand-creams",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_3.jpg",
+            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
@@ -117,15 +118,13 @@
         }
       },
       "block_order": [
-        "image_N7Lerk",
-        "image_FbqybX",
-        "image_YwcyPg",
         "image_yTNJwV",
+        "image_YwcyPg",
+        "image_FbqybX",
+        "image_N7Lerk",
         "image_b9TwtH"
       ],
-      "custom_css": [
-        "@media screen and (max-width: 768px) {[data-index=\"0\"] div {color: #000000; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "section_height": "natural",
         "mobile_height": "auto",
