@@ -23,11 +23,11 @@
             "link_text": "",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#000000",
+            "slide_text_color": "#ffffff",
             "color_accent": "",
             "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/ME_WebBanner_Anniv_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanner_Anniv_4.jpg",
+            "image": "shopify://shop_images/WH-X-Fandango-X-ME-Giveaway-Details-Page_b3a85610-5aec-4ad1-a955-d78fba4e06d3.jpg",
+            "image_mobile": "shopify://shop_images/WH-X-Fandango-X-ME-Giveaway-Details-Page_Mobile_91b2f6ee-2529-408d-b347-a5fc73fac39b.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
@@ -122,8 +122,8 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Best Sellers",
-        "home_featured_products": "mecc-best-sellers",
+        "title": "\"WUTHERING HEIGHTS\" x Margot Elena",
+        "home_featured_products": "wutheringheightsxmargotelena",
         "per_row": 4,
         "rows": 1,
         "mobile_scrollable": false,
