@@ -123,6 +123,7 @@
         "image_N7Lerk",
         "image_b9TwtH"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "section_height": "natural",
@@ -134,112 +135,130 @@
         "lazyload_images": false
       }
     },
-    "slideshow_q3pbar": {
+    "slideshow_M86URq": {
       "type": "slideshow",
       "blocks": {
-        "image_nbJJEg": {
+        "image_3fUHcL": {
           "type": "image",
           "settings": {
-            "top_subheading": "Flash Fave:",
-            "title": "30% Off M.E. \nAdvent Calendar",
+            "top_subheading": "New Special-release Fragrances!",
+            "title": "\"WUTHERING HEIGHTS\" \nx TokyoMilk Dark",
             "title_size": 40,
-            "subheading": "Countdown to Holiday Magic",
-            "link": "https://margotelena.com/products/margot-elena-advent-calendar-holiday-2025",
-            "link_text": "SHOP NOW",
+            "subheading": "Experience windswept moors & smoldering passion.",
+            "link": "shopify://collections/wutheringheightsxmargotelena",
+            "link_text": "Explore Now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/WH_x_ME_TKMD_RetailBanner_3.jpg",
+            "image_mobile": "shopify://shop_images/WH_x_ME_TKMD_RetailBanner_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "image_V7pTM7": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "NEW ARRIVALS:",
+            "title": "TokyoMilk Dark \nTravel Eau de Parfums",
+            "title_size": 40,
+            "subheading": "Enticing essentials for your next daring escape",
+            "link": "https://margotelena.com/collections/new",
+            "link_text": "explore now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#000000",
             "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_WebBanners_FlashFave_advent_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_WebBanners_FlashFave_advent_4.jpg",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/Jan26_ME_RetailBanners_NA_TKMD_3.jpg",
+            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_NA_TKMD_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
         },
-        "image_MLzmDd": {
+        "image_Q4RCPb": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "top_subheading": "12 Days of Gorgeous Gifting",
-            "title": "Enjoy 20% Off Lollia",
+            "top_subheading": "An irresistible encounter",
+            "title": "”Wuthering Heights” \nx Margot Elena",
             "title_size": 40,
-            "subheading": "Modern Romantic Luxury",
-            "link": "shopify://collections/lollia",
-            "link_text": "SHOP NOW",
+            "subheading": "Come Undone…",
+            "link": "shopify://collections/wutheringheightsxmargotelena",
+            "link_text": "Shop now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
-            "color_accent": "#101010",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_Dec2025RetailBanners_12Days_LOL_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_Dec2025RetailBanners_12Days_LOL_4.jpg",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
+            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark_Mobile.jpg",
             "parallax_direction": "top",
-            "overlay_opacity": 0
+            "overlay_opacity": 8
           }
         },
-        "image_diNytA": {
+        "image_WHBc3e": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "top_subheading": "Our gift to you:",
-            "title": "Flash Sale \nUp to 80% Off",
+            "top_subheading": "Discover moisture-rich bliss!",
+            "title": "Our Treat: 15% Off \nAll Handcreme",
             "title_size": 40,
-            "subheading": "Enjoy new luxuries for the new year!",
-            "link": "shopify://collections/flash-sale",
-            "link_text": "SHOP NOW",
+            "subheading": "Sublimely soft & scented skin awaits.",
+            "link": "shopify://collections/hand-creams",
+            "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#ffffff",
-            "color_accent": "#101010",
+            "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/241224_MEWebBanners_FlashSale_3.webp",
-            "image_mobile": "shopify://shop_images/241224_MEWebBanners_FlashSale_4.webp",
+            "image": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_3.jpg",
+            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
         },
-        "image_XafYPG": {
+        "image_TVXqHV": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "top_subheading": "Treat Yourself",
-            "title": "80% Off Flash Sale \n+ 25% Off Sitewide",
+            "top_subheading": "Awaken desire…",
+            "title": "Free Little Luxe Parfum:\nDead Sexy or Wish",
             "title_size": 40,
-            "subheading": "Enjoy new luxuries for the new year!",
-            "link": "shopify://collections/flash-sale",
-            "link_text": "Flash Sale",
-            "link_2": "shopify://collections/mecc-best-sellers",
-            "link_text_2": "Shop Sitewide",
+            "subheading": "With an $85 \"Wuthering Heights\" purchase.",
+            "link": "https://margotelena.com/collections/lollia-full-size-handcremes",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
             "slide_text_color": "#ffffff",
-            "color_accent": "#101010",
+            "color_accent": "#ffffff",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/241230_MEWebBanners_LOLNewYears_3.webp",
-            "image_mobile": "shopify://shop_images/241230_MEWebBanners_LOLNewYears_4_V2.jpg",
+            "image": "shopify://shop_images/WH_x_ME_GWP_RetailSiteBanner_c844f230-f5c7-4c67-a92e-5a848f44dd59.jpg",
+            "image_mobile": "shopify://shop_images/WH_x_ME_GWP_RetailSiteBanner_2_4e6833c6-2eea-4ea8-ac6d-da260de25971.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
         }
       },
       "block_order": [
-        "image_nbJJEg",
-        "image_MLzmDd",
-        "image_diNytA",
-        "image_XafYPG"
+        "image_3fUHcL",
+        "image_V7pTM7",
+        "image_Q4RCPb",
+        "image_WHBc3e",
+        "image_TVXqHV"
       ],
-      "disabled": true,
-      "custom_css": [
-        "div {color: #000000;}",
-        "btn {background-color: black;}"
-      ],
+      "custom_css": [],
       "settings": {
         "section_height": "natural",
         "mobile_height": "auto",
         "parallax": false,
         "style": "dots",
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 7,
-        "lazyload_images": true
+        "lazyload_images": false
       }
     },
     "87d21bca-e899-45ef-8d3e-672c2c95e114": {
@@ -844,7 +863,7 @@
   },
   "order": [
     "c2fb0821-ff02-4e44-9e6e-17336a5f1d27",
-    "slideshow_q3pbar",
+    "slideshow_M86URq",
     "87d21bca-e899-45ef-8d3e-672c2c95e114",
     "db058044-4a93-4701-850f-ed9046fb2fa2",
     "rich-text",
