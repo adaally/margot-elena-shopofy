@@ -12,8 +12,49 @@
     "c2fb0821-ff02-4e44-9e6e-17336a5f1d27": {
       "type": "slideshow",
       "blocks": {
+        "image_fVBiKE": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "New Special-release Fragrances!",
+            "title": "\"WUTHERING HEIGHTS\" \nx TokyoMilk Dark",
+            "title_size": 40,
+            "subheading": "Experience windswept moors & smoldering passion.",
+            "link": "shopify://collections/wutheringheightsxmargotelena",
+            "link_text": "Explore Now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/WH_x_ME_TKMD_RetailBanner_3.jpg",
+            "image_mobile": "shopify://shop_images/WH_x_ME_TKMD_RetailBanner_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "image_YU4a7x": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "A Beautiful Chapter",
+            "title": "New from Lollia:\nVelvet Body Scrubs",
+            "title_size": 40,
+            "subheading": "Undeniably Enchanting",
+            "link": "https://margotelena.com/collections/new",
+            "link_text": "explore now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#000000",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/ME_Feb_WebBanners_LOLscrubs_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_Feb_WebBanners_LOLscrubs_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
         "image_yTNJwV": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "Limited-release collectible!",
             "title": "\"WUTHERING HEIGHTS\" \nx Dead Sexy",
@@ -30,47 +71,6 @@
             "image_mobile": "shopify://shop_images/WH_x_ME_DeadSexy_RetailBanner_4_1.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
-          }
-        },
-        "image_YwcyPg": {
-          "type": "image",
-          "settings": {
-            "top_subheading": "NEW ARRIVALS:",
-            "title": "TokyoMilk Dark \nTravel Eau de Parfums",
-            "title_size": 40,
-            "subheading": "Enticing essentials for your next daring escape",
-            "link": "https://margotelena.com/collections/new",
-            "link_text": "explore now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#000000",
-            "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/Jan26_ME_RetailBanners_NA_TKMD_3.jpg",
-            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_NA_TKMD_4.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        },
-        "image_FbqybX": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "An irresistible encounter",
-            "title": "”Wuthering Heights” \nx Margot Elena",
-            "title_size": 40,
-            "subheading": "Come Undone…",
-            "link": "shopify://collections/wutheringheightsxmargotelena",
-            "link_text": "Shop now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-right",
-            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
-            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark_Mobile.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 8
           }
         },
         "image_N7Lerk": {
@@ -117,9 +117,9 @@
         }
       },
       "block_order": [
+        "image_fVBiKE",
+        "image_YU4a7x",
         "image_yTNJwV",
-        "image_YwcyPg",
-        "image_FbqybX",
         "image_N7Lerk",
         "image_b9TwtH"
       ],
@@ -139,6 +139,7 @@
       "blocks": {
         "image_WHBc3e": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "Flash Fave:",
             "title": "30% Off All \nDry Body Oils",
@@ -159,6 +160,7 @@
         },
         "image_Q4RCPb": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "Sweet Treats You’ll Fall For...",
             "title": "Enjoy 20% Off The Lollia \nIn Love Collection",
@@ -179,7 +181,6 @@
         },
         "image_3fUHcL": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "top_subheading": "New Special-release Fragrances!",
             "title": "\"WUTHERING HEIGHTS\" \nx TokyoMilk Dark",
