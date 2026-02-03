@@ -12,8 +12,29 @@
     "c2fb0821-ff02-4e44-9e6e-17336a5f1d27": {
       "type": "slideshow",
       "blocks": {
+        "image_N7Lerk": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Now Through 2/08",
+            "title": "Take 15% Off Sitewide",
+            "title_size": 40,
+            "subheading": "Just in time for Valentine’s Day!",
+            "link": "https://margotelena.com/collections/mecc-best-sellers",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#000000",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify://shop_images/ME_Feb_WebBanners_15sitewide_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_Feb_WebBanners_15sitewide_4.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
         "image_fVBiKE": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "New Special-release Fragrances!",
             "title": "\"WUTHERING HEIGHTS\" \nx TokyoMilk Dark",
@@ -34,6 +55,7 @@
         },
         "image_YU4a7x": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "A Beautiful Chapter",
             "title": "New from Lollia:\nVelvet Body Scrubs",
@@ -73,27 +95,6 @@
             "overlay_opacity": 0
           }
         },
-        "image_N7Lerk": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "Discover moisture-rich bliss!",
-            "title": "Our Treat: 15% Off \nAll Handcreme",
-            "title_size": 40,
-            "subheading": "Sublimely soft & scented skin awaits.",
-            "link": "shopify://collections/hand-creams",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_3.jpg",
-            "image_mobile": "shopify://shop_images/Jan26_ME_RetailBanners_HC_V2_4.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
-        },
         "image_b9TwtH": {
           "type": "image",
           "disabled": true,
@@ -117,10 +118,10 @@
         }
       },
       "block_order": [
+        "image_N7Lerk",
         "image_fVBiKE",
         "image_YU4a7x",
         "image_yTNJwV",
-        "image_N7Lerk",
         "image_b9TwtH"
       ],
       "custom_css": [],
