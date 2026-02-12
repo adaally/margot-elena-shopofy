@@ -32,22 +32,22 @@
             "overlay_opacity": 0
           }
         },
-        "image_YU4a7x": {
+        "image_eRMrWU": {
           "type": "image",
           "settings": {
-            "top_subheading": "A Beautiful Chapter",
-            "title": "New from Lollia:\nVelvet Body Scrubs",
+            "top_subheading": "Get swept away in this special release!",
+            "title": "\"WUTHERING HEIGHTS\" \nx Lollia Collection",
             "title_size": 40,
-            "subheading": "Undeniably Enchanting",
-            "link": "https://margotelena.com/collections/new",
-            "link_text": "explore now",
+            "subheading": "Experience the lavish luxury of Thrushcross Grange.",
+            "link": "shopify://collections/wutheringheightsxmargotelena",
+            "link_text": "Step Inside",
             "link_2": "",
             "link_text_2": "",
             "slide_text_color": "#000000",
             "color_accent": "#000000",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/ME_Feb_WebBanners_LOLscrubs_3.jpg",
-            "image_mobile": "shopify://shop_images/ME_Feb_WebBanners_LOLscrubs_4.jpg",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/WH_x_ME_Lollia_RetailBanner_MockUp_black.jpg",
+            "image_mobile": "shopify://shop_images/WH_x_ME_Lollia_RetailBanner_V2_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
@@ -97,11 +97,14 @@
       },
       "block_order": [
         "image_fVBiKE",
-        "image_YU4a7x",
+        "image_eRMrWU",
         "image_yTNJwV",
         "image_b9TwtH"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media screen and (min-width: 769px) {[data-index=\"1\"] .hero__top-subtitle, [data-index=\"1\"] .hero__top-subtitle * {font-size: 14px !important; line-height: 1.4 !important; }}",
+        "@media screen and (max-width: 768px) {[data-index=\"1\"] .hero__top-subtitle, [data-index=\"1\"] .hero__top-subtitle * {font-size: 12px !important; line-height: 1.35 !important; }}"
+      ],
       "settings": {
         "section_height": "natural",
         "mobile_height": "auto",
