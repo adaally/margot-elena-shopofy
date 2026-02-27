@@ -15,19 +15,19 @@
         "image_fVBiKE": {
           "type": "image",
           "settings": {
-            "top_subheading": "New Special-release Fragrances!",
-            "title": "\"WUTHERING HEIGHTS\" \nx TokyoMilk Dark",
+            "top_subheading": "She Has Arrived",
+            "title": "The Spring 2026\nSubscription Box",
             "title_size": 40,
-            "subheading": "Experience windswept moors & smoldering passion.",
-            "link": "shopify://collections/wutheringheightsxmargotelena",
+            "subheading": "Explore the full reveal now!",
+            "link": "https://margotelena.com/pages/subscription-box-spring-reveal-2026",
             "link_text": "Explore Now",
             "link_2": "",
             "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
+            "slide_text_color": "#000000",
+            "color_accent": "#000000",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/WH_x_ME_TKMD_RetailBanner_3.jpg",
-            "image_mobile": "shopify://shop_images/WH_x_ME_TKMD_RetailBanner_4.jpg",
+            "image": "shopify://shop_images/ME_WebBanners_SP26HomePageBanner_3.jpg",
+            "image_mobile": "shopify://shop_images/ME_WebBanners_SP26HomePageBanner_4.jpg",
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
