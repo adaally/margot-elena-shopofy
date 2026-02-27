@@ -265,7 +265,7 @@
       ],
       "custom_css": [
         "@media only screen and (max-width: 600px) {.image-wrap.text-spacing.loaded {padding-bottom: 100% !important; }}",
-        "p {font-weight: bold; color: #f3a599;}"
+        "p {font-weight: bold; color: #6c7a57;}"
       ],
       "settings": {
         "title": "WHAT'S INSIDE",
@@ -276,7 +276,7 @@
     "30852ee2-53c7-4d6f-acc9-9b35a3530050": {
       "type": "text-and-image",
       "custom_css": [
-        ".btn {background-color: #f3a599;}"
+        ".btn {background-color: #d8abd3;}"
       ],
       "settings": {
         "image": "{{ page.metafields.custom.image_w_text_.value }}",
