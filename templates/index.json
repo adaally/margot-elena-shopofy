@@ -32,8 +32,29 @@
             "overlay_opacity": 0
           }
         },
+        "image_wqAcFb": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "An irresistible encounter",
+            "title": "\"Wuthering Heights\"\nx Margot Elena",
+            "title_size": 40,
+            "subheading": "Come Undone…",
+            "link": "shopify://collections/wutheringheightsxmargotelena",
+            "link_text": "Shop now",
+            "link_2": "",
+            "link_text_2": "",
+            "slide_text_color": "#ffffff",
+            "color_accent": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark.jpg",
+            "image_mobile": "shopify://shop_images/260115_Launch_Day_WH_Retail_Banner_Dark_Mobile.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 8
+          }
+        },
         "image_eRMrWU": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "top_subheading": "Get swept away in this special release!",
             "title": "\"WUTHERING HEIGHTS\" \nx Lollia Collection",
@@ -72,39 +93,15 @@
             "parallax_direction": "top",
             "overlay_opacity": 0
           }
-        },
-        "image_b9TwtH": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "top_subheading": "Awaken desire…",
-            "title": "Free Little Luxe Parfum:\nDead Sexy or Wish",
-            "title_size": 40,
-            "subheading": "With an $85 \"Wuthering Heights\" purchase.",
-            "link": "https://margotelena.com/collections/lollia-full-size-handcremes",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "slide_text_color": "#ffffff",
-            "color_accent": "#ffffff",
-            "text_align": "vertical-center horizontal-left",
-            "image": "shopify://shop_images/WH_x_ME_GWP_RetailSiteBanner_c844f230-f5c7-4c67-a92e-5a848f44dd59.jpg",
-            "image_mobile": "shopify://shop_images/WH_x_ME_GWP_RetailSiteBanner_2_4e6833c6-2eea-4ea8-ac6d-da260de25971.jpg",
-            "parallax_direction": "top",
-            "overlay_opacity": 0
-          }
         }
       },
       "block_order": [
         "image_fVBiKE",
+        "image_wqAcFb",
         "image_eRMrWU",
-        "image_yTNJwV",
-        "image_b9TwtH"
+        "image_yTNJwV"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 769px) {[data-index=\"1\"] .hero__top-subtitle, [data-index=\"1\"] .hero__top-subtitle * {font-size: 14px !important; line-height: 1.4 !important; }}",
-        "@media screen and (max-width: 768px) {[data-index=\"1\"] .hero__top-subtitle, [data-index=\"1\"] .hero__top-subtitle * {font-size: 12px !important; line-height: 1.35 !important; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "section_height": "natural",
         "mobile_height": "auto",
