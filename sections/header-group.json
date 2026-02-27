@@ -33,9 +33,9 @@
         "announcement-0": {
           "type": "announcement",
           "settings": {
-            "text": "M.E. Spring Sub Box",
-            "link_text": "Reserve Yours",
-            "link": "shopify://products/seasonal-discovery-box"
+            "text": "M.E. Spring Sub Box Full Reveal",
+            "link_text": "Explore Now",
+            "link": "https://margotelena.com/pages/subscription-box-spring-reveal-2026"
           }
         }
       },
