@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "rich_text_JRn8Ay": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WiQ8pE": {
+          "type": "heading",
+          "settings": {
+            "title": "Mother's Day Gift Guide"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WiQ8pE"
+      ],
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
     "background_image_text_qfQp6b": {
       "type": "background-image-text",
       "disabled": true,
@@ -363,18 +383,6 @@
     "promo_grid_khQJ4f": {
       "type": "promo-grid",
       "blocks": {
-        "banner_ycFdBp": {
-          "type": "banner",
-          "settings": {
-            "heading": "Mother's Day Gift Guide",
-            "text": "",
-            "link": "",
-            "label": "",
-            "color_tint": "#000000",
-            "color_tint_opacity": 0,
-            "framed": false
-          }
-        },
         "advanced_3erbf8": {
           "type": "advanced",
           "settings": {
@@ -440,6 +448,7 @@
         },
         "banner_HTwDNz": {
           "type": "banner",
+          "disabled": true,
           "settings": {
             "heading": "",
             "text": "WUTHERING HEIGHTS and all related characters and elements © & ™ Warner Bros. Entertainment Inc.",
@@ -452,7 +461,6 @@
         }
       },
       "block_order": [
-        "banner_ycFdBp",
         "advanced_3erbf8",
         "advanced_RLCfaL",
         "advanced_3giDJp",
@@ -530,6 +538,7 @@
     }
   },
   "order": [
+    "rich_text_JRn8Ay",
     "background_image_text_qfQp6b",
     "slideshow_mprAxN",
     "promo_grid_ExdRcw",
